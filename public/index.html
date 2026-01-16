@@ -2,39 +2,96 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="https://thegoldenmule.com/favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    
+    <meta name="theme-color" content="#ffffff" />
+
     <!-- HTML Meta Tags -->
-    <title>thegoldenmule</title>
-    <meta name="description" content="Not magic: a different kind of science.">
+    <title>Benjamin Jordan</title>
+    <meta name="description" content="Software engineer, game developer, adjunct professor. Not magic: a different kind of science.">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://thegoldenmule.com">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="thegoldenmule">
-    <meta property="og:description" content="Not magic: a different kind of science.">
-    <meta property="og:image" content="https://thegoldenmule.com/thumbnails/logo_fb.png">
+    <meta property="og:title" content="Benjamin Jordan">
+    <meta property="og:description" content="Software engineer, game developer, adjunct professor.">
+    <meta property="og:image" content="https://thegoldenmule.com/logo_fb.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="thegoldenmule.com">
     <meta property="twitter:url" content="https://thegoldenmule.com">
-    <meta name="twitter:title" content="thegoldenmule">
-    <meta name="twitter:description" content="Not magic: a different kind of science.">
-    <meta name="twitter:image" content="https://thegoldenmule.com/thumbnails/logo_fb.png">
+    <meta name="twitter:title" content="Benjamin Jordan">
+    <meta name="twitter:description" content="Software engineer, game developer, adjunct professor.">
+    <meta name="twitter:image" content="https://thegoldenmule.com/logo_fb.png">
 
-    <link rel="apple-touch-icon" href="https://thegoldenmule.com/logo192.png" />
-    <link rel="manifest" href="https://thegoldenmule.com/manifest.json" />
-    
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Fonts -->
+    <style>
+      @font-face {
+        font-family: 'RobotoMono';
+        src: url('fonts/RobotoMono-SemiBold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="styles/main.css" />
     <script type="module" src="scripts/app.js"></script>
-
-    <title>thegoldenmule</title>
   </head>
-  <body style="padding: 0px;margin:0px">
+  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+
+    <!-- Header with category navigation -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-text">Benjamin Jordan</span>
+        </div>
+        <nav class="category-nav">
+          <button class="nav-btn active" data-category="career">Career</button>
+          <button class="nav-btn" data-category="products">Products</button>
+          <button class="nav-btn" data-category="code">Code</button>
+          <button class="nav-btn" data-category="writing">Writing</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <main class="main-content">
+      <div id="content-container">
+        <!-- Populated by JavaScript based on selected category -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-filter">
+          <label for="tech-filter">Filter by tech:</label>
+          <select id="tech-filter" class="tech-select">
+            <option value="all">All Technologies</option>
+          </select>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/thegoldenmule" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <img src="tex/github-mark.svg" alt="GitHub" class="footer-icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/benjaminmicahj/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <img src="tex/linkedin-logo.png" alt="LinkedIn" class="footer-icon" />
+          </a>
+          <a href="https://thegoldenmule.medium.com" target="_blank" rel="noopener noreferrer" title="Medium">
+            <img src="tex/medium-logo.svg" alt="Medium" class="footer-icon" />
+          </a>
+          <a href="mailto:ben@thegoldenmule.com" title="Email">
+            <span class="footer-icon email-icon">@</span>
+          </a>
+        </div>
+        <p class="footer-copyright">&copy; 2025 Benjamin Jordan</p>
+      </div>
+    </footer>
   </body>
 </html>
