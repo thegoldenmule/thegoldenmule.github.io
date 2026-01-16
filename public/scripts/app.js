@@ -12,7 +12,8 @@ const state = {
 // Code Explorer State
 const codeExplorerState = {
   expandedFolders: new Set(),
-  expandedFiles: new Set()
+  expandedFiles: new Set(),
+  selectedTags: new Set()
 };
 
 // ==========================================================================
@@ -467,9 +468,29 @@ const folderConfig = {
 const folderOrder = ['software', 'games', 'graphics', 'physics', 'ar', 'exploration', 'iot', 'misc'];
 
 function renderCodeExplorer(container, items) {
+  // Collect all unique tech tags
+  const allTags = new Set();
+  items.forEach(item => {
+    if (item.tech) {
+      item.tech.forEach(t => allTags.add(t));
+    }
+  });
+  const sortedTags = Array.from(allTags).sort();
+
+  // Filter items by selected tags
+  let filteredItems = items;
+  if (codeExplorerState.selectedTags.size > 0) {
+    filteredItems = items.filter(item => {
+      if (!item.tech) return false;
+      return Array.from(codeExplorerState.selectedTags).every(tag =>
+        item.tech.includes(tag)
+      );
+    });
+  }
+
   // Group items by type
   const grouped = {};
-  items.forEach(item => {
+  filteredItems.forEach(item => {
     const type = item.type || 'misc';
     if (!grouped[type]) grouped[type] = [];
     grouped[type].push(item);
@@ -495,15 +516,50 @@ function renderCodeExplorer(container, items) {
   container.innerHTML = `
     <div class="code-explorer">
       <div class="code-explorer-header">~/projects</div>
-      <div class="code-explorer-tree">
-        ${folderKeys.map((type, index) =>
-          renderCodeFolder(type, grouped[type], index === totalFolders - 1)
-        ).join('')}
+      <div class="code-filter-bar">
+        ${sortedTags.map(tag => `
+          <button class="code-filter-tag ${codeExplorerState.selectedTags.has(tag) ? 'active' : ''}" data-tag="${escapeHtml(tag)}">
+            ${escapeHtml(tag)}
+          </button>
+        `).join('')}
       </div>
+      ${filteredItems.length === 0 ? `
+        <div class="code-explorer-empty">No projects match the selected filters.</div>
+      ` : `
+        <div class="code-explorer-tree">
+          ${folderKeys.map((type, index) =>
+            renderCodeFolder(type, grouped[type], index === totalFolders - 1)
+          ).join('')}
+        </div>
+      `}
     </div>
   `;
 
   setupCodeExplorerInteractions(container);
+  setupCodeFilterInteractions(container, items);
+}
+
+function setupCodeFilterInteractions(container, allItems) {
+  const filterTags = container.querySelectorAll('.code-filter-tag');
+  filterTags.forEach(tagBtn => {
+    tagBtn.addEventListener('click', () => {
+      const tag = tagBtn.dataset.tag;
+      if (codeExplorerState.selectedTags.has(tag)) {
+        // Clicking active tag clears it
+        codeExplorerState.selectedTags.clear();
+        // Close all folders when no filter
+        codeExplorerState.expandedFolders.clear();
+      } else {
+        // Clicking new tag clears others and selects this one
+        codeExplorerState.selectedTags.clear();
+        codeExplorerState.selectedTags.add(tag);
+        // Expand all folders when filtering
+        folderOrder.forEach(f => codeExplorerState.expandedFolders.add(f));
+      }
+      // Re-render the explorer
+      renderCodeExplorer(container, allItems);
+    });
+  });
 }
 
 function renderCodeFolder(type, items, isLast) {
