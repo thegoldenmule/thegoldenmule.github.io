@@ -1135,59 +1135,8 @@ button {
     font-size: 0.9375rem;
   }
 
-  /* Hide tree connectors on mobile */
-  .tree-connector,
-  .tree-line {
-    display: none;
-  }
-
-  /* Folder as card */
-  .code-folder {
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--spacing-sm);
-    background: var(--color-bg);
-  }
-
-  .code-folder-row {
-    padding: var(--spacing-md);
-    gap: var(--spacing-sm);
-  }
-
-  .code-folder-children {
-    padding: 0 var(--spacing-sm) var(--spacing-sm);
-  }
-
-  /* File rows */
-  .code-file-row {
-    flex-wrap: wrap;
-    padding: var(--spacing-sm);
-    gap: var(--spacing-xs);
-  }
-
-  .code-file-name {
-    flex: 1;
-    min-width: 0;
-  }
-
   .code-file-tech {
-    order: 10;
-    width: 100%;
-    margin-left: calc(1.5em + var(--spacing-xs));
-    margin-top: var(--spacing-xs);
-    font-size: 0.6875rem;
-  }
-
-  .code-file-date {
-    min-width: auto;
-  }
-
-  .code-file-details-content {
-    padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-sm);
-  }
-
-  .code-file-details-inner {
-    padding: var(--spacing-sm);
+    display: none;
   }
 
   .code-file-description {

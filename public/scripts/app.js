@@ -11,7 +11,7 @@ const state = {
 
 // Code Explorer State
 const codeExplorerState = {
-  expandedFolders: new Set(['software']), // Default expand most recent
+  expandedFolders: new Set(),
   expandedFiles: new Set()
 };
 
