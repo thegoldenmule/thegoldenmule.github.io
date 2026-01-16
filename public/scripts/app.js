@@ -129,9 +129,11 @@ function renderContent() {
     return;
   }
 
-  // Writing uses list view, others use grid
+  // Each category uses appropriate view
   if (state.currentCategory === 'writing') {
     renderListContent(container, filteredItems);
+  } else if (state.currentCategory === 'career') {
+    renderCareerView(container, filteredItems);
   } else {
     renderGridContent(container, filteredItems);
   }
@@ -249,6 +251,104 @@ function renderListItem(item) {
       ${item.tech && item.tech.length > 0 ? `<div class="list-item-tech">${renderTechTags(item.tech)}</div>` : ''}
     </div>
   `;
+}
+
+// ==========================================================================
+// Career Timeline View
+// ==========================================================================
+
+function renderCareerView(container, items) {
+  // Sort by date (newest first)
+  const sorted = [...items].sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+  container.innerHTML = `
+    <div class="career-timeline">
+      ${sorted.map(item => renderCareerEntry(item)).join('')}
+    </div>
+  `;
+
+  // Add click/keyboard handlers for expansion
+  setupCareerEntryInteractions(container);
+}
+
+function renderCareerEntry(item) {
+  const imageUrl = getImageUrl(item);
+  const hasChildren = item.children?.length > 0;
+  const techTags = item.tech?.length ? renderTechTags(item.tech.slice(0, 5)) : '';
+
+  const childCount = item.children?.length || 0;
+  const expandHint = childCount === 1 ? '1 project' : `${childCount} projects`;
+
+  return `
+    <div class="career-entry" ${hasChildren ? 'data-expandable="true"' : ''}>
+      <div class="career-entry-header" ${hasChildren ? 'tabindex="0" role="button" aria-expanded="false"' : ''}>
+        <span class="career-entry-toggle">▶</span>
+        ${imageUrl ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.title)}" class="career-entry-logo" />` : ''}
+        <div class="career-entry-info">
+          <h3 class="career-entry-title">${escapeHtml(item.title)}</h3>
+          ${item.subtitle ? `<span class="career-entry-subtitle">${escapeHtml(item.subtitle)}</span>` : ''}
+        </div>
+        ${item.date ? `<span class="career-entry-date">${escapeHtml(item.date)}</span>` : ''}
+        ${hasChildren ? `<span class="career-entry-expand-hint">+ ${expandHint}</span>` : ''}
+      </div>
+      <div class="career-entry-body">
+        ${item.description ? `<p class="career-entry-description">${escapeHtml(item.description)}</p>` : ''}
+        ${techTags ? `<div class="career-entry-tech">${techTags}</div>` : ''}
+      </div>
+      ${hasChildren ? `
+        <div class="career-entry-children">
+          <div class="career-entry-children-header">Projects & Products (${item.children.length})</div>
+          ${item.children.slice(0, 5).map(c => renderCareerChild(c)).join('')}
+          ${item.children.length > 5 ? `<p class="career-more">+${item.children.length - 5} more</p>` : ''}
+        </div>
+      ` : ''}
+    </div>
+  `;
+}
+
+function renderCareerChild(child) {
+  const techTags = child.tech?.length ? renderTechTags(child.tech.slice(0, 3)) : '';
+
+  return `
+    <div class="career-child">
+      <h5 class="career-child-title">
+        ${child.url ? `<a href="${escapeHtml(child.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(child.title)}</a>` : escapeHtml(child.title)}
+      </h5>
+      ${child.description ? `<p class="career-child-description">${escapeHtml(child.description)}</p>` : ''}
+      ${techTags ? `<div class="career-child-tech">${techTags}</div>` : ''}
+    </div>
+  `;
+}
+
+function setupCareerEntryInteractions(container) {
+  const entries = container.querySelectorAll('.career-entry[data-expandable="true"]');
+
+  entries.forEach(entry => {
+    const header = entry.querySelector('.career-entry-header');
+
+    // Toggle function
+    const toggleEntry = (e) => {
+      // Don't toggle if clicking a link
+      if (e.target.tagName === 'A') return;
+
+      const isExpanded = entry.classList.contains('expanded');
+      entry.classList.toggle('expanded');
+
+      // Update ARIA state
+      header.setAttribute('aria-expanded', !isExpanded);
+    };
+
+    // Click handler
+    header.addEventListener('click', toggleEntry);
+
+    // Keyboard handler (Enter/Space)
+    header.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleEntry(e);
+      }
+    });
+  });
 }
 
 // ==========================================================================
