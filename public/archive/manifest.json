@@ -1,0 +1,690 @@
+{
+  "generatedAt": "2026-01-16T16:10:42.036Z",
+  "totalPosts": 114,
+  "posts": [
+    {
+      "title": "Winterizing",
+      "date": "2022-07-05T19:42:02.000Z",
+      "filename": "2022-07-05-winterizing.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2022/07/winterizing/"
+    },
+    {
+      "title": "Deferred vs Forward Thinking",
+      "date": "2020-12-11T22:51:20.000Z",
+      "filename": "2020-12-11-deferred-vs-forward-thinking.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2020/12/deferred-vs-forward-thinking/"
+    },
+    {
+      "title": "git is for everyone",
+      "date": "2020-03-13T00:37:29.000Z",
+      "filename": "2020-03-12-git-is-for-everyone.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2020/03/git-is-for-everyone/"
+    },
+    {
+      "title": "Stochastic reading",
+      "date": "2020-02-04T17:02:53.000Z",
+      "filename": "2020-02-04-stochastic-reading.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2020/02/stochastic-reading/"
+    },
+    {
+      "title": "Translations Part I: German words, Eskimos, and isometries",
+      "date": "2020-01-22T21:35:58.000Z",
+      "filename": "2020-01-22-translations-part-i-german-words-eskimos-and-isome.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2020/01/translations-part-i-german-words-eskimos-and-isometries/"
+    },
+    {
+      "title": "Like a Child",
+      "date": "2019-12-08T22:42:49.000Z",
+      "filename": "2019-12-08-like-a-child.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2019/12/like-a-child/"
+    },
+    {
+      "title": "Superluminal Learning",
+      "date": "2019-11-27T17:00:56.000Z",
+      "filename": "2019-11-27-superluminal-learning.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2019/11/superluminal/"
+    },
+    {
+      "title": "The Hard Things About Simple Things",
+      "date": "2019-02-06T18:32:04.000Z",
+      "filename": "2019-02-06-the-hard-things-about-simple-things.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2019/02/the-hard-things-about-simple-things/"
+    },
+    {
+      "title": "On Trees",
+      "date": "2017-11-12T20:26:58.000Z",
+      "filename": "2017-11-12-on-trees.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2017/11/on-trees/"
+    },
+    {
+      "title": "How Breadth Leads to More Interesting Specialization",
+      "date": "2017-08-21T17:07:58.000Z",
+      "filename": "2017-08-21-how-breadth-leads-to-more-interesting-specializati.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2017/08/how-breadth-leads-to-more-interesting-specialization/"
+    },
+    {
+      "title": "The Coke Glass",
+      "date": "2017-08-14T17:45:20.000Z",
+      "filename": "2017-08-14-the-coke-glass.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2017/08/the-coke-glass/"
+    },
+    {
+      "title": "Avrdude Part I: Setting up an Environment",
+      "date": "2017-08-04T16:00:25.000Z",
+      "filename": "2017-08-04-avrdude-part-i-setting-up-an-environment.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2017/08/avrdude-part-i-setting-up-an-environment/"
+    },
+    {
+      "title": "The Miller’s Tale",
+      "date": "2017-07-28T16:00:32.000Z",
+      "filename": "2017-07-28-the-millers-tale.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2017/07/the-millers-tale/"
+    },
+    {
+      "title": "I’ve made a huge mistake",
+      "date": "2017-07-21T16:07:12.000Z",
+      "filename": "2017-07-21-ive-made-a-huge-mistake.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2017/07/ive-made-a-huge-mistake/"
+    },
+    {
+      "title": "On Studying",
+      "date": "2017-07-15T16:15:55.000Z",
+      "filename": "2017-07-15-on-studying.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2017/07/on-studying/"
+    },
+    {
+      "title": "Dynamic Code Execution in Unity",
+      "date": "2017-07-13T04:13:38.000Z",
+      "filename": "2017-07-12-dynamic-code-execution-in-unity.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2017/07/dynamic-code-execution-in-unity/"
+    },
+    {
+      "title": "Reading Roundup",
+      "date": "2016-07-25T06:51:05.000Z",
+      "filename": "2016-07-25-reading-roundup.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2016/07/reading-roundup-4/"
+    },
+    {
+      "title": "Do Computers Dream?",
+      "date": "2015-06-18T23:50:56.000Z",
+      "filename": "2015-06-18-do-computers-dream.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2015/06/do-computers-dream/"
+    },
+    {
+      "title": "On the Complexities of Graphics Drivers (also how does software even work)",
+      "date": "2015-03-13T21:54:04.000Z",
+      "filename": "2015-03-13-on-the-complexities-of-graphics-drivers-also-how-d.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2015/03/on-the-complexities-of-graphics-drivers-also-how-does-software-even-work/"
+    },
+    {
+      "title": "Cinder is Fun.",
+      "date": "2015-01-11T07:00:59.000Z",
+      "filename": "2015-01-11-cinder-is-fun.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2015/01/cinder-is-fun/"
+    },
+    {
+      "title": "Quick Trick: Generics as a Decorator",
+      "date": "2015-01-06T08:00:09.000Z",
+      "filename": "2015-01-06-quick-trick-generics-as-a-decorator.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2015/01/quick-trick-generics-as-a-decorator/"
+    },
+    {
+      "title": "Softworking",
+      "date": "2014-12-28T20:00:43.000Z",
+      "filename": "2014-12-28-softworking.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/12/softworking/"
+    },
+    {
+      "title": "You Should Backup Your Emails! or I’m a Grumpy Old Man!",
+      "date": "2014-12-28T12:08:10.000Z",
+      "filename": "2014-12-28-you-should-backup-your-emails-or-im-a-grumpy-old-m.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/12/you-should-backup-your-emails-or-im-a-grumpy-old-man/"
+    },
+    {
+      "title": "On the daily effects of thermodynamics",
+      "date": "2014-11-27T22:53:34.000Z",
+      "filename": "2014-11-27-on-the-daily-effects-of-thermodynamics.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/11/on-the-daily-effects-of-thermodynamics/"
+    },
+    {
+      "title": "The Intersection of Visual  Art and Mathematics",
+      "date": "2014-11-25T00:12:20.000Z",
+      "filename": "2014-11-24-the-intersection-of-visual-art-and-mathematics.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/11/the-intersection-of-visual-art-and-mathematics/"
+    },
+    {
+      "title": "Creating a Worm",
+      "date": "2014-11-19T02:20:54.000Z",
+      "filename": "2014-11-18-creating-a-worm.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/11/1065/"
+    },
+    {
+      "title": "New Clock My End Time As We Know It",
+      "date": "2014-11-04T02:42:54.000Z",
+      "filename": "2014-11-03-new-clock-my-end-time-as-we-know-it.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/11/new-clock-my-end-time-as-we-know-it/"
+    },
+    {
+      "title": "My Sideproject",
+      "date": "2014-10-18T05:12:33.000Z",
+      "filename": "2014-10-18-my-sideproject.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/10/my-sideproject/"
+    },
+    {
+      "title": "Be Very Afraid.",
+      "date": "2014-10-11T05:12:38.000Z",
+      "filename": "2014-10-11-be-very-afraid.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/10/be-very-afraid/"
+    },
+    {
+      "title": "Scene Graph Traversal",
+      "date": "2014-09-19T22:59:26.000Z",
+      "filename": "2014-09-19-scene-graph-traversal.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/09/scene-graph-traversal/"
+    },
+    {
+      "title": "The IBM 360",
+      "date": "2014-09-17T23:26:32.000Z",
+      "filename": "2014-09-17-the-ibm-360.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/09/the-ibm-360/"
+    },
+    {
+      "title": "Hutchins-Maslow",
+      "date": "2014-09-17T02:50:47.000Z",
+      "filename": "2014-09-16-hutchins-maslow.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/09/hutchins-maslow/"
+    },
+    {
+      "title": "Homeless",
+      "date": "2014-09-05T23:14:10.000Z",
+      "filename": "2014-09-05-homeless.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/09/homeless/"
+    },
+    {
+      "title": "No Faberge Eggs, Just Brass Balls",
+      "date": "2014-09-04T21:45:06.000Z",
+      "filename": "2014-09-04-no-faberge-eggs-just-brass-balls.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/09/no-faberge-eggs-just-brass-balls/"
+    },
+    {
+      "title": "Potato Salad",
+      "date": "2014-08-31T05:46:14.000Z",
+      "filename": "2014-08-31-potato-salad.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/08/potato-salad/"
+    },
+    {
+      "title": "The Junior Ranger Badge",
+      "date": "2014-07-29T06:48:24.000Z",
+      "filename": "2014-07-29-the-junior-ranger-badge.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/07/the-junior-ranger-badge/"
+    },
+    {
+      "title": "On: On Go",
+      "date": "2014-06-26T23:47:33.000Z",
+      "filename": "2014-06-26-on-on-go.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/06/on-on-go/"
+    },
+    {
+      "title": "Ten Dollars Well Spent",
+      "date": "2014-04-28T05:49:34.000Z",
+      "filename": "2014-04-28-ten-dollars-well-spent.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/04/ten-dollars-well-spent/"
+    },
+    {
+      "title": "Reading Roundup",
+      "date": "2014-03-27T02:20:30.000Z",
+      "filename": "2014-03-26-reading-roundup.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/03/reading-roundup-3/"
+    },
+    {
+      "title": "Satoshi Nakamoto, Time Traveler",
+      "date": "2014-03-22T03:31:52.000Z",
+      "filename": "2014-03-21-satoshi-nakamoto-time-traveler.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/03/satoshi-nakamoto-is-a-time-traveler/"
+    },
+    {
+      "title": "Interesting thing of the day!",
+      "date": "2014-03-12T03:25:17.000Z",
+      "filename": "2014-03-11-interesting-thing-of-the-day.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/03/interesting-thing-of-the-day/"
+    },
+    {
+      "title": "bo-X Behind the Scenes: Part I – Overview",
+      "date": "2014-03-11T11:48:51.000Z",
+      "filename": "2014-03-11-bo-x-behind-the-scenes-part-i-overview.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2014/03/bo-x-behind-the-scenes-part-i-overview/"
+    },
+    {
+      "title": "Kristmas Klein Bagel!",
+      "date": "2013-12-24T23:37:50.000Z",
+      "filename": "2013-12-24-kristmas-klein-bagel.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/12/kristmas-klein-bagel/"
+    },
+    {
+      "title": "SuperColliders in Unity",
+      "date": "2013-12-12T02:10:46.000Z",
+      "filename": "2013-12-11-supercolliders-in-unity.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/12/supercolliders-in-unity/"
+    },
+    {
+      "title": "Ninject and Unity",
+      "date": "2013-12-10T04:42:51.000Z",
+      "filename": "2013-12-09-ninject-and-unity.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/12/ninject-and-unity/"
+    },
+    {
+      "title": "Interview Question: Which Side of a Square?",
+      "date": "2013-09-24T09:37:40.000Z",
+      "filename": "2013-09-24-interview-question-which-side-of-a-square.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/09/interview-question-which-side-of-a-square/"
+    },
+    {
+      "title": "Of Wisdom Teeth and Acceleration",
+      "date": "2013-09-09T22:37:01.000Z",
+      "filename": "2013-09-09-of-wisdom-teeth-and-acceleration.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/09/of-wisdom-teeth-and-acceleration/"
+    },
+    {
+      "title": "Python on the Bus: Particles",
+      "date": "2013-08-21T03:39:26.000Z",
+      "filename": "2013-08-20-python-on-the-bus-particles.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/08/python-on-the-bus-particles/"
+    },
+    {
+      "title": "Just a Thought: Virtual and Final as Contracts",
+      "date": "2013-08-09T22:49:41.000Z",
+      "filename": "2013-08-09-just-a-thought-virtual-and-final-as-contracts.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/08/just-a-thought-virtual-and-final-as-contracts/"
+    },
+    {
+      "title": "Quick Post: Repeat",
+      "date": "2013-08-02T06:55:58.000Z",
+      "filename": "2013-08-02-quick-post-repeat.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/08/quick-post-repeat/"
+    },
+    {
+      "title": "Reading Roundup",
+      "date": "2013-08-01T07:15:36.000Z",
+      "filename": "2013-08-01-reading-roundup.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/08/reading-roundup-2/"
+    },
+    {
+      "title": "More Memoization",
+      "date": "2013-07-25T23:18:45.000Z",
+      "filename": "2013-07-25-more-memoization.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/07/more-memoization/"
+    },
+    {
+      "title": "Reading Roundup",
+      "date": "2013-05-21T08:01:31.000Z",
+      "filename": "2013-05-21-reading-roundup.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/05/reading-roundup/"
+    },
+    {
+      "title": "Quick Post: Easy Enums",
+      "date": "2013-04-19T01:28:49.000Z",
+      "filename": "2013-04-18-quick-post-easy-enums.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/04/quick-post-easy-enums/"
+    },
+    {
+      "title": "Quick Post: My JS File Template",
+      "date": "2013-03-20T20:40:09.000Z",
+      "filename": "2013-03-20-quick-post-my-js-file-template.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/03/quick-post-my-js-file-template/"
+    },
+    {
+      "title": "C# Musings…",
+      "date": "2013-03-08T02:28:21.000Z",
+      "filename": "2013-03-07-c-musings.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/03/c-musings/"
+    },
+    {
+      "title": "Quick Post: Currying Func (and variants)",
+      "date": "2013-03-07T04:49:37.000Z",
+      "filename": "2013-03-06-quick-post-currying-func-and-variants.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/03/quick-post-currying-func-and-variants/"
+    },
+    {
+      "title": "Quick Post: Sum Table",
+      "date": "2013-02-09T21:26:31.000Z",
+      "filename": "2013-02-09-quick-post-sum-table.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/02/quick-post-sum-table/"
+    },
+    {
+      "title": "Real-Time Clouds Pt 2: The Actual Cloud Part",
+      "date": "2013-01-29T22:47:23.000Z",
+      "filename": "2013-01-29-real-time-clouds-pt-2-the-actual-cloud-part.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/01/real-time-clouds-pt-2-the-actual-cloud-part/"
+    },
+    {
+      "title": "Real-Time Clouds Pt 1: A Study of Noise Functions",
+      "date": "2013-01-24T23:36:19.000Z",
+      "filename": "2013-01-24-real-time-clouds-pt-1-a-study-of-noise-functions.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/01/real-time-clouds-pt-1-a-study-of-noise-functions/"
+    },
+    {
+      "title": "Earthican Shader",
+      "date": "2013-01-15T02:38:52.000Z",
+      "filename": "2013-01-14-earthican-shader.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/01/earthican-shader-2/"
+    },
+    {
+      "title": "Book Review: Effective C#",
+      "date": "2013-01-13T01:58:51.000Z",
+      "filename": "2013-01-12-book-review-effective-c.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/01/book-review-effective-c/"
+    },
+    {
+      "title": "Spherical Terrain Generation",
+      "date": "2013-01-08T05:54:07.000Z",
+      "filename": "2013-01-07-spherical-terrain-generation.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/01/spherical-terrain-generation/"
+    },
+    {
+      "title": "Geosphere: Revisited",
+      "date": "2013-01-06T22:41:01.000Z",
+      "filename": "2013-01-06-geosphere-revisited.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/01/geosphere-revisited/"
+    },
+    {
+      "title": "Procedural Texture Fun",
+      "date": "2013-01-06T06:33:56.000Z",
+      "filename": "2013-01-06-procedural-texture-fun.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2013/01/procedural-texture-fun/"
+    },
+    {
+      "title": "Quick Post: Geospheres",
+      "date": "2012-12-04T05:26:45.000Z",
+      "filename": "2012-12-03-quick-post-geospheres.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/12/quick-post-geospheres/"
+    },
+    {
+      "title": "Why quaternions?",
+      "date": "2012-10-02T02:13:27.000Z",
+      "filename": "2012-10-01-why-quaternions.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/10/why-quaternions/"
+    },
+    {
+      "title": "Why you should think five times before writing a singleton",
+      "date": "2012-09-26T02:19:01.000Z",
+      "filename": "2012-09-25-why-you-should-think-five-times-before-writing-a-s.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/09/why-you-should-think-five-times-before-writing-a-singleton/"
+    },
+    {
+      "title": "On functional programming in classical languages",
+      "date": "2012-09-18T06:41:22.000Z",
+      "filename": "2012-09-18-on-functional-programming-in-classical-languages.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/09/on-functional-programming-in-classical-languages/"
+    },
+    {
+      "title": "Small Static Factory Methods",
+      "date": "2012-09-14T04:44:59.000Z",
+      "filename": "2012-09-13-small-static-factory-methods.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/09/small-static-factory-methods/"
+    },
+    {
+      "title": "RestExpressionNode not yet implemented",
+      "date": "2012-09-12T21:41:52.000Z",
+      "filename": "2012-09-12-restexpressionnode-not-yet-implemented.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/09/restexpressionnode-not-yet-implemented/"
+    },
+    {
+      "title": "Why Inheritance Is “Broken”",
+      "date": "2012-09-07T21:47:54.000Z",
+      "filename": "2012-09-07-why-inheritance-is-broken.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/09/why-inheritance-is-broken/"
+    },
+    {
+      "title": "On Limiting the Horrors of Objective-C++",
+      "date": "2012-07-26T04:04:22.000Z",
+      "filename": "2012-07-25-on-limiting-the-horrors-of-objective-c.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/07/on-limiting-the-horrors-of-objective-c/"
+    },
+    {
+      "title": "Funtimes",
+      "date": "2012-07-26T01:07:04.000Z",
+      "filename": "2012-07-25-funtimes.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/07/funtimes/"
+    },
+    {
+      "title": "Not a Function",
+      "date": "2012-05-18T05:08:21.000Z",
+      "filename": "2012-05-18-not-a-function.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/05/not-a-function/"
+    },
+    {
+      "title": "Itsy Updates (plus a bonus tutorial)!",
+      "date": "2012-05-15T05:48:23.000Z",
+      "filename": "2012-05-15-itsy-updates-plus-a-bonus-tutorial.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/05/itsy-updates-plus-a-bonus-tutorial/"
+    },
+    {
+      "title": "How E4X Ruined My Otherwise Inoffensive Day",
+      "date": "2012-05-08T21:36:01.000Z",
+      "filename": "2012-05-08-how-e4x-ruined-my-otherwise-inoffensive-day.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/05/how-e4x-ruined-my-otherwise-inoffensive-day/"
+    },
+    {
+      "title": "Weekend Update",
+      "date": "2012-05-07T22:19:13.000Z",
+      "filename": "2012-05-07-weekend-update.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/05/weekend-update/"
+    },
+    {
+      "title": "Away3D 4.0-beta",
+      "date": "2012-03-17T07:24:58.000Z",
+      "filename": "2012-03-17-away3d-40-beta.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/03/away3d-4-0-beta/"
+    },
+    {
+      "title": "QuickPost: Faking gravity",
+      "date": "2012-02-22T03:32:58.000Z",
+      "filename": "2012-02-21-quickpost-faking-gravity.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/02/quickpost-faking-gravity/"
+    },
+    {
+      "title": "Goldbach’s Conjecture",
+      "date": "2012-01-21T07:57:22.000Z",
+      "filename": "2012-01-21-goldbachs-conjecture.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/01/goldbachs-conjecture/"
+    },
+    {
+      "title": "Putting the Funk Back in Funktional Programming",
+      "date": "2012-01-17T01:59:45.000Z",
+      "filename": "2012-01-16-putting-the-funk-back-in-funktional-programming.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/01/putting-the-funk-back-in-funktional-programming/"
+    },
+    {
+      "title": "Itsy Examples",
+      "date": "2012-01-15T02:49:25.000Z",
+      "filename": "2012-01-14-itsy-examples.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/01/itsy-examples/"
+    },
+    {
+      "title": "Itsy– a cute name for an otherwise uncaring particle system",
+      "date": "2012-01-12T03:50:16.000Z",
+      "filename": "2012-01-11-itsy-a-cute-name-for-an-otherwise-uncaring-particl.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/01/itsy-a-cute-name-for-an-otherwise-uncaring-particle-system/"
+    },
+    {
+      "title": "Cursory Observations on Cursors",
+      "date": "2012-01-08T03:12:50.000Z",
+      "filename": "2012-01-07-cursory-observations-on-cursors.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2012/01/cursory-observations-on-cursors/"
+    },
+    {
+      "title": "Pragmatically Parsing Plists without Pruning Your Persimmons (if you know what I mean)",
+      "date": "2011-12-02T03:30:56.000Z",
+      "filename": "2011-12-01-pragmatically-parsing-plists-without-pruning-your-.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/12/pragmatically-parsing-plists-without-pruning-your-persimmons-if-you-know-what-i-mean/"
+    },
+    {
+      "title": "A coming of age story",
+      "date": "2011-11-15T08:56:38.000Z",
+      "filename": "2011-11-15-a-coming-of-age-story.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/11/a-coming-of-age-story-featuring-thegoldenmule/"
+    },
+    {
+      "title": "A Portrait of the Programmer as a Young Man",
+      "date": "2011-11-09T03:56:32.000Z",
+      "filename": "2011-11-08-a-portrait-of-the-programmer-as-a-young-man.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/11/a-portrait-of-the-programmer-as-a-young-man/"
+    },
+    {
+      "title": "Letter from R. Atwater to T. Edison, circa 1868",
+      "date": "2011-10-31T02:16:42.000Z",
+      "filename": "2011-10-30-letter-from-r-atwater-to-t-edison-circa-1868.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/10/letter-from-r-atwater-to-t-edison-circa-1868/"
+    },
+    {
+      "title": "Just driving though",
+      "date": "2011-10-30T05:11:26.000Z",
+      "filename": "2011-10-30-just-driving-though.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/10/just-driving-though/"
+    },
+    {
+      "title": "Finally! A use for flash_proxy!",
+      "date": "2011-10-21T22:43:07.000Z",
+      "filename": "2011-10-21-finally-a-use-for-flash_proxy.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/10/finally-a-use-for-flash_proxy/"
+    },
+    {
+      "title": "Injecting SVN revision number via Maven",
+      "date": "2011-10-19T23:34:04.000Z",
+      "filename": "2011-10-19-injecting-svn-revision-number-via-maven.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/10/injecting-svn-revision-number-via-maven/"
+    },
+    {
+      "title": "Re:flexion!",
+      "date": "2011-10-16T23:45:56.000Z",
+      "filename": "2011-10-16-reflexion.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/10/reflexion/"
+    },
+    {
+      "title": "Q&A: Unite Flash Day 2011",
+      "date": "2011-09-29T08:31:30.000Z",
+      "filename": "2011-09-29-qa-unite-flash-day-2011.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/09/qa-unite-flash-day-2011/"
+    },
+    {
+      "title": "On conditional compilation in Flex and why it kind of sucks",
+      "date": "2011-09-20T02:29:22.000Z",
+      "filename": "2011-09-19-on-conditional-compilation-in-flex-and-why-it-kind.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/09/on-conditional-compilation-in-flex-and-why-it-kind-of-sucks/"
+    },
+    {
+      "title": "On the yumminess of NSSet and her applications to javascript",
+      "date": "2011-09-15T02:12:49.000Z",
+      "filename": "2011-09-14-on-the-yumminess-of-nsset-and-her-applications-to-.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/09/on-the-yumminess-of-nsset-and-her-applications-to-javascript/"
+    },
+    {
+      "title": "Turns out, thegoldenmule plays drums",
+      "date": "2011-09-14T22:23:37.000Z",
+      "filename": "2011-09-14-turns-out-thegoldenmule-plays-drums.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/09/turns-out-thegoldenmule-plays-drums/"
+    },
+    {
+      "title": "An algorithm for suffix stripping…",
+      "date": "2011-09-12T21:49:44.000Z",
+      "filename": "2011-09-12-an-algorithm-for-suffix-stripping.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/09/an-algorithm-for-suffix-stripping/"
+    },
+    {
+      "title": "Mathematician Murderer",
+      "date": "2011-09-07T20:19:45.000Z",
+      "filename": "2011-09-07-mathematician-murderer.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/09/mathematician-murderer/"
+    },
+    {
+      "title": "Internet, Einstein; Einstein, Internet",
+      "date": "2011-08-31T01:18:32.000Z",
+      "filename": "2011-08-30-internet-einstein-einstein-internet.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/internet-einstein-einstein-internet/"
+    },
+    {
+      "title": "e: Model of Modesty",
+      "date": "2011-08-22T23:09:55.000Z",
+      "filename": "2011-08-22-e-model-of-modesty.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/e-model-of-modesty/"
+    },
+    {
+      "title": "SOSTrace — now in JS!",
+      "date": "2011-08-18T22:21:33.000Z",
+      "filename": "2011-08-18-sostrace-now-in-js.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/sostrace-now-in-js/"
+    },
+    {
+      "title": "Classes inside of classes inside of classes inside of…",
+      "date": "2011-08-17T22:12:09.000Z",
+      "filename": "2011-08-17-classes-inside-of-classes-inside-of-classes-inside.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/classes-inside-of-classes-inside-of-classes-inside-of/"
+    },
+    {
+      "title": "After we’d lost our way",
+      "date": "2011-08-13T01:50:05.000Z",
+      "filename": "2011-08-12-after-wed-lost-our-way.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/after-wed-lost-our-way/"
+    },
+    {
+      "title": "How to Pwn Web-Apps (for web-app n00bs)",
+      "date": "2011-08-11T21:58:42.000Z",
+      "filename": "2011-08-11-how-to-pwn-web-apps-for-web-app-n00bs.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/how-to-pwn-web-apps-for-web-app-n00bs/"
+    },
+    {
+      "title": "Transcend THIS!",
+      "date": "2011-08-10T22:05:52.000Z",
+      "filename": "2011-08-10-transcend-this.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/transcend-this/"
+    },
+    {
+      "title": "Targeting SOSmax in HaXe",
+      "date": "2011-08-05T23:36:55.000Z",
+      "filename": "2011-08-05-targeting-sosmax-in-haxe.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/targeting-sosmax-in-haxe/"
+    },
+    {
+      "title": "Discourse on how far the Apple falls from the tree",
+      "date": "2011-08-04T23:44:05.000Z",
+      "filename": "2011-08-04-discourse-on-how-far-the-apple-falls-from-the-tree.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/discourse-on-how-far-the-apple-falls-from-the-tree/"
+    },
+    {
+      "title": "Concerning linear algebra and its applications to love",
+      "date": "2011-08-03T03:04:47.000Z",
+      "filename": "2011-08-02-concerning-linear-algebra-and-its-applications-to-.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/miss-matrix/"
+    },
+    {
+      "title": "Terramorphic Genesis Algorithms (or Terrain Generation)",
+      "date": "2011-08-01T23:12:26.000Z",
+      "filename": "2011-08-01-terramorphic-genesis-algorithms-or-terrain-generat.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/08/terramorphic-genesis-algorithms-or-terrain-generation/"
+    },
+    {
+      "title": "Concerning my first encounter with the factorial symbol",
+      "date": "2011-07-29T22:13:40.000Z",
+      "filename": "2011-07-29-concerning-my-first-encounter-with-the-factorial-s.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/07/concerning-my-first-encounter-with-the-factorial-symbol/"
+    },
+    {
+      "title": "The Savant Test",
+      "date": "2011-07-27T22:32:59.000Z",
+      "filename": "2011-07-27-the-savant-test.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/07/the-savant-test/"
+    },
+    {
+      "title": "Maven Just Needs Some Closure",
+      "date": "2011-07-26T23:18:52.000Z",
+      "filename": "2011-07-26-maven-just-needs-some-closure.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/07/maven-just-needs-some-closure/"
+    },
+    {
+      "title": "The Coder’s Tale",
+      "date": "2011-07-26T01:41:28.000Z",
+      "filename": "2011-07-25-the-coders-tale.md",
+      "originalUrl": "https://thegoldenmule.com/blog/2011/07/the-coders-tale/"
+    }
+  ]
+}
