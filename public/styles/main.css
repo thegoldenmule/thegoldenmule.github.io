@@ -632,6 +632,46 @@ button {
   margin-bottom: 0;
 }
 
+/* Writing vs Project visual distinction */
+.career-child--writing {
+  border-left: 3px solid #8b5cf6;
+}
+
+.career-child--project {
+  border-left: 3px solid var(--color-accent);
+}
+
+.career-child-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.career-child-type {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.career-child--writing .career-child-type {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.career-child--project .career-child-type {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.career-child-date {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
 .career-child-title {
   font-family: var(--font-heading);
   font-size: 0.9375rem;
@@ -661,11 +701,215 @@ button {
   margin-top: var(--spacing-sm);
 }
 
-.career-more {
+.career-load-more {
+  display: inline-block;
   font-size: 0.8125rem;
+  color: var(--color-accent);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  margin: var(--spacing-md) 0 0;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.career-load-more:hover {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}
+
+.career-load-more:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
+
+/* ==========================================================================
+   Code Explorer (File Tree View)
+   ========================================================================== */
+.code-explorer {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--font-heading);
+}
+
+.code-explorer-header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.code-explorer-tree {
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+/* Folder styles */
+.code-folder {
+  margin-bottom: var(--spacing-xs);
+}
+
+.code-folder-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.code-folder-row:hover {
+  background: var(--color-bg-secondary);
+}
+
+.code-folder-row:focus {
+  outline: none;
+  background: var(--color-bg-secondary);
+  box-shadow: inset 0 0 0 2px var(--color-border);
+}
+
+.tree-connector {
   color: var(--color-text-muted);
-  margin: var(--spacing-sm) 0 0;
-  font-style: italic;
+  font-weight: 400;
+  flex-shrink: 0;
+  width: 1.5em;
+}
+
+.code-folder-icon {
+  flex-shrink: 0;
+}
+
+.code-folder-name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.code-folder-count {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  margin-left: auto;
+}
+
+/* Folder children container */
+.code-folder-children {
+  overflow: hidden;
+}
+
+/* File styles */
+.code-file {
+  /* No additional margin needed */
+}
+
+.code-file-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.code-file-row:hover {
+  background: var(--color-bg-secondary);
+}
+
+.code-file-row:focus {
+  outline: none;
+  background: var(--color-bg-secondary);
+  box-shadow: inset 0 0 0 2px var(--color-border);
+}
+
+.tree-line {
+  color: var(--color-text-muted);
+  font-weight: 400;
+  flex-shrink: 0;
+  white-space: pre;
+}
+
+.code-file-icon {
+  flex-shrink: 0;
+}
+
+.code-file-name {
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.code-file-toggle {
+  color: var(--color-accent);
+  font-size: 0.625rem;
+  margin-left: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+.code-file-tech {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  margin-left: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.code-file-date {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 70px;
+  text-align: right;
+}
+
+/* Expanded file details */
+.code-file-details {
+  overflow: hidden;
+}
+
+.code-file-details-content {
+  display: flex;
+  padding: 0 var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+}
+
+.code-file-details-inner {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-accent);
+}
+
+.code-file-description {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.5;
+  margin: 0 0 var(--spacing-sm);
+}
+
+.code-file-link {
+  font-size: 0.8125rem;
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.code-file-link:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* Expanded states */
+.code-file.expanded .code-file-row {
+  background: var(--color-bg-secondary);
 }
 
 /* ==========================================================================
@@ -862,8 +1106,92 @@ button {
     margin-top: var(--spacing-xs);
   }
 
-  .career-more {
+  .career-child-header {
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+
+  .career-child-type {
+    font-size: 0.625rem;
+  }
+
+  .career-child-date {
+    font-size: 0.6875rem;
+  }
+
+  .career-load-more {
     font-size: 0.75rem;
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  /* Code Explorer Mobile */
+  .code-explorer {
+    font-size: 0.8125rem;
+  }
+
+  .code-explorer-header {
+    font-size: 0.9375rem;
+  }
+
+  /* Hide tree connectors on mobile */
+  .tree-connector,
+  .tree-line {
+    display: none;
+  }
+
+  /* Folder as card */
+  .code-folder {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    background: var(--color-bg);
+  }
+
+  .code-folder-row {
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+  }
+
+  .code-folder-children {
+    padding: 0 var(--spacing-sm) var(--spacing-sm);
+  }
+
+  /* File rows */
+  .code-file-row {
+    flex-wrap: wrap;
+    padding: var(--spacing-sm);
+    gap: var(--spacing-xs);
+  }
+
+  .code-file-name {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .code-file-tech {
+    order: 10;
+    width: 100%;
+    margin-left: calc(1.5em + var(--spacing-xs));
+    margin-top: var(--spacing-xs);
+    font-size: 0.6875rem;
+  }
+
+  .code-file-date {
+    min-width: auto;
+  }
+
+  .code-file-details-content {
+    padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-sm);
+  }
+
+  .code-file-details-inner {
+    padding: var(--spacing-sm);
+  }
+
+  .code-file-description {
+    font-size: 0.8125rem;
   }
 
   .footer-content {

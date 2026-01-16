@@ -9,6 +9,12 @@ const state = {
   techFilter: 'all'
 };
 
+// Code Explorer State
+const codeExplorerState = {
+  expandedFolders: new Set(['software']), // Default expand most recent
+  expandedFiles: new Set()
+};
+
 // ==========================================================================
 // Data Loading
 // ==========================================================================
@@ -134,6 +140,8 @@ function renderContent() {
     renderListContent(container, filteredItems);
   } else if (state.currentCategory === 'career') {
     renderCareerView(container, filteredItems);
+  } else if (state.currentCategory === 'code') {
+    renderCodeExplorer(container, filteredItems);
   } else {
     renderGridContent(container, filteredItems);
   }
@@ -257,9 +265,23 @@ function renderListItem(item) {
 // Career Timeline View
 // ==========================================================================
 
+// Store children data for lazy loading
+const careerChildrenData = new Map();
+
 function renderCareerView(container, items) {
   // Sort by date (newest first)
   const sorted = [...items].sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+  // Clear previous data
+  careerChildrenData.clear();
+
+  // Store children data for each item
+  sorted.forEach(item => {
+    if (item.children?.length > 0) {
+      const entryId = `career-entry-${item.title.replace(/\W+/g, '-').toLowerCase()}`;
+      careerChildrenData.set(entryId, item.children);
+    }
+  });
 
   container.innerHTML = `
     <div class="career-timeline">
@@ -288,10 +310,11 @@ function renderCareerEntry(item) {
   const techTags = techArray.length ? renderTechTags(techArray) : '';
 
   const childCount = item.children?.length || 0;
-  const expandHint = childCount === 1 ? '1 project' : `${childCount} projects`;
+  const expandHint = childCount === 1 ? '1 entry' : `${childCount} entries`;
+  const entryId = `career-entry-${item.title.replace(/\W+/g, '-').toLowerCase()}`;
 
   return `
-    <div class="career-entry" ${hasChildren ? 'data-expandable="true"' : ''}>
+    <div class="career-entry" id="${entryId}" ${hasChildren ? 'data-expandable="true"' : ''} ${hasChildren ? `data-children-total="${childCount}" data-children-shown="5"` : ''}>
       <div class="career-entry-header" ${hasChildren ? 'tabindex="0" role="button" aria-expanded="false"' : ''}>
         <span class="career-entry-toggle">▶</span>
         ${imageUrl ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.title)}" class="career-entry-logo" />` : ''}
@@ -308,9 +331,11 @@ function renderCareerEntry(item) {
       </div>
       ${hasChildren ? `
         <div class="career-entry-children">
-          <div class="career-entry-children-header">Projects & Products (${item.children.length})</div>
-          ${item.children.slice(0, 5).map(c => renderCareerChild(c)).join('')}
-          ${item.children.length > 5 ? `<p class="career-more">+${item.children.length - 5} more</p>` : ''}
+          <div class="career-entry-children-header">Projects & Writing (${item.children.length})</div>
+          <div class="career-children-list">
+            ${item.children.slice(0, 5).map(c => renderCareerChild(c)).join('')}
+          </div>
+          ${item.children.length > 5 ? `<button type="button" class="career-load-more" tabindex="0">+ ${item.children.length - 5} more</button>` : ''}
         </div>
       ` : ''}
     </div>
@@ -319,9 +344,16 @@ function renderCareerEntry(item) {
 
 function renderCareerChild(child) {
   const techTags = child.tech?.length ? renderTechTags(child.tech.slice(0, 3)) : '';
+  const isWriting = child.type === 'writing' || child.category === 'publications';
+  const typeClass = isWriting ? 'career-child--writing' : 'career-child--project';
+  const typeLabel = isWriting ? 'Writing' : 'Project';
 
   return `
-    <div class="career-child">
+    <div class="career-child ${typeClass}">
+      <div class="career-child-header">
+        <span class="career-child-type">${typeLabel}</span>
+        ${child.date ? `<span class="career-child-date">${escapeHtml(child.date)}</span>` : ''}
+      </div>
       <h5 class="career-child-title">
         ${child.url ? `<a href="${escapeHtml(child.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(child.title)}</a>` : escapeHtml(child.title)}
       </h5>
@@ -339,8 +371,9 @@ function setupCareerEntryInteractions(container) {
 
     // Toggle function
     const toggleEntry = (e) => {
-      // Don't toggle if clicking a link
+      // Don't toggle if clicking a link or load more button
       if (e.target.tagName === 'A') return;
+      if (e.target.classList.contains('career-load-more')) return;
 
       const isExpanded = entry.classList.contains('expanded');
       entry.classList.toggle('expanded');
@@ -357,6 +390,288 @@ function setupCareerEntryInteractions(container) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         toggleEntry(e);
+      }
+    });
+
+    // Load more button handler
+    const loadMoreBtn = entry.querySelector('.career-load-more');
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        loadMoreChildren(entry);
+      });
+
+      loadMoreBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          e.stopPropagation();
+          loadMoreChildren(entry);
+        }
+      });
+    }
+  });
+}
+
+function loadMoreChildren(entry) {
+  const entryId = entry.id;
+  const children = careerChildrenData.get(entryId);
+  if (!children) return;
+
+  const currentShown = parseInt(entry.dataset.childrenShown, 10) || 5;
+  const total = children.length;
+  const newShown = Math.min(currentShown + 5, total);
+
+  // Get the children to add
+  const newChildren = children.slice(currentShown, newShown);
+
+  // Render and append new children
+  const childrenList = entry.querySelector('.career-children-list');
+  if (childrenList) {
+    newChildren.forEach(child => {
+      childrenList.insertAdjacentHTML('beforeend', renderCareerChild(child));
+    });
+  }
+
+  // Update shown count
+  entry.dataset.childrenShown = newShown;
+
+  // Update or remove the load more button
+  const loadMoreBtn = entry.querySelector('.career-load-more');
+  if (loadMoreBtn) {
+    const remaining = total - newShown;
+    if (remaining > 0) {
+      loadMoreBtn.textContent = `+ ${remaining} more`;
+    } else {
+      loadMoreBtn.remove();
+    }
+  }
+}
+
+// ==========================================================================
+// Code Explorer (File Tree View)
+// ==========================================================================
+
+// Folder display configuration
+const folderConfig = {
+  graphics: { icon: '🎨', label: 'graphics' },
+  games: { icon: '🎮', label: 'games' },
+  physics: { icon: '⚛️', label: 'physics' },
+  software: { icon: '🔧', label: 'software' },
+  exploration: { icon: '🔬', label: 'exploration' },
+  iot: { icon: '📡', label: 'iot' },
+  ar: { icon: '👓', label: 'ar' },
+  misc: { icon: '📦', label: 'misc' }
+};
+
+// Folder sort order (most important first)
+const folderOrder = ['software', 'games', 'graphics', 'physics', 'ar', 'exploration', 'iot', 'misc'];
+
+function renderCodeExplorer(container, items) {
+  // Group items by type
+  const grouped = {};
+  items.forEach(item => {
+    const type = item.type || 'misc';
+    if (!grouped[type]) grouped[type] = [];
+    grouped[type].push(item);
+  });
+
+  // Sort items within each folder by date (newest first)
+  Object.values(grouped).forEach(folderItems => {
+    folderItems.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+  });
+
+  // Get sorted folder keys
+  const folderKeys = Object.keys(grouped).sort((a, b) => {
+    const aIndex = folderOrder.indexOf(a);
+    const bIndex = folderOrder.indexOf(b);
+    if (aIndex === -1 && bIndex === -1) return a.localeCompare(b);
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+    return aIndex - bIndex;
+  });
+
+  const totalFolders = folderKeys.length;
+
+  container.innerHTML = `
+    <div class="code-explorer">
+      <div class="code-explorer-header">~/projects</div>
+      <div class="code-explorer-tree">
+        ${folderKeys.map((type, index) =>
+          renderCodeFolder(type, grouped[type], index === totalFolders - 1)
+        ).join('')}
+      </div>
+    </div>
+  `;
+
+  setupCodeExplorerInteractions(container);
+}
+
+function renderCodeFolder(type, items, isLast) {
+  const config = folderConfig[type] || { icon: '📁', label: type };
+  const isExpanded = codeExplorerState.expandedFolders.has(type);
+  const connector = isLast ? '└─' : '├─';
+  const folderId = `code-folder-${type}`;
+  const folderIcon = isExpanded ? '📂' : '📁';
+
+  return `
+    <div class="code-folder ${isExpanded ? 'expanded' : ''}" id="${folderId}" data-folder-type="${type}">
+      <div class="code-folder-row" tabindex="0" role="button" aria-expanded="${isExpanded}">
+        <span class="tree-connector">${connector}</span>
+        <span class="code-folder-icon">${folderIcon}</span>
+        <span class="code-folder-name">${config.label}/</span>
+        <span class="code-folder-count">(${items.length} items)</span>
+      </div>
+      <div class="code-folder-children" ${isExpanded ? '' : 'style="display:none"'}>
+        ${items.map((item, index) =>
+          renderCodeFile(item, index === items.length - 1, isLast, type)
+        ).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderCodeFile(item, isLastInFolder, isLastFolder, folderType) {
+  const fileConnector = isLastInFolder ? '└─' : '├─';
+  const parentLine = isLastFolder ? '     ' : '│    ';
+  const fileId = `code-file-${(item.title || '').replace(/\W+/g, '-').toLowerCase()}`;
+  const isExpanded = codeExplorerState.expandedFiles.has(fileId);
+
+  // Get file icon based on tech
+  const fileIcon = getFileIcon(item.tech);
+
+  // Format tech tags inline
+  const techStr = item.tech && item.tech.length > 0
+    ? item.tech.slice(0, 3).join(', ')
+    : '';
+
+  // Format date
+  const dateStr = item.date || '';
+
+  return `
+    <div class="code-file ${isExpanded ? 'expanded' : ''}" id="${fileId}" data-folder="${folderType}">
+      <div class="code-file-row" tabindex="0" role="button" aria-expanded="${isExpanded}">
+        <span class="tree-line">${parentLine}</span>
+        <span class="tree-connector">${fileConnector}</span>
+        <span class="code-file-icon">${fileIcon}</span>
+        <span class="code-file-name">${escapeHtml(item.title)}</span>
+        ${isExpanded ? '<span class="code-file-toggle">▼</span>' : ''}
+        <span class="code-file-tech">${escapeHtml(techStr)}</span>
+        <span class="code-file-date">${escapeHtml(dateStr)}</span>
+      </div>
+      <div class="code-file-details" ${isExpanded ? '' : 'style="display:none"'}>
+        <div class="code-file-details-content">
+          <span class="tree-line">${parentLine}</span>
+          <span class="tree-line">${isLastInFolder ? '     ' : '│    '}</span>
+          <div class="code-file-details-inner">
+            ${item.description ? `<p class="code-file-description">${escapeHtml(item.description)}</p>` : ''}
+            ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="code-file-link">→ View on GitHub</a>` : ''}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function getFileIcon(tech) {
+  if (!tech || tech.length === 0) return '📄';
+
+  const primary = tech[0].toLowerCase();
+
+  // Map tech to icons
+  if (primary.includes('unity') || primary.includes('c#') || primary.includes('cs')) return '🎮';
+  if (primary.includes('webgl') || primary.includes('glsl') || primary.includes('shader')) return '🎨';
+  if (primary.includes('typescript') || primary.includes('ts')) return '📘';
+  if (primary.includes('javascript') || primary.includes('js')) return '📒';
+  if (primary.includes('python')) return '🐍';
+  if (primary.includes('rust')) return '🦀';
+  if (primary.includes('go') || primary.includes('golang')) return '🐹';
+  if (primary.includes('java')) return '☕';
+  if (primary.includes('swift')) return '🍎';
+  if (primary.includes('react')) return '⚛️';
+  if (primary.includes('node')) return '💚';
+  if (primary.includes('arduino') || primary.includes('iot')) return '📡';
+  if (primary.includes('ar') || primary.includes('vr')) return '👓';
+
+  return '📄';
+}
+
+function setupCodeExplorerInteractions(container) {
+  // Folder toggle handlers
+  const folders = container.querySelectorAll('.code-folder-row');
+  folders.forEach(folderRow => {
+    const toggleFolder = () => {
+      const folder = folderRow.closest('.code-folder');
+      const type = folder.dataset.folderType;
+      const children = folder.querySelector('.code-folder-children');
+      const icon = folder.querySelector('.code-folder-icon');
+      const isExpanded = folder.classList.contains('expanded');
+
+      if (isExpanded) {
+        codeExplorerState.expandedFolders.delete(type);
+        folder.classList.remove('expanded');
+        children.style.display = 'none';
+        folderRow.setAttribute('aria-expanded', 'false');
+        icon.textContent = '📁';
+      } else {
+        codeExplorerState.expandedFolders.add(type);
+        folder.classList.add('expanded');
+        children.style.display = 'block';
+        folderRow.setAttribute('aria-expanded', 'true');
+        icon.textContent = '📂';
+      }
+    };
+
+    folderRow.addEventListener('click', toggleFolder);
+    folderRow.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleFolder();
+      }
+    });
+  });
+
+  // File toggle handlers
+  const files = container.querySelectorAll('.code-file-row');
+  files.forEach(fileRow => {
+    const toggleFile = () => {
+      const file = fileRow.closest('.code-file');
+      const fileId = file.id;
+      const details = file.querySelector('.code-file-details');
+      const isExpanded = file.classList.contains('expanded');
+
+      if (isExpanded) {
+        codeExplorerState.expandedFiles.delete(fileId);
+        file.classList.remove('expanded');
+        details.style.display = 'none';
+        fileRow.setAttribute('aria-expanded', 'false');
+        // Remove toggle indicator
+        const toggle = fileRow.querySelector('.code-file-toggle');
+        if (toggle) toggle.remove();
+      } else {
+        codeExplorerState.expandedFiles.add(fileId);
+        file.classList.add('expanded');
+        details.style.display = 'block';
+        fileRow.setAttribute('aria-expanded', 'true');
+        // Add toggle indicator if not present
+        if (!fileRow.querySelector('.code-file-toggle')) {
+          const nameEl = fileRow.querySelector('.code-file-name');
+          const toggle = document.createElement('span');
+          toggle.className = 'code-file-toggle';
+          toggle.textContent = '▼';
+          nameEl.after(toggle);
+        }
+      }
+    };
+
+    fileRow.addEventListener('click', (e) => {
+      // Don't toggle if clicking a link
+      if (e.target.tagName === 'A') return;
+      toggleFile();
+    });
+    fileRow.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleFile();
       }
     });
   });
