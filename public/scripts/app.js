@@ -274,7 +274,18 @@ function renderCareerView(container, items) {
 function renderCareerEntry(item) {
   const imageUrl = getImageUrl(item);
   const hasChildren = item.children?.length > 0;
-  const techTags = item.tech?.length ? renderTechTags(item.tech.slice(0, 5)) : '';
+
+  // Collect all tech tags from item and its children
+  const allTech = new Set(item.tech || []);
+  if (item.children) {
+    item.children.forEach(child => {
+      if (child.tech) {
+        child.tech.forEach(t => allTech.add(t));
+      }
+    });
+  }
+  const techArray = Array.from(allTech).sort();
+  const techTags = techArray.length ? renderTechTags(techArray) : '';
 
   const childCount = item.children?.length || 0;
   const expandHint = childCount === 1 ? '1 project' : `${childCount} projects`;
