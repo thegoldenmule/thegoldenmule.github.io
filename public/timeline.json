@@ -576,7 +576,7 @@
     },
     {
       "category": "career",
-      "title": "Founder: SpyreIO",
+      "title": "Founder: Goldenmule Media",
       "subtitle": "Founder",
       "type": "games",
       "date": "2023-Present",
@@ -586,17 +586,6 @@
       "tech": ["games", "web3", "web", "mobile", "software"],
       "size": 45,
       "children": [
-        {
-          "category": "publications",
-          "title": "A Counterpoint to Account Abstraction",
-          "type": "writing",
-          "date": "July 2024",
-          "subtitle": "In which I take on Web3's newest fad.",
-          "description": "Account Abstraction, or Smart Wallets, are the newest fad. Everyone and their grandmother is making wallets. So why have we chosen to skip them for now?",
-          "url": "https://medium.com/spyre-io/a-counterpoint-to-account-abstraction-df71d1f179d9",
-          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zSHIlzSPQP-b-HkD2B_mPg.jpeg",
-          "tech": ["web3"]
-        },
         {
           "category": "products",
           "title": "Hangman Clash",
@@ -639,6 +628,17 @@
           ]
         },
         {
+          "category": "publications",
+          "title": "A Counterpoint to Account Abstraction",
+          "type": "writing",
+          "date": "July 2024",
+          "subtitle": "In which I take on Web3's newest fad.",
+          "description": "Account Abstraction, or Smart Wallets, are the newest fad. Everyone and their grandmother is making wallets. So why have we chosen to skip them for now?",
+          "url": "https://medium.com/spyre-io/a-counterpoint-to-account-abstraction-df71d1f179d9",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zSHIlzSPQP-b-HkD2B_mPg.jpeg",
+          "tech": ["web3"]
+        },
+        {
           "category": "code",
           "title": "Spyre JS SDK",
           "subtitle": "A typescript and react module for building games on Spyre.",
@@ -670,21 +670,7 @@
           "url": "https://github.com/heroiclabs/nakama-js/pull/196",
           "imageUrl": "tex/nakama.png",
           "tech": ["ts"]
-        }
-      ]
-    },
-    {
-      "category": "career",
-      "title": "Founder: Goldenmule Media",
-      "subtitle": "Founder",
-      "type": "games",
-      "date": "2023-Present",
-      "description": "Software development studio, working on internal and external projects. Email me if you want to work together!",
-      "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "tex/logo_square.png",
-      "tech": ["games", "web3", "web", "mobile", "software"],
-      "size": 45,
-      "children": [
+        },
         {
           "category": "products",
           "title": "Powerhouse Partner",

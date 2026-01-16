@@ -393,15 +393,27 @@ function parseDate(dateStr) {
 
   const str = dateStr.toLowerCase();
 
-  // Extract year
-  const yearMatch = str.match(/\d{4}/);
-  const year = yearMatch ? parseInt(yearMatch[0]) : 2000;
+  // "Present" means ongoing - sort to top
+  if (str.includes('present') || str.includes('current') || str.includes('now')) {
+    return Date.now();
+  }
 
-  // Extract month if present
+  // For date ranges, use the end date (last year found)
+  const yearMatches = str.match(/\d{4}/g);
+  const year = yearMatches ? parseInt(yearMatches[yearMatches.length - 1]) : 2000;
+
+  // Extract month if present (use last month found for ranges)
   const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
   let month = 0;
   months.forEach((m, i) => {
-    if (str.includes(m)) month = i;
+    const lastIndex = str.lastIndexOf(m);
+    if (lastIndex !== -1) {
+      // Check if this month appears after a dash (end of range)
+      const dashIndex = str.lastIndexOf('-');
+      if (dashIndex === -1 || lastIndex > dashIndex) {
+        month = i;
+      }
+    }
   });
 
   return new Date(year, month, 1).getTime();
