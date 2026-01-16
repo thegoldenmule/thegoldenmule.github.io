@@ -619,8 +619,11 @@ function renderCodeFile(item, isLastInFolder, isLastFolder, folderType) {
           <span class="tree-line">${parentLine}</span>
           <span class="tree-line">${isLastInFolder ? '     ' : '│    '}</span>
           <div class="code-file-details-inner">
-            ${item.description ? `<p class="code-file-description">${escapeHtml(item.description)}</p>` : ''}
-            ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="code-file-link">→ View on GitHub</a>` : ''}
+            ${getImageUrl(item) ? `<img src="${escapeHtml(getImageUrl(item))}" alt="${escapeHtml(item.title)}" class="code-file-thumbnail" />` : ''}
+            <div class="code-file-details-text">
+              ${item.description ? `<p class="code-file-description">${escapeHtml(item.description)}</p>` : ''}
+              ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="code-file-link">→ View on GitHub</a>` : ''}
+            </div>
           </div>
         </div>
       </div>

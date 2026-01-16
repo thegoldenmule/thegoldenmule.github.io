@@ -920,10 +920,25 @@ button {
 
 .code-file-details-inner {
   flex: 1;
+  display: flex;
+  gap: var(--spacing-md);
   padding: var(--spacing-sm) var(--spacing-md);
   background: var(--color-bg-secondary);
   border-radius: var(--radius-sm);
   border-left: 3px solid var(--color-accent);
+}
+
+.code-file-thumbnail {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.code-file-details-text {
+  flex: 1;
+  min-width: 0;
 }
 
 .code-file-description {
@@ -1177,6 +1192,16 @@ button {
 
   .code-file-tech {
     display: none;
+  }
+
+  .code-file-details-inner {
+    flex-direction: column;
+  }
+
+  .code-file-thumbnail {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
   }
 
   .code-file-description {
