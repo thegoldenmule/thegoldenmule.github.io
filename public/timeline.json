@@ -740,6 +740,17 @@
           "tech": ["web3", "software", "ts"]
         },
         {
+          "category": "products",
+          "title": "The Fallen Court",
+          "subtitle": "A Goldenmule Media Original",
+          "type": "games",
+          "date": "Dec 2025",
+          "description": "A story-based dungeon crawler web game with on-chain perma-choices.",
+          "url": "https://thefallencourt.com/",
+          "imageUrl": "tex/the-fallen-court.png",
+          "tech": ["games", "pixijs", "web3", "js"]
+        },
+        {
           "category": "media",
           "title": "Featured on Movement Labs Parthenon",
           "subtitle": "Featured on Movement Labs community platform",
