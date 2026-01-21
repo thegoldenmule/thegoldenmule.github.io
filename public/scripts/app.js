@@ -6,7 +6,6 @@
 const state = {
   data: null,
   currentCategory: "career",
-  techFilter: "all",
   archiveManifest: null,
   currentArticle: null,
 };
@@ -15,6 +14,16 @@ const state = {
 const codeExplorerState = {
   expandedFolders: new Set(),
   expandedFiles: new Set(),
+  selectedTags: new Set(),
+};
+
+// Products Filter State
+const productsFilterState = {
+  selectedTags: new Set(),
+};
+
+// Writing Filter State
+const writingFilterState = {
   selectedTags: new Set(),
 };
 
@@ -56,8 +65,6 @@ async function loadArchiveManifest() {
 
 function initializeApp() {
   setupCategoryNav();
-  setupTechFilter();
-  populateTechFilter();
   setupHashChangeListener();
 
   // Check URL hash for initial routing
@@ -122,46 +129,6 @@ function switchCategory(category) {
 }
 
 // ==========================================================================
-// Tech Filter
-// ==========================================================================
-
-function setupTechFilter() {
-  const techSelect = document.getElementById("tech-filter");
-  techSelect.addEventListener("change", () => {
-    state.techFilter = techSelect.value;
-    renderContent();
-  });
-}
-
-function populateTechFilter() {
-  const techSet = new Set();
-
-  // Collect all tech tags
-  state.data.events.forEach((event) => {
-    if (event.tech) {
-      event.tech.forEach((t) => techSet.add(t));
-    }
-    if (event.children) {
-      event.children.forEach((child) => {
-        if (child.tech) {
-          child.tech.forEach((t) => techSet.add(t));
-        }
-      });
-    }
-  });
-
-  // Sort and populate select
-  const sorted = Array.from(techSet).sort();
-  const select = document.getElementById("tech-filter");
-  sorted.forEach((tech) => {
-    const option = document.createElement("option");
-    option.value = tech;
-    option.textContent = tech;
-    select.appendChild(option);
-  });
-}
-
-// ==========================================================================
 // Content Rendering
 // ==========================================================================
 
@@ -180,27 +147,21 @@ function renderContent() {
 
   const items = getItemsForCategory(state.currentCategory);
 
-  // Apply tech filter
-  const filteredItems = items.filter((item) => {
-    if (state.techFilter === "all") return true;
-    return item.tech && item.tech.includes(state.techFilter);
-  });
-
-  if (filteredItems.length === 0) {
+  if (items.length === 0) {
     container.innerHTML =
-      '<div class="empty-state"><p>No items match the current filters.</p></div>';
+      '<div class="empty-state"><p>No items in this category.</p></div>';
     return;
   }
 
   // Each category uses appropriate view
   if (state.currentCategory === "writing") {
-    renderListContent(container, filteredItems);
+    renderListContent(container, items);
   } else if (state.currentCategory === "career") {
-    renderCareerView(container, filteredItems);
+    renderCareerView(container, items);
   } else if (state.currentCategory === "code") {
-    renderCodeExplorer(container, filteredItems);
+    renderCodeExplorer(container, items);
   } else {
-    renderGridContent(container, filteredItems);
+    renderGridContent(container, items);
   }
 }
 
@@ -260,15 +221,81 @@ function getItemsForCategory(category) {
 }
 
 // ==========================================================================
+// Section Filter Helpers
+// ==========================================================================
+
+function renderFilterBar(items, selectedTags) {
+  const allTags = new Set();
+  items.forEach((item) => {
+    if (item.tech) item.tech.forEach((t) => allTags.add(t));
+  });
+  const sortedTags = Array.from(allTags).sort();
+
+  if (sortedTags.length === 0) return "";
+
+  return `<div class="code-filter-bar">
+    ${sortedTags
+      .map(
+        (tag) => `
+      <button class="code-filter-tag ${selectedTags.has(tag) ? "active" : ""}"
+              data-tag="${escapeHtml(tag)}">
+        ${escapeHtml(tag)}
+      </button>
+    `
+      )
+      .join("")}
+  </div>`;
+}
+
+function setupSectionFilterInteractions(container, filterState, allItems, renderFn) {
+  const filterTags = container.querySelectorAll(".code-filter-tag");
+  filterTags.forEach((tagBtn) => {
+    tagBtn.addEventListener("click", () => {
+      const tag = tagBtn.dataset.tag;
+      if (filterState.selectedTags.has(tag)) {
+        filterState.selectedTags.clear();
+      } else {
+        filterState.selectedTags.clear();
+        filterState.selectedTags.add(tag);
+      }
+      renderFn(container, allItems);
+    });
+  });
+}
+
+function filterItemsByTags(items, selectedTags) {
+  if (selectedTags.size === 0) return items;
+  return items.filter((item) => {
+    if (!item.tech) return false;
+    return Array.from(selectedTags).every((tag) => item.tech.includes(tag));
+  });
+}
+
+// ==========================================================================
 // Grid View (Career, Products, Code)
 // ==========================================================================
 
 function renderGridContent(container, items) {
+  // Filter items based on selected tags
+  const filteredItems = filterItemsByTags(items, productsFilterState.selectedTags);
+
+  const filterBarHtml = renderFilterBar(items, productsFilterState.selectedTags);
+
   container.innerHTML = `
-    <div class="grid-container">
-      ${items.map((item) => renderGridCard(item)).join("")}
+    <div class="products-container">
+      ${filterBarHtml}
+      ${
+        filteredItems.length === 0
+          ? '<div class="empty-state"><p>No products match the selected filter.</p></div>'
+          : `<div class="grid-container">
+              ${filteredItems.map((item) => renderGridCard(item)).join("")}
+            </div>`
+      }
     </div>
   `;
+
+  // Setup filter interactions
+  setupSectionFilterInteractions(container, productsFilterState, items, renderGridContent);
 }
 
 function renderGridCard(item) {
@@ -327,11 +354,26 @@ function renderGridCard(item) {
 // ==========================================================================
 
 function renderListContent(container, items) {
+  // Filter items based on selected tags
+  const filteredItems = filterItemsByTags(items, writingFilterState.selectedTags);
+
+  const filterBarHtml = renderFilterBar(items, writingFilterState.selectedTags);
+
   container.innerHTML = `
-    <div class="list-container">
-      ${items.map((item) => renderListItem(item)).join("")}
+    <div class="writing-container">
+      ${filterBarHtml}
+      ${
+        filteredItems.length === 0
+          ? '<div class="empty-state"><p>No writing matches the selected filter.</p></div>'
+          : `<div class="list-container">
+              ${filteredItems.map((item) => renderListItem(item)).join("")}
+            </div>`
+      }
     </div>
   `;
+
+  // Setup filter interactions
+  setupSectionFilterInteractions(container, writingFilterState, items, renderListContent);
 }
 
 function renderListItem(item) {
@@ -729,7 +771,6 @@ function renderCodeExplorer(container, items) {
 
   container.innerHTML = `
     <div class="code-explorer">
-      <div class="code-explorer-header">~/projects</div>
       <div class="code-filter-bar">
         ${sortedTags
           .map(
@@ -743,6 +784,7 @@ function renderCodeExplorer(container, items) {
           )
           .join("")}
       </div>
+      <div class="code-explorer-header">~/projects</div>
       ${
         filteredItems.length === 0
           ? `

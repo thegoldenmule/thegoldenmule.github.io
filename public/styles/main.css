@@ -238,6 +238,16 @@ button {
   margin: 0 auto;
 }
 
+.products-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.writing-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .list-item {
   padding: var(--spacing-lg) 0;
   border-bottom: 1px solid var(--color-border);
@@ -316,19 +326,6 @@ button {
 }
 
 /* ==========================================================================
-   Tech Filter (in Footer)
-   ========================================================================== */
-.tech-select {
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border: 1px solid var(--color-border);
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-size: 0.875rem;
-  border-radius: var(--radius-sm);
-  min-width: 180px;
-}
-
-/* ==========================================================================
    Footer
    ========================================================================== */
 .footer {
@@ -345,17 +342,6 @@ button {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--spacing-md);
-}
-
-.footer-filter {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.footer-filter label {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
 }
 
 .footer-links {
@@ -770,7 +756,7 @@ button {
    Code Explorer (File Tree View)
    ========================================================================== */
 .code-explorer {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   font-family: var(--font-heading);
 }
@@ -779,9 +765,7 @@ button {
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-accent);
-  margin-bottom: var(--spacing-md);
-  padding-bottom: var(--spacing-sm);
-  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--spacing-xs);
 }
 
 .code-filter-bar {
@@ -1565,11 +1549,6 @@ button {
   .footer-content {
     flex-direction: column;
     text-align: center;
-  }
-
-  .footer-filter {
-    width: 100%;
-    justify-content: center;
   }
 
   .footer-links {
