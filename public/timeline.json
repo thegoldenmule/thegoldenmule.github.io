@@ -14,6 +14,116 @@
       "children": [
         {
           "category": "publications",
+          "title": "How an LLM is making my bulletproof casual game",
+          "type": "writing",
+          "date": "Jan 2026",
+          "subtitle": "Making your tools work together.",
+          "description": "A (fairly) deep dive into how I'm using an LLM to make a server-authoritative, multiplayer-by-default casual game.",
+          "url": "https://thegoldenmule.medium.com/how-an-llm-is-making-my-bulletproof-casual-game-e986c4844c1f",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*fqAnmQl6T2EnLlfCmXROaw.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Low-Hanging LLM Fruit",
+          "type": "writing",
+          "date": "Nov 2025",
+          "subtitle": "I must be crazy, stupid, or ignorant.",
+          "description": "How, if Anthropic hired me, I would speed up Claude Code's iteration speed by multiple orders of magnitude. ",
+          "url": "https://thegoldenmule.medium.com/low-hanging-llm-fruit-9944e628e6ac",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*f_OeQiE5i_cU6MA50r8ONQ.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "The Collab Machine",
+          "type": "writing",
+          "date": "Nov 2025",
+          "subtitle": "Are we part of the community yet?.",
+          "description": "More updates on Hangman! Collaboration is key.",
+          "url": "https://medium.com/spyre-io/the-collab-machine-7108c9d3ac4f",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*EQ3vI5WaYvF8LAFk-_Mi2g.png",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "The Read-Only Ouroboros",
+          "type": "writing",
+          "date": "Oct 2025",
+          "subtitle": "Hard problems herein. Solutions left as an exercise for the reader.",
+          "description": "Programming is becoming in increasingly read-only. What are we at risk of losing?",
+          "url": "https://thegoldenmule.medium.com/the-read-only-ouroboros-5a88acc8b0dd",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*fX1s4cofsFYKuIi_PMYwMA.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "What information is good for the world?",
+          "type": "writing",
+          "date": "Oct 2025",
+          "subtitle": "In a sea of AI-xcrement, a last bastion for truthy morsels..",
+          "description": "Best described as a long-form love letter to Wikipedia.",
+          "url": "https://thegoldenmule.medium.com/what-information-is-good-for-the-world-d111988ca29c",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KL7cAidDY2PdfocSfJWfmQ.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Hangman LiveOps",
+          "type": "writing",
+          "date": "Aug 2025",
+          "subtitle": "How running a live game is definitely not giving me ulcers.",
+          "description": "We are running so many live events, it's not even funny.",
+          "url": "https://medium.com/spyre-io/hangman-liveops-abbcd59124ac",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hfLHbXzIAvv1AfF9tyt6GA.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Hangman Update: THE DROP",
+          "type": "writing",
+          "date": "July 2025",
+          "subtitle": "It has been awhile but, like Morpheus yelled into a crowded cave somewhere near the city of Zion in the Matrix Reloaded, WE ARE STILL HERE.",
+          "description": "How we're giving out user incentives, on-chain, fairly.",
+          "url": "https://medium.com/spyre-io/hangman-update-the-drop-fb2934046c04",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hGCHzNMe8HSg519-vaUrVA.png",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Gemini vs Claude vs ChatGPT: The Ultimate Showdown",
+          "type": "writing",
+          "date": "July 2025",
+          "subtitle": "The difference is really, really big.",
+          "description": "An exercise in googolology and information theory.",
+          "url": "https://thegoldenmule.medium.com/gemini-vs-claude-vs-chatgpt-the-ultimate-showdown-ca19f737f4d6",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*DUK-rbxTBORuUS8dPIbgbA.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "A thought about thinking",
+          "type": "writing",
+          "date": "June 2025",
+          "subtitle": "I am told that different people think in different ways.",
+          "description": "Brief thoughts about thinking. You are special.",
+          "url": "https://thegoldenmule.medium.com/a-thought-about-thinking-783056cf0502",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ERd_qVuu0OaptR1Cda390w.jpeg",
+          "tech": []
+        },
+        {
+          "category": "publications",
+          "title": "Hangman Updates and Lessons Learned",
+          "type": "writing",
+          "date": "May 2025",
+          "subtitle": "There's no faster way to learn than to ship.",
+          "description": "It's been a wild ride, but we've learned a few things by running a game with 20k active users all by our lonesome.",
+          "url": "https://medium.com/spyre-io/hangman-updates-and-lessons-learned-f9d2fd1ecba3",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*CDZOcK1V9a93iYIG.png",
+          "tech": []
+        },
+        {
+          "category": "publications",
           "title": "On AI and Understanding",
           "type": "writing",
           "date": "Jan 2025",
@@ -25,7 +135,7 @@
         },
         {
           "category": "publications",
-          "title": "Nakame Deep Dive: Leaderboards",
+          "title": "Nakama Deep Dive: Leaderboards",
           "type": "writing",
           "date": "Jan 2025",
           "subtitle": "An in-depth study of bucketed leaderboards with Nakama.",
@@ -315,7 +425,6 @@
           "imageUrl": "tex/test.png",
           "tech": ["cs"]
         },
-
         {
           "category": "code",
           "title": "Story",
@@ -356,7 +465,6 @@
           "imageUrl": "tex/Itsy.png",
           "tech": ["js"]
         },
-
         {
           "category": "code",
           "title": "Dependency Injection in Unity3d",
@@ -487,7 +595,6 @@
           "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/screenshot.png",
           "tech": ["js", "socketio"]
         },
-
         {
           "category": "code",
           "title": "Core-AVR",
@@ -529,7 +636,6 @@
           "imageUrl": "tex/nk.png",
           "tech": ["js", "react", "redux", "bootstrap"]
         },
-
         {
           "category": "products",
           "title": "Nk-Server",
@@ -541,7 +647,6 @@
           "imageUrl": "tex/nk.png",
           "tech": ["cs", "webapi", "dotnet"]
         },
-
         {
           "category": "products",
           "title": "Nano Watch",
