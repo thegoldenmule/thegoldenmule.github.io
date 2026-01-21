@@ -21,7 +21,7 @@
           "description": "A (fairly) deep dive into how I'm using an LLM to make a server-authoritative, multiplayer-by-default casual game.",
           "url": "https://thegoldenmule.medium.com/how-an-llm-is-making-my-bulletproof-casual-game-e986c4844c1f",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*fqAnmQl6T2EnLlfCmXROaw.jpeg",
-          "tech": []
+          "tech": ["ai", "games", "learning", "deep-dives"]
         },
         {
           "category": "publications",
@@ -32,7 +32,7 @@
           "description": "How, if Anthropic hired me, I would speed up Claude Code's iteration speed by multiple orders of magnitude. ",
           "url": "https://thegoldenmule.medium.com/low-hanging-llm-fruit-9944e628e6ac",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*f_OeQiE5i_cU6MA50r8ONQ.jpeg",
-          "tech": []
+          "tech": ["ai"]
         },
         {
           "category": "publications",
@@ -43,7 +43,7 @@
           "description": "More updates on Hangman! Collaboration is key.",
           "url": "https://medium.com/spyre-io/the-collab-machine-7108c9d3ac4f",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*EQ3vI5WaYvF8LAFk-_Mi2g.png",
-          "tech": []
+          "tech": ["games", "liveops"]
         },
         {
           "category": "publications",
@@ -54,7 +54,7 @@
           "description": "Programming is becoming in increasingly read-only. What are we at risk of losing?",
           "url": "https://thegoldenmule.medium.com/the-read-only-ouroboros-5a88acc8b0dd",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*fX1s4cofsFYKuIi_PMYwMA.jpeg",
-          "tech": []
+          "tech": ["ai", "learning"]
         },
         {
           "category": "publications",
@@ -65,7 +65,7 @@
           "description": "Best described as a long-form love letter to Wikipedia.",
           "url": "https://thegoldenmule.medium.com/what-information-is-good-for-the-world-d111988ca29c",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KL7cAidDY2PdfocSfJWfmQ.jpeg",
-          "tech": []
+          "tech": ["ai", "learning"]
         },
         {
           "category": "publications",
@@ -76,7 +76,7 @@
           "description": "We are running so many live events, it's not even funny.",
           "url": "https://medium.com/spyre-io/hangman-liveops-abbcd59124ac",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hfLHbXzIAvv1AfF9tyt6GA.jpeg",
-          "tech": []
+          "tech": ["games", "liveops", "deep-dives"]
         },
         {
           "category": "publications",
@@ -87,7 +87,7 @@
           "description": "How we're giving out user incentives, on-chain, fairly.",
           "url": "https://medium.com/spyre-io/hangman-update-the-drop-fb2934046c04",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hGCHzNMe8HSg519-vaUrVA.png",
-          "tech": []
+          "tech": ["games", "liveops", "web3"]
         },
         {
           "category": "publications",
@@ -98,7 +98,7 @@
           "description": "An exercise in googolology and information theory.",
           "url": "https://thegoldenmule.medium.com/gemini-vs-claude-vs-chatgpt-the-ultimate-showdown-ca19f737f4d6",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*DUK-rbxTBORuUS8dPIbgbA.jpeg",
-          "tech": []
+          "tech": ["ai", "experiments"]
         },
         {
           "category": "publications",
@@ -109,7 +109,7 @@
           "description": "Brief thoughts about thinking. You are special.",
           "url": "https://thegoldenmule.medium.com/a-thought-about-thinking-783056cf0502",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ERd_qVuu0OaptR1Cda390w.jpeg",
-          "tech": []
+          "tech": ["ai", "learning"]
         },
         {
           "category": "publications",
@@ -120,7 +120,7 @@
           "description": "It's been a wild ride, but we've learned a few things by running a game with 20k active users all by our lonesome.",
           "url": "https://medium.com/spyre-io/hangman-updates-and-lessons-learned-f9d2fd1ecba3",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*CDZOcK1V9a93iYIG.png",
-          "tech": []
+          "tech": ["games", "liveops", "deep-dives", "web3"]
         },
         {
           "category": "publications",
@@ -131,7 +131,7 @@
           "description": "Knowledge without sweat is NOT understanding.",
           "url": "https://thegoldenmule.medium.com/on-ai-and-understanding-8627d2bbe51e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*nKGHOECq5CK5hcJCzDk6rA.jpeg",
-          "tech": []
+          "tech": ["ai", "learning"]
         },
         {
           "category": "publications",
@@ -142,18 +142,7 @@
           "description": "Look, it's more complicated than it sounds, okay?? An embarrassing story and a full walkthrough of how I implemented bucketed leaderboards in Nakama.",
           "url": "https://medium.com/spyre-io/nakama-deep-dive-leaderboards-e8d41688d53e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*a40QxPUkXsUfK5Y-YiYOng.jpeg",
-          "tech": []
-        },
-        {
-          "category": "publications",
-          "title": "Why I'm leaving programming behind for a cheese blog",
-          "type": "writing",
-          "date": "Sept 2024",
-          "subtitle": "Published in The Startup.",
-          "description": "I guess programming is over now? And other thoughts on AI.",
-          "url": "https://medium.com/swlh/why-im-leaving-programming-behind-for-a-cheese-blog-8efeb2edb601",
-          "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*My7yndGVvEqEllFFPrZchA.jpeg",
-          "tech": []
+          "tech": ["games", "liveops", "deep-dives"]
         },
         {
           "category": "publications",
@@ -164,7 +153,7 @@
           "description": "There's no denying that the Web3 ecosystem is a Dark Forest. It is particularly necessary to provide a robust security model. Here we explain how we implemented a fair match system for our casual-competitive game.",
           "url": "https://medium.com/spyre-io/fair-matches-in-web3-6d32fe508e5e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*U0T6Bmt1ulPEkDe_bUpBKA.jpeg",
-          "tech": []
+          "tech": ["games", "web3", "liveops", "deep-dives"]
         },
         {
           "category": "publications",
@@ -175,7 +164,18 @@
           "description": "Web3 is a hot mess of 'builders' building for other 'builders'. Where are the actual products and what problems are they actually solving?",
           "url": "https://medium.com/spyre-io/what-belongs-on-a-blockchain-57ed37bde544",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*3MFleJbGRwsQL7d0maS7Ew.png",
-          "tech": []
+          "tech": ["games", "web3"]
+        },
+        {
+          "category": "publications",
+          "title": "Why I'm leaving programming behind for a cheese blog",
+          "type": "writing",
+          "date": "Sept 2024",
+          "subtitle": "Published in The Startup.",
+          "description": "I guess programming is over now? And other thoughts on AI.",
+          "url": "https://medium.com/swlh/why-im-leaving-programming-behind-for-a-cheese-blog-8efeb2edb601",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*My7yndGVvEqEllFFPrZchA.jpeg",
+          "tech": ["ai", "learning"]
         },
         {
           "category": "publications",
@@ -186,83 +186,7 @@
           "description": "Unity is a great engine, but it has its weak spots. In this article, I defend our decision to use a web-native engine instead.",
           "url": "https://medium.com/spyre-io/a-tale-of-two-engines-dc80250e397a",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sghqgWIHhDLlyIzxs_lTqw.jpeg",
-          "tech": []
-        },
-        {
-          "category": "publications",
-          "title": "GitHub Copilot and major world religions",
-          "type": "writing",
-          "date": "February 2022",
-          "subtitle": "Published in Geek Culture.",
-          "description": "My little AI co-programmer is quickly becoming an indispensible tool. Let's talk about metaphysics-- wait what?",
-          "url": "https://medium.com/geekculture/github-copilot-vs-major-world-religions-44829926e055",
-          "imageUrl": "https://miro.medium.com/max/640/0*FMaBgXwuQmK7KEcg.webp",
-          "tech": []
-        },
-        {
-          "category": "publications",
-          "title": "Shaping Young Minds with Agile Thinking",
-          "type": "writing",
-          "date": "February 2022",
-          "subtitle": "Published in Geek Culture.",
-          "description": "Why Agile methodology matters, and how I'm teaching it to CS masters students. If only someone had shown me these things when I was a whipper-snapper!",
-          "url": "https://medium.com/geekculture/shaping-young-minds-with-agile-thinking-33b63ccd3c12",
-          "imageUrl": "https://miro.medium.com/max/720/0*c9YjL7ReG6E2NgT_.webp",
-          "tech": []
-        },
-        {
-          "category": "publications",
-          "title": "What you can't know about being a startup CTO",
-          "type": "writing",
-          "date": "December 2021",
-          "subtitle": "Published in CodeX.",
-          "description": "The term 'Startup CTO' can mean just about anything, depending on the startup-- but there is one thing they all have in common: wrestling with the unknown.",
-          "url": "https://medium.com/codex/what-you-cant-know-about-being-a-startup-cto-80138aceb68f",
-          "imageUrl": "https://miro.medium.com/max/720/1*3wxO_yDf9w7_I8NcJYmn9A.webp",
-          "tech": []
-        },
-        {
-          "category": "publications",
-          "title": "Embrace AI pair programming or perish",
-          "type": "writing",
-          "date": "October 2021",
-          "subtitle": "Published in CodeX.",
-          "description": "The future is here and the only choice we have is how to respond: do we reject it, or do we embrace it?",
-          "url": "https://medium.com/codex/embrace-ai-pair-programming-or-perish-359a4c1a58c8",
-          "imageUrl": "https://miro.medium.com/max/720/1*g5Bb1Cgq1QWkNyZkFJPXoA.webp",
-          "tech": []
-        },
-        {
-          "category": "publications",
-          "title": "The Binary Search Methodology",
-          "type": "writing",
-          "date": "October 2021",
-          "subtitle": "Published in CodeX.",
-          "description": "A practical methodology for building software that I completely made up in a vacuum and is completely original.",
-          "url": "https://medium.com/codex/the-binary-search-methodology-3cd21fc66531",
-          "imageUrl": "https://miro.medium.com/max/720/1*2MTujmy2vodReeVNFdx8TQ.webp",
-          "tech": []
-        },
-        {
-          "category": "publications",
-          "title": "Why Proof of Work is elegant and Proof of Stake is not",
-          "type": "writing",
-          "date": "October 2021",
-          "subtitle": "Published in Coinmonks.",
-          "description": "What can I say, I'm a sucker for elegant math. Proof of Stake is not the picture of elegance its older brother is.",
-          "url": "https://medium.com/coinmonks/why-proof-of-work-is-elegant-and-proof-of-stake-is-not-4988cdc8805f",
-          "imageUrl": "https://miro.medium.com/max/720/1*hhFG5jniMBT_5A4lvkaSNg.webp",
-          "tech": []
-        },
-        {
-          "category": "publications",
-          "title": "Take the Time to Write Less Code",
-          "type": "writing",
-          "date": "February 2019",
-          "subtitle": "Published in CodeX.",
-          "description": "Something from Pascal the programmer: please take the time to write less code. Thank you.",
-          "url": "https://medium.com/codex/take-the-time-to-write-less-code-1bf0ab385a38",
-          "imageUrl": "https://miro.medium.com/max/720/1*95u9XPdy0jCIbvG4z9OsNw.webp"
+          "tech": ["games", "deep-dives"]
         },
         {
           "category": "publications",
@@ -273,7 +197,7 @@
           "description": "Now the question: what makes physics engines break? In this article, I dive DEEP into linear algebra in complex space to find explicit conditions for failure. Believe me, it's cool!",
           "url": "https://thegoldenmule.medium.com/physics-engine-deep-dive-part-ii-cb8d1fda1f9b",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*GDEI8bHKk6Yfq4hxdu_SFg.jpeg",
-          "tech": []
+          "tech": ["games", "physics", "deep-dives"]
         },
         {
           "category": "publications",
@@ -284,7 +208,29 @@
           "description": "An unusual departure for my writing: hard math. We dive into the theory of rigid body systems and begin an exploration into what makes physics engines tick.",
           "url": "https://thegoldenmule.medium.com/physics-engines-explained-part-i-25c595ddc5b2",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:730/format:webp/0*IspZqqnDZvZmWWsY.png",
-          "tech": []
+          "tech": ["games", "physics", "deep-dives"]
+        },
+        {
+          "category": "publications",
+          "title": "A Counterpoint to Account Abstraction",
+          "type": "writing",
+          "date": "July 2024",
+          "subtitle": "In which I take on Web3's newest fad.",
+          "description": "Account Abstraction, or Smart Wallets, are the newest fad. Everyone and their grandmother is making wallets. So why have we chosen to skip them for now?",
+          "url": "https://medium.com/spyre-io/a-counterpoint-to-account-abstraction-df71d1f179d9",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zSHIlzSPQP-b-HkD2B_mPg.jpeg",
+          "tech": ["web3", "deep-dives"]
+        },
+        {
+          "category": "publications",
+          "title": "A Complete-ish 3D Engine in 1200 Lines",
+          "type": "writing",
+          "date": "July 2024",
+          "subtitle": "They said it coudn't be done.",
+          "description": "Did I mention I teach in the CS Masters program at Saint Louis University? For my computer graphics course, we pair-programmed an entire 3D engine from scratch.",
+          "url": "https://thegoldenmule.medium.com/a-complete-ish-3d-engine-in-1200-lines-b5babf4b72ed",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KidhxH5QHiplzlXv6SOU6g.jpeg",
+          "tech": ["games", "graphics", "deep-dives", "teaching"]
         },
         {
           "category": "publications",
@@ -295,7 +241,7 @@
           "description": "How can we understand each other? Thoughts from sociology, biocybernetics, and of course, mathematics.",
           "url": "https://medium.com/geekculture/software-development-dynamics-baltic-german-style-43a526a13444",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*wqkes4CAigOKmIfX.jpg",
-          "tech": []
+          "tech": ["learning", "teaching"]
         },
         {
           "category": "publications",
@@ -306,7 +252,84 @@
           "description": "NFTs may be mathematically attractive but daggum if they aren't complicated. So complicated that most of them are horribly broken.",
           "url": "https://medium.com/coinmonks/nft-collectors-are-geniuses-3edbc427c48c",
           "imageUrl": "https://miro.medium.com/max/720/1*ovBG4SiY_uoFNRZ_NhoqIA.webp",
-          "tech": ["solidity"]
+          "tech": ["web3"]
+        },
+        {
+          "category": "publications",
+          "title": "GitHub Copilot and major world religions",
+          "type": "writing",
+          "date": "February 2022",
+          "subtitle": "Published in Geek Culture.",
+          "description": "My little AI co-programmer is quickly becoming an indispensible tool. Let's talk about metaphysics-- wait what?",
+          "url": "https://medium.com/geekculture/github-copilot-vs-major-world-religions-44829926e055",
+          "imageUrl": "https://miro.medium.com/max/640/0*FMaBgXwuQmK7KEcg.webp",
+          "tech": ["ai"]
+        },
+        {
+          "category": "publications",
+          "title": "Shaping Young Minds with Agile Thinking",
+          "type": "writing",
+          "date": "February 2022",
+          "subtitle": "Published in Geek Culture.",
+          "description": "Why Agile methodology matters, and how I'm teaching it to CS masters students. If only someone had shown me these things when I was a whipper-snapper!",
+          "url": "https://medium.com/geekculture/shaping-young-minds-with-agile-thinking-33b63ccd3c12",
+          "imageUrl": "https://miro.medium.com/max/720/0*c9YjL7ReG6E2NgT_.webp",
+          "tech": ["teaching"]
+        },
+        {
+          "category": "publications",
+          "title": "What you can't know about being a startup CTO",
+          "type": "writing",
+          "date": "December 2021",
+          "subtitle": "Published in CodeX.",
+          "description": "The term 'Startup CTO' can mean just about anything, depending on the startup-- but there is one thing they all have in common: wrestling with the unknown.",
+          "url": "https://medium.com/codex/what-you-cant-know-about-being-a-startup-cto-80138aceb68f",
+          "imageUrl": "https://miro.medium.com/max/720/1*3wxO_yDf9w7_I8NcJYmn9A.webp",
+          "tech": ["teaching", "learning"]
+        },
+        {
+          "category": "publications",
+          "title": "Embrace AI pair programming or perish",
+          "type": "writing",
+          "date": "October 2021",
+          "subtitle": "Published in CodeX.",
+          "description": "The future is here and the only choice we have is how to respond: do we reject it, or do we embrace it?",
+          "url": "https://medium.com/codex/embrace-ai-pair-programming-or-perish-359a4c1a58c8",
+          "imageUrl": "https://miro.medium.com/max/720/1*g5Bb1Cgq1QWkNyZkFJPXoA.webp",
+          "tech": ["ai"]
+        },
+        {
+          "category": "publications",
+          "title": "The Binary Search Methodology",
+          "type": "writing",
+          "date": "October 2021",
+          "subtitle": "Published in CodeX.",
+          "description": "A practical methodology for building software that I completely made up in a vacuum and is completely original.",
+          "url": "https://medium.com/codex/the-binary-search-methodology-3cd21fc66531",
+          "imageUrl": "https://miro.medium.com/max/720/1*2MTujmy2vodReeVNFdx8TQ.webp",
+          "tech": ["teaching", "learning"]
+        },
+        {
+          "category": "publications",
+          "title": "Why Proof of Work is elegant and Proof of Stake is not",
+          "type": "writing",
+          "date": "October 2021",
+          "subtitle": "Published in Coinmonks.",
+          "description": "What can I say, I'm a sucker for elegant math. Proof of Stake is not the picture of elegance its older brother is.",
+          "url": "https://medium.com/coinmonks/why-proof-of-work-is-elegant-and-proof-of-stake-is-not-4988cdc8805f",
+          "imageUrl": "https://miro.medium.com/max/720/1*hhFG5jniMBT_5A4lvkaSNg.webp",
+          "tech": ["web3"]
+        },
+        {
+          "category": "publications",
+          "title": "Take the Time to Write Less Code",
+          "type": "writing",
+          "date": "February 2019",
+          "subtitle": "Published in CodeX.",
+          "description": "Something from Pascal the programmer: please take the time to write less code. Thank you.",
+          "url": "https://medium.com/codex/take-the-time-to-write-less-code-1bf0ab385a38",
+          "imageUrl": "https://miro.medium.com/max/720/1*95u9XPdy0jCIbvG4z9OsNw.webp",
+          "tech": ["teaching", "learning"]
         },
         {
           "category": "publications",
@@ -317,7 +340,7 @@
           "description": "My love for literature and math leads me down a strange path... Follow along in WONDER on a numerical exploration of classic authors.",
           "url": "https://medium.com/geekculture/in-which-i-probably-invented-a-whole-new-branch-of-mathematics-and-computer-science-fbfa6e224631",
           "imageUrl": "https://miro.medium.com/max/720/0*zJq9-2Qbvvi--dR9.webp",
-          "tech": ["python"]
+          "tech": ["experiments"]
         },
         {
           "category": "publications",
@@ -328,7 +351,7 @@
           "description": "Storytelling is a lost art in software engineering. What happens when you pit massive brains against one another?",
           "url": "https://medium.com/codex/doug-mcilroy-vs-donald-knuth-dbafec5d6b24",
           "imageUrl": "https://miro.medium.com/max/720/1*AoHzgWzzBdrVLpd9e_P4IQ.webp",
-          "tech": []
+          "tech": ["history", "teaching"]
         },
         {
           "category": "publications",
@@ -339,7 +362,7 @@
           "description": "Are we coding for space shuttles here? Why are we so afraid of failure?",
           "url": "https://medium.com/codex/programming-where-failure-is-not-an-option-d42dfa938b42",
           "imageUrl": "https://miro.medium.com/max/720/0*Hpa_ocOdiYzRZVyb.webp",
-          "tech": []
+          "tech": ["teaching"]
         }
       ]
     },
@@ -733,17 +756,6 @@
           ]
         },
         {
-          "category": "publications",
-          "title": "A Counterpoint to Account Abstraction",
-          "type": "writing",
-          "date": "July 2024",
-          "subtitle": "In which I take on Web3's newest fad.",
-          "description": "Account Abstraction, or Smart Wallets, are the newest fad. Everyone and their grandmother is making wallets. So why have we chosen to skip them for now?",
-          "url": "https://medium.com/spyre-io/a-counterpoint-to-account-abstraction-df71d1f179d9",
-          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zSHIlzSPQP-b-HkD2B_mPg.jpeg",
-          "tech": ["web3"]
-        },
-        {
           "category": "code",
           "title": "Spyre JS SDK",
           "subtitle": "A typescript and react module for building games on Spyre.",
@@ -1027,17 +1039,6 @@
       "children": [
         {
           "category": "publications",
-          "title": "A Complete-ish 3D Engine in 1200 Lines",
-          "type": "writing",
-          "date": "July 2024",
-          "subtitle": "They said it coudn't be done.",
-          "description": "Did I mention I teach in the CS Masters program at Saint Louis University? For my computer graphics course, we pair-programmed an entire 3D engine from scratch.",
-          "url": "https://thegoldenmule.medium.com/a-complete-ish-3d-engine-in-1200-lines-b5babf4b72ed",
-          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KidhxH5QHiplzlXv6SOU6g.jpeg",
-          "tech": []
-        },
-        {
-          "category": "publications",
           "title": "What is the point of higher education in computer science?",
           "type": "writing",
           "date": "March 2022",
@@ -1045,7 +1046,7 @@
           "description": "Now that I'm officially a highly professional academic, I realize I have no clue what I should be doing.",
           "url": "https://medium.com/codex/what-is-the-point-of-higher-education-in-computer-science-b8a29b63ebdc",
           "imageUrl": "https://miro.medium.com/max/720/0*uj51YZ0qr_A5wFeQ.webp",
-          "tech": []
+          "tech": ["teaching"]
         },
         {
           "category": "publications",
