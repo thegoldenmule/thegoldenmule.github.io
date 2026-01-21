@@ -22,9 +22,12 @@ const productsFilterState = {
   selectedTags: new Set(),
 };
 
-// Writing Filter State
-const writingFilterState = {
+// Unified Writing State (combines writing + archive)
+const writingState = {
   selectedTags: new Set(),
+  allItems: [],           // All items (both sources, cached)
+  displayedCount: 25,     // How many to show
+  PAGE_SIZE: 25
 };
 
 // Archive State
@@ -60,6 +63,41 @@ async function loadArchiveManifest() {
   }
 }
 
+async function loadAllWritingItems() {
+  // Load archive manifest
+  const manifest = await loadArchiveManifest();
+
+  // Get writing items from timeline
+  const writingItems = getItemsForCategory("writing");
+
+  // Normalize and merge
+  const allItems = [
+    // Writing items (normalize to common format)
+    ...writingItems.map(item => ({
+      title: item.title,
+      subtitle: item.subtitle,
+      description: item.description,
+      date: parseDate(item.date),
+      tags: item.tech || [],
+      url: item.url,
+      isArchive: false
+    })),
+    // Archive items (normalize to common format)
+    ...(manifest?.posts || []).map(post => ({
+      title: post.title,
+      subtitle: post.subtitle,
+      description: post.description,
+      date: new Date(post.date).getTime(),
+      tags: post.tags || [],
+      filename: post.filename,
+      isArchive: true
+    }))
+  ];
+
+  // Sort by date descending (newest first)
+  return allItems.sort((a, b) => b.date - a.date);
+}
+
 // ==========================================================================
 // Initialization
 // ==========================================================================
@@ -84,16 +122,28 @@ function handleRouteChange() {
     const filename = hash.slice(8); // Remove 'archive/'
     if (filename) {
       state.currentArticle = filename;
-      switchCategory("archive");
+      state.currentCategory = "archive";
+      // Update nav to show writing as active (archive is part of writing now)
+      document.querySelectorAll(".nav-btn").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.category === "writing");
+      });
+      renderContent();
       return;
     }
+  }
+
+  // Redirect #archive to #writing (archive is now part of writing)
+  if (hash === "archive") {
+    window.history.replaceState(null, null, "#writing");
+    switchCategory("writing");
+    return;
   }
 
   // Reset article state if not viewing an article
   state.currentArticle = null;
 
-  // Handle category routes
-  if (["career", "products", "code", "writing", "archive"].includes(hash)) {
+  // Handle category routes (archive removed from valid categories)
+  if (["career", "products", "code", "writing"].includes(hash)) {
     switchCategory(hash);
   } else if (!hash) {
     renderContent();
@@ -136,13 +186,15 @@ function switchCategory(category) {
 function renderContent() {
   const container = document.getElementById("content-container");
 
-  // Handle archive separately (async)
-  if (state.currentCategory === "archive") {
-    if (state.currentArticle) {
-      renderArchiveArticle(container, state.currentArticle);
-    } else {
-      renderArchiveList(container);
-    }
+  // Handle archive article routes (keep working for direct links)
+  if (state.currentCategory === "archive" && state.currentArticle) {
+    renderArchiveArticle(container, state.currentArticle);
+    return;
+  }
+
+  // Handle unified writing view (includes archive items)
+  if (state.currentCategory === "writing") {
+    renderListContent(container);
     return;
   }
 
@@ -155,9 +207,7 @@ function renderContent() {
   }
 
   // Each category uses appropriate view
-  if (state.currentCategory === "writing") {
-    renderListContent(container, items);
-  } else if (state.currentCategory === "career") {
+  if (state.currentCategory === "career") {
     renderCareerView(container, items);
   } else if (state.currentCategory === "code") {
     renderCodeExplorer(container, items);
@@ -351,75 +401,160 @@ function renderGridCard(item) {
 }
 
 // ==========================================================================
-// List View (Writing)
+// List View (Writing) - Unified with Archive
 // ==========================================================================
 
-function renderListContent(container, items) {
-  // Filter items based on selected tags
-  const filteredItems = filterItemsByTags(items, writingFilterState.selectedTags);
+async function renderListContent(container) {
+  // Show loading state
+  container.innerHTML = '<div class="archive-loading">Loading writing...</div>';
 
-  const filterBarHtml = renderFilterBar(items, writingFilterState.selectedTags);
+  // Load all items (if not cached)
+  if (writingState.allItems.length === 0) {
+    writingState.allItems = await loadAllWritingItems();
+  }
+
+  // Filter by selected tags (across ALL items)
+  const filteredItems = filterUnifiedItemsByTags(writingState.allItems, writingState.selectedTags);
+
+  // Get items to display (paginated)
+  const itemsToShow = filteredItems.slice(0, writingState.displayedCount);
+  const hasMore = filteredItems.length > writingState.displayedCount;
+
+  // Collect all unique tags from ALL items (not just visible)
+  const allTags = new Set();
+  writingState.allItems.forEach(item => {
+    (item.tags || []).forEach(tag => allTags.add(tag));
+  });
+
+  // Render filter bar
+  const filterBarHtml = renderUnifiedFilterBar(
+    Array.from(allTags).sort(),
+    writingState.selectedTags
+  );
+
+  // Render items
+  const itemsHtml = itemsToShow.map(item => renderUnifiedItem(item)).join('');
+
+  // Render load more button
+  const loadMoreHtml = hasMore ? `
+    <button class="load-more-btn">
+      Load More (${filteredItems.length - writingState.displayedCount} remaining)
+    </button>
+  ` : '';
 
   container.innerHTML = `
     <div class="writing-container">
       <div class="writing-header">
-        <p class="writing-subtitle">${items.length} posts since 2022</p>
+        <p class="writing-subtitle">${filteredItems.length} posts since 2011</p>
         ${filterBarHtml}
       </div>
       ${
         filteredItems.length === 0
           ? '<div class="empty-state"><p>No writing matches the selected filter.</p></div>'
           : `<div class="list-container">
-              ${filteredItems.map((item) => renderListItem(item)).join("")}
-            </div>`
+              ${itemsHtml}
+            </div>
+            ${loadMoreHtml}`
       }
     </div>
   `;
 
-  // Setup filter interactions
-  setupSectionFilterInteractions(container, writingFilterState, items, renderListContent);
+  setupUnifiedFilterInteractions(container);
+  setupLoadMoreButton(container);
 }
 
-function renderListItem(item) {
+function filterUnifiedItemsByTags(items, selectedTags) {
+  if (selectedTags.size === 0) return items;
+  return items.filter(item => {
+    if (!item.tags || item.tags.length === 0) return false;
+    return Array.from(selectedTags).every(tag => item.tags.includes(tag));
+  });
+}
+
+function renderUnifiedFilterBar(tags, selectedTags) {
+  if (tags.length === 0) return "";
+
+  return `<div class="code-filter-bar">
+    ${tags
+      .map(
+        tag => `
+      <button class="code-filter-tag ${selectedTags.has(tag) ? "active" : ""}"
+              data-tag="${escapeHtml(tag)}">
+        ${escapeHtml(tag)}
+      </button>
+    `
+      )
+      .join("")}
+  </div>`;
+}
+
+function renderUnifiedItem(item) {
+  const dateStr = new Date(item.date).toLocaleDateString('en-US', {
+    year: 'numeric', month: 'short', day: 'numeric'
+  });
+
+  // Archive badge
+  const archiveBadge = item.isArchive
+    ? '<span class="archive-badge">archive</span>'
+    : '';
+
+  // Link handling - archive goes to internal route, writing goes external
+  const linkHref = item.isArchive
+    ? `#archive/${item.filename}`
+    : item.url;
+  const linkTarget = item.isArchive ? '' : 'target="_blank" rel="noopener"';
+
+  const tagsHtml = (item.tags || [])
+    .map(tag => `<span class="tech-tag">${escapeHtml(tag)}</span>`)
+    .join('');
+
   return `
-    <div class="list-item">
+    <article class="list-item">
       <div class="list-item-header">
         <h3 class="list-item-title">
-          ${
-            item.url
-              ? `<a href="${escapeHtml(
-                  item.url
-                )}" target="_blank" rel="noopener noreferrer">${escapeHtml(
-                  item.title
-                )}</a>`
-              : escapeHtml(item.title)
+          ${linkHref
+            ? `<a href="${escapeHtml(linkHref)}" ${linkTarget}>${escapeHtml(item.title)}</a>`
+            : escapeHtml(item.title)
           }
+          ${archiveBadge}
         </h3>
-        ${
-          item.date
-            ? `<span class="list-item-date">${escapeHtml(item.date)}</span>`
-            : ""
-        }
+        <span class="list-item-date">${dateStr}</span>
       </div>
-      ${
-        item.subtitle
-          ? `<p class="list-item-subtitle">${escapeHtml(item.subtitle)}</p>`
-          : ""
-      }
-      ${
-        item.description
-          ? `<p class="list-item-description">${escapeHtml(
-              item.description
-            )}</p>`
-          : ""
-      }
-      ${
-        item.tech && item.tech.length > 0
-          ? `<div class="list-item-tech">${renderTechTags(item.tech)}</div>`
-          : ""
-      }
-    </div>
+      ${item.subtitle ? `<p class="list-item-subtitle">${escapeHtml(item.subtitle)}</p>` : ''}
+      ${item.description ? `<p class="list-item-description">${escapeHtml(item.description)}</p>` : ''}
+      ${tagsHtml ? `<div class="list-item-tech">${tagsHtml}</div>` : ''}
+    </article>
   `;
+}
+
+function setupUnifiedFilterInteractions(container) {
+  const filterTags = container.querySelectorAll('.code-filter-tag');
+  filterTags.forEach(tagBtn => {
+    tagBtn.addEventListener('click', () => {
+      const tag = tagBtn.dataset.tag;
+      if (writingState.selectedTags.has(tag)) {
+        // Clicking active tag clears it
+        writingState.selectedTags.clear();
+      } else {
+        // Clicking new tag clears others and selects this one
+        writingState.selectedTags.clear();
+        writingState.selectedTags.add(tag);
+      }
+      // Reset to first page when filter changes
+      writingState.displayedCount = writingState.PAGE_SIZE;
+      renderListContent(container);
+    });
+  });
+}
+
+function setupLoadMoreButton(container) {
+  const btn = container.querySelector('.load-more-btn');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      writingState.displayedCount += writingState.PAGE_SIZE;
+      renderListContent(container);
+    });
+  }
 }
 
 // ==========================================================================
@@ -1228,7 +1363,7 @@ async function renderArchiveArticle(container, filename) {
     console.error("Failed to load article:", error);
     container.innerHTML = `
       <div class="archive-article">
-        <a href="#archive" class="archive-back-link">← Back to Archive</a>
+        <a href="#writing" class="archive-back-link">← Back to Writing</a>
         <div class="empty-state"><p>Failed to load article.</p></div>
       </div>
     `;
@@ -1238,8 +1373,8 @@ async function renderArchiveArticle(container, filename) {
       backLink.addEventListener("click", (e) => {
         e.preventDefault();
         state.currentArticle = null;
-        window.history.pushState(null, null, "#archive");
-        renderArchiveList(container);
+        window.history.pushState(null, null, "#writing");
+        switchCategory("writing");
       });
     }
   }
@@ -1322,7 +1457,7 @@ function displayArticle(container, markdownContent, meta) {
 
   container.innerHTML = `
     <div class="archive-article">
-      <a href="#archive" class="archive-back-link">← Back to Archive</a>
+      <a href="#writing" class="archive-back-link">← Back to Writing</a>
       <article class="archive-article-content">
         <header class="archive-article-header">
           <h1 class="archive-article-title">${escapeHtml(
@@ -1352,8 +1487,8 @@ function displayArticle(container, markdownContent, meta) {
     backLink.addEventListener("click", (e) => {
       e.preventDefault();
       state.currentArticle = null;
-      window.history.pushState(null, null, "#archive");
-      renderArchiveList(container);
+      window.history.pushState(null, null, "#writing");
+      switchCategory("writing");
     });
   }
 }
