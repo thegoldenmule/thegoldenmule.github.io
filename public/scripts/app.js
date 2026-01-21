@@ -31,6 +31,7 @@ const writingFilterState = {
 const archiveState = {
   expandedYears: new Set(),
   articlesCache: new Map(),
+  selectedTags: new Set(),
 };
 
 // ==========================================================================
@@ -361,7 +362,10 @@ function renderListContent(container, items) {
 
   container.innerHTML = `
     <div class="writing-container">
-      ${filterBarHtml}
+      <div class="writing-header">
+        <p class="writing-subtitle">${items.length} posts since 2022</p>
+        ${filterBarHtml}
+      </div>
       ${
         filteredItems.length === 0
           ? '<div class="empty-state"><p>No writing matches the selected filter.</p></div>'
@@ -1069,9 +1073,29 @@ async function renderArchiveList(container) {
     return;
   }
 
-  // Group posts by year
-  const postsByYear = {};
+  // Collect all unique tags from all posts
+  const allTags = new Set();
   manifest.posts.forEach((post) => {
+    if (post.tags) {
+      post.tags.forEach((tag) => allTags.add(tag));
+    }
+  });
+  const sortedTags = Array.from(allTags).sort();
+
+  // Filter posts by selected tags
+  let filteredPosts = manifest.posts;
+  if (archiveState.selectedTags.size > 0) {
+    filteredPosts = manifest.posts.filter((post) => {
+      if (!post.tags) return false;
+      return Array.from(archiveState.selectedTags).every((tag) =>
+        post.tags.includes(tag)
+      );
+    });
+  }
+
+  // Group filtered posts by year
+  const postsByYear = {};
+  filteredPosts.forEach((post) => {
     const year = new Date(post.date).getFullYear();
     if (!postsByYear[year]) postsByYear[year] = [];
     postsByYear[year].push(post);
@@ -1080,21 +1104,65 @@ async function renderArchiveList(container) {
   // Sort years descending
   const years = Object.keys(postsByYear).sort((a, b) => b - a);
 
+  // Build filter bar HTML
+  const filterBarHtml = sortedTags.length > 0 ? `
+    <div class="code-filter-bar">
+      ${sortedTags
+        .map(
+          (tag) => `
+        <button class="code-filter-tag ${
+          archiveState.selectedTags.has(tag) ? "active" : ""
+        }" data-tag="${escapeHtml(tag)}">
+          ${escapeHtml(tag)}
+        </button>
+      `
+        )
+        .join("")}
+    </div>
+  ` : "";
+
   container.innerHTML = `
     <div class="archive-container">
       <div class="archive-header">
-        <h2 class="archive-title">Archive</h2>
         <p class="archive-subtitle">${
-          manifest.totalPosts
-        } posts from 2011-2022</p>
+          archiveState.selectedTags.size > 0
+            ? `${filteredPosts.length} of ${manifest.totalPosts} posts`
+            : `${manifest.totalPosts} posts from 2011-2022`
+        }</p>
+        ${filterBarHtml}
       </div>
-      <div class="archive-timeline">
-        ${years
-          .map((year) => renderArchiveYear(year, postsByYear[year]))
-          .join("")}
-      </div>
+      ${
+        filteredPosts.length === 0
+          ? '<div class="empty-state"><p>No posts match the selected tags.</p></div>'
+          : `<div class="archive-timeline">
+              ${years
+                .map((year) => renderArchiveYear(year, postsByYear[year]))
+                .join("")}
+            </div>`
+      }
     </div>
   `;
+
+  // Setup filter interactions
+  setupArchiveFilterInteractions(container, manifest);
+}
+
+function setupArchiveFilterInteractions(container, manifest) {
+  const filterTags = container.querySelectorAll(".code-filter-tag");
+  filterTags.forEach((tagBtn) => {
+    tagBtn.addEventListener("click", () => {
+      const tag = tagBtn.dataset.tag;
+      if (archiveState.selectedTags.has(tag)) {
+        // Clicking active tag clears it
+        archiveState.selectedTags.delete(tag);
+      } else {
+        // Add tag to selection (allows multiple)
+        archiveState.selectedTags.add(tag);
+      }
+      // Re-render the archive list
+      renderArchiveList(container);
+    });
+  });
 }
 
 function renderArchiveYear(year, posts) {
@@ -1118,11 +1186,18 @@ function renderArchivePost(post) {
     year: "numeric",
   });
 
+  const tagsHtml = post.tags && post.tags.length > 0
+    ? `<span class="archive-post-tags">${post.tags.map(t => `<span class="tech-tag">${escapeHtml(t)}</span>`).join("")}</span>`
+    : "";
+
   return `
     <div class="archive-post">
       <a href="#archive/${escapeHtml(post.filename)}" class="archive-post-link">
         <span class="archive-post-title">${escapeHtml(post.title)}</span>
-        <span class="archive-post-date">${escapeHtml(formattedDate)}</span>
+        <span class="archive-post-meta">
+          ${tagsHtml}
+          <span class="archive-post-date">${escapeHtml(formattedDate)}</span>
+        </span>
       </a>
     </div>
   `;

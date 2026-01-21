@@ -248,6 +248,25 @@ button {
   margin: 0 auto;
 }
 
+.writing-header {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.writing-subtitle {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  padding-bottom: var(--spacing-md);
+}
+
+.writing-header .code-filter-bar {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 .list-item {
   padding: var(--spacing-lg) 0;
   border-bottom: 1px solid var(--color-border);
@@ -1033,6 +1052,13 @@ button {
   font-size: 0.9375rem;
   color: var(--color-text-muted);
   margin: 0;
+  padding-bottom: var(--spacing-md);
+}
+
+.archive-header .code-filter-bar {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* Archive Timeline */
@@ -1120,6 +1146,24 @@ button {
 .archive-post-title {
   font-size: 0.9375rem;
   line-height: 1.4;
+}
+
+.archive-post-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.archive-post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.archive-post-tags .tech-tag {
+  font-size: 0.5625rem;
+  padding: 1px 5px;
 }
 
 .archive-post-date {
@@ -1606,6 +1650,16 @@ button {
 
   .archive-post:last-child .archive-post-link {
     border-bottom: none;
+  }
+
+  .archive-post-meta {
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+
+  .archive-post-tags {
+    order: 1;
+    width: 100%;
   }
 
   .archive-article-title {

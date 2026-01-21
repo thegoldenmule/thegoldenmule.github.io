@@ -1,3 +1,9 @@
+---
+name: tag-article
+description: Analyze archive article content and apply relevant tags from the canonical tag list
+argument-hint: [filename]
+---
+
 # Tag Article Skill
 
 Analyze archive article content and apply relevant tags from the canonical tag list.
