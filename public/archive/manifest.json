@@ -7,798 +7,1008 @@
       "date": "2022-07-05T19:42:02.000Z",
       "filename": "2022-07-05-winterizing.md",
       "originalUrl": "https://thegoldenmule.com/blog/2022/07/winterizing/",
-      "tags": ["reviews", "philosophy"]
+      "tags": ["reviews", "philosophy"],
+      "subtitle": "Putting the blog into cold storage",
+      "description": "Who can make sense of this? Thoughts on bad writing, and why it's worth keeping."
     },
     {
       "title": "Deferred vs Forward Thinking",
       "date": "2020-12-11T22:51:20.000Z",
       "filename": "2020-12-11-deferred-vs-forward-thinking.md",
       "originalUrl": "https://thegoldenmule.com/blog/2020/12/deferred-vs-forward-thinking/",
-      "tags": ["deep-dives", "graphics", "cg"]
+      "tags": ["deep-dives", "graphics", "cg", "philosophy"],
+      "subtitle": "Graphics rendering as a metaphor for problem solving",
+      "description": "Can we solve everything by thinking through it carefully? I think not."
     },
     {
       "title": "git is for everyone",
       "date": "2020-03-13T00:37:29.000Z",
       "filename": "2020-03-12-git-is-for-everyone.md",
       "originalUrl": "https://thegoldenmule.com/blog/2020/03/git-is-for-everyone/",
-      "tags": ["software", "learning"]
+      "tags": ["software", "learning", "philosophy"],
+      "subtitle": "Linus does it again",
+      "description": "Why git's core concepts could revolutionize creative workflows for writers, musicians, and artists."
     },
     {
       "title": "Stochastic reading",
       "date": "2020-02-04T17:02:53.000Z",
       "filename": "2020-02-04-stochastic-reading.md",
       "originalUrl": "https://thegoldenmule.com/blog/2020/02/stochastic-reading/",
-      "tags": ["philosophy", "learning"]
+      "tags": ["philosophy", "learning"],
+      "subtitle": "Embracing the chaos",
+      "description": "A meditation on Cusak-inspired reading."
     },
     {
       "title": "Translations Part I: German words, Eskimos, and isometries",
       "date": "2020-01-22T21:35:58.000Z",
       "filename": "2020-01-22-translations-part-i-german-words-eskimos-and-isome.md",
       "originalUrl": "https://thegoldenmule.com/blog/2020/01/translations-part-i-german-words-eskimos-and-isometries/",
-      "tags": ["philosophy", "graphics"]
+      "tags": ["philosophy", "graphics"],
+      "subtitle": "On impossibilities",
+      "description": "In which I appeal to Baltic German cyberneticists, Eskimo wisdom, and Gauss's Theorema Egregium to explore why perfect communication between different perspectives is mathematically impossible."
     },
     {
       "title": "Like a Child",
       "date": "2019-12-08T22:42:49.000Z",
       "filename": "2019-12-08-like-a-child.md",
       "originalUrl": "https://thegoldenmule.com/blog/2019/12/like-a-child/",
-      "tags": ["philosophy", "learning"]
+      "tags": ["philosophy", "learning"],
+      "subtitle": "Masters unlearn to see with fresh eyes",
+      "description": "From Picasso to Alan Kay, I explore how computing and art pioneers mastered their craft."
     },
     {
       "title": "Superluminal Learning",
       "date": "2019-11-27T17:00:56.000Z",
       "filename": "2019-11-27-superluminal-learning.md",
       "originalUrl": "https://thegoldenmule.com/blog/2019/11/superluminal/",
-      "tags": ["learning", "physics"]
+      "tags": ["learning", "physics"],
+      "subtitle": "Learning quantum computing by getting it wrong",
+      "description": "In which I attempt to disprove a Fermilab physicist."
     },
     {
       "title": "The Hard Things About Simple Things",
       "date": "2019-02-06T18:32:04.000Z",
       "filename": "2019-02-06-the-hard-things-about-simple-things.md",
       "originalUrl": "https://thegoldenmule.com/blog/2019/02/the-hard-things-about-simple-things/",
-      "tags": ["philosophy", "software"]
+      "tags": ["philosophy", "software"],
+      "subtitle": "Simplicity is HARD.",
+      "description": "An appeal to Kahneman, Polya, and Piaget proves that writing simple systems is counterintuitive."
     },
     {
       "title": "On Trees",
       "date": "2017-11-12T20:26:58.000Z",
       "filename": "2017-11-12-on-trees.md",
       "originalUrl": "https://thegoldenmule.com/blog/2017/11/on-trees/",
-      "tags": ["philosophy", "software"]
+      "tags": ["philosophy", "software"],
+      "subtitle": "Programming is woodworking, not engineering",
+      "description": "A meditation on exactly how blue my collar is."
     },
     {
       "title": "How Breadth Leads to More Interesting Specialization",
       "date": "2017-08-21T17:07:58.000Z",
       "filename": "2017-08-21-how-breadth-leads-to-more-interesting-specializati.md",
       "originalUrl": "https://thegoldenmule.com/blog/2017/08/how-breadth-leads-to-more-interesting-specialization/",
-      "tags": ["philosophy", "software"]
+      "tags": ["philosophy", "software"],
+      "subtitle": "Be the rare intersection of multiple skills",
+      "description": "Specialization is a trap. Instead, be the rare intersection of multiple skills."
     },
     {
       "title": "The Coke Glass",
       "date": "2017-08-14T17:45:20.000Z",
       "filename": "2017-08-14-the-coke-glass.md",
       "originalUrl": "https://thegoldenmule.com/blog/2017/08/the-coke-glass/",
-      "tags": ["history", "philosophy"]
+      "tags": ["history", "philosophy"],
+      "subtitle": "A childhood memory of kindness",
+      "description": "Have you ever been to the Coca-Cola world headquarters? Be the kind stranger in my memory."
     },
     {
       "title": "Avrdude Part I: Setting up an Environment",
       "date": "2017-08-04T16:00:25.000Z",
       "filename": "2017-08-04-avrdude-part-i-setting-up-an-environment.md",
       "originalUrl": "https://thegoldenmule.com/blog/2017/08/avrdude-part-i-setting-up-an-environment/",
-      "tags": ["experiments", "c", "software"]
+      "tags": ["experiments", "c", "software", "hardware"],
+      "subtitle": "Building a proper Arduino development workflow",
+      "description": "A comprehensive guide to setting up a professional Arduino development environment using Makefiles, Vim, and Catch for unit testing, rejecting the default Arduino IDE."
     },
     {
       "title": "The Miller's Tale",
       "date": "2017-07-28T16:00:32.000Z",
       "filename": "2017-07-28-the-millers-tale.md",
       "originalUrl": "https://thegoldenmule.com/blog/2017/07/the-millers-tale/",
-      "tags": ["philosophy", "history"]
+      "tags": ["philosophy", "history", "experiments", "c", "hardware"],
+      "subtitle": "From Chaucer to CNC milling PCBs",
+      "description": "It's hard, making PCBs, but crazily enough I actually pulled it off."
     },
     {
       "title": "I've made a huge mistake",
       "date": "2017-07-21T16:07:12.000Z",
       "filename": "2017-07-21-ive-made-a-huge-mistake.md",
       "originalUrl": "https://thegoldenmule.com/blog/2017/07/ive-made-a-huge-mistake/",
-      "tags": ["software", "js"]
+      "tags": ["software", "js"],
+      "subtitle": "An app that requires a small star to power",
+      "description": "Introducing natural-log, a cross-platform log server that consumes an absurd amount of disk space and memory."
     },
     {
       "title": "On Studying",
       "date": "2017-07-15T16:15:55.000Z",
       "filename": "2017-07-15-on-studying.md",
       "originalUrl": "https://thegoldenmule.com/blog/2017/07/on-studying/",
-      "tags": ["learning", "philosophy"]
+      "tags": ["learning", "philosophy"],
+      "subtitle": "Falling down rabbit holes of knowledge",
+      "description": "A night spent following links from a simple tweet through compiler theory, Rust papers, and Clang bug reports, celebrating the joy of curiosity-driven learning."
     },
     {
       "title": "Dynamic Code Execution in Unity",
       "date": "2017-07-13T04:13:38.000Z",
       "filename": "2017-07-12-dynamic-code-execution-in-unity.md",
       "originalUrl": "https://thegoldenmule.com/blog/2017/07/dynamic-code-execution-in-unity/",
-      "tags": ["deep-dives", "unity", "cs"]
+      "tags": ["deep-dives", "unity", "cs"],
+      "subtitle": "Running JavaScript in Unity",
+      "description": "A fork of the Jint JavaScript interpreter modified to run in Unity, enabling downloadable scripts and a working REPL on AOT-compiled platforms like iOS."
     },
     {
       "title": "Reading Roundup",
       "date": "2016-07-25T06:51:05.000Z",
       "filename": "2016-07-25-reading-roundup.md",
       "originalUrl": "https://thegoldenmule.com/blog/2016/07/reading-roundup-4/",
-      "tags": ["learning", "software"]
+      "tags": ["learning", "software"],
+      "subtitle": "Haskell, Java type erasure, and Dart's VM",
+      "description": "A curated collection of programming reads exploring the thought processes behind different languages: Haskell's learning curve, Java's type erasure debate, and why Dart skipped bytecode."
     },
     {
       "title": "Do Computers Dream?",
       "date": "2015-06-18T23:50:56.000Z",
       "filename": "2015-06-18-do-computers-dream.md",
       "originalUrl": "https://thegoldenmule.com/blog/2015/06/do-computers-dream/",
-      "tags": ["ai", "graphics"]
+      "tags": ["ai", "graphics"],
+      "subtitle": "Google's neural network hallucinations",
+      "description": "This aged poorly, didn't it? Google's Inceptionism research is more than random noise."
     },
     {
       "title": "On the Complexities of Graphics Drivers (also how does software even work)",
       "date": "2015-03-13T21:54:04.000Z",
       "filename": "2015-03-13-on-the-complexities-of-graphics-drivers-also-how-d.md",
       "originalUrl": "https://thegoldenmule.com/blog/2015/03/on-the-complexities-of-graphics-drivers-also-how-does-software-even-work/",
-      "tags": ["deep-dives", "graphics"]
+      "tags": ["deep-dives", "graphics", "hardware"],
+      "subtitle": "An ex-NVIDIA engineer reveals driver chaos",
+      "description": "You won't catch me writing a graphics driver, and it's definitely not becuase I'm woefully unequipped."
     },
     {
       "title": "Cinder is Fun.",
       "date": "2015-01-11T07:00:59.000Z",
       "filename": "2015-01-11-cinder-is-fun.md",
       "originalUrl": "https://thegoldenmule.com/blog/2015/01/cinder-is-fun/",
-      "tags": ["experiments", "c", "graphics"]
+      "tags": ["experiments", "c", "graphics"],
+      "subtitle": "Creative coding in C++ with Cinder",
+      "description": "Experiments with Cinder, a C++ library for creative coding."
     },
     {
       "title": "Quick Trick: Generics as a Decorator",
       "date": "2015-01-06T08:00:09.000Z",
       "filename": "2015-01-06-quick-trick-generics-as-a-decorator.md",
       "originalUrl": "https://thegoldenmule.com/blog/2015/01/quick-trick-generics-as-a-decorator/",
-      "tags": ["quick-tips", "unity", "cs"]
+      "tags": ["quick-tips", "unity", "cs"],
+      "subtitle": "Using generic parameters instead of attributes",
+      "description": "A C# pattern for Unity that uses generic type parameters to associate classes, avoiding the need for attribute decorators and providing strongly-typed APIs."
     },
     {
       "title": "Softworking",
       "date": "2014-12-28T20:00:43.000Z",
       "filename": "2014-12-28-softworking.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/12/softworking/",
-      "tags": ["philosophy", "software"]
+      "tags": ["philosophy", "software"],
+      "subtitle": "Programming as craft versus credential",
+      "description": "Incredibly, I used to believe that people cared what code looked like."
     },
     {
       "title": "You Should Backup Your Emails! or I'm a Grumpy Old Man!",
       "date": "2014-12-28T12:08:10.000Z",
       "filename": "2014-12-28-you-should-backup-your-emails-or-im-a-grumpy-old-m.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/12/you-should-backup-your-emails-or-im-a-grumpy-old-man/",
-      "tags": ["teaching", "python"]
+      "tags": ["teaching", "python", "experiments"],
+      "subtitle": "Simple Python scripts for email archival",
+      "description": "A few hundred lines of Python to backup over 100,000 emails."
     },
     {
       "title": "On the daily effects of thermodynamics",
       "date": "2014-11-27T22:53:34.000Z",
       "filename": "2014-11-27-on-the-daily-effects-of-thermodynamics.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/11/on-the-daily-effects-of-thermodynamics/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "A visual meditation on entropy",
+      "description": "An old draft from 2011 featuring an image about the heat death of the universe and everyday thermodynamics."
     },
     {
       "title": "The Intersection of Visual  Art and Mathematics",
       "date": "2014-11-25T00:12:20.000Z",
       "filename": "2014-11-24-the-intersection-of-visual-art-and-mathematics.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/11/the-intersection-of-visual-art-and-mathematics/",
-      "tags": ["graphics", "cg"]
+      "tags": ["graphics", "cg"],
+      "subtitle": "On the shared ancestry of math and art",
+      "description": "A beautiful example of mathematical visualization through shader programming."
     },
     {
       "title": "Creating a Worm",
       "date": "2014-11-19T02:20:54.000Z",
       "filename": "2014-11-18-creating-a-worm.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/11/1065/",
-      "tags": ["ai", "software"]
-    },
-    {
-      "title": "New Clock My End Time As We Know It",
-      "date": "2014-11-04T02:42:54.000Z",
-      "filename": "2014-11-03-new-clock-my-end-time-as-we-know-it.md",
-      "originalUrl": "https://thegoldenmule.com/blog/2014/11/new-clock-my-end-time-as-we-know-it/",
-      "tags": ["physics", "software"]
+      "tags": ["ai", "software"],
+      "subtitle": "OpenWorm simulates a brain in software",
+      "description": "The OpenWorm project mapped all 302 neurons of C. elegans and built a software simulation where behavior emerges without programming or learning."
     },
     {
       "title": "My Sideproject",
       "date": "2014-10-18T05:12:33.000Z",
       "filename": "2014-10-18-my-sideproject.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/10/my-sideproject/",
-      "tags": ["unity", "games"]
-    },
-    {
-      "title": "Be Very Afraid.",
-      "date": "2014-10-11T05:12:38.000Z",
-      "filename": "2014-10-11-be-very-afraid.md",
-      "originalUrl": "https://thegoldenmule.com/blog/2014/10/be-very-afraid/",
-      "tags": ["software", "physics"]
+      "tags": ["unity", "games"],
+      "subtitle": "UnityInEnglish on GitHub",
+      "description": "A tongue-in-cheek link to perhaps the greatest GitHub repository in existence: UnityInEnglish."
     },
     {
       "title": "Scene Graph Traversal",
       "date": "2014-09-19T22:59:26.000Z",
       "filename": "2014-09-19-scene-graph-traversal.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/09/scene-graph-traversal/",
-      "tags": ["unity", "games", "cs"]
+      "tags": ["unity", "games", "cs"],
+      "subtitle": "</rant>",
+      "description": "Frustrations with Unity's scene graph API."
     },
     {
       "title": "The IBM 360",
       "date": "2014-09-17T23:26:32.000Z",
       "filename": "2014-09-17-the-ibm-360.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/09/the-ibm-360/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "Technology is always exciting, in any age",
+      "description": "A quote from John H. Lienhard."
     },
     {
       "title": "Hutchins-Maslow",
       "date": "2014-09-17T02:50:47.000Z",
       "filename": "2014-09-16-hutchins-maslow.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/09/hutchins-maslow/",
-      "tags": ["philosophy", "learning"]
+      "tags": ["philosophy", "learning"],
+      "subtitle": "On rats and human motivation research",
+      "description": "Not much to say."
     },
     {
       "title": "Homeless",
       "date": "2014-09-05T23:14:10.000Z",
       "filename": "2014-09-05-homeless.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/09/homeless/",
-      "tags": ["history", "philosophy"]
+      "tags": ["history", "philosophy", "fiction"],
+      "subtitle": "Watching trains by the sugar factory",
+      "description": "A short fictional piece."
     },
     {
       "title": "No Faberge Eggs, Just Brass Balls",
       "date": "2014-09-04T21:45:06.000Z",
       "filename": "2014-09-04-no-faberge-eggs-just-brass-balls.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/09/no-faberge-eggs-just-brass-balls/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "McIlroy's legendary critique of Knuth",
+      "description": "The story of Doug McIlroy replacing Donald Knuth's 10-page literate Pascal program with a six-line Unix shell script."
     },
     {
       "title": "Potato Salad",
       "date": "2014-08-31T05:46:14.000Z",
       "filename": "2014-08-31-potato-salad.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/08/potato-salad/",
-      "tags": ["history", "philosophy"]
+      "tags": ["history", "philosophy"],
+      "subtitle": "The unwritten recipe of a mother's cooking",
+      "description": "A loving meditation on the irreplicable nature of family recipes."
     },
     {
       "title": "The Junior Ranger Badge",
       "date": "2014-07-29T06:48:24.000Z",
       "filename": "2014-07-29-the-junior-ranger-badge.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/07/the-junior-ranger-badge/",
-      "tags": ["history", "philosophy"]
+      "tags": ["history", "philosophy", "fiction"],
+      "subtitle": "A road trip and mysterious mail",
+      "description": "A cross-country journey in a terrible Chevy Cobalt leads to a mysterious Junior Ranger."
     },
     {
       "title": "On: On Go",
       "date": "2014-06-26T23:47:33.000Z",
       "filename": "2014-06-26-on-on-go.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/06/on-on-go/",
-      "tags": ["learning", "go"]
+      "tags": ["learning", "go"],
+      "subtitle": "A three-day reading plan for humility",
+      "description": "You know nothing about programming languages."
     },
     {
       "title": "Ten Dollars Well Spent",
       "date": "2014-04-28T05:49:34.000Z",
       "filename": "2014-04-28-ten-dollars-well-spent.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/04/ten-dollars-well-spent/",
-      "tags": ["philosophy", "history"]
+      "tags": ["philosophy", "history"],
+      "subtitle": "What else is money for?",
+      "description": "Love is hard."
     },
     {
       "title": "Reading Roundup",
       "date": "2014-03-27T02:20:30.000Z",
       "filename": "2014-03-26-reading-roundup.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/03/reading-roundup-3/",
-      "tags": ["learning", "software"]
+      "tags": ["learning", "software", "history"],
+      "subtitle": "Array indexing origins and Worse is Better",
+      "description": "Why do array indices start at zero (involving yacht racing) and Richard Gabriel's essay on why Lisp lost to simpler languages."
     },
     {
       "title": "Satoshi Nakamoto, Time Traveler",
       "date": "2014-03-22T03:31:52.000Z",
       "filename": "2014-03-21-satoshi-nakamoto-time-traveler.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/03/satoshi-nakamoto-is-a-time-traveler/",
-      "tags": ["philosophy", "web3"]
+      "tags": ["philosophy", "web3", "fiction"],
+      "subtitle": "Bitcoin's mysterious creator",
+      "description": "Have you ever seen Timecop? Me neither but I'd bet 2 satoshis that Satoshi has."
     },
     {
       "title": "Interesting thing of the day!",
       "date": "2014-03-12T03:25:17.000Z",
       "filename": "2014-03-11-interesting-thing-of-the-day.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/03/interesting-thing-of-the-day/",
-      "tags": ["experiments", "python", "ai"]
+      "tags": ["experiments", "python", "ai"],
+      "subtitle": "Who knew?",
+      "description": "Fascinating NLP discoveries..."
     },
     {
-      "title": "bo-X Behind the Scenes: Part I – Overview",
+      "title": "bo-X Behind the Scenes: Part I - Overview",
       "date": "2014-03-11T11:48:51.000Z",
       "filename": "2014-03-11-bo-x-behind-the-scenes-part-i-overview.md",
       "originalUrl": "https://thegoldenmule.com/blog/2014/03/bo-x-behind-the-scenes-part-i-overview/",
-      "tags": ["deep-dives", "webgl", "graphics", "js"]
+      "tags": ["deep-dives", "webgl", "graphics", "js"],
+      "subtitle": "Building a 2D WebGL rendering engine",
+      "description": "Lessons from creating bo-X, a 2D rendering engine on WebGL."
     },
     {
       "title": "Kristmas Klein Bagel!",
       "date": "2013-12-24T23:37:50.000Z",
       "filename": "2013-12-24-kristmas-klein-bagel.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/12/kristmas-klein-bagel/",
-      "tags": ["experiments", "graphics", "webgl"]
+      "tags": ["experiments", "graphics", "webgl"],
+      "subtitle": "Who said three dimentions were enough?",
+      "description": "A holiday Klein bottle visualization."
     },
     {
       "title": "SuperColliders in Unity",
       "date": "2013-12-12T02:10:46.000Z",
       "filename": "2013-12-11-supercolliders-in-unity.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/12/supercolliders-in-unity/",
-      "tags": ["teaching", "unity", "physics", "games"]
+      "tags": ["teaching", "unity", "physics", "games"],
+      "subtitle": "Separating Axis Theorem for collision detection",
+      "description": "Implementing SAT for efficient narrow-phase collision detection between convex polyhedra, scaling to 50k cubes at 60fps in Unity."
     },
     {
       "title": "Ninject and Unity",
       "date": "2013-12-10T04:42:51.000Z",
       "filename": "2013-12-09-ninject-and-unity.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/12/ninject-and-unity/",
-      "tags": ["teaching", "unity", "cs"]
+      "tags": ["teaching", "unity", "cs"],
+      "subtitle": "Dependency injection, anyone?",
+      "description": "Configuring Ninject with reflection-based injection for iOS is a TREAT."
     },
     {
       "title": "Interview Question: Which Side of a Square?",
       "date": "2013-09-24T09:37:40.000Z",
       "filename": "2013-09-24-interview-question-which-side-of-a-square.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/09/interview-question-which-side-of-a-square/",
-      "tags": ["teaching", "software", "graphics"]
+      "tags": ["teaching", "software", "graphics"],
+      "subtitle": "Point-to-square quadrant using slope arithmetic",
+      "description": "Determining which side of a square a point faces without trigonometry, using only slope calculations and simple comparisons."
     },
     {
       "title": "Of Wisdom Teeth and Acceleration",
       "date": "2013-09-09T22:37:01.000Z",
       "filename": "2013-09-09-of-wisdom-teeth-and-acceleration.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/09/of-wisdom-teeth-and-acceleration/",
-      "tags": ["experiments", "software"]
+      "tags": ["experiments", "software"],
+      "subtitle": "RC car telemetry with a Netduino",
+      "description": "Building an accelerometer-based data logger using pulse width modulation and hardware interrupts to track RC car performance."
     },
     {
       "title": "Python on the Bus: Particles",
       "date": "2013-08-21T03:39:26.000Z",
       "filename": "2013-08-20-python-on-the-bus-particles.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/08/python-on-the-bus-particles/",
-      "tags": ["experiments", "python", "mobile"]
+      "tags": ["experiments", "python", "mobile"],
+      "subtitle": "Mobile particle physics in 90 lines",
+      "description": "A Python particle engine using Pythonista's accelerometer on iPhone, with a ring buffer and simple physics model."
     },
     {
       "title": "Just a Thought: Virtual and Final as Contracts",
       "date": "2013-08-09T22:49:41.000Z",
       "filename": "2013-08-09-just-a-thought-virtual-and-final-as-contracts.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/08/just-a-thought-virtual-and-final-as-contracts/",
-      "tags": ["deep-dives", "software", "java", "cs"]
+      "tags": ["deep-dives", "software", "java", "cs"],
+      "subtitle": "Virtual and final as API contracts",
+      "description": "Comparing Java's default-virtual to C#'s default-final and their implications for class extensibility and visible contracts."
     },
     {
       "title": "Quick Post: Repeat",
       "date": "2013-08-02T06:55:58.000Z",
       "filename": "2013-08-02-quick-post-repeat.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/08/quick-post-repeat/",
-      "tags": ["quick-tips", "cs"]
+      "tags": ["quick-tips", "cs"],
+      "subtitle": "Fluent integer repetition extension",
+      "description": "A C# extension method enabling syntax like 10.Repeat(DoStuff) for cleaner loops and random iteration counts."
     },
     {
       "title": "Reading Roundup",
       "date": "2013-08-01T07:15:36.000Z",
       "filename": "2013-08-01-reading-roundup.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/08/reading-roundup-2/",
-      "tags": ["learning", "software"]
+      "tags": ["learning", "software"],
+      "subtitle": "Articles on programming's future",
+      "description": "Links covering Alan Kay on invention, garbage collection misconceptions, mobile web performance, and Bret Victor's paradigm-shifting lecture."
     },
     {
       "title": "More Memoization",
       "date": "2013-07-25T23:18:45.000Z",
       "filename": "2013-07-25-more-memoization.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/07/more-memoization/",
-      "tags": ["teaching", "cs", "software"]
+      "tags": ["teaching", "cs", "software"],
+      "subtitle": "Generic memoization extension for Func",
+      "description": "A simple C# extension method that caches function results using a dictionary, demonstrated with Fibonacci calculation."
     },
     {
       "title": "Reading Roundup",
       "date": "2013-05-21T08:01:31.000Z",
       "filename": "2013-05-21-reading-roundup.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/05/reading-roundup/",
-      "tags": ["learning", "software"]
+      "tags": ["learning", "software"],
+      "subtitle": "Links on C#, engineering, and Lisp",
+      "description": "Curated reading featuring Anders Hejlsberg's C# design vision, effective engineering practices, Lisp fundamentals, and JavaScript patterns."
     },
     {
       "title": "Quick Post: Easy Enums",
       "date": "2013-04-19T01:28:49.000Z",
       "filename": "2013-04-18-quick-post-easy-enums.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/04/quick-post-easy-enums/",
-      "tags": ["quick-tips", "cs"]
+      "tags": ["quick-tips", "cs"],
+      "subtitle": "Best practices for enum definitions",
+      "description": "Using Unset, Default, and NumEnums values for array indexing and iteration convenience in C# enum design."
     },
     {
       "title": "Quick Post: My JS File Template",
       "date": "2013-03-20T20:40:09.000Z",
       "filename": "2013-03-20-quick-post-my-js-file-template.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/03/quick-post-my-js-file-template/",
-      "tags": ["quick-tips", "js"]
+      "tags": ["quick-tips", "js"],
+      "subtitle": "A closure-wrapped JavaScript class template",
+      "description": "A PHPStorm file template pattern using IIFEs, prototypes, proper scoping, and easy Node.js export compatibility."
     },
     {
       "title": "C# Musings…",
       "date": "2013-03-08T02:28:21.000Z",
       "filename": "2013-03-07-c-musings.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/03/c-musings/",
-      "tags": ["software", "cs"]
+      "tags": ["software", "cs"],
+      "subtitle": "Wishlist for C# generics and constraints",
+      "description": "Proposing variadic generics, interface-fulfilling extensions, and constructor constraints with parameters for future C# versions."
     },
     {
       "title": "Quick Post: Currying Func (and variants)",
       "date": "2013-03-07T04:49:37.000Z",
       "filename": "2013-03-06-quick-post-currying-func-and-variants.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/03/quick-post-currying-func-and-variants/",
-      "tags": ["quick-tips", "cs", "software"]
+      "tags": ["quick-tips", "cs", "software"],
+      "subtitle": "Extension methods for Func currying",
+      "description": "Simple C# extension methods that enable partial application of Func delegates with varying parameter counts."
     },
     {
       "title": "Quick Post: Sum Table",
       "date": "2013-02-09T21:26:31.000Z",
       "filename": "2013-02-09-quick-post-sum-table.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/02/quick-post-sum-table/",
-      "tags": ["quick-tips", "software"]
+      "tags": ["quick-tips", "software"],
+      "subtitle": "Constant-time range sums",
+      "description": "A data structure for computing the sum of any range in an array with O(1) lookup after O(n) preprocessing."
     },
     {
       "title": "Real-Time Clouds Pt 2: The Actual Cloud Part",
       "date": "2013-01-29T22:47:23.000Z",
       "filename": "2013-01-29-real-time-clouds-pt-2-the-actual-cloud-part.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/01/real-time-clouds-pt-2-the-actual-cloud-part/",
-      "tags": ["teaching", "graphics", "unity", "cg"]
+      "tags": ["teaching", "graphics", "unity", "cg"],
+      "subtitle": "Fractal sums for cloud rendering",
+      "description": "Composing multiple noise frequencies into morphing, translating clouds using Perlin's fractal sum technique in Unity shaders."
     },
     {
       "title": "Real-Time Clouds Pt 1: A Study of Noise Functions",
       "date": "2013-01-24T23:36:19.000Z",
       "filename": "2013-01-24-real-time-clouds-pt-1-a-study-of-noise-functions.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/01/real-time-clouds-pt-1-a-study-of-noise-functions/",
-      "tags": ["deep-dives", "graphics", "unity"]
+      "tags": ["deep-dives", "graphics", "unity"],
+      "subtitle": "Understanding gradient lattice noise",
+      "description": "Exploring classic Perlin-style noise functions using gradient interpolation and permutation textures for procedural texturing."
     },
     {
       "title": "Earthican Shader",
       "date": "2013-01-15T02:38:52.000Z",
       "filename": "2013-01-14-earthican-shader.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/01/earthican-shader-2/",
-      "tags": ["teaching", "graphics", "unity", "cg"]
+      "tags": ["teaching", "graphics", "unity", "cg"],
+      "subtitle": "Surface shaders for planet rendering",
+      "description": "Creating Earth-like visuals by flattening ocean vertices and blending terrain colors based on distance from the sphere center."
     },
     {
       "title": "Book Review: Effective C#",
       "date": "2013-01-13T01:58:51.000Z",
       "filename": "2013-01-12-book-review-effective-c.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/01/book-review-effective-c/",
-      "tags": ["reviews", "learning", "cs"]
+      "tags": ["reviews", "learning", "cs"],
+      "subtitle": "An essential C# guide",
+      "description": "A glowing review of Bill Wagner's book that explains compiler decisions, CLR internals, and why C# works the way it does."
     },
     {
       "title": "Spherical Terrain Generation",
       "date": "2013-01-08T05:54:07.000Z",
       "filename": "2013-01-07-spherical-terrain-generation.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/01/spherical-terrain-generation/",
-      "tags": ["teaching", "graphics", "unity"]
+      "tags": ["teaching", "graphics", "unity"],
+      "subtitle": "Generating planet terrain with random planes",
+      "description": "Using iterative plane-based vertex displacement to create realistic spherical terrain on geosphere meshes in Unity."
     },
     {
       "title": "Geosphere: Revisited",
       "date": "2013-01-06T22:41:01.000Z",
       "filename": "2013-01-06-geosphere-revisited.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/01/geosphere-revisited/",
-      "tags": ["teaching", "graphics", "webgl"]
+      "tags": ["teaching", "graphics", "webgl"],
+      "subtitle": "Evenly distributed spherical mesh generation",
+      "description": "Building spheres by subdividing icosahedrons to avoid wasted geometry at the poles, with Unity implementation code."
     },
     {
       "title": "Procedural Texture Fun",
       "date": "2013-01-06T06:33:56.000Z",
       "filename": "2013-01-06-procedural-texture-fun.md",
       "originalUrl": "https://thegoldenmule.com/blog/2013/01/procedural-texture-fun/",
-      "tags": ["teaching", "graphics", "unity", "cg"]
+      "tags": ["teaching", "graphics", "unity", "cg"],
+      "subtitle": "Anti-aliasing procedural shaders with smoothstep",
+      "description": "Creating brick textures and polar coordinate patterns in Unity shaders, solving aliasing issues with cubic interpolation."
     },
     {
       "title": "Quick Post: Geospheres",
       "date": "2012-12-04T05:26:45.000Z",
       "filename": "2012-12-03-quick-post-geospheres.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/12/quick-post-geospheres/",
-      "tags": ["experiments", "graphics", "webgl"]
+      "tags": ["experiments", "graphics", "webgl"],
+      "subtitle": "An interactive geosphere terrain generator demo",
+      "description": "A quick WebGL demo for subdividing a mesh into a sphere and applying procedural noise for terrain generation, with keyboard controls for interaction."
     },
     {
       "title": "Why quaternions?",
       "date": "2012-10-02T02:13:27.000Z",
       "filename": "2012-10-01-why-quaternions.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/10/why-quaternions/",
-      "tags": ["teaching", "graphics", "physics"]
+      "tags": ["teaching", "graphics", "physics"],
+      "subtitle": "Why quaternions beat matrices for 3D rotations",
+      "description": "An introduction to quaternions as an extension of complex numbers, demonstrating their dramatically faster inverse calculation compared to matrix inversion."
     },
     {
       "title": "Why you should think five times before writing a singleton",
       "date": "2012-09-26T02:19:01.000Z",
       "filename": "2012-09-25-why-you-should-think-five-times-before-writing-a-s.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/09/why-you-should-think-five-times-before-writing-a-singleton/",
-      "tags": ["teaching", "software"]
+      "tags": ["teaching", "software"],
+      "subtitle": "Problems with singletons and better alternatives",
+      "description": "A critique of the singleton pattern covering subclassing issues, hidden instantiation, and threading problems, with simpler alternatives using static references."
     },
     {
       "title": "On functional programming in classical languages",
       "date": "2012-09-18T06:41:22.000Z",
       "filename": "2012-09-18-on-functional-programming-in-classical-languages.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/09/on-functional-programming-in-classical-languages/",
-      "tags": ["teaching", "software", "flash"]
+      "tags": ["teaching", "software", "flash"],
+      "subtitle": "Implementing currying and memoization in AS3",
+      "description": "Adding functional programming constructs to ActionScript 3, with implementations of function currying and memoization for caching return values."
     },
     {
       "title": "Small Static Factory Methods",
       "date": "2012-09-14T04:44:59.000Z",
       "filename": "2012-09-13-small-static-factory-methods.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/09/small-static-factory-methods/",
-      "tags": ["teaching", "software", "flash"]
+      "tags": ["teaching", "software", "flash"],
+      "subtitle": "Cocoa-style factory methods in ActionScript",
+      "description": "Advocating for static factory methods in AS3 inspired by Cocoa patterns, providing cleaner object creation with read-only properties."
     },
     {
       "title": "RestExpressionNode not yet implemented",
       "date": "2012-09-12T21:41:52.000Z",
       "filename": "2012-09-12-restexpressionnode-not-yet-implemented.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/09/restexpressionnode-not-yet-implemented/",
-      "tags": ["flash", "software"]
+      "tags": ["flash", "software"],
+      "subtitle": "A cryptic MXMLC compiler error explained",
+      "description": "Documenting the unhelpful MXMLC error that occurs when accidentally passing rest parameters with spread syntax instead of the array directly."
     },
     {
       "title": "Why Inheritance Is \"Broken\"",
       "date": "2012-09-07T21:47:54.000Z",
       "filename": "2012-09-07-why-inheritance-is-broken.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/09/why-inheritance-is-broken/",
-      "tags": ["deep-dives", "software", "teaching"]
+      "tags": ["deep-dives", "software", "teaching"],
+      "subtitle": "Favoring composition over class inheritance",
+      "description": "A comprehensive argument for composition over inheritance, examining how classical inheritance bundles implementation, contract, and type in problematic ways."
     },
     {
       "title": "On Limiting the Horrors of Objective-C++",
       "date": "2012-07-26T04:04:22.000Z",
       "filename": "2012-07-25-on-limiting-the-horrors-of-objective-c.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/07/on-limiting-the-horrors-of-objective-c/",
-      "tags": ["teaching", "objc", "c", "physics", "mobile"]
+      "tags": ["teaching", "objc", "c", "physics", "mobile"],
+      "subtitle": "Using opaque pointers to isolate C++ code",
+      "description": "A technique for limiting Objective-C++ file proliferation when using Box2D by wrapping C++ objects in opaque pointer structs within Objective-C classes."
     },
     {
       "title": "Funtimes",
       "date": "2012-07-26T01:07:04.000Z",
       "filename": "2012-07-25-funtimes.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/07/funtimes/",
-      "tags": ["teaching", "flash"]
+      "tags": ["teaching", "flash"],
+      "subtitle": "A one-liner array replacement trick",
+      "description": "A quick tip showing how to replace all elements of an array with elements from another array using splice and apply in a single line."
     },
     {
       "title": "Not a Function",
       "date": "2012-05-18T05:08:21.000Z",
       "filename": "2012-05-18-not-a-function.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/05/not-a-function/",
-      "tags": ["flash", "software"]
+      "tags": ["flash", "software"],
+      "subtitle": "A quirky AS3 scoping error",
+      "description": "A brief example of the confusing error message when defining a function inside a switch case block in ActionScript 3."
     },
     {
       "title": "Itsy Updates (plus a bonus tutorial)!",
       "date": "2012-05-15T05:48:23.000Z",
       "filename": "2012-05-15-itsy-updates-plus-a-bonus-tutorial.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/05/itsy-updates-plus-a-bonus-tutorial/",
-      "tags": ["teaching", "graphics", "js"]
+      "tags": ["teaching", "graphics", "js"],
+      "subtitle": "New fire effects and custom plugin tutorial",
+      "description": "Showcasing improved fire particle effects in Itsy with a tutorial on writing custom plugins, including a mouse-following smoke trail example."
     },
     {
       "title": "How E4X Ruined My Otherwise Inoffensive Day",
       "date": "2012-05-08T21:36:01.000Z",
       "filename": "2012-05-08-how-e4x-ruined-my-otherwise-inoffensive-day.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/05/how-e4x-ruined-my-otherwise-inoffensive-day/",
-      "tags": ["teaching", "flash"]
+      "tags": ["teaching", "flash"],
+      "subtitle": "The frustrations of XML attribute checking in AS3",
+      "description": "A rant about E4X in ActionScript 3, specifically the unintuitive XMLList behavior and hacky workarounds needed to check if an attribute exists."
     },
     {
       "title": "Weekend Update",
       "date": "2012-05-07T22:19:13.000Z",
       "filename": "2012-05-07-weekend-update.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/05/weekend-update/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "A status update on upcoming projects",
+      "description": "A brief update on pending blog posts about Itsy updates, a spritesheet tool, Flash optimizations, and progress on a novel started during NaNoWriMo."
     },
     {
       "title": "Away3D 4.0-beta",
       "date": "2012-03-17T07:24:58.000Z",
       "filename": "2012-03-17-away3d-40-beta.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/03/away3d-4-0-beta/",
-      "tags": ["experiments", "flash", "graphics", "physics"]
+      "tags": ["experiments", "flash", "graphics", "physics"],
+      "subtitle": "A 3D demo combining Away3D and Box2D",
+      "description": "An interactive Flash demo using Away3D 4.0-beta for 3D rendering with Box2D physics on the XZ plane, featuring movement, shooting, and jumping."
     },
     {
       "title": "QuickPost: Faking gravity",
       "date": "2012-02-22T03:32:58.000Z",
       "filename": "2012-02-21-quickpost-faking-gravity.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/02/quickpost-faking-gravity/",
-      "tags": ["teaching", "physics", "games"]
+      "tags": ["teaching", "physics", "games"],
+      "subtitle": "Using Newton's equations for parametric motion",
+      "description": "A quick technique for simulating realistic projectile motion without physics engines, using Newton's kinematic equations as parametric functions."
     },
     {
       "title": "Goldbach's Conjecture",
       "date": "2012-01-21T07:57:22.000Z",
       "filename": "2012-01-21-goldbachs-conjecture.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/01/goldbachs-conjecture/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "A visual representation of number theory",
+      "description": "An image illustrating Goldbach's Conjecture, the unsolved mathematical proposition that every even integer greater than two is the sum of two primes."
     },
     {
       "title": "Putting the Funk Back in Funktional Programming",
       "date": "2012-01-17T01:59:45.000Z",
       "filename": "2012-01-16-putting-the-funk-back-in-funktional-programming.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/01/putting-the-funk-back-in-funktional-programming/",
-      "tags": ["experiments", "games", "js"]
+      "tags": ["experiments", "games", "js"],
+      "subtitle": "Remaking Scorched Earth in JavaScript",
+      "description": "Announcing Scorch3d, a JavaScript remake of the classic DOS artillery game Scorched Earth, built as an HTML5 learning exercise."
     },
     {
       "title": "Itsy Examples",
       "date": "2012-01-15T02:49:25.000Z",
       "filename": "2012-01-14-itsy-examples.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/01/itsy-examples/",
-      "tags": ["teaching", "graphics", "js"]
+      "tags": ["teaching", "graphics", "js"],
+      "subtitle": "Interactive demos of the Itsy particle system",
+      "description": "Three interactive particle effect demos showcasing Itsy's capabilities: explosions, fire effects, and attractor-based charging animations."
     },
     {
-      "title": "Itsy– a cute name for an otherwise uncaring particle system",
+      "title": "Itsy-- a cute name for an otherwise uncaring particle system",
       "date": "2012-01-12T03:50:16.000Z",
       "filename": "2012-01-11-itsy-a-cute-name-for-an-otherwise-uncaring-particl.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/01/itsy-a-cute-name-for-an-otherwise-uncaring-particle-system/",
-      "tags": ["teaching", "graphics", "js"]
+      "tags": ["teaching", "graphics", "js"],
+      "subtitle": "A lightweight plugin-driven JavaScript particle system",
+      "description": "Introducing Itsy, a sub-2kb particle system for HTML5 canvas that uses a decorator pattern for extensibility through plugins."
     },
     {
       "title": "Cursory Observations on Cursors",
       "date": "2012-01-08T03:12:50.000Z",
       "filename": "2012-01-07-cursory-observations-on-cursors.md",
       "originalUrl": "https://thegoldenmule.com/blog/2012/01/cursory-observations-on-cursors/",
-      "tags": ["teaching", "web", "js"]
+      "tags": ["teaching", "web", "js"],
+      "subtitle": "Preventing unwanted text selection in HTML5",
+      "description": "A humorous exploration of how to stop browsers from highlighting everything in HTML5 canvas games using CSS user-select properties."
     },
     {
       "title": "Pragmatically Parsing Plists without Pruning Your Persimmons (if you know what I mean)",
       "date": "2011-12-02T03:30:56.000Z",
       "filename": "2011-12-01-pragmatically-parsing-plists-without-pruning-your-.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/12/pragmatically-parsing-plists-without-pruning-your-persimmons-if-you-know-what-i-mean/",
-      "tags": ["teaching", "js", "web"]
+      "tags": ["teaching", "js", "web"],
+      "subtitle": "A lightweight JavaScript plist parser",
+      "description": "A simple JavaScript library to parse Apple's plist XML format into JSON-like objects, avoiding the need for heavyweight XML parsing libraries."
     },
     {
       "title": "A coming of age story",
       "date": "2011-11-15T08:56:38.000Z",
       "filename": "2011-11-15-a-coming-of-age-story.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/11/a-coming-of-age-story-featuring-thegoldenmule/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "Taking on NaNoWriMo",
+      "description": "A brief update on participating in National Novel Writing Month, putting the blog on hold to write 50,000 words in 30 days."
     },
     {
       "title": "A Portrait of the Programmer as a Young Man",
       "date": "2011-11-09T03:56:32.000Z",
       "filename": "2011-11-08-a-portrait-of-the-programmer-as-a-young-man.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/11/a-portrait-of-the-programmer-as-a-young-man/",
-      "tags": ["learning", "java", "software"]
+      "tags": ["learning", "java", "software"],
+      "subtitle": "On the opacity of Java and Joyce",
+      "description": "A reflection comparing the inscrutability of Java programming to James Joyce's prose—both requiring a certain genius to truly appreciate."
     },
     {
       "title": "Letter from R. Atwater to T. Edison, circa 1868",
       "date": "2011-10-31T02:16:42.000Z",
       "filename": "2011-10-30-letter-from-r-atwater-to-t-edison-circa-1868.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/10/letter-from-r-atwater-to-t-edison-circa-1868/",
-      "tags": ["history", "ai"]
+      "tags": ["history", "ai"],
+      "subtitle": "A fictional letter about machine invention",
+      "description": "An imagined 1868 letter describing a creation machine that generates inventions but becomes trapped generating only copies of itself—an early meditation on AI."
     },
     {
       "title": "Just driving though",
       "date": "2011-10-30T05:11:26.000Z",
       "filename": "2011-10-30-just-driving-though.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/10/just-driving-though/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "A brief encounter with wisdom",
+      "description": "A short reflective piece about meeting an old stranger whose directions came from experience rather than maps."
     },
     {
       "title": "Finally! A use for flash_proxy!",
       "date": "2011-10-21T22:43:07.000Z",
       "filename": "2011-10-21-finally-a-use-for-flash_proxy.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/10/finally-a-use-for-flash_proxy/",
-      "tags": ["teaching", "flash"]
+      "tags": ["teaching", "flash"],
+      "subtitle": "Dynamic property propagation with Proxy",
+      "description": "An elegant use of ActionScript's Proxy class to propagate property changes across collections, enabling group tweening without explicit getters and setters."
     },
     {
       "title": "Injecting SVN revision number via Maven",
       "date": "2011-10-19T23:34:04.000Z",
       "filename": "2011-10-19-injecting-svn-revision-number-via-maven.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/10/injecting-svn-revision-number-via-maven/",
-      "tags": ["teaching", "java", "groovy"]
+      "tags": ["teaching", "java", "groovy"],
+      "subtitle": "Automatic version stamping with Maven and Groovy",
+      "description": "Using Maven's buildnumber plugin and Groovy scripts to compile SVN revision numbers directly into builds, solving browser cache debugging nightmares."
     },
     {
       "title": "Re:flexion!",
       "date": "2011-10-16T23:45:56.000Z",
       "filename": "2011-10-16-reflexion.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/10/reflexion/",
-      "tags": ["teaching", "flash"]
+      "tags": ["teaching", "flash"],
+      "subtitle": "Custom metadata for automatic XML serialization",
+      "description": "Using Flash's describeType() and custom [SaveProperty] metadata to automatically serialize objects to XML without writing property-by-property code."
     },
     {
       "title": "Q&A: Unite Flash Day 2011",
       "date": "2011-09-29T08:31:30.000Z",
       "filename": "2011-09-29-qa-unite-flash-day-2011.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/09/qa-unite-flash-day-2011/",
-      "tags": ["flash", "unity", "history"]
+      "tags": ["flash", "unity", "history"],
+      "subtitle": "When Flash developers meet Unity",
+      "description": "A sardonic recounting of the misguided questions Flash developers asked at Unity's announcement of SWF export support."
     },
     {
       "title": "On conditional compilation in Flex and why it kind of sucks",
       "date": "2011-09-20T02:29:22.000Z",
       "filename": "2011-09-19-on-conditional-compilation-in-flex-and-why-it-kind.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/09/on-conditional-compilation-in-flex-and-why-it-kind-of-sucks/",
-      "tags": ["teaching", "flash", "mobile"]
+      "tags": ["teaching", "flash", "mobile"],
+      "subtitle": "The dual nature of Flex compiler constants",
+      "description": "A cautionary tale about Flex compiler constants that behave as both compile-time and runtime constructs, causing unexpected crashes when combining conditions."
     },
     {
       "title": "On the yumminess of NSSet and her applications to javascript",
       "date": "2011-09-15T02:12:49.000Z",
       "filename": "2011-09-14-on-the-yumminess-of-nsset-and-her-applications-to-.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/09/on-the-yumminess-of-nsset-and-her-applications-to-javascript/",
-      "tags": ["teaching", "js", "objc"]
+      "tags": ["teaching", "js", "objc"],
+      "subtitle": "Mathematical set operations in JavaScript",
+      "description": "JSSet: a JavaScript implementation of mathematical set operations including union, intersection, cartesian product, and powerset, inspired by Cocoa's NSSet."
     },
     {
       "title": "Turns out, thegoldenmule plays drums",
       "date": "2011-09-14T22:23:37.000Z",
       "filename": "2011-09-14-turns-out-thegoldenmule-plays-drums.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/09/turns-out-thegoldenmule-plays-drums/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "A musical side of programming",
+      "description": "Sharing a studio EP recording from a Christian band, showcasing the author's drumming alongside software engineering."
     },
     {
       "title": "An algorithm for suffix stripping…",
       "date": "2011-09-12T21:49:44.000Z",
       "filename": "2011-09-12-an-algorithm-for-suffix-stripping.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/09/an-algorithm-for-suffix-stripping/",
-      "tags": ["teaching", "software", "js"]
+      "tags": ["teaching", "software", "js"],
+      "subtitle": "Implementing Porter's Stemming Algorithm",
+      "description": "A JavaScript implementation of Porter's stemming algorithm for reducing words to their roots, useful for building search engines."
     },
     {
       "title": "Mathematician Murderer",
       "date": "2011-09-07T20:19:45.000Z",
       "filename": "2011-09-07-mathematician-murderer.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/09/mathematician-murderer/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "A mathematical murder mystery",
+      "description": "A one-liner joke about a serial killer whose crimes follow the Fibonacci sequence."
     },
     {
       "title": "Internet, Einstein; Einstein, Internet",
       "date": "2011-08-31T01:18:32.000Z",
       "filename": "2011-08-30-internet-einstein-einstein-internet.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/internet-einstein-einstein-internet/",
-      "tags": ["experiments", "physics", "js"]
+      "tags": ["experiments", "physics", "js"],
+      "subtitle": "A relativistic physics simulator in JavaScript",
+      "description": "Exploring special relativity through code: building a simulator that demonstrates Lorentz transformations and length contraction at near-light speeds."
     },
     {
       "title": "e: Model of Modesty",
       "date": "2011-08-22T23:09:55.000Z",
       "filename": "2011-08-22-e-model-of-modesty.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/e-model-of-modesty/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "A tribute to Euler's constant",
+      "description": "A visual appreciation of the mathematical constant e and its understated elegance."
     },
     {
       "title": "SOSTrace — now in JS!",
       "date": "2011-08-18T22:21:33.000Z",
       "filename": "2011-08-18-sostrace-now-in-js.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/sostrace-now-in-js/",
-      "tags": ["teaching", "haxe", "js"]
+      "tags": ["teaching", "haxe", "js"],
+      "subtitle": "Cross-platform trace targeting for HaXe",
+      "description": "Adding JavaScript support to the HaXe SOSTrace library using Flash's XMLSocket as a proxy for WebSocket-less browsers."
     },
     {
       "title": "Classes inside of classes inside of classes inside of…",
       "date": "2011-08-17T22:12:09.000Z",
       "filename": "2011-08-17-classes-inside-of-classes-inside-of-classes-inside.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/classes-inside-of-classes-inside-of-classes-inside-of/",
-      "tags": ["teaching", "flash"]
+      "tags": ["teaching", "flash"],
+      "subtitle": "AS3 reflection for nested class instantiation",
+      "description": "A solution for using getDefinitionByName to instantiate embedded classes in ActionScript 3, including the required qualified name prefix trick."
     },
     {
       "title": "After we'd lost our way",
       "date": "2011-08-13T01:50:05.000Z",
       "filename": "2011-08-12-after-wed-lost-our-way.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/after-wed-lost-our-way/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "A short fiction about code as religion",
+      "description": "A brief dystopian vignette imagining a future where priests maintain incomprehensible ancient code, knowing only the rituals, not the meaning."
     },
     {
       "title": "How to Pwn Web-Apps (for web-app n00bs)",
       "date": "2011-08-11T21:58:42.000Z",
       "filename": "2011-08-11-how-to-pwn-web-apps-for-web-app-n00bs.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/how-to-pwn-web-apps-for-web-app-n00bs/",
-      "tags": ["teaching", "js", "web", "mobile"]
+      "tags": ["teaching", "js", "web", "mobile"],
+      "subtitle": "Hard-won lessons in cross-browser development",
+      "description": "Eight practical tips for building HTML5 web apps targeting multiple browsers and touchscreen devices, from jQuery to touch events."
     },
     {
       "title": "Transcend THIS!",
       "date": "2011-08-10T22:05:52.000Z",
       "filename": "2011-08-10-transcend-this.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/transcend-this/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "When transcendental numbers get rowdy",
+      "description": "A visual joke about the mathematical concept of transcendental numbers."
     },
     {
       "title": "Targeting SOSmax in HaXe",
       "date": "2011-08-05T23:36:55.000Z",
       "filename": "2011-08-05-targeting-sosmax-in-haxe.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/targeting-sosmax-in-haxe/",
-      "tags": ["teaching", "haxe", "flash"]
+      "tags": ["teaching", "haxe", "flash"],
+      "subtitle": "Better logging for HaXe development",
+      "description": "How to redirect HaXe's trace() function to SOSmax, an XML socket server, for improved debugging during Flash and Unity development."
     },
     {
       "title": "Discourse on how far the Apple falls from the tree",
       "date": "2011-08-04T23:44:05.000Z",
       "filename": "2011-08-04-discourse-on-how-far-the-apple-falls-from-the-tree.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/discourse-on-how-far-the-apple-falls-from-the-tree/",
-      "tags": ["software", "history", "objc"]
+      "tags": ["software", "history", "objc"],
+      "subtitle": "Apple's assault on capitalization rules",
+      "description": "A satirical observation on how Apple products have quietly amended English grammar rules with their lowercase 'i' naming convention."
     },
     {
       "title": "Concerning linear algebra and its applications to love",
       "date": "2011-08-03T03:04:47.000Z",
       "filename": "2011-08-02-concerning-linear-algebra-and-its-applications-to-.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/miss-matrix/",
-      "tags": ["graphics", "history"]
+      "tags": ["graphics", "history"],
+      "subtitle": "A mathematical romance",
+      "description": "A visual pun connecting linear algebra matrices to matters of the heart."
     },
     {
       "title": "Terramorphic Genesis Algorithms (or Terrain Generation)",
       "date": "2011-08-01T23:12:26.000Z",
       "filename": "2011-08-01-terramorphic-genesis-algorithms-or-terrain-generat.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/08/terramorphic-genesis-algorithms-or-terrain-generation/",
-      "tags": ["teaching", "graphics", "games", "js"]
+      "tags": ["teaching", "graphics", "games", "js"],
+      "subtitle": "Two approaches to procedural terrain",
+      "description": "Exploring limited-random and circle-hill algorithms for generating Scorched Earth-style terrain, with JavaScript implementations and live demos."
     },
     {
       "title": "Concerning my first encounter with the factorial symbol",
       "date": "2011-07-29T22:13:40.000Z",
       "filename": "2011-07-29-concerning-my-first-encounter-with-the-factorial-s.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/07/concerning-my-first-encounter-with-the-factorial-symbol/",
-      "tags": ["history", "software"]
+      "tags": ["history", "software"],
+      "subtitle": "When math notation gets exciting",
+      "description": "A visual joke about the surprising emotional impact of discovering factorial notation for the first time."
     },
     {
       "title": "The Savant Test",
       "date": "2011-07-27T22:32:59.000Z",
       "filename": "2011-07-27-the-savant-test.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/07/the-savant-test/",
-      "tags": ["software", "history"]
+      "tags": ["software", "history"],
+      "subtitle": "A poem about parental programming expectations",
+      "description": "A short, playful poem imagining the absurd parenting technique of testing toddlers on hash cracking."
     },
     {
       "title": "Maven Just Needs Some Closure",
       "date": "2011-07-26T23:18:52.000Z",
       "filename": "2011-07-26-maven-just-needs-some-closure.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/07/maven-just-needs-some-closure/",
-      "tags": ["teaching", "java", "js", "web"]
+      "tags": ["teaching", "java", "js", "web"],
+      "subtitle": "Integrating Google Closure with Maven builds",
+      "description": "A step-by-step guide to configuring Maven with the wro4j plugin to minify and optimize JavaScript using Google's Closure Compiler."
     },
     {
       "title": "The Coder's Tale",
       "date": "2011-07-26T01:41:28.000Z",
       "filename": "2011-07-25-the-coders-tale.md",
       "originalUrl": "https://thegoldenmule.com/blog/2011/07/the-coders-tale/",
-      "tags": ["history", "web", "software"]
+      "tags": ["history", "web", "software"],
+      "subtitle": "A humorous ode to early web development",
+      "description": "A tongue-in-cheek reflection on programmer insecurity, sparked by a childhood memory of being shamed for not knowing the marquee tag."
     }
   ]
 }
