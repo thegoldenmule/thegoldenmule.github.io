@@ -694,6 +694,15 @@ button {
   color: #2563eb;
 }
 
+.career-child--media {
+  border-left: 3px solid #f59e0b;
+}
+
+.career-child--media .career-child-type {
+  background: #fef3c7;
+  color: #d97706;
+}
+
 .career-child-date {
   font-size: 0.75rem;
   color: var(--color-text-muted);

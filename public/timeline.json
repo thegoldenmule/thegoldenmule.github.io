@@ -21,7 +21,14 @@
           "description": "A (fairly) deep dive into how I'm using an LLM to make a server-authoritative, multiplayer-by-default casual game.",
           "url": "https://thegoldenmule.medium.com/how-an-llm-is-making-my-bulletproof-casual-game-e986c4844c1f",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*fqAnmQl6T2EnLlfCmXROaw.jpeg",
-          "tech": ["ai", "games", "learning", "deep-dives"]
+          "tech": [
+            "ai",
+            "games",
+            "learning",
+            "backend",
+            "frontend",
+            "deep-dives"
+          ]
         },
         {
           "category": "publications",
@@ -76,7 +83,7 @@
           "description": "We are running so many live events, it's not even funny.",
           "url": "https://medium.com/spyre-io/hangman-liveops-abbcd59124ac",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hfLHbXzIAvv1AfF9tyt6GA.jpeg",
-          "tech": ["games", "liveops", "deep-dives"]
+          "tech": ["games", "liveops", "deep-dives", "backend", "frontend"]
         },
         {
           "category": "publications",
@@ -120,7 +127,14 @@
           "description": "It's been a wild ride, but we've learned a few things by running a game with 20k active users all by our lonesome.",
           "url": "https://medium.com/spyre-io/hangman-updates-and-lessons-learned-f9d2fd1ecba3",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*CDZOcK1V9a93iYIG.png",
-          "tech": ["games", "liveops", "deep-dives", "web3"]
+          "tech": [
+            "games",
+            "liveops",
+            "deep-dives",
+            "web3",
+            "backend",
+            "frontend"
+          ]
         },
         {
           "category": "publications",
@@ -142,7 +156,7 @@
           "description": "Look, it's more complicated than it sounds, okay?? An embarrassing story and a full walkthrough of how I implemented bucketed leaderboards in Nakama.",
           "url": "https://medium.com/spyre-io/nakama-deep-dive-leaderboards-e8d41688d53e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*a40QxPUkXsUfK5Y-YiYOng.jpeg",
-          "tech": ["games", "liveops", "deep-dives"]
+          "tech": ["games", "liveops", "deep-dives", "backend"]
         },
         {
           "category": "publications",
@@ -153,7 +167,7 @@
           "description": "There's no denying that the Web3 ecosystem is a Dark Forest. It is particularly necessary to provide a robust security model. Here we explain how we implemented a fair match system for our casual-competitive game.",
           "url": "https://medium.com/spyre-io/fair-matches-in-web3-6d32fe508e5e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*U0T6Bmt1ulPEkDe_bUpBKA.jpeg",
-          "tech": ["games", "web3", "liveops", "deep-dives"]
+          "tech": ["games", "web3", "liveops", "deep-dives", "backend"]
         },
         {
           "category": "publications",
@@ -164,7 +178,7 @@
           "description": "Web3 is a hot mess of 'builders' building for other 'builders'. Where are the actual products and what problems are they actually solving?",
           "url": "https://medium.com/spyre-io/what-belongs-on-a-blockchain-57ed37bde544",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*3MFleJbGRwsQL7d0maS7Ew.png",
-          "tech": ["games", "web3"]
+          "tech": ["games", "web3", "backend"]
         },
         {
           "category": "publications",
@@ -186,7 +200,7 @@
           "description": "Unity is a great engine, but it has its weak spots. In this article, I defend our decision to use a web-native engine instead.",
           "url": "https://medium.com/spyre-io/a-tale-of-two-engines-dc80250e397a",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sghqgWIHhDLlyIzxs_lTqw.jpeg",
-          "tech": ["games", "deep-dives"]
+          "tech": ["games", "deep-dives", "frontend"]
         },
         {
           "category": "publications",
@@ -219,7 +233,7 @@
           "description": "Account Abstraction, or Smart Wallets, are the newest fad. Everyone and their grandmother is making wallets. So why have we chosen to skip them for now?",
           "url": "https://medium.com/spyre-io/a-counterpoint-to-account-abstraction-df71d1f179d9",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zSHIlzSPQP-b-HkD2B_mPg.jpeg",
-          "tech": ["web3", "deep-dives"]
+          "tech": ["web3", "deep-dives", "backend"]
         },
         {
           "category": "publications",
@@ -230,7 +244,7 @@
           "description": "Did I mention I teach in the CS Masters program at Saint Louis University? For my computer graphics course, we pair-programmed an entire 3D engine from scratch.",
           "url": "https://thegoldenmule.medium.com/a-complete-ish-3d-engine-in-1200-lines-b5babf4b72ed",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KidhxH5QHiplzlXv6SOU6g.jpeg",
-          "tech": ["games", "graphics", "deep-dives", "teaching"]
+          "tech": ["games", "graphics", "deep-dives", "teaching", "frontend"]
         },
         {
           "category": "publications",
@@ -736,7 +750,7 @@
           "size": 38
         },
         {
-          "category": "publications",
+          "category": "media",
           "title": "Thirdweb Accelerator Recipient",
           "subtitle": "Partnering with Thirdweb for our first game.",
           "type": "games",
@@ -1057,7 +1071,7 @@
           "description": "Yes yes, I could have used what the last professor had prepped -- but what's the fun in that? Here are all my under-appreciated slide decks to walk students through the construction of a 3D graphics engine from scratch.",
           "url": "https://drive.google.com/drive/u/2/folders/1jWaDK59EUUIbPWz3FdeVNZOX2VgYKoUc",
           "imageUrl": "tex/slu-graphics.png",
-          "tech": []
+          "tech": ["teaching", "graphics", "deep-dives"]
         }
       ]
     },

@@ -571,10 +571,20 @@ function renderCareerChild(child) {
     : "";
   const isWriting =
     child.type === "writing" || child.category === "publications";
-  const typeClass = isWriting
-    ? "career-child--writing"
-    : "career-child--project";
-  const typeLabel = isWriting ? "Writing" : "Project";
+  const isMedia =
+    child.type === "media" || child.category === "media";
+
+  let typeClass, typeLabel;
+  if (isWriting) {
+    typeClass = "career-child--writing";
+    typeLabel = "Writing";
+  } else if (isMedia) {
+    typeClass = "career-child--media";
+    typeLabel = "Media";
+  } else {
+    typeClass = "career-child--project";
+    typeLabel = "Project";
+  }
 
   return `
     <div class="career-child ${typeClass}">
