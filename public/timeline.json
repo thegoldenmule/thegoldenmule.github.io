@@ -730,6 +730,28 @@
       "children": [
         {
           "category": "products",
+          "title": "Powerhouse Reactor",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "2026",
+          "description": "The central reactive document server for all Powerhouse products. Event-sourced, realtime, and decentralized.",
+          "url": "https://www.powerhouse.inc/",
+          "imageUrl": "tex/powerhouse.jpg",
+          "tech": ["web3", "software", "ts"]
+        },
+        {
+          "category": "media",
+          "title": "Featured on Movement Labs Parthenon",
+          "subtitle": "Featured on Movement Labs community platform",
+          "type": "",
+          "date": "Nov 2025",
+          "description": "Hangman Clash featured as a quest on Movement Labs' Parthenon Odyssey community program.",
+          "url": "https://parthenon.movementlabs.xyz/quests/cmeqktrgd000608jwfjwh181i",
+          "imageUrl": "tex/parthenon.png",
+          "tech": ["games", "web3"]
+        },
+        {
+          "category": "products",
           "title": "Hangman Clash",
           "subtitle": "A Goldenmule Media first.",
           "type": "games",
@@ -800,17 +822,6 @@
           "description": "An incredibly complicated fix deep inside of Nakama's JS library. Okay it was a one-liner but it was a hard to find one-liner.",
           "url": "https://github.com/heroiclabs/nakama-js/pull/196",
           "imageUrl": "tex/nakama.png",
-          "tech": ["ts"]
-        },
-        {
-          "category": "products",
-          "title": "Powerhouse Partner",
-          "subtitle": "Building tools for DAOs.",
-          "type": "software",
-          "date": "2024",
-          "description": "I've got a jacket and everything. Officially a Powerhouse parner, building out core technology for the MakerDAO Sustainable Ecosystem Scaling Core Unit.",
-          "url": "https://powerhouse.inc",
-          "imageUrl": "tex/powerhouse.jpg",
           "tech": ["ts"]
         },
         {
