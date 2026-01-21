@@ -5,15 +5,23 @@
 // State
 const state = {
   data: null,
-  currentCategory: 'career',
-  techFilter: 'all'
+  currentCategory: "career",
+  techFilter: "all",
+  archiveManifest: null,
+  currentArticle: null,
 };
 
 // Code Explorer State
 const codeExplorerState = {
   expandedFolders: new Set(),
   expandedFiles: new Set(),
-  selectedTags: new Set()
+  selectedTags: new Set(),
+};
+
+// Archive State
+const archiveState = {
+  expandedYears: new Set(),
+  articlesCache: new Map(),
 };
 
 // ==========================================================================
@@ -22,11 +30,23 @@ const codeExplorerState = {
 
 async function loadData() {
   try {
-    const response = await fetch('timeline.json');
+    const response = await fetch("timeline.json");
     state.data = await response.json();
     initializeApp();
   } catch (error) {
-    console.error('Failed to load timeline data:', error);
+    console.error("Failed to load timeline data:", error);
+  }
+}
+
+async function loadArchiveManifest() {
+  if (state.archiveManifest) return state.archiveManifest;
+  try {
+    const response = await fetch("archive/manifest.json");
+    state.archiveManifest = await response.json();
+    return state.archiveManifest;
+  } catch (error) {
+    console.error("Failed to load archive manifest:", error);
+    return null;
   }
 }
 
@@ -38,12 +58,36 @@ function initializeApp() {
   setupCategoryNav();
   setupTechFilter();
   populateTechFilter();
+  setupHashChangeListener();
 
-  // Check URL hash for initial category
+  // Check URL hash for initial routing
+  handleRouteChange();
+}
+
+function setupHashChangeListener() {
+  window.addEventListener("hashchange", handleRouteChange);
+}
+
+function handleRouteChange() {
   const hash = window.location.hash.slice(1);
-  if (['career', 'products', 'code', 'writing'].includes(hash)) {
+
+  // Handle archive article routes: #archive/filename.md
+  if (hash.startsWith("archive/")) {
+    const filename = hash.slice(8); // Remove 'archive/'
+    if (filename) {
+      state.currentArticle = filename;
+      switchCategory("archive");
+      return;
+    }
+  }
+
+  // Reset article state if not viewing an article
+  state.currentArticle = null;
+
+  // Handle category routes
+  if (["career", "products", "code", "writing", "archive"].includes(hash)) {
     switchCategory(hash);
-  } else {
+  } else if (!hash) {
     renderContent();
   }
 }
@@ -53,9 +97,9 @@ function initializeApp() {
 // ==========================================================================
 
 function setupCategoryNav() {
-  const buttons = document.querySelectorAll('.nav-btn');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
+  const buttons = document.querySelectorAll(".nav-btn");
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
       const category = btn.dataset.category;
       switchCategory(category);
     });
@@ -66,8 +110,8 @@ function switchCategory(category) {
   state.currentCategory = category;
 
   // Update buttons
-  document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.category === category);
+  document.querySelectorAll(".nav-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.category === category);
   });
 
   // Update URL hash
@@ -82,8 +126,8 @@ function switchCategory(category) {
 // ==========================================================================
 
 function setupTechFilter() {
-  const techSelect = document.getElementById('tech-filter');
-  techSelect.addEventListener('change', () => {
+  const techSelect = document.getElementById("tech-filter");
+  techSelect.addEventListener("change", () => {
     state.techFilter = techSelect.value;
     renderContent();
   });
@@ -93,14 +137,14 @@ function populateTechFilter() {
   const techSet = new Set();
 
   // Collect all tech tags
-  state.data.events.forEach(event => {
+  state.data.events.forEach((event) => {
     if (event.tech) {
-      event.tech.forEach(t => techSet.add(t));
+      event.tech.forEach((t) => techSet.add(t));
     }
     if (event.children) {
-      event.children.forEach(child => {
+      event.children.forEach((child) => {
         if (child.tech) {
-          child.tech.forEach(t => techSet.add(t));
+          child.tech.forEach((t) => techSet.add(t));
         }
       });
     }
@@ -108,9 +152,9 @@ function populateTechFilter() {
 
   // Sort and populate select
   const sorted = Array.from(techSet).sort();
-  const select = document.getElementById('tech-filter');
-  sorted.forEach(tech => {
-    const option = document.createElement('option');
+  const select = document.getElementById("tech-filter");
+  sorted.forEach((tech) => {
+    const option = document.createElement("option");
     option.value = tech;
     option.textContent = tech;
     select.appendChild(option);
@@ -122,26 +166,38 @@ function populateTechFilter() {
 // ==========================================================================
 
 function renderContent() {
-  const container = document.getElementById('content-container');
+  const container = document.getElementById("content-container");
+
+  // Handle archive separately (async)
+  if (state.currentCategory === "archive") {
+    if (state.currentArticle) {
+      renderArchiveArticle(container, state.currentArticle);
+    } else {
+      renderArchiveList(container);
+    }
+    return;
+  }
+
   const items = getItemsForCategory(state.currentCategory);
 
   // Apply tech filter
-  const filteredItems = items.filter(item => {
-    if (state.techFilter === 'all') return true;
+  const filteredItems = items.filter((item) => {
+    if (state.techFilter === "all") return true;
     return item.tech && item.tech.includes(state.techFilter);
   });
 
   if (filteredItems.length === 0) {
-    container.innerHTML = '<div class="empty-state"><p>No items match the current filters.</p></div>';
+    container.innerHTML =
+      '<div class="empty-state"><p>No items match the current filters.</p></div>';
     return;
   }
 
   // Each category uses appropriate view
-  if (state.currentCategory === 'writing') {
+  if (state.currentCategory === "writing") {
     renderListContent(container, filteredItems);
-  } else if (state.currentCategory === 'career') {
+  } else if (state.currentCategory === "career") {
     renderCareerView(container, filteredItems);
-  } else if (state.currentCategory === 'code') {
+  } else if (state.currentCategory === "code") {
     renderCodeExplorer(container, filteredItems);
   } else {
     renderGridContent(container, filteredItems);
@@ -151,41 +207,41 @@ function renderContent() {
 function getItemsForCategory(category) {
   const items = [];
 
-  if (category === 'career') {
+  if (category === "career") {
     // Top-level events with category: "career"
-    state.data.events.forEach(event => {
-      if (event.category === 'career') {
+    state.data.events.forEach((event) => {
+      if (event.category === "career") {
         items.push(event);
       }
     });
-  } else if (category === 'products') {
+  } else if (category === "products") {
     // Children with category: "products"
-    state.data.events.forEach(event => {
+    state.data.events.forEach((event) => {
       if (event.children) {
-        event.children.forEach(child => {
-          if (child.category === 'products') {
+        event.children.forEach((child) => {
+          if (child.category === "products") {
             items.push(child);
           }
         });
       }
     });
-  } else if (category === 'code') {
+  } else if (category === "code") {
     // Children with category: "code"
-    state.data.events.forEach(event => {
+    state.data.events.forEach((event) => {
       if (event.children) {
-        event.children.forEach(child => {
-          if (child.category === 'code') {
+        event.children.forEach((child) => {
+          if (child.category === "code") {
             items.push(child);
           }
         });
       }
     });
-  } else if (category === 'writing') {
+  } else if (category === "writing") {
     // Children with category: "publications" or type: "writing"
-    state.data.events.forEach(event => {
+    state.data.events.forEach((event) => {
       if (event.children) {
-        event.children.forEach(child => {
-          if (child.category === 'publications' || child.type === 'writing') {
+        event.children.forEach((child) => {
+          if (child.category === "publications" || child.type === "writing") {
             items.push(child);
           }
         });
@@ -210,7 +266,7 @@ function getItemsForCategory(category) {
 function renderGridContent(container, items) {
   container.innerHTML = `
     <div class="grid-container">
-      ${items.map(item => renderGridCard(item)).join('')}
+      ${items.map((item) => renderGridCard(item)).join("")}
     </div>
   `;
 }
@@ -220,15 +276,47 @@ function renderGridCard(item) {
 
   return `
     <div class="grid-card">
-      ${imageUrl ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.title)}" class="grid-card-image" />` : '<div class="grid-card-image placeholder"></div>'}
+      ${
+        imageUrl
+          ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(
+              item.title
+            )}" class="grid-card-image" />`
+          : '<div class="grid-card-image placeholder"></div>'
+      }
       <div class="grid-card-content">
         <h3 class="grid-card-title">
-          ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>` : escapeHtml(item.title)}
+          ${
+            item.url
+              ? `<a href="${escapeHtml(
+                  item.url
+                )}" target="_blank" rel="noopener noreferrer">${escapeHtml(
+                  item.title
+                )}</a>`
+              : escapeHtml(item.title)
+          }
         </h3>
-        ${item.subtitle ? `<p class="grid-card-subtitle">${escapeHtml(item.subtitle)}</p>` : ''}
-        ${item.date ? `<div class="grid-card-date">${escapeHtml(item.date)}</div>` : ''}
-        ${item.description ? `<p class="grid-card-description">${escapeHtml(item.description)}</p>` : ''}
-        ${item.tech && item.tech.length > 0 ? `<div class="grid-card-tech">${renderTechTags(item.tech)}</div>` : ''}
+        ${
+          item.subtitle
+            ? `<p class="grid-card-subtitle">${escapeHtml(item.subtitle)}</p>`
+            : ""
+        }
+        ${
+          item.date
+            ? `<div class="grid-card-date">${escapeHtml(item.date)}</div>`
+            : ""
+        }
+        ${
+          item.description
+            ? `<p class="grid-card-description">${escapeHtml(
+                item.description
+              )}</p>`
+            : ""
+        }
+        ${
+          item.tech && item.tech.length > 0
+            ? `<div class="grid-card-tech">${renderTechTags(item.tech)}</div>`
+            : ""
+        }
       </div>
     </div>
   `;
@@ -241,7 +329,7 @@ function renderGridCard(item) {
 function renderListContent(container, items) {
   container.innerHTML = `
     <div class="list-container">
-      ${items.map(item => renderListItem(item)).join('')}
+      ${items.map((item) => renderListItem(item)).join("")}
     </div>
   `;
 }
@@ -251,13 +339,39 @@ function renderListItem(item) {
     <div class="list-item">
       <div class="list-item-header">
         <h3 class="list-item-title">
-          ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>` : escapeHtml(item.title)}
+          ${
+            item.url
+              ? `<a href="${escapeHtml(
+                  item.url
+                )}" target="_blank" rel="noopener noreferrer">${escapeHtml(
+                  item.title
+                )}</a>`
+              : escapeHtml(item.title)
+          }
         </h3>
-        ${item.date ? `<span class="list-item-date">${escapeHtml(item.date)}</span>` : ''}
+        ${
+          item.date
+            ? `<span class="list-item-date">${escapeHtml(item.date)}</span>`
+            : ""
+        }
       </div>
-      ${item.subtitle ? `<p class="list-item-subtitle">${escapeHtml(item.subtitle)}</p>` : ''}
-      ${item.description ? `<p class="list-item-description">${escapeHtml(item.description)}</p>` : ''}
-      ${item.tech && item.tech.length > 0 ? `<div class="list-item-tech">${renderTechTags(item.tech)}</div>` : ''}
+      ${
+        item.subtitle
+          ? `<p class="list-item-subtitle">${escapeHtml(item.subtitle)}</p>`
+          : ""
+      }
+      ${
+        item.description
+          ? `<p class="list-item-description">${escapeHtml(
+              item.description
+            )}</p>`
+          : ""
+      }
+      ${
+        item.tech && item.tech.length > 0
+          ? `<div class="list-item-tech">${renderTechTags(item.tech)}</div>`
+          : ""
+      }
     </div>
   `;
 }
@@ -271,22 +385,37 @@ const careerChildrenData = new Map();
 
 function renderCareerView(container, items) {
   // Sort by date (newest first)
-  const sorted = [...items].sort((a, b) => parseDate(b.date) - parseDate(a.date));
+  const sorted = [...items].sort(
+    (a, b) => parseDate(b.date) - parseDate(a.date)
+  );
 
   // Clear previous data
   careerChildrenData.clear();
 
   // Store children data for each item
-  sorted.forEach(item => {
+  sorted.forEach((item) => {
     if (item.children?.length > 0) {
-      const entryId = `career-entry-${item.title.replace(/\W+/g, '-').toLowerCase()}`;
+      const entryId = `career-entry-${item.title
+        .replace(/\W+/g, "-")
+        .toLowerCase()}`;
       careerChildrenData.set(entryId, item.children);
     }
   });
 
   container.innerHTML = `
-    <div class="career-timeline">
-      ${sorted.map(item => renderCareerEntry(item)).join('')}
+    <div class="career-container">
+      <div class="career-header">
+        <h2 class="career-title">thegoldenmule at your service</h2>
+        <p class="career-subtitle">(but you can just call me <strong>Ben</strong>)</p>
+        <ul class="career-intro">
+          <li>I am a hands-on, full-stack technical leader with extensive experience in interactive applications and games, augmented reality, Web3, and SaaS.</li>
+          <li>I have built and led many teams over the years, providing coaching and mentoring to grow aptitude, capacity, and velocity.</li>
+          <li>I 💙 open source as a business strategy.</li>
+        </ul>
+      </div>
+      <div class="career-timeline">
+        ${sorted.map((item) => renderCareerEntry(item)).join("")}
+      </div>
     </div>
   `;
 
@@ -301,109 +430,185 @@ function renderCareerEntry(item) {
   // Collect all tech tags from item and its children
   const allTech = new Set(item.tech || []);
   if (item.children) {
-    item.children.forEach(child => {
+    item.children.forEach((child) => {
       if (child.tech) {
-        child.tech.forEach(t => allTech.add(t));
+        child.tech.forEach((t) => allTech.add(t));
       }
     });
   }
   const techArray = Array.from(allTech).sort();
-  const techTags = techArray.length ? renderTechTags(techArray) : '';
+  const techTags = techArray.length ? renderTechTags(techArray) : "";
 
   const childCount = item.children?.length || 0;
-  const expandHint = childCount === 1 ? '1 entry' : `${childCount} entries`;
-  const entryId = `career-entry-${item.title.replace(/\W+/g, '-').toLowerCase()}`;
+  const expandHint = childCount === 1 ? "1 entry" : `${childCount} entries`;
+  const entryId = `career-entry-${item.title
+    .replace(/\W+/g, "-")
+    .toLowerCase()}`;
 
   return `
-    <div class="career-entry" id="${entryId}" ${hasChildren ? 'data-expandable="true"' : ''} ${hasChildren ? `data-children-total="${childCount}" data-children-shown="5"` : ''}>
-      <div class="career-entry-header" ${hasChildren ? 'tabindex="0" role="button" aria-expanded="false"' : ''}>
+    <div class="career-entry" id="${entryId}" ${
+    hasChildren ? 'data-expandable="true"' : ""
+  } ${
+    hasChildren
+      ? `data-children-total="${childCount}" data-children-shown="5"`
+      : ""
+  }>
+      <div class="career-entry-header" ${
+        hasChildren ? 'tabindex="0" role="button" aria-expanded="false"' : ""
+      }>
         <span class="career-entry-toggle">▶</span>
-        ${imageUrl ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(item.title)}" class="career-entry-logo" />` : ''}
+        ${
+          imageUrl
+            ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(
+                item.title
+              )}" class="career-entry-logo" />`
+            : ""
+        }
         <div class="career-entry-info">
           <h3 class="career-entry-title">${escapeHtml(item.title)}</h3>
-          ${item.subtitle ? `<span class="career-entry-subtitle">${escapeHtml(item.subtitle)}</span>` : ''}
+          ${
+            item.subtitle
+              ? `<span class="career-entry-subtitle">${escapeHtml(
+                  item.subtitle
+                )}</span>`
+              : ""
+          }
         </div>
-        ${item.date ? `<span class="career-entry-date">${escapeHtml(item.date)}</span>` : ''}
-        ${hasChildren ? `<span class="career-entry-expand-hint">+ ${expandHint}</span>` : ''}
+        ${
+          item.date
+            ? `<span class="career-entry-date">${escapeHtml(item.date)}</span>`
+            : ""
+        }
+        ${
+          hasChildren
+            ? `<span class="career-entry-expand-hint">+ ${expandHint}</span>`
+            : ""
+        }
       </div>
       <div class="career-entry-body">
-        ${item.description ? `<p class="career-entry-description">${escapeHtml(item.description)}</p>` : ''}
-        ${techTags ? `<div class="career-entry-tech">${techTags}</div>` : ''}
+        ${
+          item.description
+            ? `<p class="career-entry-description">${escapeHtml(
+                item.description
+              )}</p>`
+            : ""
+        }
+        ${techTags ? `<div class="career-entry-tech">${techTags}</div>` : ""}
       </div>
-      ${hasChildren ? `
+      ${
+        hasChildren
+          ? `
         <div class="career-entry-children">
-          <div class="career-entry-children-header">Projects & Writing (${item.children.length})</div>
+          <div class="career-entry-children-header">Projects & Writing (${
+            item.children.length
+          })</div>
           <div class="career-children-list">
-            ${item.children.slice(0, 5).map(c => renderCareerChild(c)).join('')}
+            ${item.children
+              .slice(0, 5)
+              .map((c) => renderCareerChild(c))
+              .join("")}
           </div>
-          ${item.children.length > 5 ? `<button type="button" class="career-load-more" tabindex="0">+ ${item.children.length - 5} more</button>` : ''}
+          ${
+            item.children.length > 5
+              ? `<button type="button" class="career-load-more" tabindex="0">+ ${
+                  item.children.length - 5
+                } more</button>`
+              : ""
+          }
         </div>
-      ` : ''}
+      `
+          : ""
+      }
     </div>
   `;
 }
 
 function renderCareerChild(child) {
-  const techTags = child.tech?.length ? renderTechTags(child.tech.slice(0, 3)) : '';
-  const isWriting = child.type === 'writing' || child.category === 'publications';
-  const typeClass = isWriting ? 'career-child--writing' : 'career-child--project';
-  const typeLabel = isWriting ? 'Writing' : 'Project';
+  const techTags = child.tech?.length
+    ? renderTechTags(child.tech.slice(0, 3))
+    : "";
+  const isWriting =
+    child.type === "writing" || child.category === "publications";
+  const typeClass = isWriting
+    ? "career-child--writing"
+    : "career-child--project";
+  const typeLabel = isWriting ? "Writing" : "Project";
 
   return `
     <div class="career-child ${typeClass}">
       <div class="career-child-header">
         <span class="career-child-type">${typeLabel}</span>
-        ${child.date ? `<span class="career-child-date">${escapeHtml(child.date)}</span>` : ''}
+        ${
+          child.date
+            ? `<span class="career-child-date">${escapeHtml(child.date)}</span>`
+            : ""
+        }
       </div>
       <h5 class="career-child-title">
-        ${child.url ? `<a href="${escapeHtml(child.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(child.title)}</a>` : escapeHtml(child.title)}
+        ${
+          child.url
+            ? `<a href="${escapeHtml(
+                child.url
+              )}" target="_blank" rel="noopener noreferrer">${escapeHtml(
+                child.title
+              )}</a>`
+            : escapeHtml(child.title)
+        }
       </h5>
-      ${child.description ? `<p class="career-child-description">${escapeHtml(child.description)}</p>` : ''}
-      ${techTags ? `<div class="career-child-tech">${techTags}</div>` : ''}
+      ${
+        child.description
+          ? `<p class="career-child-description">${escapeHtml(
+              child.description
+            )}</p>`
+          : ""
+      }
+      ${techTags ? `<div class="career-child-tech">${techTags}</div>` : ""}
     </div>
   `;
 }
 
 function setupCareerEntryInteractions(container) {
-  const entries = container.querySelectorAll('.career-entry[data-expandable="true"]');
+  const entries = container.querySelectorAll(
+    '.career-entry[data-expandable="true"]'
+  );
 
-  entries.forEach(entry => {
-    const header = entry.querySelector('.career-entry-header');
+  entries.forEach((entry) => {
+    const header = entry.querySelector(".career-entry-header");
 
     // Toggle function
     const toggleEntry = (e) => {
       // Don't toggle if clicking a link or load more button
-      if (e.target.tagName === 'A') return;
-      if (e.target.classList.contains('career-load-more')) return;
+      if (e.target.tagName === "A") return;
+      if (e.target.classList.contains("career-load-more")) return;
 
-      const isExpanded = entry.classList.contains('expanded');
-      entry.classList.toggle('expanded');
+      const isExpanded = entry.classList.contains("expanded");
+      entry.classList.toggle("expanded");
 
       // Update ARIA state
-      header.setAttribute('aria-expanded', !isExpanded);
+      header.setAttribute("aria-expanded", !isExpanded);
     };
 
     // Click handler
-    header.addEventListener('click', toggleEntry);
+    header.addEventListener("click", toggleEntry);
 
     // Keyboard handler (Enter/Space)
-    header.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+    header.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         toggleEntry(e);
       }
     });
 
     // Load more button handler
-    const loadMoreBtn = entry.querySelector('.career-load-more');
+    const loadMoreBtn = entry.querySelector(".career-load-more");
     if (loadMoreBtn) {
-      loadMoreBtn.addEventListener('click', (e) => {
+      loadMoreBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         loadMoreChildren(entry);
       });
 
-      loadMoreBtn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+      loadMoreBtn.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           e.stopPropagation();
           loadMoreChildren(entry);
@@ -426,10 +631,10 @@ function loadMoreChildren(entry) {
   const newChildren = children.slice(currentShown, newShown);
 
   // Render and append new children
-  const childrenList = entry.querySelector('.career-children-list');
+  const childrenList = entry.querySelector(".career-children-list");
   if (childrenList) {
-    newChildren.forEach(child => {
-      childrenList.insertAdjacentHTML('beforeend', renderCareerChild(child));
+    newChildren.forEach((child) => {
+      childrenList.insertAdjacentHTML("beforeend", renderCareerChild(child));
     });
   }
 
@@ -437,7 +642,7 @@ function loadMoreChildren(entry) {
   entry.dataset.childrenShown = newShown;
 
   // Update or remove the load more button
-  const loadMoreBtn = entry.querySelector('.career-load-more');
+  const loadMoreBtn = entry.querySelector(".career-load-more");
   if (loadMoreBtn) {
     const remaining = total - newShown;
     if (remaining > 0) {
@@ -454,25 +659,34 @@ function loadMoreChildren(entry) {
 
 // Folder display configuration
 const folderConfig = {
-  graphics: { icon: '🎨', label: 'graphics' },
-  games: { icon: '🎮', label: 'games' },
-  physics: { icon: '⚛️', label: 'physics' },
-  software: { icon: '🔧', label: 'software' },
-  exploration: { icon: '🔬', label: 'exploration' },
-  iot: { icon: '📡', label: 'iot' },
-  ar: { icon: '👓', label: 'ar' },
-  misc: { icon: '📦', label: 'misc' }
+  graphics: { icon: "🎨", label: "graphics" },
+  games: { icon: "🎮", label: "games" },
+  physics: { icon: "⚛️", label: "physics" },
+  software: { icon: "🔧", label: "software" },
+  exploration: { icon: "🔬", label: "exploration" },
+  iot: { icon: "📡", label: "iot" },
+  ar: { icon: "👓", label: "ar" },
+  misc: { icon: "📦", label: "misc" },
 };
 
 // Folder sort order (most important first)
-const folderOrder = ['software', 'games', 'graphics', 'physics', 'ar', 'exploration', 'iot', 'misc'];
+const folderOrder = [
+  "software",
+  "games",
+  "graphics",
+  "physics",
+  "ar",
+  "exploration",
+  "iot",
+  "misc",
+];
 
 function renderCodeExplorer(container, items) {
   // Collect all unique tech tags
   const allTags = new Set();
-  items.forEach(item => {
+  items.forEach((item) => {
     if (item.tech) {
-      item.tech.forEach(t => allTags.add(t));
+      item.tech.forEach((t) => allTags.add(t));
     }
   });
   const sortedTags = Array.from(allTags).sort();
@@ -480,9 +694,9 @@ function renderCodeExplorer(container, items) {
   // Filter items by selected tags
   let filteredItems = items;
   if (codeExplorerState.selectedTags.size > 0) {
-    filteredItems = items.filter(item => {
+    filteredItems = items.filter((item) => {
       if (!item.tech) return false;
-      return Array.from(codeExplorerState.selectedTags).every(tag =>
+      return Array.from(codeExplorerState.selectedTags).every((tag) =>
         item.tech.includes(tag)
       );
     });
@@ -490,14 +704,14 @@ function renderCodeExplorer(container, items) {
 
   // Group items by type
   const grouped = {};
-  filteredItems.forEach(item => {
-    const type = item.type || 'misc';
+  filteredItems.forEach((item) => {
+    const type = item.type || "misc";
     if (!grouped[type]) grouped[type] = [];
     grouped[type].push(item);
   });
 
   // Sort items within each folder by date (newest first)
-  Object.values(grouped).forEach(folderItems => {
+  Object.values(grouped).forEach((folderItems) => {
     folderItems.sort((a, b) => parseDate(b.date) - parseDate(a.date));
   });
 
@@ -517,21 +731,33 @@ function renderCodeExplorer(container, items) {
     <div class="code-explorer">
       <div class="code-explorer-header">~/projects</div>
       <div class="code-filter-bar">
-        ${sortedTags.map(tag => `
-          <button class="code-filter-tag ${codeExplorerState.selectedTags.has(tag) ? 'active' : ''}" data-tag="${escapeHtml(tag)}">
+        ${sortedTags
+          .map(
+            (tag) => `
+          <button class="code-filter-tag ${
+            codeExplorerState.selectedTags.has(tag) ? "active" : ""
+          }" data-tag="${escapeHtml(tag)}">
             ${escapeHtml(tag)}
           </button>
-        `).join('')}
+        `
+          )
+          .join("")}
       </div>
-      ${filteredItems.length === 0 ? `
+      ${
+        filteredItems.length === 0
+          ? `
         <div class="code-explorer-empty">No projects match the selected filters.</div>
-      ` : `
+      `
+          : `
         <div class="code-explorer-tree">
-          ${folderKeys.map((type, index) =>
-            renderCodeFolder(type, grouped[type], index === totalFolders - 1)
-          ).join('')}
+          ${folderKeys
+            .map((type, index) =>
+              renderCodeFolder(type, grouped[type], index === totalFolders - 1)
+            )
+            .join("")}
         </div>
-      `}
+      `
+      }
     </div>
   `;
 
@@ -540,9 +766,9 @@ function renderCodeExplorer(container, items) {
 }
 
 function setupCodeFilterInteractions(container, allItems) {
-  const filterTags = container.querySelectorAll('.code-filter-tag');
-  filterTags.forEach(tagBtn => {
-    tagBtn.addEventListener('click', () => {
+  const filterTags = container.querySelectorAll(".code-filter-tag");
+  filterTags.forEach((tagBtn) => {
+    tagBtn.addEventListener("click", () => {
       const tag = tagBtn.dataset.tag;
       if (codeExplorerState.selectedTags.has(tag)) {
         // Clicking active tag clears it
@@ -554,7 +780,7 @@ function setupCodeFilterInteractions(container, allItems) {
         codeExplorerState.selectedTags.clear();
         codeExplorerState.selectedTags.add(tag);
         // Expand all folders when filtering
-        folderOrder.forEach(f => codeExplorerState.expandedFolders.add(f));
+        folderOrder.forEach((f) => codeExplorerState.expandedFolders.add(f));
       }
       // Re-render the explorer
       renderCodeExplorer(container, allItems);
@@ -563,66 +789,97 @@ function setupCodeFilterInteractions(container, allItems) {
 }
 
 function renderCodeFolder(type, items, isLast) {
-  const config = folderConfig[type] || { icon: '📁', label: type };
+  const config = folderConfig[type] || { icon: "📁", label: type };
   const isExpanded = codeExplorerState.expandedFolders.has(type);
-  const connector = isLast ? '└─' : '├─';
+  const connector = isLast ? "└─" : "├─";
   const folderId = `code-folder-${type}`;
-  const folderIcon = isExpanded ? '📂' : '📁';
+  const folderIcon = isExpanded ? "📂" : "📁";
 
   return `
-    <div class="code-folder ${isExpanded ? 'expanded' : ''}" id="${folderId}" data-folder-type="${type}">
+    <div class="code-folder ${
+      isExpanded ? "expanded" : ""
+    }" id="${folderId}" data-folder-type="${type}">
       <div class="code-folder-row" tabindex="0" role="button" aria-expanded="${isExpanded}">
         <span class="tree-connector">${connector}</span>
         <span class="code-folder-icon">${folderIcon}</span>
         <span class="code-folder-name">${config.label}/</span>
         <span class="code-folder-count">(${items.length} items)</span>
       </div>
-      <div class="code-folder-children" ${isExpanded ? '' : 'style="display:none"'}>
-        ${items.map((item, index) =>
-          renderCodeFile(item, index === items.length - 1, isLast, type)
-        ).join('')}
+      <div class="code-folder-children" ${
+        isExpanded ? "" : 'style="display:none"'
+      }>
+        ${items
+          .map((item, index) =>
+            renderCodeFile(item, index === items.length - 1, isLast, type)
+          )
+          .join("")}
       </div>
     </div>
   `;
 }
 
 function renderCodeFile(item, isLastInFolder, isLastFolder, folderType) {
-  const fileConnector = isLastInFolder ? '└─' : '├─';
-  const parentLine = isLastFolder ? '     ' : '│    ';
-  const fileId = `code-file-${(item.title || '').replace(/\W+/g, '-').toLowerCase()}`;
+  const fileConnector = isLastInFolder ? "└─" : "├─";
+  const parentLine = isLastFolder ? "     " : "│    ";
+  const fileId = `code-file-${(item.title || "")
+    .replace(/\W+/g, "-")
+    .toLowerCase()}`;
   const isExpanded = codeExplorerState.expandedFiles.has(fileId);
 
   // Get file icon based on tech
   const fileIcon = getFileIcon(item.tech);
 
   // Format tech tags inline
-  const techStr = item.tech && item.tech.length > 0
-    ? item.tech.slice(0, 3).join(', ')
-    : '';
+  const techStr =
+    item.tech && item.tech.length > 0 ? item.tech.slice(0, 3).join(", ") : "";
 
   // Format date
-  const dateStr = item.date || '';
+  const dateStr = item.date || "";
 
   return `
-    <div class="code-file ${isExpanded ? 'expanded' : ''}" id="${fileId}" data-folder="${folderType}">
+    <div class="code-file ${
+      isExpanded ? "expanded" : ""
+    }" id="${fileId}" data-folder="${folderType}">
       <div class="code-file-row" tabindex="0" role="button" aria-expanded="${isExpanded}">
         <span class="tree-line">${parentLine}</span>
         <span class="tree-connector">${fileConnector}</span>
         <span class="code-file-icon">${fileIcon}</span>
         <span class="code-file-name">${escapeHtml(item.title)}</span>
-        ${isExpanded ? '<span class="code-file-toggle">▼</span>' : ''}
+        ${isExpanded ? '<span class="code-file-toggle">▼</span>' : ""}
         <span class="code-file-tech">${escapeHtml(techStr)}</span>
         <span class="code-file-date">${escapeHtml(dateStr)}</span>
       </div>
-      <div class="code-file-details" ${isExpanded ? '' : 'style="display:none"'}>
+      <div class="code-file-details" ${
+        isExpanded ? "" : 'style="display:none"'
+      }>
         <div class="code-file-details-content">
           <span class="tree-line">${parentLine}</span>
-          <span class="tree-line">${isLastInFolder ? '     ' : '│    '}</span>
+          <span class="tree-line">${isLastInFolder ? "     " : "│    "}</span>
           <div class="code-file-details-inner">
-            ${getImageUrl(item) ? `<img src="${escapeHtml(getImageUrl(item))}" alt="${escapeHtml(item.title)}" class="code-file-thumbnail" />` : ''}
+            ${
+              getImageUrl(item)
+                ? `<img src="${escapeHtml(
+                    getImageUrl(item)
+                  )}" alt="${escapeHtml(
+                    item.title
+                  )}" class="code-file-thumbnail" />`
+                : ""
+            }
             <div class="code-file-details-text">
-              ${item.description ? `<p class="code-file-description">${escapeHtml(item.description)}</p>` : ''}
-              ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="code-file-link">→ View on GitHub</a>` : ''}
+              ${
+                item.description
+                  ? `<p class="code-file-description">${escapeHtml(
+                      item.description
+                    )}</p>`
+                  : ""
+              }
+              ${
+                item.url
+                  ? `<a href="${escapeHtml(
+                      item.url
+                    )}" target="_blank" rel="noopener noreferrer" class="code-file-link">→ View on GitHub</a>`
+                  : ""
+              }
             </div>
           </div>
         </div>
@@ -632,57 +889,67 @@ function renderCodeFile(item, isLastInFolder, isLastFolder, folderType) {
 }
 
 function getFileIcon(tech) {
-  if (!tech || tech.length === 0) return '📄';
+  if (!tech || tech.length === 0) return "📄";
 
   const primary = tech[0].toLowerCase();
 
   // Map tech to icons
-  if (primary.includes('unity') || primary.includes('c#') || primary.includes('cs')) return '🎮';
-  if (primary.includes('webgl') || primary.includes('glsl') || primary.includes('shader')) return '🎨';
-  if (primary.includes('typescript') || primary.includes('ts')) return '📘';
-  if (primary.includes('javascript') || primary.includes('js')) return '📒';
-  if (primary.includes('python')) return '🐍';
-  if (primary.includes('rust')) return '🦀';
-  if (primary.includes('go') || primary.includes('golang')) return '🐹';
-  if (primary.includes('java')) return '☕';
-  if (primary.includes('swift')) return '🍎';
-  if (primary.includes('react')) return '⚛️';
-  if (primary.includes('node')) return '💚';
-  if (primary.includes('arduino') || primary.includes('iot')) return '📡';
-  if (primary.includes('ar') || primary.includes('vr')) return '👓';
+  if (
+    primary.includes("unity") ||
+    primary.includes("c#") ||
+    primary.includes("cs")
+  )
+    return "🎮";
+  if (
+    primary.includes("webgl") ||
+    primary.includes("glsl") ||
+    primary.includes("shader")
+  )
+    return "🎨";
+  if (primary.includes("typescript") || primary.includes("ts")) return "📘";
+  if (primary.includes("javascript") || primary.includes("js")) return "📒";
+  if (primary.includes("python")) return "🐍";
+  if (primary.includes("rust")) return "🦀";
+  if (primary.includes("go") || primary.includes("golang")) return "🐹";
+  if (primary.includes("java")) return "☕";
+  if (primary.includes("swift")) return "🍎";
+  if (primary.includes("react")) return "⚛️";
+  if (primary.includes("node")) return "💚";
+  if (primary.includes("arduino") || primary.includes("iot")) return "📡";
+  if (primary.includes("ar") || primary.includes("vr")) return "👓";
 
-  return '📄';
+  return "📄";
 }
 
 function setupCodeExplorerInteractions(container) {
   // Folder toggle handlers
-  const folders = container.querySelectorAll('.code-folder-row');
-  folders.forEach(folderRow => {
+  const folders = container.querySelectorAll(".code-folder-row");
+  folders.forEach((folderRow) => {
     const toggleFolder = () => {
-      const folder = folderRow.closest('.code-folder');
+      const folder = folderRow.closest(".code-folder");
       const type = folder.dataset.folderType;
-      const children = folder.querySelector('.code-folder-children');
-      const icon = folder.querySelector('.code-folder-icon');
-      const isExpanded = folder.classList.contains('expanded');
+      const children = folder.querySelector(".code-folder-children");
+      const icon = folder.querySelector(".code-folder-icon");
+      const isExpanded = folder.classList.contains("expanded");
 
       if (isExpanded) {
         codeExplorerState.expandedFolders.delete(type);
-        folder.classList.remove('expanded');
-        children.style.display = 'none';
-        folderRow.setAttribute('aria-expanded', 'false');
-        icon.textContent = '📁';
+        folder.classList.remove("expanded");
+        children.style.display = "none";
+        folderRow.setAttribute("aria-expanded", "false");
+        icon.textContent = "📁";
       } else {
         codeExplorerState.expandedFolders.add(type);
-        folder.classList.add('expanded');
-        children.style.display = 'block';
-        folderRow.setAttribute('aria-expanded', 'true');
-        icon.textContent = '📂';
+        folder.classList.add("expanded");
+        children.style.display = "block";
+        folderRow.setAttribute("aria-expanded", "true");
+        icon.textContent = "📂";
       }
     };
 
-    folderRow.addEventListener('click', toggleFolder);
-    folderRow.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+    folderRow.addEventListener("click", toggleFolder);
+    folderRow.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         toggleFolder();
       }
@@ -690,45 +957,45 @@ function setupCodeExplorerInteractions(container) {
   });
 
   // File toggle handlers
-  const files = container.querySelectorAll('.code-file-row');
-  files.forEach(fileRow => {
+  const files = container.querySelectorAll(".code-file-row");
+  files.forEach((fileRow) => {
     const toggleFile = () => {
-      const file = fileRow.closest('.code-file');
+      const file = fileRow.closest(".code-file");
       const fileId = file.id;
-      const details = file.querySelector('.code-file-details');
-      const isExpanded = file.classList.contains('expanded');
+      const details = file.querySelector(".code-file-details");
+      const isExpanded = file.classList.contains("expanded");
 
       if (isExpanded) {
         codeExplorerState.expandedFiles.delete(fileId);
-        file.classList.remove('expanded');
-        details.style.display = 'none';
-        fileRow.setAttribute('aria-expanded', 'false');
+        file.classList.remove("expanded");
+        details.style.display = "none";
+        fileRow.setAttribute("aria-expanded", "false");
         // Remove toggle indicator
-        const toggle = fileRow.querySelector('.code-file-toggle');
+        const toggle = fileRow.querySelector(".code-file-toggle");
         if (toggle) toggle.remove();
       } else {
         codeExplorerState.expandedFiles.add(fileId);
-        file.classList.add('expanded');
-        details.style.display = 'block';
-        fileRow.setAttribute('aria-expanded', 'true');
+        file.classList.add("expanded");
+        details.style.display = "block";
+        fileRow.setAttribute("aria-expanded", "true");
         // Add toggle indicator if not present
-        if (!fileRow.querySelector('.code-file-toggle')) {
-          const nameEl = fileRow.querySelector('.code-file-name');
-          const toggle = document.createElement('span');
-          toggle.className = 'code-file-toggle';
-          toggle.textContent = '▼';
+        if (!fileRow.querySelector(".code-file-toggle")) {
+          const nameEl = fileRow.querySelector(".code-file-name");
+          const toggle = document.createElement("span");
+          toggle.className = "code-file-toggle";
+          toggle.textContent = "▼";
           nameEl.after(toggle);
         }
       }
     };
 
-    fileRow.addEventListener('click', (e) => {
+    fileRow.addEventListener("click", (e) => {
       // Don't toggle if clicking a link
-      if (e.target.tagName === 'A') return;
+      if (e.target.tagName === "A") return;
       toggleFile();
     });
-    fileRow.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+    fileRow.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         toggleFile();
       }
@@ -737,19 +1004,251 @@ function setupCodeExplorerInteractions(container) {
 }
 
 // ==========================================================================
+// Archive View
+// ==========================================================================
+
+async function renderArchiveList(container) {
+  container.innerHTML = '<div class="archive-loading">Loading archive...</div>';
+
+  const manifest = await loadArchiveManifest();
+  if (!manifest) {
+    container.innerHTML =
+      '<div class="empty-state"><p>Failed to load archive.</p></div>';
+    return;
+  }
+
+  // Group posts by year
+  const postsByYear = {};
+  manifest.posts.forEach((post) => {
+    const year = new Date(post.date).getFullYear();
+    if (!postsByYear[year]) postsByYear[year] = [];
+    postsByYear[year].push(post);
+  });
+
+  // Sort years descending
+  const years = Object.keys(postsByYear).sort((a, b) => b - a);
+
+  container.innerHTML = `
+    <div class="archive-container">
+      <div class="archive-header">
+        <h2 class="archive-title">Archive</h2>
+        <p class="archive-subtitle">${
+          manifest.totalPosts
+        } posts from 2011-2022</p>
+      </div>
+      <div class="archive-timeline">
+        ${years
+          .map((year) => renderArchiveYear(year, postsByYear[year]))
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderArchiveYear(year, posts) {
+  const postCount = posts.length;
+  const postLabel = postCount === 1 ? "1 post" : `${postCount} posts`;
+
+  return `
+    <div class="archive-year" data-year="${year}">
+      <div class="archive-year-header">
+        <span class="archive-year-label">${year}</span>
+        <span class="archive-year-count">${postLabel}</span>
+      </div>
+      <div class="archive-year-posts">
+        ${posts.map((post) => renderArchivePost(post)).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderArchivePost(post) {
+  const date = new Date(post.date);
+  const formattedDate = date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+
+  return `
+    <div class="archive-post">
+      <a href="#archive/${escapeHtml(post.filename)}" class="archive-post-link">
+        <span class="archive-post-title">${escapeHtml(post.title)}</span>
+        <span class="archive-post-date">${escapeHtml(formattedDate)}</span>
+      </a>
+    </div>
+  `;
+}
+
+async function renderArchiveArticle(container, filename) {
+  container.innerHTML = '<div class="archive-loading">Loading article...</div>';
+
+  // Check cache first
+  if (archiveState.articlesCache.has(filename)) {
+    const cached = archiveState.articlesCache.get(filename);
+    displayArticle(container, cached.content, cached.meta);
+    return;
+  }
+
+  try {
+    const response = await fetch(`archive/${filename}`);
+    if (!response.ok) throw new Error("Article not found");
+
+    const markdown = await response.text();
+    const { meta, content } = parseMarkdownWithFrontmatter(markdown);
+
+    // Cache the article
+    archiveState.articlesCache.set(filename, { content, meta });
+
+    displayArticle(container, content, meta);
+  } catch (error) {
+    console.error("Failed to load article:", error);
+    container.innerHTML = `
+      <div class="archive-article">
+        <a href="#archive" class="archive-back-link">← Back to Archive</a>
+        <div class="empty-state"><p>Failed to load article.</p></div>
+      </div>
+    `;
+    // Setup back link handler for error state
+    const backLink = container.querySelector(".archive-back-link");
+    if (backLink) {
+      backLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        state.currentArticle = null;
+        window.history.pushState(null, null, "#archive");
+        renderArchiveList(container);
+      });
+    }
+  }
+}
+
+function parseMarkdownWithFrontmatter(markdown) {
+  const frontmatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
+  const match = markdown.match(frontmatterRegex);
+
+  if (!match) {
+    return { meta: {}, content: markdown };
+  }
+
+  const frontmatter = match[1];
+  const content = match[2];
+
+  // Parse YAML frontmatter (simple key: value parsing)
+  const meta = {};
+  frontmatter.split("\n").forEach((line) => {
+    const colonIndex = line.indexOf(":");
+    if (colonIndex > 0) {
+      const key = line.slice(0, colonIndex).trim();
+      let value = line.slice(colonIndex + 1).trim();
+      // Remove quotes if present
+      if (
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
+        value = value.slice(1, -1);
+      }
+      meta[key] = value;
+    }
+  });
+
+  return { meta, content };
+}
+
+function displayArticle(container, markdownContent, meta) {
+  // Configure marked to rewrite image paths
+  const renderer = new marked.Renderer();
+  const originalImage = renderer.image.bind(renderer);
+  renderer.image = function (href, title, text) {
+    // Handle both old and new marked.js API
+    const src = typeof href === "object" ? href.href : href;
+    const altText = typeof href === "object" ? href.text : text;
+
+    let finalSrc = src;
+    if (src && !src.startsWith("http") && !src.startsWith("/")) {
+      finalSrc = `archive/${src}`;
+    }
+    return `<img src="${finalSrc}" alt="${altText || ""}" loading="lazy" />`;
+  };
+
+  marked.setOptions({
+    renderer: renderer,
+    breaks: true,
+    gfm: true,
+  });
+
+  const htmlContent = marked.parse(markdownContent);
+
+  // Format date if available
+  let dateStr = "";
+  if (meta.date) {
+    const date = new Date(meta.date);
+    dateStr = date.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+  }
+
+  // Build original URL link if available
+  let originalLink = "";
+  if (meta.original_url) {
+    originalLink = `<a href="${escapeHtml(
+      meta.original_url
+    )}" target="_blank" rel="noopener noreferrer" class="archive-original-link">Originally at thegoldenmule.com</a>`;
+  }
+
+  container.innerHTML = `
+    <div class="archive-article">
+      <a href="#archive" class="archive-back-link">← Back to Archive</a>
+      <article class="archive-article-content">
+        <header class="archive-article-header">
+          <h1 class="archive-article-title">${escapeHtml(
+            meta.title || "Untitled"
+          )}</h1>
+          <div class="archive-article-meta">
+            ${
+              dateStr
+                ? `<span class="archive-article-date">${escapeHtml(
+                    dateStr
+                  )}</span>`
+                : ""
+            }
+            ${originalLink}
+          </div>
+        </header>
+        <div class="archive-article-body">
+          ${htmlContent}
+        </div>
+      </article>
+    </div>
+  `;
+
+  // Setup back link handler
+  const backLink = container.querySelector(".archive-back-link");
+  if (backLink) {
+    backLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      state.currentArticle = null;
+      window.history.pushState(null, null, "#archive");
+      renderArchiveList(container);
+    });
+  }
+}
+
+// ==========================================================================
 // Utility Functions
 // ==========================================================================
 
 function escapeHtml(text) {
-  if (!text) return '';
-  const div = document.createElement('div');
+  if (!text) return "";
+  const div = document.createElement("div");
   div.textContent = text;
   return div.innerHTML;
 }
 
 function getImageUrl(item) {
   if (item.imageUrl) {
-    if (item.imageUrl.startsWith('http')) {
+    if (item.imageUrl.startsWith("http")) {
       return item.imageUrl;
     }
     return item.imageUrl;
@@ -758,8 +1257,10 @@ function getImageUrl(item) {
 }
 
 function renderTechTags(tech) {
-  if (!tech || tech.length === 0) return '';
-  return tech.map(t => `<span class="tech-tag">${escapeHtml(t)}</span>`).join('');
+  if (!tech || tech.length === 0) return "";
+  return tech
+    .map((t) => `<span class="tech-tag">${escapeHtml(t)}</span>`)
+    .join("");
 }
 
 function parseDate(dateStr) {
@@ -768,22 +1269,41 @@ function parseDate(dateStr) {
   const str = dateStr.toLowerCase();
 
   // "Present" means ongoing - sort to top
-  if (str.includes('present') || str.includes('current') || str.includes('now')) {
+  if (
+    str.includes("present") ||
+    str.includes("current") ||
+    str.includes("now")
+  ) {
     return Date.now();
   }
 
   // For date ranges, use the end date (last year found)
   const yearMatches = str.match(/\d{4}/g);
-  const year = yearMatches ? parseInt(yearMatches[yearMatches.length - 1]) : 2000;
+  const year = yearMatches
+    ? parseInt(yearMatches[yearMatches.length - 1])
+    : 2000;
 
   // Extract month if present (use last month found for ranges)
-  const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+  const months = [
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "may",
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "oct",
+    "nov",
+    "dec",
+  ];
   let month = 0;
   months.forEach((m, i) => {
     const lastIndex = str.lastIndexOf(m);
     if (lastIndex !== -1) {
       // Check if this month appears after a dash (end of range)
-      const dashIndex = str.lastIndexOf('-');
+      const dashIndex = str.lastIndexOf("-");
       if (dashIndex === -1 || lastIndex > dashIndex) {
         month = i;
       }
@@ -797,4 +1317,4 @@ function parseDate(dateStr) {
 // Initialize
 // ==========================================================================
 
-document.addEventListener('DOMContentLoaded', loadData);
+document.addEventListener("DOMContentLoaded", loadData);
