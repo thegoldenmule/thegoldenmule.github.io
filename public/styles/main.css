@@ -705,6 +705,9 @@ button {
 
 /* Child item */
 .career-child {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
   background: var(--color-bg-secondary);
@@ -714,6 +717,19 @@ button {
 
 .career-child:last-child {
   margin-bottom: 0;
+}
+
+.career-child-thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.career-child-content {
+  flex: 1;
+  min-width: 0;
 }
 
 /* Writing vs Project visual distinction */
@@ -1601,6 +1617,11 @@ button {
 
   .career-child-date {
     font-size: 0.6875rem;
+  }
+
+  .career-child-thumbnail {
+    width: 60px;
+    height: 45px;
   }
 
   .career-load-more {

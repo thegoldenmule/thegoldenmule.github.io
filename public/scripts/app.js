@@ -725,35 +725,43 @@ function renderCareerChild(child) {
     typeLabel = "Project";
   }
 
+  const imageUrl = getImageUrl(child);
+
   return `
     <div class="career-child ${typeClass}">
-      <div class="career-child-header">
-        <span class="career-child-type">${typeLabel}</span>
+      ${imageUrl
+        ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(child.title)}" class="career-child-thumbnail" loading="lazy" />`
+        : ''
+      }
+      <div class="career-child-content">
+        <div class="career-child-header">
+          <span class="career-child-type">${typeLabel}</span>
+          ${
+            child.date
+              ? `<span class="career-child-date">${escapeHtml(child.date)}</span>`
+              : ""
+          }
+        </div>
+        <h5 class="career-child-title">
+          ${
+            child.url
+              ? `<a href="${escapeHtml(
+                  child.url
+                )}" target="_blank" rel="noopener noreferrer">${escapeHtml(
+                  child.title
+                )}</a>`
+              : escapeHtml(child.title)
+          }
+        </h5>
         ${
-          child.date
-            ? `<span class="career-child-date">${escapeHtml(child.date)}</span>`
+          child.description
+            ? `<p class="career-child-description">${escapeHtml(
+                child.description
+              )}</p>`
             : ""
         }
+        ${techTags ? `<div class="career-child-tech">${techTags}</div>` : ""}
       </div>
-      <h5 class="career-child-title">
-        ${
-          child.url
-            ? `<a href="${escapeHtml(
-                child.url
-              )}" target="_blank" rel="noopener noreferrer">${escapeHtml(
-                child.title
-              )}</a>`
-            : escapeHtml(child.title)
-        }
-      </h5>
-      ${
-        child.description
-          ? `<p class="career-child-description">${escapeHtml(
-              child.description
-            )}</p>`
-          : ""
-      }
-      ${techTags ? `<div class="career-child-tech">${techTags}</div>` : ""}
     </div>
   `;
 }
