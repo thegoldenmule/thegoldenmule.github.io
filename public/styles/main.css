@@ -1441,7 +1441,7 @@ button {
   }
 
   .grid-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .list-item-header {
@@ -1710,6 +1710,10 @@ button {
 }
 
 @media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
   .category-nav {
     flex-wrap: wrap;
   }

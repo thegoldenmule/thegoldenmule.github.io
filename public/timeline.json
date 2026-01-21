@@ -1,7 +1,7 @@
 {
   "events": [
     {
-      "category": "career",
+      "category": "collection",
       "title": "Miscellaneous Writing",
       "subtitle": "",
       "type": "",
@@ -381,7 +381,7 @@
       ]
     },
     {
-      "category": "career",
+      "category": "collection",
       "title": "Experiments",
       "subtitle": "",
       "type": "",
@@ -701,7 +701,7 @@
           "subtitle": "Web-based SaaS Product",
           "type": "software",
           "date": "2022",
-          "description": "Web-based metronomes are terrible, but not this one! A configurable, sample-accurate metronome in the browser. Create your routine and track your progress with your new practice buddy.",
+          "description": "A configurable, sample-accurate metronome in the browser. Create your routine and track your progress with your new practice buddy.",
           "url": "https://webtrono.me",
           "imageUrl": "tex/webtronome2.png",
           "tech": [
@@ -830,7 +830,7 @@
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "Mar 2024 - Apr 2024",
-          "description": "Tech advisor for Powerhouse's decentralized toolkit. Additionally, built tools and user flows on Powerhouse tech for tracking progress of Arbitrum grant recipients, in conjunction with Stable Labs.",
+          "description": "Built tools and user flows on for tracking progress of Arbitrum grant recipients, in conjunction with Stable Labs.",
           "url": "https://www.powerhouse.inc/",
           "imageUrl": "tex/arb.png",
           "tech": ["react", "software", "web", "mobile", "web3"]
@@ -894,7 +894,7 @@
           "subtitle": "N3TWORK Studios",
           "type": "games",
           "date": "2023",
-          "description": "I didn't write it, but was responsible for development and SRE teams for Legendary.",
+          "description": "Responsible for development and SRE teams for Legendary. Cut infra OPEX by 30% with forensics.",
           "imageUrl": "tex/legendary.png",
           "tech": ["unity", "java", "aws"]
         },
@@ -904,7 +904,7 @@
           "subtitle": "N3TWORK Studios",
           "type": "games",
           "date": "2023",
-          "description": "I didn't write it (minor bugfixes notwithstanding), but ran the engineering org for Triumph.",
+          "description": "Ran the engineering org for Triumph.",
           "imageUrl": "tex/triumph.png",
           "tech": ["unity", "java", "aws"]
         },
@@ -914,7 +914,7 @@
           "subtitle": "N3TWORK Studios",
           "type": "games",
           "date": "2023",
-          "description": "I didn't write it, but ran the engineering org for LHU.",
+          "description": "Ran the engineering org for LHU.",
           "imageUrl": "tex/lhu.png",
           "tech": ["unity", "java", "aws"]
         }
@@ -959,7 +959,7 @@
           "subtitle": "Big Run Studios",
           "type": "games",
           "date": "2022",
-          "description": "We built out a transparent, custodial wallet system on top of the Polygon Network. For this project I wrote ERC20 and ERC1155 contracts, IPFS integration (with heavy caching!), and all sorts of other nifty features to introduce the crypto and social gaming communities. I even made a Go code contribution to the Polygon Edge project (see entry below).",
+          "description": "We built out a transparent, custodial wallet system on top of the Polygon Network.",
           "tech": ["solidity", "go", "nodejs", "unity"]
         },
         {
@@ -1209,7 +1209,7 @@
           "subtitle": "Synchronous Multiplayer Client SDK",
           "type": "software",
           "date": "2017-2020",
-          "description": "Enkluplayer is a collaborative, cross-platform multiplayer AR runtime that is unfortunately now closed-source. Live behavior and UI scripting across devices. Drag and drop asset import. Enkluplayer lets users collaboratively design and publish multiplayer-by-default AR experiences.",
+          "description": "A collaborative, cross-platform multiplayer augmented reality runtime that is unfortunately now closed-source.",
           "url": "https://github.com/enklu/enkluplayer",
           "imageUrl": "tex/player-small.png",
           "tech": ["cs", "unity"]
@@ -1269,7 +1269,7 @@
           "subtitle": "Location Based Entertainment Product",
           "type": "ar",
           "date": "October 2019",
-          "description": "We were the first to adapt the Azure Kinect to live entertainment by adding Azure Kinect support to Enkluplayer. This ran as an interactive installation at Universal Studios in LA where lightning shot from your fingertips.",
+          "description": "We were the first to adapt the Azure Kinect to live entertainment at Universal Studios in LA.",
           "url": "https://www.thegoldenmule.com/videos/azure-kinect-dev.mp4",
           "imageUrl": "tex/azure-kinect.png",
           "tech": ["cs", "js", "dotnetty", "akka", "docker"]
@@ -1349,7 +1349,7 @@
           "title": "Criminal Empire",
           "type": "games",
           "date": "2017",
-          "description": "Build an empire.",
+          "description": "Build an empire in this gorgeous, turn based shooter.",
           "url": "https://play.google.com/store/apps/details?id=com.goldslugz.criminal.empire&hl=en_US&gl=US",
           "imageUrl": "tex/criminal.png",
           "tech": ["cs", "unity", "aws", "docker", "dotnetty", "webapi"]
@@ -1360,7 +1360,7 @@
           "subtitle": "NCSOFT",
           "type": "games",
           "date": "2017",
-          "description": "Wish I could say more!",
+          "description": "The most incredible mobile game in the Lineage franchise. Cancelled after 3 years in development.",
           "tech": ["cs", "unity", "aws", "docker", "dotnetty", "webapi"]
         }
       ]
@@ -1383,7 +1383,7 @@
           "subtitle": "Kixeye",
           "type": "games",
           "date": "2013",
-          "description": "Wish I could say more!",
+          "description": "A 3D RTS... with swords!",
           "tech": ["cs", "unity", "cg"]
         },
         {
@@ -1446,7 +1446,7 @@
           "subtitle": "Electrotank",
           "type": "games",
           "date": "2011",
-          "description": "Wish I could say more!",
+          "description": "A 3D multiplayer minigolf game on mobile. Cancelled :/",
           "tech": ["flash", "java"]
         },
         {
