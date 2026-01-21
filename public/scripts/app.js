@@ -1088,14 +1088,10 @@ async function renderArchiveList(container) {
 }
 
 function renderArchiveYear(year, posts) {
-  const postCount = posts.length;
-  const postLabel = postCount === 1 ? "1 post" : `${postCount} posts`;
-
   return `
     <div class="archive-year" data-year="${year}">
       <div class="archive-year-header">
         <span class="archive-year-label">${year}</span>
-        <span class="archive-year-count">${postLabel}</span>
       </div>
       <div class="archive-year-posts">
         ${posts.map((post) => renderArchivePost(post)).join("")}
