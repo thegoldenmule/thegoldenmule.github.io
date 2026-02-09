@@ -14,6 +14,17 @@
       "children": [
         {
           "category": "publications",
+          "title": "The Shape of Software is Collapsing",
+          "type": "writing",
+          "date": "Feb 2026",
+          "subtitle": "When 'build it' always beats 'buy it'.",
+          "description": "AI coding tools are making custom software trivial to build, collapsing the layers of SaaS products that once seemed indispensable. What happens to the industry when the standard models disappear overnight?",
+          "url": "https://thegoldenmule.medium.com/the-shape-of-software-is-collapsing-67999845afba",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1024/format:webp/0*dvHCjjRvxCJFSqul.png",
+          "tech": ["ai", "software"]
+        },
+        {
+          "category": "publications",
           "title": "How an LLM is making my bulletproof casual game",
           "type": "writing",
           "date": "Jan 2026",
