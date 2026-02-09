@@ -8,7 +8,7 @@
       "date": "",
       "description": "By no means an exhaustive list of my writing -- but some of the Greatest Hits.",
       "url": "https://thegoldenmule.medium.com",
-      "tech": ["games", "web3", "web", "mobile", "software"],
+      "tech": [],
       "size": 60,
       "connectedLines": false,
       "children": [
@@ -35,10 +35,12 @@
           "tech": [
             "ai",
             "games",
-            "learning",
+            
             "backend",
             "frontend",
-            "deep-dives"
+            "deep-dives",
+            "js",
+            "typescript"
           ]
         },
         {
@@ -72,7 +74,7 @@
           "description": "Programming is becoming in increasingly read-only. What are we at risk of losing?",
           "url": "https://thegoldenmule.medium.com/the-read-only-ouroboros-5a88acc8b0dd",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*fX1s4cofsFYKuIi_PMYwMA.jpeg",
-          "tech": ["ai", "learning"]
+          "tech": ["ai"]
         },
         {
           "category": "publications",
@@ -83,7 +85,7 @@
           "description": "Best described as a long-form love letter to Wikipedia.",
           "url": "https://thegoldenmule.medium.com/what-information-is-good-for-the-world-d111988ca29c",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KL7cAidDY2PdfocSfJWfmQ.jpeg",
-          "tech": ["ai", "learning"]
+          "tech": ["ai"]
         },
         {
           "category": "publications",
@@ -105,7 +107,7 @@
           "description": "How we're giving out user incentives, on-chain, fairly.",
           "url": "https://medium.com/spyre-io/hangman-update-the-drop-fb2934046c04",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hGCHzNMe8HSg519-vaUrVA.png",
-          "tech": ["games", "liveops", "web3"]
+          "tech": ["games", "liveops"]
         },
         {
           "category": "publications",
@@ -127,7 +129,7 @@
           "description": "Brief thoughts about thinking. You are special.",
           "url": "https://thegoldenmule.medium.com/a-thought-about-thinking-783056cf0502",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ERd_qVuu0OaptR1Cda390w.jpeg",
-          "tech": ["ai", "learning"]
+          "tech": ["ai"]
         },
         {
           "category": "publications",
@@ -156,7 +158,7 @@
           "description": "Knowledge without sweat is NOT understanding.",
           "url": "https://thegoldenmule.medium.com/on-ai-and-understanding-8627d2bbe51e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*nKGHOECq5CK5hcJCzDk6rA.jpeg",
-          "tech": ["ai", "learning"]
+          "tech": ["ai"]
         },
         {
           "category": "publications",
@@ -167,7 +169,18 @@
           "description": "Look, it's more complicated than it sounds, okay?? An embarrassing story and a full walkthrough of how I implemented bucketed leaderboards in Nakama.",
           "url": "https://medium.com/spyre-io/nakama-deep-dive-leaderboards-e8d41688d53e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*a40QxPUkXsUfK5Y-YiYOng.jpeg",
-          "tech": ["games", "liveops", "deep-dives", "backend"]
+          "tech": ["games", "liveops", "deep-dives", "backend", "go"]
+        },
+        {
+          "category": "publications",
+          "title": "Nakama's Missing CMS",
+          "type": "writing",
+          "date": "Nov 2024",
+          "subtitle": "Nakama is a great skeleton. A proper CMS provides the meat.",
+          "description": "Tales in using an open-source CMS in games.",
+          "url": "https://medium.com/spyre-io/nakama-deep-dive-leaderboards-e8d41688d53e",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*a40QxPUkXsUfK5Y-YiYOng.jpeg",
+          "tech": ["games", "liveops", "deep-dives", "backend", "go"]
         },
         {
           "category": "publications",
@@ -178,7 +191,7 @@
           "description": "There's no denying that the Web3 ecosystem is a Dark Forest. It is particularly necessary to provide a robust security model. Here we explain how we implemented a fair match system for our casual-competitive game.",
           "url": "https://medium.com/spyre-io/fair-matches-in-web3-6d32fe508e5e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*U0T6Bmt1ulPEkDe_bUpBKA.jpeg",
-          "tech": ["games", "web3", "liveops", "deep-dives", "backend"]
+          "tech": ["games", "web3", "liveops", "deep-dives", "backend", "frontend", "js", "go"]
         },
         {
           "category": "publications",
@@ -200,7 +213,7 @@
           "description": "I guess programming is over now? And other thoughts on AI.",
           "url": "https://medium.com/swlh/why-im-leaving-programming-behind-for-a-cheese-blog-8efeb2edb601",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*My7yndGVvEqEllFFPrZchA.jpeg",
-          "tech": ["ai", "learning"]
+          "tech": ["ai"]
         },
         {
           "category": "publications",
@@ -211,7 +224,7 @@
           "description": "Unity is a great engine, but it has its weak spots. In this article, I defend our decision to use a web-native engine instead.",
           "url": "https://medium.com/spyre-io/a-tale-of-two-engines-dc80250e397a",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sghqgWIHhDLlyIzxs_lTqw.jpeg",
-          "tech": ["games", "deep-dives", "frontend"]
+          "tech": ["games", "deep-dives", "frontend", "js", "typescript"]
         },
         {
           "category": "publications",
@@ -255,7 +268,7 @@
           "description": "Did I mention I teach in the CS Masters program at Saint Louis University? For my computer graphics course, we pair-programmed an entire 3D engine from scratch.",
           "url": "https://thegoldenmule.medium.com/a-complete-ish-3d-engine-in-1200-lines-b5babf4b72ed",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KidhxH5QHiplzlXv6SOU6g.jpeg",
-          "tech": ["games", "graphics", "deep-dives", "teaching", "frontend"]
+          "tech": ["games", "graphics", "deep-dives", "teaching", "frontend", "js"]
         },
         {
           "category": "publications",
@@ -266,7 +279,7 @@
           "description": "How can we understand each other? Thoughts from sociology, biocybernetics, and of course, mathematics.",
           "url": "https://medium.com/geekculture/software-development-dynamics-baltic-german-style-43a526a13444",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*wqkes4CAigOKmIfX.jpg",
-          "tech": ["learning", "teaching"]
+          "tech": [ "teaching"]
         },
         {
           "category": "publications",
@@ -310,7 +323,7 @@
           "description": "The term 'Startup CTO' can mean just about anything, depending on the startup-- but there is one thing they all have in common: wrestling with the unknown.",
           "url": "https://medium.com/codex/what-you-cant-know-about-being-a-startup-cto-80138aceb68f",
           "imageUrl": "https://miro.medium.com/max/720/1*3wxO_yDf9w7_I8NcJYmn9A.webp",
-          "tech": ["teaching", "learning"]
+          "tech": ["teaching"]
         },
         {
           "category": "publications",
@@ -332,7 +345,7 @@
           "description": "A practical methodology for building software that I completely made up in a vacuum and is completely original.",
           "url": "https://medium.com/codex/the-binary-search-methodology-3cd21fc66531",
           "imageUrl": "https://miro.medium.com/max/720/1*2MTujmy2vodReeVNFdx8TQ.webp",
-          "tech": ["teaching", "learning"]
+          "tech": ["teaching"]
         },
         {
           "category": "publications",
@@ -354,7 +367,7 @@
           "description": "Something from Pascal the programmer: please take the time to write less code. Thank you.",
           "url": "https://medium.com/codex/take-the-time-to-write-less-code-1bf0ab385a38",
           "imageUrl": "https://miro.medium.com/max/720/1*95u9XPdy0jCIbvG4z9OsNw.webp",
-          "tech": ["teaching", "learning"]
+          "tech": ["teaching"]
         },
         {
           "category": "publications",
@@ -399,7 +412,7 @@
       "date": "",
       "description": "Non-work projects I've done.",
       "url": "https://thegoldenmule.com",
-      "tech": ["games", "web3", "web", "mobile", "software"],
+      "tech": [],
       "size": 60,
       "connectedLines": false,
       "children": [
@@ -411,7 +424,7 @@
           "description": "Everyone has created flat procedural terrain-- but what methods can be used for generating spherical terrain? This two part post builds on geospheres and explores one method of geometry creation and one method for an accompanying Earthlike shader.",
           "url": "https://thegoldenmule.com/blog/2013/01/spherical-terrain-generation/",
           "imageUrl": "tex/world.jpg",
-          "tech": ["cs", "unity"]
+          "tech": ["c-sharp", "unity"]
         },
         {
           "category": "code",
@@ -471,7 +484,7 @@
           "description": "A Javascript interpreter for Unity.",
           "url": "https://github.com/thegoldenmule/jint",
           "imageUrl": "tex/test.jpg",
-          "tech": ["cs"]
+          "tech": ["c-sharp"]
         },
         {
           "category": "code",
@@ -521,7 +534,7 @@
           "description": "A couple classes for using Ninject as a dependency injection solution in Unity3d.",
           "url": "https://thegoldenmule.com/blog/2013/12/ninject-and-unity/",
           "imageUrl": "tex/ninject.jpg",
-          "tech": ["cs", "unity"]
+          "tech": ["c-sharp", "unity"]
         },
         {
           "category": "code",
@@ -531,7 +544,7 @@
           "description": "A short exploration of generating a 3d immersion of a 4d Klein bottle.",
           "url": "https://github.com/thegoldenmule/Topology",
           "imageUrl": "tex/Klein.jpg",
-          "tech": ["cs", "unity"]
+          "tech": ["c-sharp", "unity", "graphics"]
         },
         {
           "category": "code",
@@ -541,7 +554,7 @@
           "description": "A very basic implementation of the separating axes theorem for collision detection. This was created for illustrative purposes, and has, let's say, a few bugs.",
           "url": "https://thegoldenmule.com/blog/2013/12/supercolliders-in-unity/",
           "imageUrl": "tex/collision.jpg",
-          "tech": ["cs", "unity"]
+          "tech": ["c-sharp", "unity"]
         },
         {
           "category": "code",
@@ -555,33 +568,23 @@
         },
         {
           "category": "code",
-          "title": "Telemetrino",
-          "type": "iot",
-          "date": "September 2013",
-          "description": "Strapping an Arduino + accelerometer to an RC car.",
-          "url": "https://thegoldenmule.com/blog/2013/09/of-wisdom-teeth-and-acceleration/",
-          "imageUrl": "tex/accelerationTelemetry.jpg",
-          "tech": ["cs"]
-        },
-        {
-          "category": "code",
           "title": "Fabric Sim",
           "type": "physics",
           "date": "August 2013",
           "description": "A simple fabric simulation. Uses a spring system with point masses and Verlet integration. The original used my own graphics engine, but this uses ThreeJS.",
           "url": "https://www.thegoldenmule.com/labs/three-physics/",
           "imageUrl": "tex/FabricAnimation.jpg",
-          "tech": ["js", "webgl"]
+          "tech": ["js", "graphics"]
         },
         {
           "category": "code",
           "title": "boX",
           "type": "graphics",
           "date": "August 2013",
-          "description": "That's not an 'x' at all! It's a chi! A 2D WebGL graphics engine, twice as pretentious as LateX.",
+          "description": "That's not an 'x' at all! It's a chi! A 2D graphics graphics engine, twice as pretentious as LateX.",
           "url": "https://github.com/thegoldenmule/boX",
           "imageUrl": "tex/boXAnimation.jpg",
-          "tech": ["js", "webgl", "glsl"]
+          "tech": ["js", "graphics", "glsl"]
         },
         {
           "category": "code",
@@ -591,7 +594,7 @@
           "description": "The geometrical construction of a sphere based on the subdivision of an icosahedron. This method creates a sphere where each triangle is the same size.",
           "url": "https://thegoldenmule.com/blog/2013/01/geosphere-revisited/",
           "imageUrl": "tex/geosphere.jpg",
-          "tech": ["cs", "unity"]
+          "tech": ["c-sharp", "unity"]
         },
         {
           "category": "code",
@@ -601,7 +604,7 @@
           "description": "A two part study into noise functions and how they might be used to create purely GPU-based moving clouds.",
           "url": "https://thegoldenmule.com/blog/2013/01/real-time-clouds-pt-1-a-study-of-noise-functions/",
           "imageUrl": "tex/clouds.jpg",
-          "tech": ["cs", "unity"]
+          "tech": ["c-sharp", "unity"]
         },
         {
           "category": "code",
@@ -621,7 +624,7 @@
           "description": "I used ANTLR to make a DSL for the Enkluplayer UI system. The only problem: it didn't run on HoloLens. This PR fixed the ANTLR project for UWP.",
           "url": "https://github.com/antlr/antlr4/pull/2267",
           "imageUrl": "https://www.antlr.org/images/antlr-logo.png",
-          "tech": ["cs"]
+          "tech": ["c-sharp"]
         },
         {
           "category": "code",
@@ -631,7 +634,7 @@
           "description": "A Unity library for sending logs to Natural-Log.",
           "url": "https://github.com/thegoldenmule/naturallog-examples",
           "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/icons/png/128x128.png",
-          "tech": ["cs"]
+          "tech": ["c-sharp"]
         },
         {
           "category": "code",
@@ -671,7 +674,7 @@
           "description": "A simple Akka + ASP.NET server that creates HLS streams from WebM or MP4 videos.",
           "url": "https://github.com/thegoldenmule/ffabricator",
           "imageUrl": "tex/ffabricator.jpg",
-          "tech": ["cs", "dotnet", "akka"]
+          "tech": ["c-sharp", "dotnet", "akka"]
         },
         {
           "category": "products",
@@ -693,7 +696,7 @@
           "description": "No peeking. An end-to-end encrypted, no-knowledge key/value storage server.",
           "url": "https://github.com/thegoldenmule/nk/tree/develop/nk-server",
           "imageUrl": "tex/nk.jpg",
-          "tech": ["cs", "webapi", "dotnet"]
+          "tech": ["c-sharp", "webapi", "dotnet"]
         },
         {
           "category": "products",
@@ -736,7 +739,7 @@
       "description": "Software development studio, working on internal and external projects. Email me if you want to work together!",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/logo_square.jpg",
-      "tech": ["games", "web3", "web", "mobile", "software"],
+      "tech": [],
       "size": 45,
       "children": [
         {
@@ -786,12 +789,22 @@
             "ts",
             "go",
             "viem",
-            "nakama",
             "pixijs",
             "react",
             "tailwind"
           ],
           "size": 38
+        },
+        {
+          "category": "publications",
+          "title": "Nakama, Meet Blockchain",
+          "type": "writing",
+          "date": "Sept 2024",
+          "subtitle": "A long-form tip on integrating Nakama with blockchains.",
+          "description": "A walkthrough of integrating Nakama with blockchains via chain-chomp, covering asynchronous transaction handling, Go goroutine-based polling, and real-time client notifications.",
+          "url": "https://medium.com/spyre-io/nakama-meet-blockchain-0ec58827c26a",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_jkvVvz08iMknkktZhZI1g.jpeg",
+          "tech": ["web3", "go", "games", "backend", "deep-dives"]
         },
         {
           "category": "media",
@@ -855,7 +868,7 @@
           "description": "Built tools and user flows on for tracking progress of Arbitrum grant recipients, in conjunction with Stable Labs.",
           "url": "https://www.powerhouse.inc/",
           "imageUrl": "tex/arb.jpg",
-          "tech": ["react", "software", "web", "mobile", "web3"]
+          "tech": ["react", "software", "js", "typescript", "web3"]
         },
         {
           "category": "products",
@@ -866,7 +879,7 @@
           "description": "Built a powerful, open-source analytics system that can run anywhere.",
           "url": "https://github.com/powerhouse-inc/analytics-engine",
           "imageUrl": "tex/arb.jpg",
-          "tech": ["software", "web", "web3"]
+          "tech": ["software", "js", "typescript", "web3"]
         },
         {
           "category": "products",
@@ -877,7 +890,7 @@
           "description": "Short term contract for Bindery Books doing GCP DevOps, containerization, and full-stack web work.",
           "url": "https://binderybooks.com/",
           "imageUrl": "tex/bindery.jpg",
-          "tech": ["nextjs", "software", "web", "mobile", "docker", "gcp"]
+          "tech": ["nextjs", "software", "js", "typescript", "docker", "gcp"]
         }
       ]
     },
@@ -892,7 +905,7 @@
       "imageUrl": "tex/network-logo.jpg",
       "tech": [
         "java",
-        "cs",
+        "c-sharp",
         "js",
         "unity",
         "nodejs",
@@ -953,7 +966,7 @@
       "imageUrl": "tex/br-logo.jpg",
       "tech": [
         "go",
-        "cs",
+        "c-sharp",
         "js",
         "unity",
         "nakama",
@@ -993,7 +1006,7 @@
           "description": "A skill-based, multiplayer word game.",
           "url": "https://bigrunstudios.com/games/word-star/",
           "imageUrl": "tex/word-star.jpg",
-          "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
+          "tech": ["unity", "c-sharp", "nodejs", "aws", "snowflake", "tableau"]
         },
         {
           "category": "products",
@@ -1004,7 +1017,7 @@
           "description": "A skill-based, multiplayer cooking game.",
           "url": "https://bigrunstudios.com/games/big-cooking-2/",
           "imageUrl": "tex/big-cooking.jpg",
-          "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
+          "tech": ["unity", "c-sharp", "nodejs", "aws", "snowflake", "tableau"]
         },
         {
           "category": "publications",
@@ -1025,7 +1038,7 @@
           "description": "A skill-based twist to the game of multiplayer minesweeper.",
           "url": "https://bigrunstudios.com/games/farm-sweeper/",
           "imageUrl": "tex/farmsweeper.jpg",
-          "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
+          "tech": ["unity", "c-sharp", "nodejs", "aws", "snowflake", "tableau"]
         },
         {
           "category": "products",
@@ -1036,7 +1049,7 @@
           "description": "A skill-based twist to the game of multiplayer solitaire.",
           "url": "https://bigrunstudios.com/games/big-run-solitaire/",
           "imageUrl": "tex/solitaire.jpg",
-          "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
+          "tech": ["unity", "c-sharp", "nodejs", "aws", "snowflake", "tableau"]
         },
         {
           "category": "products",
@@ -1047,7 +1060,7 @@
           "description": "A skill-based twist to the game of multiplayer bingo.",
           "url": "https://bigrunstudios.com/games/blackout-bingo-2/",
           "imageUrl": "tex/blackout-bingo.jpg",
-          "tech": ["unity", "cs", "nodejs", "aws", "snowflake", "tableau"]
+          "tech": ["unity", "c-sharp", "nodejs", "aws", "snowflake", "tableau"]
         },
         {
           "category": "publications",
@@ -1117,11 +1130,10 @@
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/enklu-logo.svg",
       "tech": [
-        "cs",
+        "c-sharp",
         "js",
         "groovy",
-        "cg",
-        "webgl",
+        "graphics",
         "socketio",
         "dotnetty",
         "azure",
@@ -1146,7 +1158,7 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-mamba",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "cs"]
+          "tech": ["unity", "c-sharp"]
         },
         {
           "category": "code",
@@ -1157,7 +1169,7 @@
           "description": "",
           "url": "https://github.com/enklu/chelydra",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "cs"]
+          "tech": ["unity", "c-sharp"]
         },
         {
           "category": "code",
@@ -1168,7 +1180,7 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-http",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "cs"]
+          "tech": ["unity", "c-sharp"]
         },
         {
           "category": "code",
@@ -1179,7 +1191,7 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-messaging",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "cs"]
+          "tech": ["unity", "c-sharp"]
         },
         {
           "category": "code",
@@ -1190,7 +1202,7 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-logging",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "cs"]
+          "tech": ["unity", "c-sharp"]
         },
         {
           "category": "code",
@@ -1201,7 +1213,7 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-async",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "cs"]
+          "tech": ["unity", "c-sharp"]
         },
         {
           "category": "code",
@@ -1212,7 +1224,7 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-debugrendering",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "cs"]
+          "tech": ["unity", "c-sharp"]
         },
         {
           "category": "code",
@@ -1223,7 +1235,7 @@
           "description": "",
           "url": "https://github.com/enklu/commons-gradle-unity",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "cs", "groovy"]
+          "tech": ["unity", "c-sharp", "groovy"]
         },
         {
           "category": "products",
@@ -1234,7 +1246,7 @@
           "description": "A collaborative, cross-platform multiplayer augmented reality runtime that is unfortunately now closed-source.",
           "url": "https://github.com/enklu/enkluplayer",
           "imageUrl": "tex/player-small.jpg",
-          "tech": ["cs", "unity"]
+          "tech": ["c-sharp", "unity"]
         },
         {
           "category": "products",
@@ -1246,11 +1258,10 @@
           "url": "https://cloud.enklu.com",
           "imageUrl": "tex/cloud.jpg",
           "tech": [
-            "cs",
+            "c-sharp",
             "js",
             "groovy",
-            "cg",
-            "webgl",
+            "graphics",
             "socketio",
             "dotnetty",
             "azure",
@@ -1273,7 +1284,7 @@
           "description": "We created a multiplayer spellcasting demo in just a few hours for an invite-only tech day at Microsoft Reactor.",
           "url": "https://www.thegoldenmule.com/videos/duel.mp4",
           "imageUrl": "tex/duel.jpg",
-          "tech": ["cs", "js", "dotnetty", "akka"]
+          "tech": ["c-sharp", "js", "dotnetty", "akka"]
         },
         {
           "category": "code",
@@ -1283,7 +1294,7 @@
           "description": "At another invite-only Microsoft hackathon, I created a prototype for a conversational world-building application using Azure's LUIS and Enklu. The computer asks what you see and builds the scene as you describe it.",
           "url": "https://www.thegoldenmule.com/videos/story.mp4",
           "imageUrl": "tex/story.jpg",
-          "tech": ["cs", "js", "dotnetty", "akka"]
+          "tech": ["c-sharp", "js", "dotnetty", "akka"]
         },
         {
           "category": "products",
@@ -1294,7 +1305,7 @@
           "description": "We were the first to adapt the Azure Kinect to live entertainment at Universal Studios in LA.",
           "url": "https://www.thegoldenmule.com/videos/azure-kinect-dev.mp4",
           "imageUrl": "tex/azure-kinect.jpg",
-          "tech": ["cs", "js", "dotnetty", "akka", "docker"]
+          "tech": ["c-sharp", "js", "dotnetty", "akka", "docker"]
         },
         {
           "category": "code",
@@ -1304,7 +1315,7 @@
           "description": "We created the world's first 100 HoloLens multiplayer experience at E3. Over 7500 attendees were able to put on a HoloLens and explore magical powers in the Unreal Garden.",
           "imageUrl": "https://www.thegoldenmule.com/thumbnails/player-small.png",
           "url": "https://www.youtube.com/watch?v=j1usTNschXg",
-          "tech": ["cs", "js", "dotnetty", "akka", "docker"]
+          "tech": ["c-sharp", "js", "dotnetty", "akka", "docker"]
         },
         {
           "category": "code",
@@ -1315,10 +1326,10 @@
           "url": "https://www.thegoldenmule.com/videos/e3-wings-mp4.mp4",
           "imageUrl": "tex/e3-wings.jpg",
           "tech": [
-            "cs",
+            "c-sharp",
             "js",
             "groovy",
-            "cg",
+            "graphics",
             "socketio",
             "dotnetty",
             "azure",
@@ -1340,7 +1351,7 @@
           "date": "August 2017",
           "description": "Open source fork of StrangeIOC library, compatible with UWP.",
           "url": "https://github.com/enklu/StrangeIOC-UWP",
-          "tech": ["cs"]
+          "tech": ["c-sharp"]
         }
       ]
     },
@@ -1353,7 +1364,7 @@
       "description": "I ran engineering for two AAA game teams, a core tech group, and a tools engineering team.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/nc-logo.svg",
-      "tech": ["cs", "unity", "cg", "js", "akka", "webapi", "dotnet", "aws"],
+      "tech": ["c-sharp", "unity", "graphics", "js", "akka", "webapi", "dotnet", "aws"],
       "size": 40,
       "children": [
         {
@@ -1374,7 +1385,7 @@
           "description": "Build an empire in this gorgeous, turn based shooter.",
           "url": "https://play.google.com/store/apps/details?id=com.goldslugz.criminal.empire&hl=en_US&gl=US",
           "imageUrl": "tex/criminal.jpg",
-          "tech": ["cs", "unity", "aws", "docker", "dotnetty", "webapi"]
+          "tech": ["c-sharp", "unity", "aws", "docker", "dotnetty", "webapi"]
         },
         {
           "category": "products",
@@ -1383,7 +1394,7 @@
           "type": "games",
           "date": "2017",
           "description": "The most incredible mobile game in the Lineage franchise. Cancelled after 3 years in development.",
-          "tech": ["cs", "unity", "aws", "docker", "dotnetty", "webapi"]
+          "tech": ["c-sharp", "unity", "aws", "docker", "dotnetty", "webapi"]
         }
       ]
     },
@@ -1396,7 +1407,7 @@
       "description": "The Mos Eisley of game development studios. Here I worked on Flash, Unity, and web games at scale, while doing my best not to get run over.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/Kixeye.webp",
-      "tech": ["flash", "cs", "unity", "cg", "agal", "js"],
+      "tech": ["flash", "c-sharp", "unity", "graphics", "js"],
       "size": 25,
       "children": [
         {
@@ -1406,7 +1417,7 @@
           "type": "games",
           "date": "2013",
           "description": "A 3D RTS... with swords!",
-          "tech": ["cs", "unity", "cg"]
+          "tech": ["c-sharp", "unity", "graphics"]
         },
         {
           "category": "products",
@@ -1446,7 +1457,7 @@
           "date": "2014",
           "description": "Build bases and units... on mobile. Find targets. Kill 'em all.",
           "imageUrl": "tex/rogue-assault.jpg",
-          "tech": ["cs", "unity", "cg"]
+          "tech": ["c-sharp", "unity", "graphics"]
         }
       ]
     },

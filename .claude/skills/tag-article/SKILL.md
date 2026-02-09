@@ -64,7 +64,7 @@ Example:
 
 **Article about Unity physics**:
 ```json
-["unity", "games", "physics", "cs", "teaching"]
+["unity", "games", "physics", "c-sharp", "teaching"]
 ```
 
 **Philosophical post about software**:
@@ -114,7 +114,7 @@ When the skill is invoked:
 ```json
 {
   "tags": [
-    "ai", "akka", "aws", "azure", "backend", "bootstrap", "c", "cg", "cs",
+    "ai", "akka", "aws", "azure", "backend", "bootstrap", "c", "cg", "c-sharp",
     "deep-dives", "docker", "dotnet", "experiments", "flash", "frontend",
     "games", "glsl", "go", "graphics", "haxe", "history", "java", "js",
     "learning", "liveops", "mobile", "nakama", "nodejs", "objc", "physics",
@@ -123,7 +123,7 @@ When the skill is invoked:
     // ... full list in tags.json
   ],
   "keywords": {
-    "Unity": ["unity", "games", "cs"],
+    "Unity": ["unity", "games", "c-sharp"],
     "shader": ["graphics", "cg", "glsl"],
     ...
   }
@@ -137,7 +137,7 @@ When the skill is invoked:
   "date": "2020-01-01T00:00:00.000Z",
   "filename": "2020-01-01-example-post.md",
   "originalUrl": "https://...",
-  "tags": ["teaching", "unity", "games", "cs"]
+  "tags": ["teaching", "unity", "games", "c-sharp"]
 }
 ```
 

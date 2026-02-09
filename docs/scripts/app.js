@@ -1096,7 +1096,7 @@ function getFileIcon(tech) {
   if (
     primary.includes("unity") ||
     primary.includes("c#") ||
-    primary.includes("cs")
+    primary.includes("c-sharp")
   )
     return "🎮";
   if (
