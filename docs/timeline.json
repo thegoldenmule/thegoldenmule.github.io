@@ -803,6 +803,17 @@
       "size": 45,
       "children": [
         {
+          "category": "publications",
+          "title": "W00t — We Won a Game Jam",
+          "type": "writing",
+          "date": "Feb 2026",
+          "subtitle": "FRIENDS!",
+          "description": "The Fallen Court, a story-driven ASCII-art dungeon crawler built on-stream, won a game jam on Encode Club. A look at the game and how it works without a server.",
+          "url": "https://medium.com/spyre-io/w00t-we-won-a-game-jam-beecdff44ed7",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*GdhhFSKPGZrU-yor3RKtnQ.png",
+          "tech": ["games", "web3"]
+        },
+        {
           "category": "products",
           "title": "Powerhouse Reactor",
           "subtitle": "Goldenmule Contract",
