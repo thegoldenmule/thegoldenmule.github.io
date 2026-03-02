@@ -14,6 +14,50 @@
       "children": [
         {
           "category": "publications",
+          "title": "The Value of Resistance",
+          "type": "writing",
+          "date": "Feb 2026",
+          "subtitle": "On formation through friction.",
+          "description": "Why difficulty, toil, and struggle are intrinsically valuable, and what we risk losing when programming no longer requires them.",
+          "url": "https://thegoldenmule.medium.com/the-value-of-resistance-f6b31cf235f9",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*wWqYLO9RgDw9SQSg8rgZgA.jpeg",
+          "tech": ["ai", "software", "learning"]
+        },
+        {
+          "category": "publications",
+          "title": "The TikTok-ification of Programming",
+          "type": "writing",
+          "date": "Feb 2026",
+          "subtitle": "Building software in 20-second bursts and losing something slower.",
+          "description": "A reflection on how LLM-powered coding has compressed programming into short bursts of productivity.",
+          "url": "https://thegoldenmule.medium.com/the-tiktok-ification-of-programming-de7b80786c22",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*tk9n7IFbrjC4voZNwmozhQ.jpeg",
+          "tech": ["ai", "software"]
+        },
+        {
+          "category": "publications",
+          "title": "File Over App Is an Old Idea",
+          "type": "writing",
+          "date": "Feb 2026",
+          "subtitle": "A toast to an abstraction that has scaled for 50 years.",
+          "description": "How Obsidian's 'file over app' philosophy traces back to the Unix pipe, the Thompson shell, and the 50-year-old idea that everything is a file.",
+          "url": "https://thegoldenmule.medium.com/file-over-app-is-an-old-idea-0840e651db40",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*zqzEVEz0tWgMCsGbgR3sNw.png",
+          "tech": ["software"]
+        },
+        {
+          "category": "publications",
+          "title": "The Myth of a Post-Programming World",
+          "type": "writing",
+          "date": "Feb 2026",
+          "subtitle": "When you don't know history, don't guess about the future.",
+          "description": "Why programming languages will always be needed.",
+          "url": "https://thegoldenmule.medium.com/the-myth-of-a-post-programming-world-1578214e789e",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*-32OfwwTLObmOFFHGxphvw.jpeg",
+          "tech": ["ai", "software", "learning"]
+        },
+        {
+          "category": "publications",
           "title": "The Shape of Software is Collapsing",
           "type": "writing",
           "date": "Feb 2026",
@@ -35,7 +79,7 @@
           "tech": [
             "ai",
             "games",
-            
+
             "backend",
             "frontend",
             "deep-dives",
@@ -191,7 +235,16 @@
           "description": "There's no denying that the Web3 ecosystem is a Dark Forest. It is particularly necessary to provide a robust security model. Here we explain how we implemented a fair match system for our casual-competitive game.",
           "url": "https://medium.com/spyre-io/fair-matches-in-web3-6d32fe508e5e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*U0T6Bmt1ulPEkDe_bUpBKA.jpeg",
-          "tech": ["games", "web3", "liveops", "deep-dives", "backend", "frontend", "js", "go"]
+          "tech": [
+            "games",
+            "web3",
+            "liveops",
+            "deep-dives",
+            "backend",
+            "frontend",
+            "js",
+            "go"
+          ]
         },
         {
           "category": "publications",
@@ -268,7 +321,14 @@
           "description": "Did I mention I teach in the CS Masters program at Saint Louis University? For my computer graphics course, we pair-programmed an entire 3D engine from scratch.",
           "url": "https://thegoldenmule.medium.com/a-complete-ish-3d-engine-in-1200-lines-b5babf4b72ed",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KidhxH5QHiplzlXv6SOU6g.jpeg",
-          "tech": ["games", "graphics", "deep-dives", "teaching", "frontend", "js"]
+          "tech": [
+            "games",
+            "graphics",
+            "deep-dives",
+            "teaching",
+            "frontend",
+            "js"
+          ]
         },
         {
           "category": "publications",
@@ -279,7 +339,7 @@
           "description": "How can we understand each other? Thoughts from sociology, biocybernetics, and of course, mathematics.",
           "url": "https://medium.com/geekculture/software-development-dynamics-baltic-german-style-43a526a13444",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*wqkes4CAigOKmIfX.jpg",
-          "tech": [ "teaching"]
+          "tech": ["teaching"]
         },
         {
           "category": "publications",
@@ -784,15 +844,7 @@
           "description": "A bespoke twist to the familiar. Realtime, blockchain-enabled, skill-based multiplayer game.",
           "url": "https://hangmanclash.com",
           "imageUrl": "tex/hangman.jpg",
-          "tech": [
-            "js",
-            "ts",
-            "go",
-            "viem",
-            "pixijs",
-            "react",
-            "tailwind"
-          ],
+          "tech": ["js", "ts", "go", "viem", "pixijs", "react", "tailwind"],
           "size": 38
         },
         {
@@ -1364,7 +1416,16 @@
       "description": "I ran engineering for two AAA game teams, a core tech group, and a tools engineering team.",
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/nc-logo.svg",
-      "tech": ["c-sharp", "unity", "graphics", "js", "akka", "webapi", "dotnet", "aws"],
+      "tech": [
+        "c-sharp",
+        "unity",
+        "graphics",
+        "js",
+        "akka",
+        "webapi",
+        "dotnet",
+        "aws"
+      ],
       "size": 40,
       "children": [
         {
