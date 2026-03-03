@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/benjaminjordan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://thegoldenmule.com
+  * I am benjaminjordan (https://keybase.io/benjaminjordan) on keybase.
+  * I have a public key with fingerprint 9958 EF96 E3CA 149C A6D3  0049 3B3F E49B 2E03 7CDB
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "9958ef96e3ca149ca6d300493b3fe49b2e037cdb",
+            "host": "keybase.io",
+            "key_id": "3b3fe49b2e037cdb",
+            "uid": "e40cedda6806f4a4404dba7268ef8100",
+            "username": "benjaminjordan"
+        },
+        "service": {
+            "hostname": "thegoldenmule.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1397587669,
+    "expire_in": 157680000,
+    "prev": "8e326f39856a0701d272f8e7ec0d96e04de64f1c4ac7ebe862a334141b3b77ee",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.8
+Comment: https://keybase.io/crypto
+
+yMH4AnicbZFLTBN5HMdbWnApEbwsHDzIDkvialtmOtN51MMejEKywmpEVDDUefym
+ndrOlOm0UAobNCSibvYgGEOQRA3sQfEBCQeIJIRwMGIgIWkIssIBCYcNly6PZJHH
+fwjenMs/8/t+ft/fa/KozeKwvr/4vMhVqoN1avxr3HK58o90ChM0KYn5UtgtOHhk
+RQ2AHtUV1cB8GMd5WZA5GkiRJyhO5GmJxHGKIwVSBooTPICTjCgJmBMLajEzA9kI
+fAzcioZi6MevSCj6HT5+IACFiyBJPM3itEzxFIVTksAzHhqVZQkcN8EY6CofAUQL
+oIb4iKKGNF3iVazViSEtoYhISx00cMgZQQhoYQnUSDwMblGLIJuorhmaqIWRHDSM
+qM/MNpJRE28EwX9o5BcUVUIrQAkJ0GOKpmI+ApGioZjOBMkxXpahac6JQVNU0cGv
+mISXQQOgzywDCWTJAumhZZJjvTSPMzgheRiPzAIDIi6hdaIpgaZkQqR4kQEBWNrD
+kyRFUIRACgwDgOrHoEHVMB+J2uQDyDKmBFTeiOuAtU6M37BbrA5LTnaWeUSLI/fY
+t9Pa64/sXb0ij65Mbyd/sxXbXKvxv0bOPl4JNWzKynxeZebcxHrVSO7PQy/SMxuR
+wZ8WPzn8e4nhrK7EjxWn53LYTG9p71zh0g/NJdVVb57uFE68zHS4fx/+dejCyUvZ
+dV0f3TVTSkeSK7Vksls+9P7dU2bdLm9rSy+9NdYfpP/re/b/4N35Reek3PTPagVz
+qtbVPpyVmr5e3r91vmD39cOb4fn8uq07xfWJTvdWf0s4Mrr8xVadIzzpK+ie/WUh
+sEts/tl8vO7evw5r/lqo1u5xNQ6Ufd4Ze1eiO/p7xrxnMpWz4KRsS7c7pweUmaJl
+e9XCicGNvPaFRz3XuqtnXt2vCa4t7gOVJhnk
+=frrW
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/benjaminjordan
+
+==================================================================
