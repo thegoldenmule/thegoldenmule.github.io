@@ -14,6 +14,17 @@
       "children": [
         {
           "category": "publications",
+          "title": "My Workflow is Better than Yours — Week 2",
+          "type": "writing",
+          "date": "Mar 2026",
+          "subtitle": "A cycle worth sharing. Again.",
+          "description": "One week into using Hotseat as a primary interface for wrangling LLM coding agents. A native macOS Kanban app that queues plans, code, and commits — with worktrees, live tails, transition hooks, and a semantic CLI so LLMs can drive themselves.",
+          "url": "https://thegoldenmule.medium.com/my-workflow-is-better-than-yours-week-2-00b6e57a464b",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*iheIZy9V-tVJKa81zjaFNg.png",
+          "tech": ["ai", "software"]
+        },
+        {
+          "category": "publications",
           "title": "The Value of Resistance",
           "type": "writing",
           "date": "Feb 2026",
@@ -812,6 +823,17 @@
           "url": "https://medium.com/spyre-io/w00t-we-won-a-game-jam-beecdff44ed7",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*GdhhFSKPGZrU-yor3RKtnQ.png",
           "tech": ["games", "web3"]
+        },
+        {
+          "category": "products",
+          "title": "Hotseat",
+          "subtitle": "A Goldenmule Media Original",
+          "type": "software",
+          "date": "Mar 2026",
+          "description": "A native macOS app for wrangling LLM coding agents via a Kanban board. Queue plans, code, and commits across repos — with worktrees, live tails, transition hooks, and a semantic CLI for LLMs to drive themselves.",
+          "url": "https://thegoldenmule.medium.com/my-workflow-is-better-than-yours-week-2-00b6e57a464b",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*iheIZy9V-tVJKa81zjaFNg.png",
+          "tech": ["software"]
         },
         {
           "category": "products",
