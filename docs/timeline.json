@@ -1023,6 +1023,39 @@
         },
         {
           "category": "products",
+          "title": "Legendary: Game of Heroes",
+          "subtitle": "Goldenmule Contract",
+          "type": "games",
+          "date": "2023",
+          "description": "Consulting engagement on Legendary: infrastructure forensics and cloud optimization on a live game with 1M+ MDAU, cutting cloud spend 40% and trimming an additional $1M/year of OPEX.",
+          "url": "https://www.n3twork.com/#games",
+          "imageUrl": "tex/legendary.jpg",
+          "tech": ["unity", "java", "aws", "docker"]
+        },
+        {
+          "category": "products",
+          "title": "Legendary: Heroes Unchained",
+          "subtitle": "Goldenmule Contract",
+          "type": "games",
+          "date": "2023",
+          "description": "Consulting engagement on Heroes Unchained: integrated third-party providers for asynchronous on-chain operations, and shipped Unity gameplay to the browser via WebGL.",
+          "url": "https://www.n3twork.com/#games",
+          "imageUrl": "tex/lhu.jpg",
+          "tech": ["unity", "webgl", "solidity", "polygon"]
+        },
+        {
+          "category": "products",
+          "title": "Triumph",
+          "subtitle": "Goldenmule Contract",
+          "type": "games",
+          "date": "2023",
+          "description": "Consulting engagement on Triumph: GO Infinite — migrating legacy services off aging infrastructure toward Docker, EKS, and ARM64 to modernize the live-ops backend.",
+          "url": "https://www.n3twork.com/#games",
+          "imageUrl": "tex/triumph.jpg",
+          "tech": ["unity", "java", "aws", "docker"]
+        },
+        {
+          "category": "products",
           "title": "Slingshot Aerospace",
           "subtitle": "Goldenmule Contract",
           "type": "software",
