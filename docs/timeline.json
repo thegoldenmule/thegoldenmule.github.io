@@ -832,7 +832,7 @@
           "date": "May 2026",
           "description": "Semantic and full-text search for church YouTube channels — find the moment a verse was preached, not just the video.",
           "url": "https://sermonseek.ai",
-          "imageUrl": "tex/logo_square.jpg",
+          "imageUrl": "tex/sermon-seek.png",
           "tech": ["ts", "ai", "software"]
         },
         {
@@ -897,7 +897,7 @@
           "type": "games",
           "date": "Dec 2025",
           "description": "A story-based dungeon crawler web game with on-chain perma-choices.",
-          "url": "https://thefallencourt.com/",
+          "url": "https://main.d1qrc4ab7pa2u4.amplifyapp.com/",
           "imageUrl": "tex/the-fallen-court.jpg",
           "tech": ["games", "pixijs", "web3", "js"]
         },
