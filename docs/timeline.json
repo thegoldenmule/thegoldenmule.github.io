@@ -825,6 +825,17 @@
       "size": 45,
       "children": [
         {
+          "category": "products",
+          "title": "Sermon Seek",
+          "subtitle": "A Goldenmule Media Original",
+          "type": "software",
+          "date": "May 2026",
+          "description": "Semantic and full-text search for church YouTube channels — find the moment a verse was preached, not just the video.",
+          "url": "https://sermonseek.ai",
+          "imageUrl": "tex/logo_square.jpg",
+          "tech": ["ts", "ai", "software"]
+        },
+        {
           "category": "publications",
           "title": "Deep Dive: Reconciling Local-First Event Streams",
           "type": "writing",
