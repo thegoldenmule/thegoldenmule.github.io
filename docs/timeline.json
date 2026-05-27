@@ -1020,6 +1020,17 @@
           "url": "https://binderybooks.com/",
           "imageUrl": "tex/bindery.jpg",
           "tech": ["nextjs", "software", "js", "typescript", "docker", "gcp"]
+        },
+        {
+          "category": "products",
+          "title": "Slingshot Aerospace",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "",
+          "description": "Consulting engagement with Slingshot Aerospace, builders of an integrated operational stack for space situational awareness. I was brought in for guidance on networked 3D simulation in a browser.",
+          "url": "https://www.slingshot.space/",
+          "imageUrl": "tex/slingshot.png",
+          "tech": ["graphics", "software", "unity", "webgl"]
         }
       ]
     },
