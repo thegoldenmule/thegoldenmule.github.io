@@ -14,6 +14,17 @@
       "children": [
         {
           "category": "publications",
+          "title": "Lessons Learned in Building Agentic Tools",
+          "type": "writing",
+          "date": "Mar 2026",
+          "subtitle": "Patterns from building Hotseat with LLMs in the loop.",
+          "description": "Architectural patterns from building Hotseat: semantic APIs over raw ones, error logs that spawn investigation agents, dependency-aware task queues, and context injection across projects to let Claude agents help build the very tool they run in.",
+          "url": "https://thegoldenmule.medium.com/lessons-learned-in-building-agentic-tools-ce79b0a69fb1",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*iheIZy9V-tVJKa81zjaFNg.png",
+          "tech": ["ai", "software", "deep-dives"]
+        },
+        {
+          "category": "publications",
           "title": "My Workflow is Better than Yours — Week 2",
           "type": "writing",
           "date": "Mar 2026",
@@ -815,6 +826,17 @@
       "children": [
         {
           "category": "publications",
+          "title": "Deep Dive: Reconciling Local-First Event Streams",
+          "type": "writing",
+          "date": "Apr 2026",
+          "subtitle": "Operational Reshuffle: merging divergent event streams without breaking user intent.",
+          "description": "Why game networking and CRDTs fall short for syncing multiple Reactor instances, and a novel approach — Operational Reshuffle — that reconciles divergent event streams while preserving immutable operations and user intent.",
+          "url": "https://thegoldenmule.medium.com/deep-dive-reconciling-local-first-event-streams-cfd20d1dccd4",
+          "imageUrl": "tex/powerhouse.jpg",
+          "tech": ["web3", "software", "deep-dives", "backend", "ts"]
+        },
+        {
+          "category": "publications",
           "title": "W00t — We Won a Game Jam",
           "type": "writing",
           "date": "Feb 2026",
@@ -834,6 +856,17 @@
           "url": "https://thegoldenmule.medium.com/my-workflow-is-better-than-yours-week-2-00b6e57a464b",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*iheIZy9V-tVJKa81zjaFNg.png",
           "tech": ["software"]
+        },
+        {
+          "category": "publications",
+          "title": "Deep Dive: Document Models and The Reactor",
+          "type": "writing",
+          "date": "Mar 2026",
+          "subtitle": "The convenience of centralized SaaS with the sovereignty of local-first.",
+          "description": "A deep dive into Powerhouse's local-first architecture: how Document Models and The Reactor combine event sourcing and CQRS to deliver realtime collaboration without sacrificing user sovereignty.",
+          "url": "https://thegoldenmule.medium.com/deep-dive-document-models-and-the-reactor-f03b81826cba",
+          "imageUrl": "tex/powerhouse.jpg",
+          "tech": ["web3", "software", "deep-dives", "backend", "ts"]
         },
         {
           "category": "products",
