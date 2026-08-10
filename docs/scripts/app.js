@@ -567,15 +567,9 @@ function setupLoadMoreButton(container) {
 // Resume View (Career)
 // ==========================================================================
 
-// Number of child items revealed per "more" click
-const CHILDREN_PAGE_SIZE = 5;
-
 // An entry's children expand as separate groups, so you can open just the code
 // or just the writing. Order here is the order they appear.
 const CHILD_GROUPS = ["products", "code", "writing"];
-
-// Group key -> the items in it, keyed by `${entryId}:${group}`
-const careerChildrenData = new Map();
 
 function careerEntryId(item) {
   return `career-entry-${item.title.replace(/\W+/g, "-").toLowerCase()}`;
@@ -595,13 +589,17 @@ function childGroup(child) {
   return child.category === "code" ? "code" : "products";
 }
 
+// Returns [{ key, items }] in CHILD_GROUPS order, newest first, empty groups dropped.
 function groupChildren(children) {
   const groups = new Map(CHILD_GROUPS.map((key) => [key, []]));
   children.forEach((child) => groups.get(childGroup(child)).push(child));
-  groups.forEach((items) =>
-    items.sort((a, b) => parseDate(b.date) - parseDate(a.date))
-  );
-  return groups;
+
+  return CHILD_GROUPS.map((key) => ({
+    key,
+    items: groups
+      .get(key)
+      .sort((a, b) => parseDate(b.date) - parseDate(a.date)),
+  })).filter((group) => group.items.length);
 }
 
 function renderCareerView(container, items) {
@@ -609,20 +607,6 @@ function renderCareerView(container, items) {
   const sorted = [...items].sort(
     (a, b) => parseDate(b.date) - parseDate(a.date)
   );
-
-  // Clear previous data
-  careerChildrenData.clear();
-
-  // Store each entry's children, split by group, for lazy loading
-  sorted.forEach((item) => {
-    if (!item.children?.length) return;
-    const entryId = careerEntryId(item);
-    groupChildren(item.children).forEach((groupItems, key) => {
-      if (groupItems.length) {
-        careerChildrenData.set(`${entryId}:${key}`, groupItems);
-      }
-    });
-  });
 
   const profile = state.data.profile || {};
   const primary = sorted.filter((item) => !item.minor);
@@ -766,11 +750,7 @@ function renderCareerEntry(item) {
     ? `${item.subtitle}, ${item.title}`
     : item.title;
 
-  // Only groups that actually have items get a toggle.
-  const groups = CHILD_GROUPS.map((key) => ({
-    key,
-    items: careerChildrenData.get(`${entryId}:${key}`) || [],
-  })).filter((group) => group.items.length);
+  const groups = groupChildren(item.children || []);
 
   return `
     <article class="resume-entry" id="${entryId}">
@@ -825,23 +805,12 @@ function renderCareerEntry(item) {
 }
 
 function renderChildGroup(entryId, group) {
-  const remaining = group.items.length - CHILDREN_PAGE_SIZE;
-
   return `
-    <div class="resume-entry-children" id="${entryId}-${group.key}"
-         data-children-shown="${CHILDREN_PAGE_SIZE}" hidden>
+    <div class="resume-entry-children" id="${entryId}-${group.key}" hidden>
       <p class="resume-children-heading">${escapeHtml(group.key)}</p>
       <ul class="resume-children-list">
-        ${group.items
-          .slice(0, CHILDREN_PAGE_SIZE)
-          .map((child) => renderCareerChild(child))
-          .join("")}
+        ${group.items.map((child) => renderCareerChild(child)).join("")}
       </ul>
-      ${
-        remaining > 0
-          ? `<button type="button" class="resume-more">+ ${remaining} more</button>`
-          : ""
-      }
     </div>
   `;
 }
@@ -904,45 +873,6 @@ function setupCareerEntryInteractions(container) {
         : "+";
     });
   });
-
-  container.querySelectorAll(".resume-more").forEach((button) => {
-    button.addEventListener("click", () =>
-      loadMoreChildren(button.closest(".resume-entry-children"))
-    );
-  });
-}
-
-// `panel` is one group's container; its id is `${entryId}-${group}`, which maps
-// back to the `${entryId}:${group}` key the items were stored under.
-function loadMoreChildren(panel) {
-  const entry = panel.closest(".resume-entry");
-  const group = panel.id.slice(entry.id.length + 1);
-  const children = careerChildrenData.get(`${entry.id}:${group}`);
-  if (!children) return;
-
-  const currentShown =
-    parseInt(panel.dataset.childrenShown, 10) || CHILDREN_PAGE_SIZE;
-  const total = children.length;
-  const newShown = Math.min(currentShown + CHILDREN_PAGE_SIZE, total);
-
-  const childrenList = panel.querySelector(".resume-children-list");
-  if (childrenList) {
-    children.slice(currentShown, newShown).forEach((child) => {
-      childrenList.insertAdjacentHTML("beforeend", renderCareerChild(child));
-    });
-  }
-
-  panel.dataset.childrenShown = newShown;
-
-  const moreBtn = panel.querySelector(".resume-more");
-  if (moreBtn) {
-    const remaining = total - newShown;
-    if (remaining > 0) {
-      moreBtn.textContent = `+ ${remaining} more`;
-    } else {
-      moreBtn.remove();
-    }
-  }
 }
 
 // ==========================================================================

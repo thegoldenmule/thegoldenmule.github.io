@@ -724,19 +724,6 @@ button {
   color: var(--color-text-muted);
 }
 
-.resume-more {
-  margin-top: var(--spacing-md);
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 0.8125rem;
-  color: var(--color-accent);
-}
-
-.resume-more:hover {
-  text-decoration: underline;
-}
-
 /* Education */
 .resume-education {
   display: flex;
@@ -1341,8 +1328,7 @@ button {
   .footer,
   .resume-expand-row,
   .resume-expand,
-  .resume-entry-children,
-  .resume-more {
+  .resume-entry-children {
     display: none !important;
   }
 
