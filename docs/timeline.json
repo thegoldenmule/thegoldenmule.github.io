@@ -1545,7 +1545,7 @@
           ]
         },
         {
-          "category": "code",
+          "category": "products",
           "title": "chelydra",
           "subtitle": "Multiplayer-connected DSLR controller.",
           "type": "software",
@@ -1686,7 +1686,7 @@
           ]
         },
         {
-          "category": "code",
+          "category": "products",
           "title": "HoloLens 2 Multiplayer",
           "type": "ar",
           "date": "2019",
@@ -1701,7 +1701,7 @@
           ]
         },
         {
-          "category": "code",
+          "category": "products",
           "title": "Conversational AI World Building",
           "type": "exploration",
           "date": "2019",
@@ -1733,7 +1733,7 @@
           ]
         },
         {
-          "category": "code",
+          "category": "products",
           "title": "100 HoloLens Multiplayer @ E3",
           "type": "ar",
           "date": "June 2019",
@@ -1749,7 +1749,7 @@
           ]
         },
         {
-          "category": "code",
+          "category": "products",
           "title": "Kinect + Enklu + E3",
           "type": "ar",
           "date": "June 2019",

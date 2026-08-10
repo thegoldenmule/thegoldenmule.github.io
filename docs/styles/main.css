@@ -579,22 +579,26 @@ button {
   color: var(--color-text-muted);
 }
 
-/* Expand affordance */
+/* Expand affordance -- one toggle per child group */
+.resume-expand-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md) var(--spacing-lg);
+  margin-top: var(--spacing-md);
+  padding-left: calc(24px + var(--spacing-sm));
+}
+
 .resume-expand {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  margin: var(--spacing-md) 0 0;
+  margin: 0;
   padding: 0;
   border: 0;
   background: none;
   font-size: 0.8125rem;
   color: var(--color-text-muted);
   transition: color var(--transition-fast);
-}
-
-.resume-entry > .resume-expand {
-  margin-left: calc(24px + var(--spacing-sm));
 }
 
 .resume-expand:hover {
@@ -643,6 +647,16 @@ button {
 /* Expanded children */
 .resume-entry-children {
   margin-top: var(--spacing-md);
+}
+
+.resume-children-heading {
+  margin: 0 0 var(--spacing-xs);
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-subtle);
 }
 
 .resume-children-list {
@@ -699,42 +713,15 @@ button {
   white-space: nowrap;
 }
 
-.resume-child-meta {
-  display: flex;
-  align-items: baseline;
-  gap: 0.4rem;
-  min-width: 0;
-  margin: 2px 0 0;
-  font-size: 0.8125rem;
-  color: var(--color-text-muted);
-}
-
-.resume-child-kind {
-  flex-shrink: 0;
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-subtle);
-}
-
-.resume-child--project .resume-child-kind {
-  color: var(--color-accent);
-}
-
-.resume-child--writing .resume-child-kind {
-  color: #7c3aed;
-}
-
-.resume-child--media .resume-child-kind {
-  color: #d97706;
-}
-
 .resume-child-blurb {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  margin: 2px 0 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
 }
 
 .resume-more {
@@ -1352,6 +1339,7 @@ button {
 @media print {
   .header,
   .footer,
+  .resume-expand-row,
   .resume-expand,
   .resume-entry-children,
   .resume-more {
@@ -1452,12 +1440,9 @@ button {
   /* Drop the logo gutter so text uses the full width */
   .resume-entry-note,
   .resume-entry > .resume-bullets,
-  .resume-entry > .resume-entry-children {
+  .resume-entry > .resume-entry-children,
+  .resume-expand-row {
     padding-left: 0;
-  }
-
-  .resume-entry > .resume-expand {
-    margin-left: 0;
   }
 
   .resume-entry-head {

@@ -570,11 +570,38 @@ function setupLoadMoreButton(container) {
 // Number of child items revealed per "more" click
 const CHILDREN_PAGE_SIZE = 5;
 
-// Store children data for lazy loading
+// An entry's children expand as separate groups, so you can open just the code
+// or just the writing. Order here is the order they appear.
+const CHILD_GROUPS = ["products", "code", "writing"];
+
+// Group key -> the items in it, keyed by `${entryId}:${group}`
 const careerChildrenData = new Map();
 
 function careerEntryId(item) {
   return `career-entry-${item.title.replace(/\W+/g, "-").toLowerCase()}`;
+}
+
+// products = a standalone thing someone runs or uses; code = libraries, SDKs,
+// plugins, and upstream contributions; writing = essays plus press about them.
+function childGroup(child) {
+  if (
+    child.category === "publications" ||
+    child.category === "media" ||
+    child.type === "writing" ||
+    child.type === "media"
+  ) {
+    return "writing";
+  }
+  return child.category === "code" ? "code" : "products";
+}
+
+function groupChildren(children) {
+  const groups = new Map(CHILD_GROUPS.map((key) => [key, []]));
+  children.forEach((child) => groups.get(childGroup(child)).push(child));
+  groups.forEach((items) =>
+    items.sort((a, b) => parseDate(b.date) - parseDate(a.date))
+  );
+  return groups;
 }
 
 function renderCareerView(container, items) {
@@ -586,11 +613,15 @@ function renderCareerView(container, items) {
   // Clear previous data
   careerChildrenData.clear();
 
-  // Store children data for each item
+  // Store each entry's children, split by group, for lazy loading
   sorted.forEach((item) => {
-    if (item.children?.length > 0) {
-      careerChildrenData.set(careerEntryId(item), item.children);
-    }
+    if (!item.children?.length) return;
+    const entryId = careerEntryId(item);
+    groupChildren(item.children).forEach((groupItems, key) => {
+      if (groupItems.length) {
+        careerChildrenData.set(`${entryId}:${key}`, groupItems);
+      }
+    });
   });
 
   const profile = state.data.profile || {};
@@ -708,7 +739,7 @@ function renderEarlierRoles(items) {
   const label = `${items.length} earlier roles`;
 
   return `
-    <div class="resume-earlier" data-expand-label="${escapeHtml(label)}">
+    <div class="resume-earlier">
       ${renderExpandButton("resume-earlier-body", label)}
       <div class="resume-entry-children" id="resume-earlier-body" hidden>
         <div class="resume-entries">
@@ -730,24 +761,19 @@ function renderExpandButton(controls, label) {
 
 function renderCareerEntry(item) {
   const imageUrl = getImageUrl(item);
-  const children = item.children || [];
-  const hasChildren = children.length > 0;
   const entryId = careerEntryId(item);
   const heading = item.subtitle
     ? `${item.subtitle}, ${item.title}`
     : item.title;
-  const expandLabel = `${children.length} ${
-    children.length === 1 ? "project or post" : "projects & writing"
-  }`;
+
+  // Only groups that actually have items get a toggle.
+  const groups = CHILD_GROUPS.map((key) => ({
+    key,
+    items: careerChildrenData.get(`${entryId}:${key}`) || [],
+  })).filter((group) => group.items.length);
 
   return `
-    <article class="resume-entry" id="${entryId}"${
-    hasChildren
-      ? ` data-expandable="true" data-children-shown="${CHILDREN_PAGE_SIZE}" data-expand-label="${escapeHtml(
-          expandLabel
-        )}"`
-      : ""
-  }>
+    <article class="resume-entry" id="${entryId}">
       <div class="resume-entry-head">
         ${
           imageUrl
@@ -776,24 +802,21 @@ function renderCareerEntry(item) {
           : ""
       }
       ${
-        hasChildren
+        groups.length
           ? `
-        ${renderExpandButton(`${entryId}-children`, expandLabel)}
-        <div class="resume-entry-children" id="${entryId}-children" hidden>
-          <ul class="resume-children-list">
-            ${children
-              .slice(0, CHILDREN_PAGE_SIZE)
-              .map((child) => renderCareerChild(child))
-              .join("")}
-          </ul>
-          ${
-            children.length > CHILDREN_PAGE_SIZE
-              ? `<button type="button" class="resume-more">+ ${
-                  children.length - CHILDREN_PAGE_SIZE
-                } more</button>`
-              : ""
-          }
+        <div class="resume-expand-row">
+          ${groups
+            .map((group) =>
+              renderExpandButton(
+                `${entryId}-${group.key}`,
+                `${group.key} (${group.items.length})`
+              )
+            )
+            .join("")}
         </div>
+        ${groups
+          .map((group) => renderChildGroup(entryId, group))
+          .join("")}
       `
           : ""
       }
@@ -801,20 +824,34 @@ function renderCareerEntry(item) {
   `;
 }
 
-function childKind(child) {
-  if (child.type === "media" || child.category === "media") return "media";
-  if (child.type === "writing" || child.category === "publications")
-    return "writing";
-  return "project";
+function renderChildGroup(entryId, group) {
+  const remaining = group.items.length - CHILDREN_PAGE_SIZE;
+
+  return `
+    <div class="resume-entry-children" id="${entryId}-${group.key}"
+         data-children-shown="${CHILDREN_PAGE_SIZE}" hidden>
+      <p class="resume-children-heading">${escapeHtml(group.key)}</p>
+      <ul class="resume-children-list">
+        ${group.items
+          .slice(0, CHILDREN_PAGE_SIZE)
+          .map((child) => renderCareerChild(child))
+          .join("")}
+      </ul>
+      ${
+        remaining > 0
+          ? `<button type="button" class="resume-more">+ ${remaining} more</button>`
+          : ""
+      }
+    </div>
+  `;
 }
 
 function renderCareerChild(child) {
-  const kind = childKind(child);
   const imageUrl = getImageUrl(child);
   const blurb = child.description || child.subtitle || "";
 
   return `
-    <li class="resume-child resume-child--${kind}">
+    <li class="resume-child">
       ${
         imageUrl
           ? `<img src="${escapeHtml(imageUrl)}" alt="" class="resume-child-thumb" loading="lazy" />`
@@ -839,67 +876,65 @@ function renderCareerChild(child) {
               : ""
           }
         </p>
-        <p class="resume-child-meta">
-          <span class="resume-child-kind">${kind}</span>
-          ${
-            blurb
-              ? `<span class="resume-sep" aria-hidden="true">·</span><span class="resume-child-blurb">${escapeHtml(
-                  blurb
-                )}</span>`
-              : ""
-          }
-        </p>
+        ${
+          blurb
+            ? `<p class="resume-child-blurb">${escapeHtml(blurb)}</p>`
+            : ""
+        }
       </div>
     </li>
   `;
 }
 
 function setupCareerEntryInteractions(container) {
+  // Each toggle owns exactly one panel, named by aria-controls. Groups open and
+  // close independently, so the label stays put and only the icon changes.
   container.querySelectorAll(".resume-expand").forEach((button) => {
     button.addEventListener("click", () => {
-      const section = button.closest(".resume-entry, .resume-earlier");
-      const body = section.querySelector(":scope > .resume-entry-children");
-      if (!body) return;
+      const panel = document.getElementById(
+        button.getAttribute("aria-controls")
+      );
+      if (!panel) return;
 
-      const expanded = !section.classList.contains("expanded");
-      section.classList.toggle("expanded", expanded);
-      body.hidden = !expanded;
+      const expanded = panel.hidden;
+      panel.hidden = !expanded;
       button.setAttribute("aria-expanded", String(expanded));
       button.querySelector(".resume-expand-icon").textContent = expanded
         ? "–"
         : "+";
-      button.querySelector(".resume-expand-label").textContent = expanded
-        ? "Hide"
-        : section.dataset.expandLabel;
     });
   });
 
   container.querySelectorAll(".resume-more").forEach((button) => {
     button.addEventListener("click", () =>
-      loadMoreChildren(button.closest(".resume-entry"))
+      loadMoreChildren(button.closest(".resume-entry-children"))
     );
   });
 }
 
-function loadMoreChildren(entry) {
-  const children = careerChildrenData.get(entry.id);
+// `panel` is one group's container; its id is `${entryId}-${group}`, which maps
+// back to the `${entryId}:${group}` key the items were stored under.
+function loadMoreChildren(panel) {
+  const entry = panel.closest(".resume-entry");
+  const group = panel.id.slice(entry.id.length + 1);
+  const children = careerChildrenData.get(`${entry.id}:${group}`);
   if (!children) return;
 
   const currentShown =
-    parseInt(entry.dataset.childrenShown, 10) || CHILDREN_PAGE_SIZE;
+    parseInt(panel.dataset.childrenShown, 10) || CHILDREN_PAGE_SIZE;
   const total = children.length;
   const newShown = Math.min(currentShown + CHILDREN_PAGE_SIZE, total);
 
-  const childrenList = entry.querySelector(".resume-children-list");
+  const childrenList = panel.querySelector(".resume-children-list");
   if (childrenList) {
     children.slice(currentShown, newShown).forEach((child) => {
       childrenList.insertAdjacentHTML("beforeend", renderCareerChild(child));
     });
   }
 
-  entry.dataset.childrenShown = newShown;
+  panel.dataset.childrenShown = newShown;
 
-  const moreBtn = entry.querySelector(".resume-more");
+  const moreBtn = panel.querySelector(".resume-more");
   if (moreBtn) {
     const remaining = total - newShown;
     if (remaining > 0) {
