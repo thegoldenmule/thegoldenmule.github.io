@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"
+     role="img" aria-label="No artwork available — unreleased title">
+  <title>Unreleased title</title>
+  <defs>
+    <!-- Quiet diagonal hatch, so the tile reads as "nothing to show" rather than
+         as a failed image. Colours are the site's own border/surface tokens. -->
+    <pattern id="hatch" width="28" height="28" patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="#f8f9fa"/>
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#e9ecef" stroke-width="11"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#hatch)"/>
+  <!-- The tile is cropped by object-fit: cover into boxes as wide as 2.3:1, which
+       keeps only the middle ~43% of the height. Sizing the mark at 30% keeps it
+       whole in the grid card and still legible in the 44px thumbnail. -->
+  <rect x="140" y="140" width="120" height="120" rx="12"
+        fill="#f8f9fa" fill-opacity="0.85"
+        stroke="#ced4da" stroke-width="5" stroke-dasharray="18 14" stroke-linecap="round"/>
+</svg>
