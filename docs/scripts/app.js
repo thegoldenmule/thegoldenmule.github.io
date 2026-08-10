@@ -78,8 +78,13 @@ async function loadAllWritingItems() {
       subtitle: item.subtitle,
       description: item.description,
       date: parseDate(item.date),
+      // Timeline dates are month- or year-precise ("Apr 2026", "2023"). Keep the
+      // original string for display -- reformatting the timestamp would invent a
+      // day of the month, and would print a year-only date as December.
+      dateLabel: item.date,
       tags: item.tech || [],
       url: item.url,
+      imageUrl: getImageUrl(item),
       isArchive: false
     })),
     // Archive items (normalize to common format)
@@ -495,9 +500,12 @@ function renderUnifiedFilterBar(tags, selectedTags) {
 }
 
 function renderUnifiedItem(item) {
-  const dateStr = new Date(item.date).toLocaleDateString('en-US', {
-    year: 'numeric', month: 'short', day: 'numeric'
-  });
+  // Archive posts carry a full publication date; timeline entries do not.
+  const dateStr = item.dateLabel
+    ? item.dateLabel
+    : new Date(item.date).toLocaleDateString('en-US', {
+        year: 'numeric', month: 'short', day: 'numeric'
+      });
 
   // Archive badge
   const archiveBadge = item.isArchive
@@ -514,21 +522,30 @@ function renderUnifiedItem(item) {
     .map(tag => `<span class="tech-tag">${escapeHtml(tag)}</span>`)
     .join('');
 
+  // Archive posts carry no artwork, so the slot stays as an empty tile rather
+  // than collapsing -- otherwise titles jump left and right down the list.
+  const thumb = item.imageUrl
+    ? `<img src="${escapeHtml(item.imageUrl)}" alt="" class="list-item-thumb" loading="lazy" />`
+    : '<span class="list-item-thumb list-item-thumb--empty" aria-hidden="true"></span>';
+
   return `
     <article class="list-item">
-      <div class="list-item-header">
-        <h3 class="list-item-title">
-          ${linkHref
-            ? `<a href="${escapeHtml(linkHref)}" ${linkTarget}>${escapeHtml(item.title)}</a>`
-            : escapeHtml(item.title)
-          }
-          ${archiveBadge}
-        </h3>
-        <span class="list-item-date">${dateStr}</span>
+      ${thumb}
+      <div class="list-item-body">
+        <div class="list-item-header">
+          <h3 class="list-item-title">
+            ${linkHref
+              ? `<a href="${escapeHtml(linkHref)}" ${linkTarget}>${escapeHtml(item.title)}</a>`
+              : escapeHtml(item.title)
+            }
+            ${archiveBadge}
+          </h3>
+          <span class="list-item-date">${dateStr}</span>
+        </div>
+        ${item.subtitle ? `<p class="list-item-subtitle">${escapeHtml(item.subtitle)}</p>` : ''}
+        ${item.description ? `<p class="list-item-description">${escapeHtml(item.description)}</p>` : ''}
+        ${tagsHtml ? `<div class="list-item-tech">${tagsHtml}</div>` : ''}
       </div>
-      ${item.subtitle ? `<p class="list-item-subtitle">${escapeHtml(item.subtitle)}</p>` : ''}
-      ${item.description ? `<p class="list-item-description">${escapeHtml(item.description)}</p>` : ''}
-      ${tagsHtml ? `<div class="list-item-tech">${tagsHtml}</div>` : ''}
     </article>
   `;
 }
