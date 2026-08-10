@@ -1392,7 +1392,7 @@
           "type": "games",
           "date": "Dec 2025",
           "description": "A story-based dungeon crawler web game with on-chain perma-choices.",
-          "url": "https://thefallencourt.com/",
+          "url": "https://main.d1qrc4ab7pa2u4.amplifyapp.com/",
           "imageUrl": "tex/the-fallen-court.jpg",
           "tech": [
             "games",
@@ -1577,10 +1577,13 @@
           "url": "https://medium.com/p/cfd20d1dccd4",
           "imageUrl": "https://cdn-images-1.medium.com/max/800/0*CWsLyNVJyxuuIhA-.png",
           "tech": [
+            "web3",
             "software",
             "deep-dives",
-            "backend"
-          ]
+            "backend",
+            "ts"
+          ],
+          "description": "Why game networking and CRDTs fall short for syncing multiple Reactor instances, and a novel approach — Operational Reshuffle — that reconciles divergent event streams while preserving immutable operations and user intent."
         },
         {
           "category": "publications",
@@ -1621,7 +1624,8 @@
             "ai",
             "software",
             "deep-dives"
-          ]
+          ],
+          "description": "Architectural patterns from building Hotseat: semantic APIs over raw ones, error logs that spawn investigation agents, dependency-aware task queues, and context injection across projects to let Claude agents help build the very tool they run in."
         },
         {
           "category": "publications",
@@ -1645,11 +1649,13 @@
           "url": "https://medium.com/p/f03b81826cba",
           "imageUrl": "https://cdn-images-1.medium.com/max/2560/1*7PNjM03eJvKNv14_5oKLOw.png",
           "tech": [
+            "web3",
             "software",
             "deep-dives",
             "backend",
             "ts"
-          ]
+          ],
+          "description": "A deep dive into Powerhouse's local-first architecture: how Document Models and The Reactor combine event sourcing and CQRS to deliver realtime collaboration without sacrificing user sovereignty."
         },
         {
           "category": "publications",
@@ -1695,12 +1701,12 @@
         },
         {
           "category": "products",
-          "title": "SermonSeek.ai",
+          "title": "Sermon Seek",
           "subtitle": "A Goldenmule Media Original",
           "type": "software",
-          "date": "2026",
+          "date": "May 2026",
           "description": "AI semantic and full-text search over church YouTube channels and sermon transcripts: find the moment a verse was preached, not just the video. A RAG pipeline of OpenAI chunk embeddings into pgvector search, with LLM enrichment for summaries, topics, and scripture references.",
-          "imageUrl": "tex/sermonseek.jpg",
+          "imageUrl": "tex/sermon-seek.png",
           "url": "https://sermonseek.ai",
           "tech": [
             "ts",
@@ -1731,13 +1737,15 @@
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "",
-          "description": "Guidance on networked 3D simulation in the browser for space situational awareness.",
-          "imageUrl": "tex/slingshot.svg",
+          "description": "Consulting engagement with Slingshot Aerospace, builders of an integrated operational stack for space situational awareness. I was brought in for guidance on networked 3D simulation in a browser.",
+          "imageUrl": "tex/slingshot.png",
           "tech": [
-            "webgl",
             "graphics",
-            "js"
-          ]
+            "software",
+            "unity",
+            "webgl"
+          ],
+          "url": "https://www.slingshot.space/"
         },
         {
           "category": "products",
@@ -1779,6 +1787,48 @@
           "tech": [
             "games",
             "web3"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Legendary: Game of Heroes",
+          "subtitle": "N3TWORK Studios",
+          "type": "games",
+          "date": "2023",
+          "description": "Responsible for development and SRE teams for Legendary. Cut infra OPEX by 30% with forensics.",
+          "imageUrl": "tex/legendary.jpg",
+          "tech": [
+            "unity",
+            "java",
+            "aws"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Legendary: Heroes Unchained",
+          "subtitle": "N3TWORK Studios",
+          "type": "games",
+          "date": "2023",
+          "description": "Ran the engineering org for LHU.",
+          "imageUrl": "tex/lhu.jpg",
+          "tech": [
+            "unity",
+            "java",
+            "aws"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Triumph",
+          "subtitle": "N3TWORK Studios",
+          "type": "games",
+          "date": "2023",
+          "description": "Ran the engineering org for Triumph.",
+          "imageUrl": "tex/triumph.jpg",
+          "tech": [
+            "unity",
+            "java",
+            "aws"
           ]
         }
       ]
@@ -2021,7 +2071,7 @@
       "title": "Saint Louis University",
       "subtitle": "Adjunct Instructor",
       "type": "teaching",
-      "date": "2022 – Present",
+      "date": "2022 – 2024",
       "bullets": [
         "Developed, taught, and open-sourced two courses for the CS Master's program: [Computer Graphics](https://github.com/thegoldenmule/csci-starter-05) (CSCI-4820) and [Principles of Software Engineering](https://github.com/thegoldenmule/csci-5030/) (CSCI-5030)."
       ],
