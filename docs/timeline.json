@@ -1313,7 +1313,7 @@
       "bullets": [
         "Authored the core, local-first engine (CQRS + CRDT/OT) behind [Vetra.io](https://vetra.io), the AI-native platform for building software from natural language.",
         "Shipped, operated, and sunset [Hangman Clash](https://hangmanclash.com): 250K real-time PvP matches, 40K players, 10%+ paid conversion, 0 exploits.",
-        "Built the agentic planning loop (comprehension-gated HITL, task execution graphs, team Kanban) behind Hotseat + Hotseat Wiki, tools in daily use."
+        "Built the agentic planning loop (comprehension-gated HITL, task execution graphs, team Kanban) behind [Hotseat](https://github.com/Goldenmule-Media/hotseat) + [Hotseat Wiki](https://wiki.thegoldenmule.com), tools in daily use."
       ],
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/logo_square.jpg",
@@ -1981,7 +1981,7 @@
       "type": "teaching",
       "date": "2022 – Present",
       "bullets": [
-        "Developed, taught, and open-sourced two courses for the CS Master's program: Computer Graphics (CSCI-4820) and [Principles of Software Engineering](https://github.com/thegoldenmule/csci-5030/) (CSCI-5030)."
+        "Developed, taught, and open-sourced two courses for the CS Master's program: [Computer Graphics](https://github.com/thegoldenmule/csci-starter-05) (CSCI-4820) and [Principles of Software Engineering](https://github.com/thegoldenmule/csci-5030/) (CSCI-5030)."
       ],
       "url": "https://github.com/thegoldenmule/csci-5030/",
       "imageUrl": "https://www.slu.edu/ico/apple-touch-icon.png",
