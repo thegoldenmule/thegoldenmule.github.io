@@ -142,6 +142,12 @@ function handleRouteChange() {
   // Reset article state if not viewing an article
   state.currentArticle = null;
 
+  // "resume" is the public-facing name for the career view
+  if (hash === "resume") {
+    switchCategory("career");
+    return;
+  }
+
   // Handle category routes (archive removed from valid categories)
   if (["career", "products", "code", "writing"].includes(hash)) {
     switchCategory(hash);
@@ -558,11 +564,18 @@ function setupLoadMoreButton(container) {
 }
 
 // ==========================================================================
-// Career Timeline View
+// Resume View (Career)
 // ==========================================================================
+
+// Number of child items revealed per "more" click
+const CHILDREN_PAGE_SIZE = 5;
 
 // Store children data for lazy loading
 const careerChildrenData = new Map();
+
+function careerEntryId(item) {
+  return `career-entry-${item.title.replace(/\W+/g, "-").toLowerCase()}`;
+}
 
 function renderCareerView(container, items) {
   // Sort by date (newest first)
@@ -576,123 +589,207 @@ function renderCareerView(container, items) {
   // Store children data for each item
   sorted.forEach((item) => {
     if (item.children?.length > 0) {
-      const entryId = `career-entry-${item.title
-        .replace(/\W+/g, "-")
-        .toLowerCase()}`;
-      careerChildrenData.set(entryId, item.children);
+      careerChildrenData.set(careerEntryId(item), item.children);
     }
   });
 
+  const profile = state.data.profile || {};
+  const primary = sorted.filter((item) => !item.minor);
+  const earlier = sorted.filter((item) => item.minor);
+
   container.innerHTML = `
-    <div class="career-container">
-      <div class="career-header">
-        <h2 class="career-title">thegoldenmule at your service</h2>
-        <p class="career-subtitle">(but you can just call me <strong>Ben</strong>)</p>
-        <ul class="career-intro">
-          <li>I am a hands-on, full-stack technical leader with extensive experience in interactive applications and games, augmented reality, Web3, and SaaS.</li>
-          <li>I have built and led many teams over the years, providing coaching and mentoring to grow aptitude, capacity, and velocity.</li>
-          <li>I 💙 open source as a business strategy.</li>
-        </ul>
-      </div>
-      <div class="career-timeline">
-        ${sorted.map((item) => renderCareerEntry(item)).join("")}
-      </div>
+    <div class="resume">
+      ${renderResumeMasthead(profile)}
+      ${
+        profile.summary
+          ? `<p class="resume-summary">${renderInline(profile.summary)}</p>`
+          : ""
+      }
+      ${renderResumeSkills(profile)}
+      <section class="resume-section">
+        <h2 class="resume-section-title">Experience</h2>
+        <div class="resume-entries">
+          ${primary.map((item) => renderCareerEntry(item)).join("")}
+        </div>
+        ${renderEarlierRoles(earlier)}
+      </section>
+      ${renderResumeEducation(profile)}
+      ${renderResumeHighlights(profile)}
     </div>
   `;
 
-  // Add click/keyboard handlers for expansion
   setupCareerEntryInteractions(container);
+}
+
+function renderResumeMasthead(profile) {
+  if (!profile.name) return "";
+
+  const contact = (profile.links || []).map(
+    (link) =>
+      `<a href="${escapeHtml(
+        link.url
+      )}" target="_blank" rel="noopener noreferrer">${escapeHtml(
+        link.label
+      )}</a>`
+  );
+
+  return `
+    <header class="resume-masthead">
+      <h1 class="resume-name">${escapeHtml(profile.name)}</h1>
+      <p class="resume-contact">${contact.join(
+        '<span class="resume-sep" aria-hidden="true">·</span>'
+      )}</p>
+    </header>
+  `;
+}
+
+function renderResumeSkills(profile) {
+  if (!profile.skills?.length) return "";
+
+  return `
+    <section class="resume-section">
+      <h2 class="resume-section-title">Skills</h2>
+      <dl class="resume-skills">
+        ${profile.skills
+          .map(
+            (skill) => `
+          <dt>${escapeHtml(skill.label)}</dt>
+          <dd>${escapeHtml(skill.value)}</dd>
+        `
+          )
+          .join("")}
+      </dl>
+    </section>
+  `;
+}
+
+function renderResumeEducation(profile) {
+  if (!profile.education?.length) return "";
+
+  return `
+    <section class="resume-section">
+      <h2 class="resume-section-title">Education</h2>
+      ${profile.education
+        .map(
+          (entry) => `
+        <p class="resume-education">
+          <span class="resume-education-degree">${escapeHtml(
+            entry.degree
+          )}</span>
+          <span class="resume-education-school">${escapeHtml(
+            entry.school
+          )}</span>
+        </p>
+      `
+        )
+        .join("")}
+    </section>
+  `;
+}
+
+function renderResumeHighlights(profile) {
+  if (!profile.highlights?.length) return "";
+
+  return `
+    <section class="resume-section">
+      <h2 class="resume-section-title">Open Source &amp; Writing</h2>
+      <ul class="resume-bullets">
+        ${profile.highlights
+          .map((line) => `<li>${renderInline(line)}</li>`)
+          .join("")}
+      </ul>
+    </section>
+  `;
+}
+
+function renderEarlierRoles(items) {
+  if (!items.length) return "";
+
+  const label = `${items.length} earlier roles`;
+
+  return `
+    <div class="resume-earlier" data-expand-label="${escapeHtml(label)}">
+      ${renderExpandButton("resume-earlier-body", label)}
+      <div class="resume-entry-children" id="resume-earlier-body" hidden>
+        <div class="resume-entries">
+          ${items.map((item) => renderCareerEntry(item)).join("")}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderExpandButton(controls, label) {
+  return `
+    <button type="button" class="resume-expand" aria-expanded="false" aria-controls="${controls}">
+      <span class="resume-expand-icon" aria-hidden="true">+</span>
+      <span class="resume-expand-label">${escapeHtml(label)}</span>
+    </button>
+  `;
 }
 
 function renderCareerEntry(item) {
   const imageUrl = getImageUrl(item);
-  const hasChildren = item.children?.length > 0;
-
-  // Collect all tech tags from item and its children
-  const allTech = new Set(item.tech || []);
-  if (item.children) {
-    item.children.forEach((child) => {
-      if (child.tech) {
-        child.tech.forEach((t) => allTech.add(t));
-      }
-    });
-  }
-  const techArray = Array.from(allTech).sort();
-  const techTags = techArray.length ? renderTechTags(techArray) : "";
-
-  const childCount = item.children?.length || 0;
-  const expandHint = childCount === 1 ? "1 entry" : `${childCount} entries`;
-  const entryId = `career-entry-${item.title
-    .replace(/\W+/g, "-")
-    .toLowerCase()}`;
+  const children = item.children || [];
+  const hasChildren = children.length > 0;
+  const entryId = careerEntryId(item);
+  const heading = item.subtitle
+    ? `${item.subtitle}, ${item.title}`
+    : item.title;
+  const expandLabel = `${children.length} ${
+    children.length === 1 ? "project or post" : "projects & writing"
+  }`;
 
   return `
-    <div class="career-entry" id="${entryId}" ${
-    hasChildren ? 'data-expandable="true"' : ""
-  } ${
+    <article class="resume-entry" id="${entryId}"${
     hasChildren
-      ? `data-children-total="${childCount}" data-children-shown="5"`
+      ? ` data-expandable="true" data-children-shown="${CHILDREN_PAGE_SIZE}" data-expand-label="${escapeHtml(
+          expandLabel
+        )}"`
       : ""
   }>
-      <div class="career-entry-header" ${
-        hasChildren ? 'tabindex="0" role="button" aria-expanded="false"' : ""
-      }>
-        <span class="career-entry-toggle">▶</span>
+      <div class="resume-entry-head">
         ${
           imageUrl
-            ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(
-                item.title
-              )}" class="career-entry-logo" />`
-            : ""
+            ? `<img src="${escapeHtml(
+                imageUrl
+              )}" alt="" class="resume-entry-logo" loading="lazy" />`
+            : '<span class="resume-entry-logo resume-entry-logo--empty" aria-hidden="true"></span>'
         }
-        <div class="career-entry-info">
-          <h3 class="career-entry-title">${escapeHtml(item.title)}</h3>
-          ${
-            item.subtitle
-              ? `<span class="career-entry-subtitle">${escapeHtml(
-                  item.subtitle
-                )}</span>`
-              : ""
-          }
-        </div>
+        <h3 class="resume-entry-role">${escapeHtml(heading)}</h3>
         ${
           item.date
-            ? `<span class="career-entry-date">${escapeHtml(item.date)}</span>`
-            : ""
-        }
-        ${
-          hasChildren
-            ? `<span class="career-entry-expand-hint">+ ${expandHint}</span>`
+            ? `<span class="resume-entry-date">${escapeHtml(item.date)}</span>`
             : ""
         }
       </div>
-      <div class="career-entry-body">
-        ${
-          item.description
-            ? `<p class="career-entry-description">${escapeHtml(
-                item.description
-              )}</p>`
-            : ""
-        }
-        ${techTags ? `<div class="career-entry-tech">${techTags}</div>` : ""}
-      </div>
+      ${
+        item.description
+          ? `<p class="resume-entry-note">${renderInline(item.description)}</p>`
+          : ""
+      }
+      ${
+        item.bullets?.length
+          ? `<ul class="resume-bullets">${item.bullets
+              .map((bullet) => `<li>${renderInline(bullet)}</li>`)
+              .join("")}</ul>`
+          : ""
+      }
       ${
         hasChildren
           ? `
-        <div class="career-entry-children">
-          <div class="career-entry-children-header">Projects & Writing (${
-            item.children.length
-          })</div>
-          <div class="career-children-list">
-            ${item.children
-              .slice(0, 5)
-              .map((c) => renderCareerChild(c))
+        ${renderExpandButton(`${entryId}-children`, expandLabel)}
+        <div class="resume-entry-children" id="${entryId}-children" hidden>
+          <ul class="resume-children-list">
+            ${children
+              .slice(0, CHILDREN_PAGE_SIZE)
+              .map((child) => renderCareerChild(child))
               .join("")}
-          </div>
+          </ul>
           ${
-            item.children.length > 5
-              ? `<button type="button" class="career-load-more" tabindex="0">+ ${
-                  item.children.length - 5
+            children.length > CHILDREN_PAGE_SIZE
+              ? `<button type="button" class="resume-more">+ ${
+                  children.length - CHILDREN_PAGE_SIZE
                 } more</button>`
               : ""
           }
@@ -700,49 +797,31 @@ function renderCareerEntry(item) {
       `
           : ""
       }
-    </div>
+    </article>
   `;
 }
 
+function childKind(child) {
+  if (child.type === "media" || child.category === "media") return "media";
+  if (child.type === "writing" || child.category === "publications")
+    return "writing";
+  return "project";
+}
+
 function renderCareerChild(child) {
-  const techTags = child.tech?.length
-    ? renderTechTags(child.tech.slice(0, 3))
-    : "";
-  const isWriting =
-    child.type === "writing" || child.category === "publications";
-  const isMedia =
-    child.type === "media" || child.category === "media";
-
-  let typeClass, typeLabel;
-  if (isWriting) {
-    typeClass = "career-child--writing";
-    typeLabel = "Writing";
-  } else if (isMedia) {
-    typeClass = "career-child--media";
-    typeLabel = "Media";
-  } else {
-    typeClass = "career-child--project";
-    typeLabel = "Project";
-  }
-
+  const kind = childKind(child);
   const imageUrl = getImageUrl(child);
+  const blurb = child.description || child.subtitle || "";
 
   return `
-    <div class="career-child ${typeClass}">
-      ${imageUrl
-        ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(child.title)}" class="career-child-thumbnail" loading="lazy" />`
-        : ''
+    <li class="resume-child resume-child--${kind}">
+      ${
+        imageUrl
+          ? `<img src="${escapeHtml(imageUrl)}" alt="" class="resume-child-thumb" loading="lazy" />`
+          : '<span class="resume-child-thumb resume-child-thumb--empty" aria-hidden="true"></span>'
       }
-      <div class="career-child-content">
-        <div class="career-child-header">
-          <span class="career-child-type">${typeLabel}</span>
-          ${
-            child.date
-              ? `<span class="career-child-date">${escapeHtml(child.date)}</span>`
-              : ""
-          }
-        </div>
-        <h5 class="career-child-title">
+      <div class="resume-child-body">
+        <p class="resume-child-title">
           ${
             child.url
               ? `<a href="${escapeHtml(
@@ -752,102 +831,81 @@ function renderCareerChild(child) {
                 )}</a>`
               : escapeHtml(child.title)
           }
-        </h5>
-        ${
-          child.description
-            ? `<p class="career-child-description">${escapeHtml(
-                child.description
-              )}</p>`
-            : ""
-        }
-        ${techTags ? `<div class="career-child-tech">${techTags}</div>` : ""}
+          ${
+            child.date
+              ? `<span class="resume-child-date">${escapeHtml(
+                  child.date
+                )}</span>`
+              : ""
+          }
+        </p>
+        <p class="resume-child-meta">
+          <span class="resume-child-kind">${kind}</span>
+          ${
+            blurb
+              ? `<span class="resume-sep" aria-hidden="true">·</span><span class="resume-child-blurb">${escapeHtml(
+                  blurb
+                )}</span>`
+              : ""
+          }
+        </p>
       </div>
-    </div>
+    </li>
   `;
 }
 
 function setupCareerEntryInteractions(container) {
-  const entries = container.querySelectorAll(
-    '.career-entry[data-expandable="true"]'
-  );
+  container.querySelectorAll(".resume-expand").forEach((button) => {
+    button.addEventListener("click", () => {
+      const section = button.closest(".resume-entry, .resume-earlier");
+      const body = section.querySelector(":scope > .resume-entry-children");
+      if (!body) return;
 
-  entries.forEach((entry) => {
-    const header = entry.querySelector(".career-entry-header");
-
-    // Toggle function
-    const toggleEntry = (e) => {
-      // Don't toggle if clicking a link or load more button
-      if (e.target.tagName === "A") return;
-      if (e.target.classList.contains("career-load-more")) return;
-
-      const isExpanded = entry.classList.contains("expanded");
-      entry.classList.toggle("expanded");
-
-      // Update ARIA state
-      header.setAttribute("aria-expanded", !isExpanded);
-    };
-
-    // Click handler
-    header.addEventListener("click", toggleEntry);
-
-    // Keyboard handler (Enter/Space)
-    header.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        toggleEntry(e);
-      }
+      const expanded = !section.classList.contains("expanded");
+      section.classList.toggle("expanded", expanded);
+      body.hidden = !expanded;
+      button.setAttribute("aria-expanded", String(expanded));
+      button.querySelector(".resume-expand-icon").textContent = expanded
+        ? "–"
+        : "+";
+      button.querySelector(".resume-expand-label").textContent = expanded
+        ? "Hide"
+        : section.dataset.expandLabel;
     });
+  });
 
-    // Load more button handler
-    const loadMoreBtn = entry.querySelector(".career-load-more");
-    if (loadMoreBtn) {
-      loadMoreBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        loadMoreChildren(entry);
-      });
-
-      loadMoreBtn.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          e.stopPropagation();
-          loadMoreChildren(entry);
-        }
-      });
-    }
+  container.querySelectorAll(".resume-more").forEach((button) => {
+    button.addEventListener("click", () =>
+      loadMoreChildren(button.closest(".resume-entry"))
+    );
   });
 }
 
 function loadMoreChildren(entry) {
-  const entryId = entry.id;
-  const children = careerChildrenData.get(entryId);
+  const children = careerChildrenData.get(entry.id);
   if (!children) return;
 
-  const currentShown = parseInt(entry.dataset.childrenShown, 10) || 5;
+  const currentShown =
+    parseInt(entry.dataset.childrenShown, 10) || CHILDREN_PAGE_SIZE;
   const total = children.length;
-  const newShown = Math.min(currentShown + 5, total);
+  const newShown = Math.min(currentShown + CHILDREN_PAGE_SIZE, total);
 
-  // Get the children to add
-  const newChildren = children.slice(currentShown, newShown);
-
-  // Render and append new children
-  const childrenList = entry.querySelector(".career-children-list");
+  const childrenList = entry.querySelector(".resume-children-list");
   if (childrenList) {
-    newChildren.forEach((child) => {
+    children.slice(currentShown, newShown).forEach((child) => {
       childrenList.insertAdjacentHTML("beforeend", renderCareerChild(child));
     });
   }
 
-  // Update shown count
   entry.dataset.childrenShown = newShown;
 
-  // Update or remove the load more button
-  const loadMoreBtn = entry.querySelector(".career-load-more");
-  if (loadMoreBtn) {
+  const moreBtn = entry.querySelector(".resume-more");
+  if (moreBtn) {
     const remaining = total - newShown;
     if (remaining > 0) {
-      loadMoreBtn.textContent = `+ ${remaining} more`;
+      moreBtn.textContent = `+ ${remaining} more`;
     } else {
-      loadMoreBtn.remove();
+      moreBtn.remove();
     }
   }
 }
@@ -1512,6 +1570,23 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+// Renders a plain-text string that may contain [label](url) links. Everything is
+// escaped first, so only the link syntax survives as markup.
+function renderInline(text) {
+  if (!text) return "";
+
+  return escapeHtml(text).replace(
+    /\[([^\]]+)\]\(([^)\s"]+)\)/g,
+    (match, label, url) => {
+      if (!/^(https?:\/\/|mailto:|#|\/)/.test(url)) return match;
+      const external = url.startsWith("http");
+      return `<a href="${url}"${
+        external ? ' target="_blank" rel="noopener noreferrer"' : ""
+      }>${label}</a>`;
+    }
+  );
+}
+
 function getImageUrl(item) {
   if (item.imageUrl) {
     if (item.imageUrl.startsWith("http")) {
@@ -1569,7 +1644,7 @@ function parseDate(dateStr) {
     const lastIndex = str.lastIndexOf(m);
     if (lastIndex !== -1) {
       // Check if this month appears after a dash (end of range)
-      const dashIndex = str.lastIndexOf("-");
+      const dashIndex = Math.max(str.lastIndexOf("-"), str.lastIndexOf("–"));
       if (dashIndex === -1 || lastIndex > dashIndex) {
         month = i;
       }

@@ -1,4 +1,50 @@
 {
+  "profile": {
+    "name": "Benjamin Jordan",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/benjaminmicahj/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/thegoldenmule"
+      },
+      {
+        "label": "Medium",
+        "url": "https://thegoldenmule.medium.com/"
+      }
+    ],
+    "summary": "Hands-on technical leader with 20+ years of shipping people-first products. Currently working on LLM-native workflows for builders at [vetra.io](https://vetra.io) (MCP, RAG, structured agent FSMs), and AI-first products that solve problems for my local community.",
+    "skills": [
+      {
+        "label": "LLM-native products",
+        "value": "MCP, RAG, HITL, semantic APIs, structured loops, agent design"
+      },
+      {
+        "label": "Full-stack",
+        "value": "Go, TypeScript, C#, Java, Python, Obj-C, Unity, WebGL, CG"
+      },
+      {
+        "label": "Distributed systems & infrastructure",
+        "value": "CQRS, local-first CRDT/OT, Docker, K8s, AWS, GCP"
+      },
+      {
+        "label": "Leadership",
+        "value": "0-to-1 product engineering, org building and hiring, xDev and vendor management"
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS, Mathematics",
+        "school": "Truman State University"
+      }
+    ],
+    "highlights": [
+      "Invited maintainer of [Quicktype](https://github.com/quicktype/quicktype/pulls?q=is%3Apr+author%3Athegoldenmule+is%3Aclosed), serial contributor to [Nakama](https://github.com/heroiclabs/nakama), contributor to [Polygon Edge](https://github.com/0xPolygon/polygon-edge/pull/414) and [Antlr](https://github.com/antlr/antlr4/pull/2267).",
+      "[100+ published essays](#writing), with AI and agentic tooling the current focus."
+    ]
+  },
   "events": [
     {
       "category": "collection",
@@ -21,7 +67,10 @@
           "description": "One week into using Hotseat as a primary interface for wrangling LLM coding agents. A native macOS Kanban app that queues plans, code, and commits — with worktrees, live tails, transition hooks, and a semantic CLI so LLMs can drive themselves.",
           "url": "https://thegoldenmule.medium.com/my-workflow-is-better-than-yours-week-2-00b6e57a464b",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*iheIZy9V-tVJKa81zjaFNg.png",
-          "tech": ["ai", "software"]
+          "tech": [
+            "ai",
+            "software"
+          ]
         },
         {
           "category": "publications",
@@ -32,7 +81,11 @@
           "description": "Why difficulty, toil, and struggle are intrinsically valuable, and what we risk losing when programming no longer requires them.",
           "url": "https://thegoldenmule.medium.com/the-value-of-resistance-f6b31cf235f9",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*wWqYLO9RgDw9SQSg8rgZgA.jpeg",
-          "tech": ["ai", "software", "learning"]
+          "tech": [
+            "ai",
+            "software",
+            "learning"
+          ]
         },
         {
           "category": "publications",
@@ -43,7 +96,10 @@
           "description": "A reflection on how LLM-powered coding has compressed programming into short bursts of productivity.",
           "url": "https://thegoldenmule.medium.com/the-tiktok-ification-of-programming-de7b80786c22",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*tk9n7IFbrjC4voZNwmozhQ.jpeg",
-          "tech": ["ai", "software"]
+          "tech": [
+            "ai",
+            "software"
+          ]
         },
         {
           "category": "publications",
@@ -54,7 +110,9 @@
           "description": "How Obsidian's 'file over app' philosophy traces back to the Unix pipe, the Thompson shell, and the 50-year-old idea that everything is a file.",
           "url": "https://thegoldenmule.medium.com/file-over-app-is-an-old-idea-0840e651db40",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*zqzEVEz0tWgMCsGbgR3sNw.png",
-          "tech": ["software"]
+          "tech": [
+            "software"
+          ]
         },
         {
           "category": "publications",
@@ -65,7 +123,11 @@
           "description": "Why programming languages will always be needed.",
           "url": "https://thegoldenmule.medium.com/the-myth-of-a-post-programming-world-1578214e789e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*-32OfwwTLObmOFFHGxphvw.jpeg",
-          "tech": ["ai", "software", "learning"]
+          "tech": [
+            "ai",
+            "software",
+            "learning"
+          ]
         },
         {
           "category": "publications",
@@ -76,7 +138,10 @@
           "description": "AI coding tools are making custom software trivial to build, collapsing the layers of SaaS products that once seemed indispensable. What happens to the industry when the standard models disappear overnight?",
           "url": "https://thegoldenmule.medium.com/the-shape-of-software-is-collapsing-67999845afba",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1024/format:webp/0*dvHCjjRvxCJFSqul.png",
-          "tech": ["ai", "software"]
+          "tech": [
+            "ai",
+            "software"
+          ]
         },
         {
           "category": "publications",
@@ -90,7 +155,6 @@
           "tech": [
             "ai",
             "games",
-
             "backend",
             "frontend",
             "deep-dives",
@@ -107,7 +171,9 @@
           "description": "How, if Anthropic hired me, I would speed up Claude Code's iteration speed by multiple orders of magnitude. ",
           "url": "https://thegoldenmule.medium.com/low-hanging-llm-fruit-9944e628e6ac",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*f_OeQiE5i_cU6MA50r8ONQ.jpeg",
-          "tech": ["ai"]
+          "tech": [
+            "ai"
+          ]
         },
         {
           "category": "publications",
@@ -118,7 +184,10 @@
           "description": "More updates on Hangman! Collaboration is key.",
           "url": "https://medium.com/spyre-io/the-collab-machine-7108c9d3ac4f",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*EQ3vI5WaYvF8LAFk-_Mi2g.png",
-          "tech": ["games", "liveops"]
+          "tech": [
+            "games",
+            "liveops"
+          ]
         },
         {
           "category": "publications",
@@ -129,7 +198,9 @@
           "description": "Programming is becoming in increasingly read-only. What are we at risk of losing?",
           "url": "https://thegoldenmule.medium.com/the-read-only-ouroboros-5a88acc8b0dd",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*fX1s4cofsFYKuIi_PMYwMA.jpeg",
-          "tech": ["ai"]
+          "tech": [
+            "ai"
+          ]
         },
         {
           "category": "publications",
@@ -140,7 +211,9 @@
           "description": "Best described as a long-form love letter to Wikipedia.",
           "url": "https://thegoldenmule.medium.com/what-information-is-good-for-the-world-d111988ca29c",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KL7cAidDY2PdfocSfJWfmQ.jpeg",
-          "tech": ["ai"]
+          "tech": [
+            "ai"
+          ]
         },
         {
           "category": "publications",
@@ -151,7 +224,13 @@
           "description": "We are running so many live events, it's not even funny.",
           "url": "https://medium.com/spyre-io/hangman-liveops-abbcd59124ac",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hfLHbXzIAvv1AfF9tyt6GA.jpeg",
-          "tech": ["games", "liveops", "deep-dives", "backend", "frontend"]
+          "tech": [
+            "games",
+            "liveops",
+            "deep-dives",
+            "backend",
+            "frontend"
+          ]
         },
         {
           "category": "publications",
@@ -162,7 +241,10 @@
           "description": "How we're giving out user incentives, on-chain, fairly.",
           "url": "https://medium.com/spyre-io/hangman-update-the-drop-fb2934046c04",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hGCHzNMe8HSg519-vaUrVA.png",
-          "tech": ["games", "liveops"]
+          "tech": [
+            "games",
+            "liveops"
+          ]
         },
         {
           "category": "publications",
@@ -173,7 +255,10 @@
           "description": "An exercise in googolology and information theory.",
           "url": "https://thegoldenmule.medium.com/gemini-vs-claude-vs-chatgpt-the-ultimate-showdown-ca19f737f4d6",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*DUK-rbxTBORuUS8dPIbgbA.jpeg",
-          "tech": ["ai", "experiments"]
+          "tech": [
+            "ai",
+            "experiments"
+          ]
         },
         {
           "category": "publications",
@@ -184,7 +269,9 @@
           "description": "Brief thoughts about thinking. You are special.",
           "url": "https://thegoldenmule.medium.com/a-thought-about-thinking-783056cf0502",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ERd_qVuu0OaptR1Cda390w.jpeg",
-          "tech": ["ai"]
+          "tech": [
+            "ai"
+          ]
         },
         {
           "category": "publications",
@@ -213,7 +300,9 @@
           "description": "Knowledge without sweat is NOT understanding.",
           "url": "https://thegoldenmule.medium.com/on-ai-and-understanding-8627d2bbe51e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*nKGHOECq5CK5hcJCzDk6rA.jpeg",
-          "tech": ["ai"]
+          "tech": [
+            "ai"
+          ]
         },
         {
           "category": "publications",
@@ -224,7 +313,13 @@
           "description": "Look, it's more complicated than it sounds, okay?? An embarrassing story and a full walkthrough of how I implemented bucketed leaderboards in Nakama.",
           "url": "https://medium.com/spyre-io/nakama-deep-dive-leaderboards-e8d41688d53e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*a40QxPUkXsUfK5Y-YiYOng.jpeg",
-          "tech": ["games", "liveops", "deep-dives", "backend", "go"]
+          "tech": [
+            "games",
+            "liveops",
+            "deep-dives",
+            "backend",
+            "go"
+          ]
         },
         {
           "category": "publications",
@@ -235,7 +330,13 @@
           "description": "Tales in using an open-source CMS in games.",
           "url": "https://medium.com/spyre-io/nakama-deep-dive-leaderboards-e8d41688d53e",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*a40QxPUkXsUfK5Y-YiYOng.jpeg",
-          "tech": ["games", "liveops", "deep-dives", "backend", "go"]
+          "tech": [
+            "games",
+            "liveops",
+            "deep-dives",
+            "backend",
+            "go"
+          ]
         },
         {
           "category": "publications",
@@ -266,7 +367,11 @@
           "description": "Web3 is a hot mess of 'builders' building for other 'builders'. Where are the actual products and what problems are they actually solving?",
           "url": "https://medium.com/spyre-io/what-belongs-on-a-blockchain-57ed37bde544",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*3MFleJbGRwsQL7d0maS7Ew.png",
-          "tech": ["games", "web3", "backend"]
+          "tech": [
+            "games",
+            "web3",
+            "backend"
+          ]
         },
         {
           "category": "publications",
@@ -277,7 +382,9 @@
           "description": "I guess programming is over now? And other thoughts on AI.",
           "url": "https://medium.com/swlh/why-im-leaving-programming-behind-for-a-cheese-blog-8efeb2edb601",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*My7yndGVvEqEllFFPrZchA.jpeg",
-          "tech": ["ai"]
+          "tech": [
+            "ai"
+          ]
         },
         {
           "category": "publications",
@@ -288,7 +395,13 @@
           "description": "Unity is a great engine, but it has its weak spots. In this article, I defend our decision to use a web-native engine instead.",
           "url": "https://medium.com/spyre-io/a-tale-of-two-engines-dc80250e397a",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sghqgWIHhDLlyIzxs_lTqw.jpeg",
-          "tech": ["games", "deep-dives", "frontend", "js", "typescript"]
+          "tech": [
+            "games",
+            "deep-dives",
+            "frontend",
+            "js",
+            "typescript"
+          ]
         },
         {
           "category": "publications",
@@ -299,7 +412,11 @@
           "description": "Now the question: what makes physics engines break? In this article, I dive DEEP into linear algebra in complex space to find explicit conditions for failure. Believe me, it's cool!",
           "url": "https://thegoldenmule.medium.com/physics-engine-deep-dive-part-ii-cb8d1fda1f9b",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*GDEI8bHKk6Yfq4hxdu_SFg.jpeg",
-          "tech": ["games", "physics", "deep-dives"]
+          "tech": [
+            "games",
+            "physics",
+            "deep-dives"
+          ]
         },
         {
           "category": "publications",
@@ -310,7 +427,11 @@
           "description": "An unusual departure for my writing: hard math. We dive into the theory of rigid body systems and begin an exploration into what makes physics engines tick.",
           "url": "https://thegoldenmule.medium.com/physics-engines-explained-part-i-25c595ddc5b2",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:730/format:webp/0*IspZqqnDZvZmWWsY.png",
-          "tech": ["games", "physics", "deep-dives"]
+          "tech": [
+            "games",
+            "physics",
+            "deep-dives"
+          ]
         },
         {
           "category": "publications",
@@ -321,7 +442,11 @@
           "description": "Account Abstraction, or Smart Wallets, are the newest fad. Everyone and their grandmother is making wallets. So why have we chosen to skip them for now?",
           "url": "https://medium.com/spyre-io/a-counterpoint-to-account-abstraction-df71d1f179d9",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*zSHIlzSPQP-b-HkD2B_mPg.jpeg",
-          "tech": ["web3", "deep-dives", "backend"]
+          "tech": [
+            "web3",
+            "deep-dives",
+            "backend"
+          ]
         },
         {
           "category": "publications",
@@ -350,7 +475,9 @@
           "description": "How can we understand each other? Thoughts from sociology, biocybernetics, and of course, mathematics.",
           "url": "https://medium.com/geekculture/software-development-dynamics-baltic-german-style-43a526a13444",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*wqkes4CAigOKmIfX.jpg",
-          "tech": ["teaching"]
+          "tech": [
+            "teaching"
+          ]
         },
         {
           "category": "publications",
@@ -361,7 +488,9 @@
           "description": "NFTs may be mathematically attractive but daggum if they aren't complicated. So complicated that most of them are horribly broken.",
           "url": "https://medium.com/coinmonks/nft-collectors-are-geniuses-3edbc427c48c",
           "imageUrl": "https://miro.medium.com/max/720/1*ovBG4SiY_uoFNRZ_NhoqIA.webp",
-          "tech": ["web3"]
+          "tech": [
+            "web3"
+          ]
         },
         {
           "category": "publications",
@@ -372,7 +501,9 @@
           "description": "My little AI co-programmer is quickly becoming an indispensible tool. Let's talk about metaphysics-- wait what?",
           "url": "https://medium.com/geekculture/github-copilot-vs-major-world-religions-44829926e055",
           "imageUrl": "https://miro.medium.com/max/640/0*FMaBgXwuQmK7KEcg.webp",
-          "tech": ["ai"]
+          "tech": [
+            "ai"
+          ]
         },
         {
           "category": "publications",
@@ -383,7 +514,9 @@
           "description": "Why Agile methodology matters, and how I'm teaching it to CS masters students. If only someone had shown me these things when I was a whipper-snapper!",
           "url": "https://medium.com/geekculture/shaping-young-minds-with-agile-thinking-33b63ccd3c12",
           "imageUrl": "https://miro.medium.com/max/720/0*c9YjL7ReG6E2NgT_.webp",
-          "tech": ["teaching"]
+          "tech": [
+            "teaching"
+          ]
         },
         {
           "category": "publications",
@@ -394,7 +527,9 @@
           "description": "The term 'Startup CTO' can mean just about anything, depending on the startup-- but there is one thing they all have in common: wrestling with the unknown.",
           "url": "https://medium.com/codex/what-you-cant-know-about-being-a-startup-cto-80138aceb68f",
           "imageUrl": "https://miro.medium.com/max/720/1*3wxO_yDf9w7_I8NcJYmn9A.webp",
-          "tech": ["teaching"]
+          "tech": [
+            "teaching"
+          ]
         },
         {
           "category": "publications",
@@ -405,7 +540,9 @@
           "description": "The future is here and the only choice we have is how to respond: do we reject it, or do we embrace it?",
           "url": "https://medium.com/codex/embrace-ai-pair-programming-or-perish-359a4c1a58c8",
           "imageUrl": "https://miro.medium.com/max/720/1*g5Bb1Cgq1QWkNyZkFJPXoA.webp",
-          "tech": ["ai"]
+          "tech": [
+            "ai"
+          ]
         },
         {
           "category": "publications",
@@ -416,7 +553,9 @@
           "description": "A practical methodology for building software that I completely made up in a vacuum and is completely original.",
           "url": "https://medium.com/codex/the-binary-search-methodology-3cd21fc66531",
           "imageUrl": "https://miro.medium.com/max/720/1*2MTujmy2vodReeVNFdx8TQ.webp",
-          "tech": ["teaching"]
+          "tech": [
+            "teaching"
+          ]
         },
         {
           "category": "publications",
@@ -427,7 +566,9 @@
           "description": "What can I say, I'm a sucker for elegant math. Proof of Stake is not the picture of elegance its older brother is.",
           "url": "https://medium.com/coinmonks/why-proof-of-work-is-elegant-and-proof-of-stake-is-not-4988cdc8805f",
           "imageUrl": "https://miro.medium.com/max/720/1*hhFG5jniMBT_5A4lvkaSNg.webp",
-          "tech": ["web3"]
+          "tech": [
+            "web3"
+          ]
         },
         {
           "category": "publications",
@@ -438,7 +579,9 @@
           "description": "Something from Pascal the programmer: please take the time to write less code. Thank you.",
           "url": "https://medium.com/codex/take-the-time-to-write-less-code-1bf0ab385a38",
           "imageUrl": "https://miro.medium.com/max/720/1*95u9XPdy0jCIbvG4z9OsNw.webp",
-          "tech": ["teaching"]
+          "tech": [
+            "teaching"
+          ]
         },
         {
           "category": "publications",
@@ -449,7 +592,9 @@
           "description": "My love for literature and math leads me down a strange path... Follow along in WONDER on a numerical exploration of classic authors.",
           "url": "https://medium.com/geekculture/in-which-i-probably-invented-a-whole-new-branch-of-mathematics-and-computer-science-fbfa6e224631",
           "imageUrl": "https://miro.medium.com/max/720/0*zJq9-2Qbvvi--dR9.webp",
-          "tech": ["experiments"]
+          "tech": [
+            "experiments"
+          ]
         },
         {
           "category": "publications",
@@ -460,7 +605,10 @@
           "description": "Storytelling is a lost art in software engineering. What happens when you pit massive brains against one another?",
           "url": "https://medium.com/codex/doug-mcilroy-vs-donald-knuth-dbafec5d6b24",
           "imageUrl": "https://miro.medium.com/max/720/1*AoHzgWzzBdrVLpd9e_P4IQ.webp",
-          "tech": ["history", "teaching"]
+          "tech": [
+            "history",
+            "teaching"
+          ]
         },
         {
           "category": "publications",
@@ -471,7 +619,9 @@
           "description": "Are we coding for space shuttles here? Why are we so afraid of failure?",
           "url": "https://medium.com/codex/programming-where-failure-is-not-an-option-d42dfa938b42",
           "imageUrl": "https://miro.medium.com/max/720/0*Hpa_ocOdiYzRZVyb.webp",
-          "tech": ["teaching"]
+          "tech": [
+            "teaching"
+          ]
         }
       ]
     },
@@ -495,7 +645,10 @@
           "description": "Everyone has created flat procedural terrain-- but what methods can be used for generating spherical terrain? This two part post builds on geospheres and explores one method of geometry creation and one method for an accompanying Earthlike shader.",
           "url": "https://thegoldenmule.com/blog/2013/01/spherical-terrain-generation/",
           "imageUrl": "tex/world.jpg",
-          "tech": ["c-sharp", "unity"]
+          "tech": [
+            "c-sharp",
+            "unity"
+          ]
         },
         {
           "category": "code",
@@ -505,7 +658,9 @@
           "description": "An ancient and naive implementation of Porter's stemming algorithm. Essentially, it takes words and decomposes them down to their root.",
           "url": "https://github.com/thegoldenmule/PStem",
           "imageUrl": "tex/stem.jpg",
-          "tech": ["js"]
+          "tech": [
+            "js"
+          ]
         },
         {
           "category": "code",
@@ -515,7 +670,9 @@
           "description": "Now in 2D! An ancient, Scorched Earth style, software rendered, hot-seat multiplayer extravaganza.",
           "url": "https://thegoldenmule.com/labs/Scorch3d/",
           "imageUrl": "tex/ScorchedAnimation.jpg",
-          "tech": ["js"]
+          "tech": [
+            "js"
+          ]
         },
         {
           "category": "code",
@@ -525,7 +682,9 @@
           "description": "For those of you wanting to generate interesting 2D terrains, similar to the Mother of All Games: Scorched Earth. These don't use silly fractals or perlin-- those are too boring!",
           "url": "https://thegoldenmule.com/blog/2011/08/terramorphic-genesis-algorithms-or-terrain-generation/",
           "imageUrl": "tex/TGA.jpg",
-          "tech": ["js"]
+          "tech": [
+            "js"
+          ]
         },
         {
           "category": "code",
@@ -535,7 +694,9 @@
           "description": "A relativity engine-- essentially any object in the scene can be the Observer, and every object has a clock. Both time and space are transformed by speed relative to the current Observer.",
           "url": "https://thegoldenmule.com/blog/2011/08/internet-einstein-einstein-internet/",
           "imageUrl": "tex/ss.jpg",
-          "tech": ["haxe"]
+          "tech": [
+            "haxe"
+          ]
         },
         {
           "category": "code",
@@ -545,7 +706,9 @@
           "description": "An XML log target for SOS Max that works across HaXe's AS3 and JS targets.",
           "url": "https://github.com/thegoldenmule/HaXe-SOSTrace",
           "imageUrl": "tex/SOS.jpg",
-          "tech": ["haxe"]
+          "tech": [
+            "haxe"
+          ]
         },
         {
           "category": "code",
@@ -555,7 +718,9 @@
           "description": "A Javascript interpreter for Unity.",
           "url": "https://github.com/thegoldenmule/jint",
           "imageUrl": "tex/test.jpg",
-          "tech": ["c-sharp"]
+          "tech": [
+            "c-sharp"
+          ]
         },
         {
           "category": "code",
@@ -565,7 +730,9 @@
           "description": "Story is a research project that leverages the Python NLT and machine learning techniques for gaming. It's a reverse text adventure. The goal is to use natural language input to describe an environment to a computer, which then makes choices about how to use the environment to accomplish the described goal.",
           "url": "https://github.com/thegoldenmule/story",
           "imageUrl": "tex/vsdLA.jpg",
-          "tech": ["python"]
+          "tech": [
+            "python"
+          ]
         },
         {
           "category": "code",
@@ -575,7 +742,9 @@
           "description": "My first project using Cinder. It's very simple, linking luma from a video capture source to various properties of a bunch of circles (in the biz we call them particles).",
           "url": "https://github.com/thegoldenmule/CameraOutline",
           "imageUrl": "tex/cinder.jpg",
-          "tech": ["c"]
+          "tech": [
+            "c"
+          ]
         },
         {
           "category": "code",
@@ -585,7 +754,9 @@
           "description": "A set of tools for backing up email. Yes, it sounds boring, but it was fun and I needed something simple.",
           "url": "https://github.com/thegoldenmule/email-backup",
           "imageUrl": "tex/ebackupUsage.jpg",
-          "tech": ["python"]
+          "tech": [
+            "python"
+          ]
         },
         {
           "category": "code",
@@ -595,7 +766,9 @@
           "description": "A cute name for an otherwise uncaring software-rendered particle system.",
           "url": "https://github.com/thegoldenmule/Itsy",
           "imageUrl": "tex/Itsy.jpg",
-          "tech": ["js"]
+          "tech": [
+            "js"
+          ]
         },
         {
           "category": "code",
@@ -605,7 +778,10 @@
           "description": "A couple classes for using Ninject as a dependency injection solution in Unity3d.",
           "url": "https://thegoldenmule.com/blog/2013/12/ninject-and-unity/",
           "imageUrl": "tex/ninject.jpg",
-          "tech": ["c-sharp", "unity"]
+          "tech": [
+            "c-sharp",
+            "unity"
+          ]
         },
         {
           "category": "code",
@@ -615,7 +791,11 @@
           "description": "A short exploration of generating a 3d immersion of a 4d Klein bottle.",
           "url": "https://github.com/thegoldenmule/Topology",
           "imageUrl": "tex/Klein.jpg",
-          "tech": ["c-sharp", "unity", "graphics"]
+          "tech": [
+            "c-sharp",
+            "unity",
+            "graphics"
+          ]
         },
         {
           "category": "code",
@@ -625,7 +805,10 @@
           "description": "A very basic implementation of the separating axes theorem for collision detection. This was created for illustrative purposes, and has, let's say, a few bugs.",
           "url": "https://thegoldenmule.com/blog/2013/12/supercolliders-in-unity/",
           "imageUrl": "tex/collision.jpg",
-          "tech": ["c-sharp", "unity"]
+          "tech": [
+            "c-sharp",
+            "unity"
+          ]
         },
         {
           "category": "code",
@@ -635,7 +818,9 @@
           "description": "A simple game built with Cocos2d that expands on Minesweeper. Energy, biodiesel, unit types and actions-- lots of fun stuff!",
           "url": "https://bitbucket.org/benthehutt/all-mine/src/",
           "imageUrl": "tex/cocos.jpg",
-          "tech": ["objc"]
+          "tech": [
+            "objc"
+          ]
         },
         {
           "category": "code",
@@ -645,7 +830,10 @@
           "description": "A simple fabric simulation. Uses a spring system with point masses and Verlet integration. The original used my own graphics engine, but this uses ThreeJS.",
           "url": "https://www.thegoldenmule.com/labs/three-physics/",
           "imageUrl": "tex/FabricAnimation.jpg",
-          "tech": ["js", "graphics"]
+          "tech": [
+            "js",
+            "graphics"
+          ]
         },
         {
           "category": "code",
@@ -655,7 +843,11 @@
           "description": "That's not an 'x' at all! It's a chi! A 2D graphics graphics engine, twice as pretentious as LateX.",
           "url": "https://github.com/thegoldenmule/boX",
           "imageUrl": "tex/boXAnimation.jpg",
-          "tech": ["js", "graphics", "glsl"]
+          "tech": [
+            "js",
+            "graphics",
+            "glsl"
+          ]
         },
         {
           "category": "code",
@@ -665,7 +857,10 @@
           "description": "The geometrical construction of a sphere based on the subdivision of an icosahedron. This method creates a sphere where each triangle is the same size.",
           "url": "https://thegoldenmule.com/blog/2013/01/geosphere-revisited/",
           "imageUrl": "tex/geosphere.jpg",
-          "tech": ["c-sharp", "unity"]
+          "tech": [
+            "c-sharp",
+            "unity"
+          ]
         },
         {
           "category": "code",
@@ -675,7 +870,10 @@
           "description": "A two part study into noise functions and how they might be used to create purely GPU-based moving clouds.",
           "url": "https://thegoldenmule.com/blog/2013/01/real-time-clouds-pt-1-a-study-of-noise-functions/",
           "imageUrl": "tex/clouds.jpg",
-          "tech": ["c-sharp", "unity"]
+          "tech": [
+            "c-sharp",
+            "unity"
+          ]
         },
         {
           "category": "code",
@@ -685,7 +883,9 @@
           "description": "After major contributions to go, csharp, and prop-types generators, I was asked to be a maintainer.",
           "url": "https://github.com/quicktype/quicktype/pulls?q=is%3Apr+author%3Athegoldenmule+is%3Aclosed",
           "imageUrl": "tex/quicktype.jpg",
-          "tech": ["typescript"]
+          "tech": [
+            "typescript"
+          ]
         },
         {
           "category": "code",
@@ -695,7 +895,9 @@
           "description": "I used ANTLR to make a DSL for the Enkluplayer UI system. The only problem: it didn't run on HoloLens. This PR fixed the ANTLR project for UWP.",
           "url": "https://github.com/antlr/antlr4/pull/2267",
           "imageUrl": "https://www.antlr.org/images/antlr-logo.png",
-          "tech": ["c-sharp"]
+          "tech": [
+            "c-sharp"
+          ]
         },
         {
           "category": "code",
@@ -705,7 +907,9 @@
           "description": "A Unity library for sending logs to Natural-Log.",
           "url": "https://github.com/thegoldenmule/naturallog-examples",
           "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/icons/png/128x128.png",
-          "tech": ["c-sharp"]
+          "tech": [
+            "c-sharp"
+          ]
         },
         {
           "category": "code",
@@ -715,7 +919,10 @@
           "description": "A socket server and slick client, wrapped in a cross platform binary using Electron.io.",
           "url": "https://github.com/thegoldenmule/naturallog",
           "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/screenshot.png",
-          "tech": ["js", "socketio"]
+          "tech": [
+            "js",
+            "socketio"
+          ]
         },
         {
           "category": "code",
@@ -725,7 +932,9 @@
           "description": "Libraries for working with 32-bit Atmel AVR microcontrollers. They are not good.",
           "url": "https://github.com/Open-farm/openfarm-core-avr",
           "imageUrl": "tex/openfarm-core-avr-thumb.jpg",
-          "tech": ["c"]
+          "tech": [
+            "c"
+          ]
         },
         {
           "category": "code",
@@ -735,7 +944,9 @@
           "description": "Hide data in pictures (steganography), which are then stored in plain sight: on Facebook. Stegasaurus encrypts data with a one time pad, which is then stored... in other pictures.",
           "url": "https://github.com/thegoldenmule/stegosaurus",
           "imageUrl": "tex/steg.jpg",
-          "tech": ["python"]
+          "tech": [
+            "python"
+          ]
         },
         {
           "category": "code",
@@ -745,7 +956,11 @@
           "description": "A simple Akka + ASP.NET server that creates HLS streams from WebM or MP4 videos.",
           "url": "https://github.com/thegoldenmule/ffabricator",
           "imageUrl": "tex/ffabricator.jpg",
-          "tech": ["c-sharp", "dotnet", "akka"]
+          "tech": [
+            "c-sharp",
+            "dotnet",
+            "akka"
+          ]
         },
         {
           "category": "products",
@@ -756,7 +971,12 @@
           "description": "Nk-js is an end-to-end encrypted js library for use with nk-server: the no-knowledge store.",
           "url": "https://github.com/thegoldenmule/nk/tree/develop/nk-js",
           "imageUrl": "tex/nk.jpg",
-          "tech": ["js", "react", "redux", "bootstrap"]
+          "tech": [
+            "js",
+            "react",
+            "redux",
+            "bootstrap"
+          ]
         },
         {
           "category": "products",
@@ -767,7 +987,11 @@
           "description": "No peeking. An end-to-end encrypted, no-knowledge key/value storage server.",
           "url": "https://github.com/thegoldenmule/nk/tree/develop/nk-server",
           "imageUrl": "tex/nk.jpg",
-          "tech": ["c-sharp", "webapi", "dotnet"]
+          "tech": [
+            "c-sharp",
+            "webapi",
+            "dotnet"
+          ]
         },
         {
           "category": "products",
@@ -778,7 +1002,10 @@
           "description": "Nano watch is a simple web app that watches nanopool mining rigs and pushes browser notifications when the monitored rigs dip below a target hashrate.",
           "url": "https://github.com/thegoldenmule/nano-watch",
           "imageUrl": "tex/nano-watch.jpg",
-          "tech": ["react", "bootstrap"]
+          "tech": [
+            "react",
+            "bootstrap"
+          ]
         },
         {
           "category": "products",
@@ -803,15 +1030,18 @@
     },
     {
       "category": "career",
-      "title": "Founder: Goldenmule Media",
+      "title": "Goldenmule Media",
       "subtitle": "Founder",
       "type": "games",
-      "date": "2023-Present",
-      "description": "Software development studio, working on internal and external projects. Email me if you want to work together!",
+      "date": "Jan 2024 – Present",
+      "description": "An independent software studio: AI-native products of my own, plus select client work.",
+      "bullets": [
+        "Authored the core, local-first engine (CQRS + CRDT/OT) behind [Vetra.io](https://vetra.io), the AI-native platform for building software from natural language.",
+        "Shipped, operated, and sunset [Hangman Clash](https://hangmanclash.com): 250K real-time PvP matches, 40K players, 10%+ paid conversion, 0 exploits.",
+        "Built the agentic planning loop (comprehension-gated HITL, task execution graphs, team Kanban) behind Hotseat + Hotseat Wiki, tools in daily use."
+      ],
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/logo_square.jpg",
-      "tech": [],
-      "size": 45,
       "children": [
         {
           "category": "publications",
@@ -822,7 +1052,10 @@
           "description": "The Fallen Court, a story-driven ASCII-art dungeon crawler built on-stream, won a game jam on Encode Club. A look at the game and how it works without a server.",
           "url": "https://medium.com/spyre-io/w00t-we-won-a-game-jam-beecdff44ed7",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:640/format:webp/1*GdhhFSKPGZrU-yor3RKtnQ.png",
-          "tech": ["games", "web3"]
+          "tech": [
+            "games",
+            "web3"
+          ]
         },
         {
           "category": "products",
@@ -833,7 +1066,9 @@
           "description": "A native macOS app for wrangling LLM coding agents via a Kanban board. Queue plans, code, and commits across repos — with worktrees, live tails, transition hooks, and a semantic CLI for LLMs to drive themselves.",
           "url": "https://thegoldenmule.medium.com/my-workflow-is-better-than-yours-week-2-00b6e57a464b",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*iheIZy9V-tVJKa81zjaFNg.png",
-          "tech": ["software"]
+          "tech": [
+            "software"
+          ]
         },
         {
           "category": "products",
@@ -844,7 +1079,11 @@
           "description": "The central reactive document server for all Powerhouse products. Event-sourced, realtime, and decentralized.",
           "url": "https://www.powerhouse.inc/",
           "imageUrl": "tex/powerhouse.jpg",
-          "tech": ["web3", "software", "ts"]
+          "tech": [
+            "web3",
+            "software",
+            "ts"
+          ]
         },
         {
           "category": "products",
@@ -855,7 +1094,12 @@
           "description": "A story-based dungeon crawler web game with on-chain perma-choices.",
           "url": "https://thefallencourt.com/",
           "imageUrl": "tex/the-fallen-court.jpg",
-          "tech": ["games", "pixijs", "web3", "js"]
+          "tech": [
+            "games",
+            "pixijs",
+            "web3",
+            "js"
+          ]
         },
         {
           "category": "media",
@@ -866,7 +1110,10 @@
           "description": "Hangman Clash featured as a quest on Movement Labs' Parthenon Odyssey community program.",
           "url": "https://parthenon.movementlabs.xyz/quests/cmeqktrgd000608jwfjwh181i",
           "imageUrl": "tex/parthenon.jpg",
-          "tech": ["games", "web3"]
+          "tech": [
+            "games",
+            "web3"
+          ]
         },
         {
           "category": "products",
@@ -877,7 +1124,15 @@
           "description": "A bespoke twist to the familiar. Realtime, blockchain-enabled, skill-based multiplayer game.",
           "url": "https://hangmanclash.com",
           "imageUrl": "tex/hangman.jpg",
-          "tech": ["js", "ts", "go", "viem", "pixijs", "react", "tailwind"],
+          "tech": [
+            "js",
+            "ts",
+            "go",
+            "viem",
+            "pixijs",
+            "react",
+            "tailwind"
+          ],
           "size": 38
         },
         {
@@ -889,7 +1144,13 @@
           "description": "A walkthrough of integrating Nakama with blockchains via chain-chomp, covering asynchronous transaction handling, Go goroutine-based polling, and real-time client notifications.",
           "url": "https://medium.com/spyre-io/nakama-meet-blockchain-0ec58827c26a",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_jkvVvz08iMknkktZhZI1g.jpeg",
-          "tech": ["web3", "go", "games", "backend", "deep-dives"]
+          "tech": [
+            "web3",
+            "go",
+            "games",
+            "backend",
+            "deep-dives"
+          ]
         },
         {
           "category": "media",
@@ -920,7 +1181,13 @@
           "description": "A typescript and react module for building games on Spyre.",
           "url": "https://github.com/spyre-io/js",
           "imageUrl": "tex/chomp.jpg",
-          "tech": ["js", "magic", "thirdweb", "viem", "nakama"]
+          "tech": [
+            "js",
+            "magic",
+            "thirdweb",
+            "viem",
+            "nakama"
+          ]
         },
         {
           "category": "code",
@@ -931,7 +1198,11 @@
           "description": "Chain-chomp is an HTTP server for interacting with Spyre and USDC smart contracts, providing a gasless end-user experience.",
           "url": "https://github.com/spyre-io/chain-chomp/",
           "imageUrl": "tex/chomp.jpg",
-          "tech": ["js", "viem", "sailsjs"]
+          "tech": [
+            "js",
+            "viem",
+            "sailsjs"
+          ]
         },
         {
           "category": "code",
@@ -942,7 +1213,9 @@
           "description": "An incredibly complicated fix deep inside of Nakama's JS library. Okay it was a one-liner but it was a hard to find one-liner.",
           "url": "https://github.com/heroiclabs/nakama-js/pull/196",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["ts"]
+          "tech": [
+            "ts"
+          ]
         },
         {
           "category": "products",
@@ -953,7 +1226,13 @@
           "description": "Built tools and user flows on for tracking progress of Arbitrum grant recipients, in conjunction with Stable Labs.",
           "url": "https://www.powerhouse.inc/",
           "imageUrl": "tex/arb.jpg",
-          "tech": ["react", "software", "js", "typescript", "web3"]
+          "tech": [
+            "react",
+            "software",
+            "js",
+            "typescript",
+            "web3"
+          ]
         },
         {
           "category": "products",
@@ -964,7 +1243,12 @@
           "description": "Built a powerful, open-source analytics system that can run anywhere.",
           "url": "https://github.com/powerhouse-inc/analytics-engine",
           "imageUrl": "tex/arb.jpg",
-          "tech": ["software", "js", "typescript", "web3"]
+          "tech": [
+            "software",
+            "js",
+            "typescript",
+            "web3"
+          ]
         },
         {
           "category": "products",
@@ -975,38 +1259,28 @@
           "description": "Short term contract for Bindery Books doing GCP DevOps, containerization, and full-stack web work.",
           "url": "https://binderybooks.com/",
           "imageUrl": "tex/bindery.jpg",
-          "tech": ["nextjs", "software", "js", "typescript", "docker", "gcp"]
+          "tech": [
+            "nextjs",
+            "software",
+            "js",
+            "typescript",
+            "docker",
+            "gcp"
+          ]
         }
       ]
     },
     {
       "category": "career",
-      "title": "VPE: N3twork Studios",
+      "title": "N3twork Studios",
       "subtitle": "VP, Engineering",
       "type": "games",
-      "date": "Mar 2023-Dec 2023",
-      "description": "I led N3twork's engineering, IT, and QA disciplines.",
+      "date": "Mar 2023 – Dec 2023",
+      "bullets": [
+        "Led ~20 reports across two live games and two titles in development, cutting costs 40% and live-ops PagerDuty incidents 30% on a live title while modernizing legacy services."
+      ],
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/network-logo.jpg",
-      "tech": [
-        "java",
-        "c-sharp",
-        "js",
-        "unity",
-        "nodejs",
-        "react",
-        "redux",
-        "bootstrap",
-        "jenkins",
-        "aws",
-        "docker",
-        "kinesis",
-        "tableau",
-        "solidity",
-        "ipfs",
-        "polygon"
-      ],
-      "size": 45,
       "children": [
         {
           "category": "products",
@@ -1016,7 +1290,11 @@
           "date": "2023",
           "description": "Responsible for development and SRE teams for Legendary. Cut infra OPEX by 30% with forensics.",
           "imageUrl": "tex/legendary.jpg",
-          "tech": ["unity", "java", "aws"]
+          "tech": [
+            "unity",
+            "java",
+            "aws"
+          ]
         },
         {
           "category": "products",
@@ -1026,7 +1304,11 @@
           "date": "2023",
           "description": "Ran the engineering org for Triumph.",
           "imageUrl": "tex/triumph.jpg",
-          "tech": ["unity", "java", "aws"]
+          "tech": [
+            "unity",
+            "java",
+            "aws"
+          ]
         },
         {
           "category": "products",
@@ -1036,42 +1318,25 @@
           "date": "2023",
           "description": "Ran the engineering org for LHU.",
           "imageUrl": "tex/lhu.jpg",
-          "tech": ["unity", "java", "aws"]
+          "tech": [
+            "unity",
+            "java",
+            "aws"
+          ]
         }
       ]
     },
     {
       "category": "career",
-      "title": "CTO: Big Run Studios",
+      "title": "Big Run Studios",
       "subtitle": "Chief Technical Officer",
       "type": "games",
-      "date": "2020-2023",
-      "description": "I run Big Run's engineering team, stem to stern! And I run a tight ship, mind ye-- we build great games, great teams, and great tech.",
+      "date": "Mar 2020 – Feb 2023",
+      "bullets": [
+        "Built and led the 30-person engineering org behind six live mobile games at 150K+ DAU, growing four tech directors and two xDev teams, while remaining primary author of the game services stack."
+      ],
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/br-logo.jpg",
-      "tech": [
-        "go",
-        "c-sharp",
-        "js",
-        "unity",
-        "nakama",
-        "sailsjs",
-        "nodejs",
-        "react",
-        "redux",
-        "bootstrap",
-        "akka",
-        "jenkins",
-        "aws",
-        "docker",
-        "kinesis",
-        "snowflake",
-        "tableau",
-        "solidity",
-        "ipfs",
-        "polygon"
-      ],
-      "size": 50,
       "children": [
         {
           "category": "products",
@@ -1080,7 +1345,12 @@
           "type": "games",
           "date": "2022",
           "description": "We built out a transparent, custodial wallet system on top of the Polygon Network.",
-          "tech": ["solidity", "go", "nodejs", "unity"]
+          "tech": [
+            "solidity",
+            "go",
+            "nodejs",
+            "unity"
+          ]
         },
         {
           "category": "products",
@@ -1091,7 +1361,14 @@
           "description": "A skill-based, multiplayer word game.",
           "url": "https://bigrunstudios.com/games/word-star/",
           "imageUrl": "tex/word-star.jpg",
-          "tech": ["unity", "c-sharp", "nodejs", "aws", "snowflake", "tableau"]
+          "tech": [
+            "unity",
+            "c-sharp",
+            "nodejs",
+            "aws",
+            "snowflake",
+            "tableau"
+          ]
         },
         {
           "category": "products",
@@ -1102,7 +1379,14 @@
           "description": "A skill-based, multiplayer cooking game.",
           "url": "https://bigrunstudios.com/games/big-cooking-2/",
           "imageUrl": "tex/big-cooking.jpg",
-          "tech": ["unity", "c-sharp", "nodejs", "aws", "snowflake", "tableau"]
+          "tech": [
+            "unity",
+            "c-sharp",
+            "nodejs",
+            "aws",
+            "snowflake",
+            "tableau"
+          ]
         },
         {
           "category": "publications",
@@ -1123,7 +1407,14 @@
           "description": "A skill-based twist to the game of multiplayer minesweeper.",
           "url": "https://bigrunstudios.com/games/farm-sweeper/",
           "imageUrl": "tex/farmsweeper.jpg",
-          "tech": ["unity", "c-sharp", "nodejs", "aws", "snowflake", "tableau"]
+          "tech": [
+            "unity",
+            "c-sharp",
+            "nodejs",
+            "aws",
+            "snowflake",
+            "tableau"
+          ]
         },
         {
           "category": "products",
@@ -1134,7 +1425,14 @@
           "description": "A skill-based twist to the game of multiplayer solitaire.",
           "url": "https://bigrunstudios.com/games/big-run-solitaire/",
           "imageUrl": "tex/solitaire.jpg",
-          "tech": ["unity", "c-sharp", "nodejs", "aws", "snowflake", "tableau"]
+          "tech": [
+            "unity",
+            "c-sharp",
+            "nodejs",
+            "aws",
+            "snowflake",
+            "tableau"
+          ]
         },
         {
           "category": "products",
@@ -1145,7 +1443,14 @@
           "description": "A skill-based twist to the game of multiplayer bingo.",
           "url": "https://bigrunstudios.com/games/blackout-bingo-2/",
           "imageUrl": "tex/blackout-bingo.jpg",
-          "tech": ["unity", "c-sharp", "nodejs", "aws", "snowflake", "tableau"]
+          "tech": [
+            "unity",
+            "c-sharp",
+            "nodejs",
+            "aws",
+            "snowflake",
+            "tableau"
+          ]
         },
         {
           "category": "publications",
@@ -1165,21 +1470,23 @@
           "description": "I fixed some cross origin issues in Polygon Edge: the EVM-compatible blockchain tech.",
           "url": "https://github.com/0xPolygon/polygon-edge/pull/414",
           "imageUrl": "tex/polygon-logo.svg",
-          "tech": ["go"]
+          "tech": [
+            "go"
+          ]
         }
       ]
     },
     {
       "category": "career",
-      "title": "Adjunct: SLU",
-      "subtitle": "Saint Louis University",
+      "title": "Saint Louis University",
+      "subtitle": "Adjunct Instructor",
       "type": "teaching",
-      "date": "2022-Present",
-      "description": "I teach classes for the SLU CS Master's program. So far, Computer Graphics (CSCI 4820) and Principles of Software Engineering (CSCI-5030). My course material is (mostly) on GitHub.",
+      "date": "Aug 2022 – Present",
+      "bullets": [
+        "Developed, taught, and open-sourced two courses for the CS Master's program: Computer Graphics (CSCI-4820) and [Principles of Software Engineering](https://github.com/thegoldenmule/csci-5030/) (CSCI-5030)."
+      ],
       "url": "https://github.com/thegoldenmule/csci-5030/",
       "imageUrl": "https://www.slu.edu/ico/apple-touch-icon.png",
-      "tech": [],
-      "size": 35,
       "children": [
         {
           "category": "publications",
@@ -1190,7 +1497,9 @@
           "description": "Now that I'm officially a highly professional academic, I realize I have no clue what I should be doing.",
           "url": "https://medium.com/codex/what-is-the-point-of-higher-education-in-computer-science-b8a29b63ebdc",
           "imageUrl": "https://miro.medium.com/max/720/0*uj51YZ0qr_A5wFeQ.webp",
-          "tech": ["teaching"]
+          "tech": [
+            "teaching"
+          ]
         },
         {
           "category": "publications",
@@ -1201,38 +1510,25 @@
           "description": "Yes yes, I could have used what the last professor had prepped -- but what's the fun in that? Here are all my under-appreciated slide decks to walk students through the construction of a 3D graphics engine from scratch.",
           "url": "https://drive.google.com/drive/u/2/folders/1jWaDK59EUUIbPWz3FdeVNZOX2VgYKoUc",
           "imageUrl": "tex/slu-graphics.jpg",
-          "tech": ["teaching", "graphics", "deep-dives"]
+          "tech": [
+            "teaching",
+            "graphics",
+            "deep-dives"
+          ]
         }
       ]
     },
     {
       "category": "career",
-      "title": "CTO: Enklu",
-      "subtitle": "Chief Technology Officer",
+      "title": "Enklu",
+      "subtitle": "Chief Technical Officer & Cofounder",
       "type": "games",
-      "date": "2017-2020",
-      "description": "'CTO' at Enklu meant 'guy that writes everything'-- and this was fun. After a stint doing 99% management, I dove into 99% coding again, writing the full stack for the HoloLens collaborative platform that outperforms Microsoft's own.",
+      "date": "Jul 2017 – Mar 2020",
+      "bullets": [
+        "Technical co-founder; authored the cross-platform Augmented Reality runtime on a synchronous real-time stack, while delivering client work for Universal Studios, Sprint, LinkedIn, Ultrahaptics, and USC."
+      ],
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/enklu-logo.svg",
-      "tech": [
-        "c-sharp",
-        "js",
-        "groovy",
-        "graphics",
-        "socketio",
-        "dotnetty",
-        "azure",
-        "sailsjs",
-        "nodejs",
-        "react",
-        "redux",
-        "bootstrap",
-        "akka",
-        "jenkins",
-        "aws",
-        "docker"
-      ],
-      "size": 45,
       "children": [
         {
           "category": "code",
@@ -1243,7 +1539,10 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-mamba",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "c-sharp"]
+          "tech": [
+            "unity",
+            "c-sharp"
+          ]
         },
         {
           "category": "code",
@@ -1254,7 +1553,10 @@
           "description": "",
           "url": "https://github.com/enklu/chelydra",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "c-sharp"]
+          "tech": [
+            "unity",
+            "c-sharp"
+          ]
         },
         {
           "category": "code",
@@ -1265,7 +1567,10 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-http",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "c-sharp"]
+          "tech": [
+            "unity",
+            "c-sharp"
+          ]
         },
         {
           "category": "code",
@@ -1276,7 +1581,10 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-messaging",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "c-sharp"]
+          "tech": [
+            "unity",
+            "c-sharp"
+          ]
         },
         {
           "category": "code",
@@ -1287,7 +1595,10 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-logging",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "c-sharp"]
+          "tech": [
+            "unity",
+            "c-sharp"
+          ]
         },
         {
           "category": "code",
@@ -1298,7 +1609,10 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-async",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "c-sharp"]
+          "tech": [
+            "unity",
+            "c-sharp"
+          ]
         },
         {
           "category": "code",
@@ -1309,7 +1623,10 @@
           "description": "",
           "url": "https://github.com/enklu/commons-unity-debugrendering",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "c-sharp"]
+          "tech": [
+            "unity",
+            "c-sharp"
+          ]
         },
         {
           "category": "code",
@@ -1320,7 +1637,11 @@
           "description": "",
           "url": "https://github.com/enklu/commons-gradle-unity",
           "imageUrl": "tex/nakama.jpg",
-          "tech": ["unity", "c-sharp", "groovy"]
+          "tech": [
+            "unity",
+            "c-sharp",
+            "groovy"
+          ]
         },
         {
           "category": "products",
@@ -1331,7 +1652,10 @@
           "description": "A collaborative, cross-platform multiplayer augmented reality runtime that is unfortunately now closed-source.",
           "url": "https://github.com/enklu/enkluplayer",
           "imageUrl": "tex/player-small.jpg",
-          "tech": ["c-sharp", "unity"]
+          "tech": [
+            "c-sharp",
+            "unity"
+          ]
         },
         {
           "category": "products",
@@ -1369,7 +1693,12 @@
           "description": "We created a multiplayer spellcasting demo in just a few hours for an invite-only tech day at Microsoft Reactor.",
           "url": "https://www.thegoldenmule.com/videos/duel.mp4",
           "imageUrl": "tex/duel.jpg",
-          "tech": ["c-sharp", "js", "dotnetty", "akka"]
+          "tech": [
+            "c-sharp",
+            "js",
+            "dotnetty",
+            "akka"
+          ]
         },
         {
           "category": "code",
@@ -1379,7 +1708,12 @@
           "description": "At another invite-only Microsoft hackathon, I created a prototype for a conversational world-building application using Azure's LUIS and Enklu. The computer asks what you see and builds the scene as you describe it.",
           "url": "https://www.thegoldenmule.com/videos/story.mp4",
           "imageUrl": "tex/story.jpg",
-          "tech": ["c-sharp", "js", "dotnetty", "akka"]
+          "tech": [
+            "c-sharp",
+            "js",
+            "dotnetty",
+            "akka"
+          ]
         },
         {
           "category": "products",
@@ -1390,7 +1724,13 @@
           "description": "We were the first to adapt the Azure Kinect to live entertainment at Universal Studios in LA.",
           "url": "https://www.thegoldenmule.com/videos/azure-kinect-dev.mp4",
           "imageUrl": "tex/azure-kinect.jpg",
-          "tech": ["c-sharp", "js", "dotnetty", "akka", "docker"]
+          "tech": [
+            "c-sharp",
+            "js",
+            "dotnetty",
+            "akka",
+            "docker"
+          ]
         },
         {
           "category": "code",
@@ -1400,7 +1740,13 @@
           "description": "We created the world's first 100 HoloLens multiplayer experience at E3. Over 7500 attendees were able to put on a HoloLens and explore magical powers in the Unreal Garden.",
           "imageUrl": "https://www.thegoldenmule.com/thumbnails/player-small.png",
           "url": "https://www.youtube.com/watch?v=j1usTNschXg",
-          "tech": ["c-sharp", "js", "dotnetty", "akka", "docker"]
+          "tech": [
+            "c-sharp",
+            "js",
+            "dotnetty",
+            "akka",
+            "docker"
+          ]
         },
         {
           "category": "code",
@@ -1436,30 +1782,23 @@
           "date": "August 2017",
           "description": "Open source fork of StrangeIOC library, compatible with UWP.",
           "url": "https://github.com/enklu/StrangeIOC-UWP",
-          "tech": ["c-sharp"]
+          "tech": [
+            "c-sharp"
+          ]
         }
       ]
     },
     {
       "category": "career",
-      "title": "Tech Director: NCSOFT",
+      "title": "NCSoft Interactive",
       "subtitle": "Studio Technical Director",
       "type": "games",
-      "date": "2015-2017",
-      "description": "I ran engineering for two AAA game teams, a core tech group, and a tools engineering team.",
+      "date": "Feb 2015 – Aug 2017",
+      "bullets": [
+        "Led implementation of netcode and server stack for synchronous multiplayer games, and artist-friendly authoring tools for anim/fx, while hiring and leading 40+ engineers across client, server, and tools."
+      ],
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/nc-logo.svg",
-      "tech": [
-        "c-sharp",
-        "unity",
-        "graphics",
-        "js",
-        "akka",
-        "webapi",
-        "dotnet",
-        "aws"
-      ],
-      "size": 40,
       "children": [
         {
           "category": "publications",
@@ -1479,7 +1818,14 @@
           "description": "Build an empire in this gorgeous, turn based shooter.",
           "url": "https://play.google.com/store/apps/details?id=com.goldslugz.criminal.empire&hl=en_US&gl=US",
           "imageUrl": "tex/criminal.jpg",
-          "tech": ["c-sharp", "unity", "aws", "docker", "dotnetty", "webapi"]
+          "tech": [
+            "c-sharp",
+            "unity",
+            "aws",
+            "docker",
+            "dotnetty",
+            "webapi"
+          ]
         },
         {
           "category": "products",
@@ -1488,21 +1834,28 @@
           "type": "games",
           "date": "2017",
           "description": "The most incredible mobile game in the Lineage franchise. Cancelled after 3 years in development.",
-          "tech": ["c-sharp", "unity", "aws", "docker", "dotnetty", "webapi"]
+          "tech": [
+            "c-sharp",
+            "unity",
+            "aws",
+            "docker",
+            "dotnetty",
+            "webapi"
+          ]
         }
       ]
     },
     {
       "category": "career",
-      "title": "Staff Engineer: Kixeye",
+      "title": "Kixeye",
       "subtitle": "Staff Engineer",
       "type": "games",
-      "date": "2012-2015",
-      "description": "The Mos Eisley of game development studios. Here I worked on Flash, Unity, and web games at scale, while doing my best not to get run over.",
+      "date": "2012 – Jan 2015",
+      "bullets": [
+        "Built out game features as part of pod-based development, across Flash, Unity, and the shared web systems every title on Kixeye.com ran on."
+      ],
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/Kixeye.webp",
-      "tech": ["flash", "c-sharp", "unity", "graphics", "js"],
-      "size": 25,
       "children": [
         {
           "category": "products",
@@ -1511,7 +1864,11 @@
           "type": "games",
           "date": "2013",
           "description": "A 3D RTS... with swords!",
-          "tech": ["c-sharp", "unity", "graphics"]
+          "tech": [
+            "c-sharp",
+            "unity",
+            "graphics"
+          ]
         },
         {
           "category": "products",
@@ -1521,7 +1878,9 @@
           "date": "2013",
           "description": "I worked on shared systems that games used across Kixeye.com, like chat and mail.",
           "imageUrl": "tex/kixeye-website.jpg",
-          "tech": ["js"]
+          "tech": [
+            "js"
+          ]
         },
         {
           "category": "products",
@@ -1531,7 +1890,9 @@
           "date": "2013",
           "description": "Build bases and units. Find targets. Kill 'em all.",
           "imageUrl": "tex/war-commander.jpg",
-          "tech": ["flash"]
+          "tech": [
+            "flash"
+          ]
         },
         {
           "category": "products",
@@ -1541,7 +1902,9 @@
           "date": "2012",
           "description": "Build bases and ships. Find targets. Kill 'em all.",
           "imageUrl": "tex/battle-pirates.jpg",
-          "tech": ["flash"]
+          "tech": [
+            "flash"
+          ]
         },
         {
           "category": "products",
@@ -1551,21 +1914,25 @@
           "date": "2014",
           "description": "Build bases and units... on mobile. Find targets. Kill 'em all.",
           "imageUrl": "tex/rogue-assault.jpg",
-          "tech": ["c-sharp", "unity", "graphics"]
+          "tech": [
+            "c-sharp",
+            "unity",
+            "graphics"
+          ]
         }
       ]
     },
     {
       "category": "career",
       "title": "Electrotank",
-      "subtitle": "Jr > Sr > Lead Engineer",
+      "subtitle": "Engineer → Lead Engineer",
       "type": "games",
-      "date": "2009-2012",
-      "description": "My first fulltime job out of college was working for this MMO technology provider. We build the tech and the games on top of them for the biggest Flash MMOs on the planet.",
+      "date": "Jun 2009 – 2012",
+      "bullets": [
+        "Built the MMO server technology and shipped the licensed Flash MMOs running on top of it, including Imagine Town with Ubisoft."
+      ],
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
       "imageUrl": "tex/et-logo.jpg",
-      "tech": ["flash", "java"],
-      "size": 25,
       "children": [
         {
           "category": "products",
@@ -1574,7 +1941,10 @@
           "type": "games",
           "date": "2011",
           "description": "A 3D multiplayer minigolf game on mobile. Cancelled :/",
-          "tech": ["flash", "java"]
+          "tech": [
+            "flash",
+            "java"
+          ]
         },
         {
           "category": "products",
@@ -1585,45 +1955,51 @@
           "description": "An MMO for tweens we made in partnership with Ubisoft.",
           "url": "https://www.youtube.com/watch?v=1QpbQhP67VE",
           "imageUrl": "tex/imagine.jpg",
-          "tech": ["flash", "java"]
+          "tech": [
+            "flash",
+            "java"
+          ]
         }
       ]
     },
     {
       "category": "career",
-      "title": "Student Worker",
-      "subtitle": "Truman State University",
+      "title": "Truman State University",
+      "subtitle": "Student Worker, Network Engineering & IT",
       "type": "games",
-      "date": "2005-2009",
-      "description": "At Truman, I worked on network engineering and IT: mostly in Perl, VB, and C. It was here that I first learned how awful printer software could be.",
+      "date": "2005 – 2009",
+      "bullets": [
+        "Network engineering and internal IT tooling in Perl, VB, and C."
+      ],
+      "minor": true,
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "tex/truman-logo.svg",
-      "tech": ["perl", "js", "vb"],
-      "size": 20
+      "imageUrl": "tex/truman-logo.svg"
     },
     {
       "category": "career",
       "title": "Pixelwelders",
       "subtitle": "Flash Contractor",
       "type": "games",
-      "date": "2007-2009",
-      "description": "I paid my way through college with part-time Flash work on games and websites for the company, Pixelwelders.",
+      "date": "2007 – 2009",
+      "bullets": [
+        "Part-time contract work on games and websites, paying my way through college."
+      ],
+      "minor": true,
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "tex/pixelwelders.jpg",
-      "tech": ["flash"],
-      "size": 20
+      "imageUrl": "tex/pixelwelders.jpg"
     },
     {
       "category": "career",
       "title": "How Machines Work",
       "subtitle": "Flash Contractor",
       "type": "games",
-      "date": "2006-2007",
-      "description": "My first job in the industry! I worked part time for this small flash development shop. I was brought in after I sold them the rights to a rigid-body physics engine I wrote my senior year of high school.",
+      "date": "2006 – 2007",
+      "bullets": [
+        "First job in the industry, after selling the studio the rights to a rigid-body physics engine I wrote my senior year of high school."
+      ],
+      "minor": true,
       "url": "https://www.linkedin.com/in/benjaminmicahj/",
-      "imageUrl": "tex/machine.jpg",
-      "tech": ["flash"],
-      "size": 20
+      "imageUrl": "tex/machine.jpg"
     }
   ]
 }
