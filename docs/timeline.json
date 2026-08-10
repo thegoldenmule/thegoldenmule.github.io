@@ -1347,18 +1347,19 @@
           ]
         },
         {
-          "category": "products",
+          "category": "code",
           "title": "Powerhouse Reactor",
-          "subtitle": "Goldenmule Contract",
+          "subtitle": "The engine behind Vetra.",
           "type": "software",
           "date": "2026",
-          "description": "The central reactive document server for all Powerhouse products. Event-sourced, realtime, and decentralized.",
-          "url": "https://www.powerhouse.inc/",
+          "description": "The event-sourced, CQRS document-model engine powering every Powerhouse product: realtime, decentralized, and local-first, reconciling divergent streams with CRDTs and operational transformation.",
+          "url": "https://github.com/powerhouse-inc/powerhouse",
           "imageUrl": "tex/powerhouse.jpg",
           "tech": [
-            "web3",
+            "ts",
+            "backend",
             "software",
-            "ts"
+            "deep-dives"
           ]
         },
         {
@@ -1725,6 +1726,23 @@
             "games",
             "web3"
           ]
+        },
+        {
+          "category": "products",
+          "title": "Vetra",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "2026",
+          "description": "Powerhouse's open-source, AI-native platform for building software from natural-language descriptions. A realtime collaborative, local-first workspace with Git-like version history, cryptographically signed audit logs, self-host or cloud deployment, and user-chosen AI models. I architected and built the engine underneath it, large parts of the TypeScript and React SDK, and the self-host and deploy layer.",
+          "url": "https://vetra.io",
+          "imageUrl": "tex/powerhouse.jpg",
+          "tech": [
+            "ts",
+            "react",
+            "ai",
+            "backend",
+            "docker"
+          ]
         }
       ]
     },
@@ -1930,8 +1948,7 @@
           "type": "media",
           "date": "March 2020",
           "description": "Hear ye, hear ye: random guy on the internet gets a job!",
-          "url": "https://www.pocketgamer.biz/job-news/73421/big-run-studios-hires-benjamin-jordan-new-cto/",
-          "imageUrl": "https://imgs.pocketgamer.biz/PGbiz_logo_210x204.png"
+          "url": "https://www.pocketgamer.biz/job-news/73421/big-run-studios-hires-benjamin-jordan-new-cto/"
         },
         {
           "category": "code",
@@ -1996,6 +2013,34 @@
             "teaching",
             "graphics",
             "deep-dives"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "csci-5030",
+          "subtitle": "Principles of Software Engineering course material.",
+          "type": "software",
+          "date": "2022",
+          "description": "The full open-sourced course: lectures, assignments, and reference material for CSCI-5030 in the SLU CS Master's program.",
+          "url": "https://github.com/thegoldenmule/csci-5030",
+          "tech": [
+            "teaching",
+            "software"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "csci-starter-05",
+          "subtitle": "A complete-ish 3D graphics library in 1200 lines.",
+          "type": "software",
+          "date": "2023",
+          "description": "The last of seven starter repos for Computer Graphics (CSCI-4820), pair-programmed in front of students to build a WebGL engine from scratch. Slide decks for the whole course are in the linked Drive folder.",
+          "url": "https://github.com/thegoldenmule/csci-starter-05",
+          "tech": [
+            "teaching",
+            "graphics",
+            "webgl",
+            "js"
           ]
         }
       ]
@@ -2220,7 +2265,6 @@
           "type": "ar",
           "date": "June 2019",
           "description": "We created the world's first 100 HoloLens multiplayer experience at E3. Over 7500 attendees were able to put on a HoloLens and explore magical powers in the Unreal Garden.",
-          "imageUrl": "https://www.thegoldenmule.com/thumbnails/player-small.png",
           "url": "https://www.youtube.com/watch?v=j1usTNschXg",
           "tech": [
             "c-sharp",
