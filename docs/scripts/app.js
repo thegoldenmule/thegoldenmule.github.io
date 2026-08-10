@@ -1621,7 +1621,7 @@ function parseDate(dateStr) {
     "nov",
     "dec",
   ];
-  let month = 0;
+  let month = null;
   months.forEach((m, i) => {
     const lastIndex = str.lastIndexOf(m);
     if (lastIndex !== -1) {
@@ -1632,6 +1632,13 @@ function parseDate(dateStr) {
       }
     }
   });
+
+  // A date with no month ("2024", "2017-2020") spans the whole year, so it
+  // sorts at the end of that year -- above every month within it, below the
+  // next year's January.
+  if (month === null) {
+    return new Date(year + 1, 0, 1).getTime() - 1;
+  }
 
   return new Date(year, month, 1).getTime();
 }

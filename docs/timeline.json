@@ -1397,7 +1397,7 @@
           "title": "Hangman Clash",
           "subtitle": "A Goldenmule Media first.",
           "type": "games",
-          "date": "Sept 2024",
+          "date": "2024",
           "description": "A bespoke twist to the familiar. Realtime, blockchain-enabled, skill-based multiplayer game.",
           "url": "https://hangmanclash.com",
           "imageUrl": "tex/hangman.jpg",
@@ -1647,6 +1647,23 @@
         },
         {
           "category": "products",
+          "title": "Vetra",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "2026",
+          "description": "Powerhouse's open-source, AI-native platform for building software from natural-language descriptions. A realtime collaborative, local-first workspace with Git-like version history, cryptographically signed audit logs, self-host or cloud deployment, and user-chosen AI models. I architected and built the engine underneath it, large parts of the TypeScript and React SDK, and the self-host and deploy layer.",
+          "url": "https://vetra.io",
+          "imageUrl": "tex/powerhouse.jpg",
+          "tech": [
+            "ts",
+            "react",
+            "ai",
+            "backend",
+            "docker"
+          ]
+        },
+        {
+          "category": "products",
           "title": "SermonSeek.ai",
           "subtitle": "A Goldenmule Media Original",
           "type": "software",
@@ -1725,23 +1742,6 @@
           "tech": [
             "games",
             "web3"
-          ]
-        },
-        {
-          "category": "products",
-          "title": "Vetra",
-          "subtitle": "Goldenmule Contract",
-          "type": "software",
-          "date": "2026",
-          "description": "Powerhouse's open-source, AI-native platform for building software from natural-language descriptions. A realtime collaborative, local-first workspace with Git-like version history, cryptographically signed audit logs, self-host or cloud deployment, and user-chosen AI models. I architected and built the engine underneath it, large parts of the TypeScript and React SDK, and the self-host and deploy layer.",
-          "url": "https://vetra.io",
-          "imageUrl": "tex/powerhouse.jpg",
-          "tech": [
-            "ts",
-            "react",
-            "ai",
-            "backend",
-            "docker"
           ]
         }
       ]
