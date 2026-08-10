@@ -11,6 +11,11 @@
 # production
 /build
 
+# hotseat -- machine-local tool state: the wrapper hardcodes an absolute path
+# and the config points at a localhost port, so neither is portable
+/.hotseat
+/hotseat.json
+
 # misc
 .DS_Store
 .env.local
