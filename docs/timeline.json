@@ -1310,7 +1310,6 @@
       "subtitle": "Founder",
       "type": "games",
       "date": "Jan 2024 – Present",
-      "description": "An independent software studio: AI-native products of my own, plus select client work.",
       "bullets": [
         "Authored the core, local-first engine (CQRS + CRDT/OT) behind [Vetra.io](https://vetra.io), the AI-native platform for building software from natural language.",
         "Shipped, operated, and sunset [Hangman Clash](https://hangmanclash.com): 250K real-time PvP matches, 40K players, 10%+ paid conversion, 0 exploits.",
