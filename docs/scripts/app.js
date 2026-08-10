@@ -576,30 +576,47 @@ function careerEntryId(item) {
 }
 
 // products = a standalone thing someone runs or uses; code = libraries, SDKs,
-// plugins, and upstream contributions; writing = essays plus press about them.
+// plugins, and upstream contributions; writing = essays, press, and talks.
 function childGroup(child) {
   if (
     child.category === "publications" ||
     child.category === "media" ||
+    child.category === "speaking" ||
     child.type === "writing" ||
-    child.type === "media"
+    child.type === "media" ||
+    child.type === "speaking"
   ) {
     return "writing";
   }
   return child.category === "code" ? "code" : "products";
 }
 
-// Returns [{ key, items }] in CHILD_GROUPS order, newest first, empty groups dropped.
+function isSpeaking(child) {
+  return child.category === "speaking" || child.type === "speaking";
+}
+
+// Talks share the writing group, so the label names whichever kinds are present.
+function groupLabel(key, items) {
+  if (key !== "writing") return key;
+
+  const speaking = items.some(isSpeaking);
+  const written = items.some((child) => !isSpeaking(child));
+  if (speaking && written) return "writing & speaking";
+  return speaking ? "speaking" : "writing";
+}
+
+// Returns [{ key, label, items }] in CHILD_GROUPS order, newest first,
+// empty groups dropped.
 function groupChildren(children) {
   const groups = new Map(CHILD_GROUPS.map((key) => [key, []]));
   children.forEach((child) => groups.get(childGroup(child)).push(child));
 
-  return CHILD_GROUPS.map((key) => ({
-    key,
-    items: groups
+  return CHILD_GROUPS.map((key) => {
+    const items = groups
       .get(key)
-      .sort((a, b) => parseDate(b.date) - parseDate(a.date)),
-  })).filter((group) => group.items.length);
+      .sort((a, b) => parseDate(b.date) - parseDate(a.date));
+    return { key, label: groupLabel(key, items), items };
+  }).filter((group) => group.items.length);
 }
 
 function renderCareerView(container, items) {
@@ -789,7 +806,7 @@ function renderCareerEntry(item) {
             .map((group) =>
               renderExpandButton(
                 `${entryId}-${group.key}`,
-                `${group.key} (${group.items.length})`
+                `${group.label} (${group.items.length})`
               )
             )
             .join("")}
@@ -807,7 +824,7 @@ function renderCareerEntry(item) {
 function renderChildGroup(entryId, group) {
   return `
     <div class="resume-entry-children" id="${entryId}-${group.key}" hidden>
-      <p class="resume-children-heading">${escapeHtml(group.key)}</p>
+      <p class="resume-children-heading">${escapeHtml(group.label)}</p>
       <ul class="resume-children-list">
         ${group.items.map((child) => renderCareerChild(child)).join("")}
       </ul>

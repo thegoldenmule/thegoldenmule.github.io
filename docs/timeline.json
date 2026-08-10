@@ -622,6 +622,282 @@
           "tech": [
             "teaching"
           ]
+        },
+        {
+          "category": "publications",
+          "title": "Software for humans",
+          "type": "writing",
+          "date": "Jul 2026",
+          "subtitle": "Making what we do related to how we live.",
+          "url": "https://medium.com/p/b9148392b3cb",
+          "tech": [
+            "ai",
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Try my inverted agentic harness",
+          "type": "writing",
+          "date": "Jun 2026",
+          "subtitle": "This article goes places, I swear.",
+          "url": "https://medium.com/p/2a5d83b631bb",
+          "tech": [
+            "ai",
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Agentic workflows for dummies",
+          "type": "writing",
+          "date": "May 2026",
+          "subtitle": "I am the dummy, not you.",
+          "url": "https://medium.com/p/e30e12494de4",
+          "tech": [
+            "ai",
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "A scary footnote from Mozilla",
+          "type": "writing",
+          "date": "May 2026",
+          "subtitle": "When your heroes say dumb things, maybe.",
+          "url": "https://medium.com/p/9122341dfc4c",
+          "tech": [
+            "ai",
+            "web"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "A programmer cleared for landing",
+          "type": "writing",
+          "date": "Apr 2026",
+          "subtitle": "An uninformed take on the management of air travel.",
+          "url": "https://medium.com/p/69e1576540b2",
+          "tech": [
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Software craftsmanship is temporarily dead",
+          "type": "writing",
+          "date": "Apr 2026",
+          "subtitle": "But you don’t have to feel dead _inside_.",
+          "url": "https://medium.com/p/b61bc9b92a07",
+          "tech": [
+            "ai",
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "The Open-Source Software Superposition",
+          "type": "writing",
+          "date": "Nov 2024",
+          "subtitle": "You’ve heard of Open Source Software, but why does it matter?",
+          "url": "https://medium.com/p/81b37f8e7f49",
+          "tech": [
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "One helluva React hook",
+          "type": "writing",
+          "date": "Oct 2024",
+          "subtitle": "It packs a punch: but who actually cares?",
+          "url": "https://medium.com/p/0c5a9c9988fc",
+          "tech": [
+            "react",
+            "js",
+            "frontend"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "3 Books Every Software Engineer Should Read",
+          "type": "writing",
+          "date": "Sep 2024",
+          "subtitle": "Engineers should look outside of engineering.",
+          "url": "https://medium.com/p/9e66d827bde6",
+          "tech": [
+            "software",
+            "learning"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "The Hottest Programming Language of 2023 Kinda Sucks",
+          "type": "writing",
+          "date": "Apr 2023",
+          "subtitle": "How Angles, Saxons, and Jutes inadvertently invented the worst programming language of modern times.",
+          "url": "https://medium.com/p/3f1c552fe9a0",
+          "tech": [
+            "software",
+            "history"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "A Case for Change",
+          "type": "writing",
+          "date": "Jan 2023",
+          "subtitle": "I had a breakthrough this past Thanksgiving: I realized that I had been brainwashed.",
+          "url": "https://medium.com/p/26bc21eee630",
+          "tech": [
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Math Comics Anyone?",
+          "type": "writing",
+          "date": "Jul 2022",
+          "subtitle": "You’re here for the motherflipping content and today I’m going to deliver.",
+          "url": "https://medium.com/p/b10dfd0e2864",
+          "tech": [
+            "experiments"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Surviving Tech Startup Scale",
+          "type": "writing",
+          "date": "Jun 2022",
+          "subtitle": "This one is an extended metaphor involving explosive tech startup growth and a scrappy Digimon clone.",
+          "url": "https://medium.com/p/1d99df981124",
+          "tech": [
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "For Non-Programmers: An Idea from Programming!",
+          "type": "writing",
+          "date": "Apr 2022",
+          "subtitle": "How ideas from the programming realm revolutionized the industry and how they could transform exploration and thinking in other domains…",
+          "url": "https://medium.com/p/7e758a659159",
+          "tech": [
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "A Rom-Com Starring Mathematics and 1990s Me",
+          "type": "writing",
+          "date": "Feb 2022",
+          "subtitle": "In this analogy, I’m obviously Randall Park in “Always Be My Maybe”.",
+          "url": "https://medium.com/p/5b3698bd85d8",
+          "tech": [
+            "learning",
+            "history"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Scrum Therapy and Medium Clickbait!",
+          "type": "writing",
+          "date": "Jan 2022",
+          "subtitle": "Click this if you — BITCOIN — know what’s good for you. #growthhacks",
+          "url": "https://medium.com/p/fab9005269ec",
+          "tech": [
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "How many bugs should your product have?",
+          "type": "writing",
+          "date": "Jan 2022",
+          "subtitle": "Production readiness is not only about bugs.",
+          "url": "https://medium.com/p/fd7edd1c61d",
+          "tech": [
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Thoughts on Gardening (eventually)",
+          "type": "writing",
+          "date": "Jan 2022",
+          "subtitle": "Suckers, this is actually about computers.",
+          "url": "https://medium.com/p/c1fea7f64526",
+          "tech": [
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "2022: The year of the pluck",
+          "type": "writing",
+          "date": "Jan 2022",
+          "subtitle": "Damn my unpluckiness.",
+          "url": "https://medium.com/p/a57bf3454be1",
+          "tech": [
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "52 things I learned this year",
+          "type": "writing",
+          "date": "Dec 2021",
+          "subtitle": "One thing a week. Turns out, it was harder to whittle down than I thought.",
+          "url": "https://medium.com/p/7c483d50ffe9",
+          "tech": [
+            "learning"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Survivors in the tech echo-chamber",
+          "type": "writing",
+          "date": "Dec 2021",
+          "subtitle": "Grip those gunnels.",
+          "url": "https://medium.com/p/e64a7a17c2",
+          "tech": [
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "The Pachycephalosaurs method of coding servers",
+          "type": "writing",
+          "date": "Sep 2021",
+          "subtitle": "My experience writing a “no knowledge” key/value server.",
+          "url": "https://medium.com/p/1ddc3984e908",
+          "tech": [
+            "backend",
+            "c-sharp",
+            "deep-dives"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Crypto is an elegant way to destroy the world",
+          "type": "writing",
+          "date": "May 2021",
+          "subtitle": "I am in the process of getting a tattoo of one of my favorite mathematical statements on my left arm. I wish the ink were dry so that I…",
+          "url": "https://medium.com/p/ede8e37c04",
+          "tech": [
+            "web3"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "The Pachycephalosaur Method of Learning: Part I",
+          "type": "writing",
+          "date": "Mar 2021",
+          "subtitle": "When your head is a hammer, every problem looks like a nail.",
+          "url": "https://medium.com/p/874d93f382e9",
+          "tech": [
+            "learning"
+          ]
         }
       ]
     },
@@ -1267,6 +1543,188 @@
             "docker",
             "gcp"
           ]
+        },
+        {
+          "category": "publications",
+          "title": "Deep Dive: Reconciling local-first event streams",
+          "type": "writing",
+          "date": "Apr 2026",
+          "subtitle": "A few schemes that don’t work and a novel scheme that does.",
+          "url": "https://medium.com/p/cfd20d1dccd4",
+          "tech": [
+            "software",
+            "deep-dives",
+            "backend"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Sun-setting Hangman Clash",
+          "type": "writing",
+          "date": "Apr 2026",
+          "subtitle": "Did you feel that?",
+          "url": "https://medium.com/p/dc16cb9b7df4",
+          "tech": [
+            "games",
+            "web3",
+            "liveops"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "My workflow is still better than yours: part 3?",
+          "type": "writing",
+          "date": "Apr 2026",
+          "subtitle": "Look man, I just calls ’em like I sees ’em. If you’re mad that you can’t figure out how to understand what’s going on when you have more…",
+          "url": "https://medium.com/p/c51c28d13cc3",
+          "tech": [
+            "ai",
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Lessons learned in building agentic tools",
+          "type": "writing",
+          "date": "Mar 2026",
+          "subtitle": "And other incredible finds.",
+          "url": "https://medium.com/p/ce79b0a69fb1",
+          "tech": [
+            "ai",
+            "software",
+            "deep-dives"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "A Workflow Worth Sharing",
+          "type": "writing",
+          "date": "Mar 2026",
+          "subtitle": "A pragmatic way to handle so much work!",
+          "url": "https://medium.com/p/837e69e2774b",
+          "tech": [
+            "ai",
+            "software"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Deep Dive: Document Models and The Reactor",
+          "type": "writing",
+          "date": "Mar 2026",
+          "subtitle": "Build a CQRS inspired reactive document system.",
+          "url": "https://medium.com/p/f03b81826cba",
+          "tech": [
+            "software",
+            "deep-dives",
+            "backend",
+            "ts"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Spyre x Movement Labs",
+          "type": "writing",
+          "date": "Dec 2024",
+          "subtitle": "A partnership is born.",
+          "url": "https://medium.com/p/5c00a1676ad9",
+          "tech": [
+            "games",
+            "web3"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "Game Studios Are Struggling — Here’s Why We’re Optimistic",
+          "type": "writing",
+          "date": "Sep 2024",
+          "subtitle": "Look, we love making games, but it’s a rough world out there. Discover why we’re betting on an age-old model.",
+          "url": "https://medium.com/p/ac5e5b89a52e",
+          "tech": [
+            "games"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "SermonSeek.ai",
+          "subtitle": "A Goldenmule Media Original",
+          "type": "software",
+          "date": "2026",
+          "description": "AI semantic and full-text search over church YouTube channels and sermon transcripts: find the moment a verse was preached, not just the video. A RAG pipeline of OpenAI chunk embeddings into pgvector search, with LLM enrichment for summaries, topics, and scripture references.",
+          "url": "https://sermonseek.ai",
+          "tech": [
+            "ts",
+            "nextjs",
+            "ai",
+            "backend"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Hotseat Wiki",
+          "subtitle": "A Goldenmule Media Original",
+          "type": "software",
+          "date": "2026",
+          "description": "An open-source, event-sourced, LLM-first wiki. Pages are typed documents that change only through named mutations gated by a finite-state machine, over append-only Durable Streams and PGlite, with MCP integration for agent access.",
+          "url": "https://github.com/Goldenmule-Media/hotseat-web",
+          "tech": [
+            "ts",
+            "nextjs",
+            "ai",
+            "backend"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Slingshot Aerospace",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "",
+          "description": "Guidance on networked 3D simulation in the browser for space situational awareness.",
+          "tech": [
+            "webgl",
+            "graphics",
+            "js"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Ice Cubed",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "",
+          "description": "A custom website for a St. Louis snow-cone startup, built to get past the limits of generic site builders.",
+          "tech": [
+            "ts",
+            "nextjs",
+            "web"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Powerhouse Recipes",
+          "subtitle": "All 23 reference projects for the Powerhouse platform.",
+          "type": "software",
+          "date": "2026",
+          "description": "The canonical reference architectures every developer on the engine builds against. Each isolates one pattern: analytics, webhook, and full-text-search processors, read models and materialized views, sync channels and health monitoring, role-based auth and rate limiting, schema migrations and document versioning, and event-driven cross-document automation.",
+          "url": "https://github.com/powerhouse-inc/recipes",
+          "tech": [
+            "ts",
+            "backend",
+            "deep-dives"
+          ]
+        },
+        {
+          "category": "speaking",
+          "title": "Movement Summit, Korea Blockchain Week",
+          "subtitle": "Presenting the casual-competitive thesis.",
+          "type": "speaking",
+          "date": "",
+          "description": "Presented our casual-competitive games thesis at the Movement Summit, during Korea Blockchain Week.",
+          "tech": [
+            "games",
+            "web3"
+          ]
         }
       ]
     },
@@ -1322,6 +1780,19 @@
             "unity",
             "java",
             "aws"
+          ]
+        },
+        {
+          "category": "publications",
+          "title": "The Evolution of Containerization Competency",
+          "type": "writing",
+          "date": "Aug 2023",
+          "subtitle": "Thoughts on Docker experience vs Docker competency.",
+          "url": "https://medium.com/p/8cbd66b1f20c",
+          "tech": [
+            "docker",
+            "backend",
+            "software"
           ]
         }
       ]
@@ -1473,6 +1944,17 @@
           "tech": [
             "go"
           ]
+        },
+        {
+          "category": "publications",
+          "title": "Does code style matter?",
+          "type": "writing",
+          "date": "May 2020",
+          "subtitle": "I’m currently building my third engineering organization. This means that on three separate occasions someone thought “this seems like a…",
+          "url": "https://medium.com/p/3d8a677f1e1",
+          "tech": [
+            "software"
+          ]
         }
       ]
     },
@@ -1481,7 +1963,7 @@
       "title": "Saint Louis University",
       "subtitle": "Adjunct Instructor",
       "type": "teaching",
-      "date": "Aug 2022 – Present",
+      "date": "2022 – Present",
       "bullets": [
         "Developed, taught, and open-sourced two courses for the CS Master's program: Computer Graphics (CSCI-4820) and [Principles of Software Engineering](https://github.com/thegoldenmule/csci-5030/) (CSCI-5030)."
       ],
@@ -1783,6 +2265,30 @@
           "description": "Open source fork of StrangeIOC library, compatible with UWP.",
           "url": "https://github.com/enklu/StrangeIOC-UWP",
           "tech": [
+            "c-sharp"
+          ]
+        },
+        {
+          "category": "speaking",
+          "title": "Singularity University",
+          "subtitle": "On the future of augmented reality.",
+          "type": "speaking",
+          "date": "",
+          "description": "Presented on the future of AR at Singularity University, on the grounds at NASA Ames Research Center.",
+          "tech": [
+            "ar"
+          ]
+        },
+        {
+          "category": "speaking",
+          "title": "Teaching AR at Microsoft Reactor",
+          "subtitle": "Invited by Microsoft, multiple times.",
+          "type": "speaking",
+          "date": "",
+          "description": "Invited by Microsoft, multiple times, to Microsoft Reactor in San Francisco to teach students how to build AR experiences on the HoloLens.",
+          "tech": [
+            "ar",
+            "unity",
             "c-sharp"
           ]
         }
