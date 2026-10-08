@@ -1340,6 +1340,284 @@
             "redux",
             "bootstrap"
           ]
+        },
+        {
+          "category": "code",
+          "title": "static-x",
+          "subtitle": "Static analysis tools for LLMs.",
+          "type": "software",
+          "date": "Aug 2026",
+          "description": "Source-code tools for LLMs built on language servers and static analysis instead of text search: answers come from symbol tables, ASTs, and LSP, not grep. TypeScript and Swift packs, an MCP server, and hooks that gate commits and Claude's edits on the tools.",
+          "url": "https://github.com/thegoldenmule/static-x",
+          "imageUrl": "tex/static-x.jpg",
+          "tech": [
+            "ts",
+            "ai",
+            "software"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Terminal Wrapped",
+          "subtitle": "Spotify Wrapped, for your shell.",
+          "type": "software",
+          "date": "Dec 2025",
+          "description": "Reads your shell history and plays back an animated dashboard: top commands, favorite flags, activity by hour, and the secrets you've leaked into it.",
+          "url": "https://github.com/thegoldenmule/terminal-wrapped",
+          "imageUrl": "tex/terminal-wrapped.jpg",
+          "tech": [
+            "ts",
+            "web"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Why Physics Engines Break",
+          "subtitle": "An interactive explainer.",
+          "type": "physics",
+          "date": "Sep 2026",
+          "description": "An interactive, in-browser explainer of physical and numerical stability, adapted from a two-part series. Live at thegoldenmule.com/explainer-numerical-integration.",
+          "url": "https://github.com/thegoldenmule/explainer-numerical-integration",
+          "imageUrl": "tex/explainer-numerical-integration.jpg",
+          "tech": [
+            "js",
+            "physics",
+            "teaching"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "aibleton",
+          "subtitle": "An AI bandmate.",
+          "type": "software",
+          "date": "Sep 2026",
+          "description": "An AI bandmate for practicing musicians, drummers first. A Bun service runs the loop and drives Ableton Live and Splice over MCP, a Next.js app shows the song plan, and JUCE plugins run inside Live.",
+          "url": "https://github.com/thegoldenmule/aibleton",
+          "imageUrl": "tex/aibleton.jpg",
+          "tech": [
+            "ts",
+            "ai",
+            "nextjs"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Hooks",
+          "subtitle": "Personal automation for Claude Code.",
+          "type": "software",
+          "date": "Aug 2026",
+          "description": "A morning work summary written from GitHub, a commit log at the end of each Claude Code turn, a length cap on closing messages, and a context-window status line.",
+          "url": "https://github.com/thegoldenmule/hooks",
+          "imageUrl": "tex/hooks.jpg",
+          "tech": [
+            "ai",
+            "software"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "LLM Quines",
+          "subtitle": "Growing quines with an agent loop.",
+          "type": "software",
+          "date": "Jul 2026",
+          "description": "An agent loop that grows ever-larger JavaScript quines through Claude Code. Each must beat the incumbent in bytes and executed steps, keep under half its source in string literals, and convince an LLM judge it is more interesting.",
+          "url": "https://github.com/thegoldenmule/llm-quines",
+          "imageUrl": "tex/llm-quines.jpg",
+          "tech": [
+            "ts",
+            "ai",
+            "experiments"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Godot Addons",
+          "subtitle": "Reusable Godot 4 addons.",
+          "type": "games",
+          "date": "Jun 2026",
+          "description": "A stack-FSM UI router with a semantic automation driver, base classes for in-editor tools with optional MCP access, and a remote-config authoring tool.",
+          "url": "https://github.com/thegoldenmule/godot-addons",
+          "imageUrl": "tex/godot-addons.jpg",
+          "tech": [
+            "godot",
+            "games"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "GitHub Estimator",
+          "subtitle": "Where did the year go?",
+          "type": "software",
+          "date": "Dec 2025",
+          "description": "A Bun CLI that reads a GitHub user's contributions over a period and estimates the share of time spent on each project.",
+          "url": "https://github.com/thegoldenmule/github-estimator",
+          "imageUrl": "tex/github-estimator.jpg",
+          "tech": [
+            "ts",
+            "software"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Music Box",
+          "subtitle": "Apple Music, inside walls.",
+          "type": "software",
+          "date": "Jul 2026",
+          "description": "A native iOS and Mac app that lets kids explore Apple Music inside limits a parent sets: MusicKit for the catalog, a pure-Swift policy engine for what a kid can reach.",
+          "url": "https://github.com/thegoldenmule/music-box",
+          "imageUrl": "tex/music-box.jpg",
+          "tech": [
+            "swift",
+            "software"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Timeline",
+          "subtitle": "A video editor.",
+          "type": "software",
+          "date": "Sep 2026",
+          "description": "A video editor in Swift, built on an event-sourced project model: every edit is a recorded event.",
+          "url": "https://github.com/thegoldenmule/timeline",
+          "imageUrl": "tex/timeline.jpg",
+          "tech": [
+            "swift",
+            "software"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Spotify-Apple Converter",
+          "subtitle": "Playlists across services.",
+          "type": "software",
+          "date": "Sep 2026",
+          "description": "Converts public Spotify playlists to Apple Music: paste a link, review the matches, create the playlist. Web UI and CLI.",
+          "url": "https://github.com/thegoldenmule/spotify-apple-converter",
+          "imageUrl": "tex/spotify-apple-converter.jpg",
+          "tech": [
+            "python"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "MidiPad Daemon",
+          "subtitle": "MIDI pads as triggers.",
+          "type": "software",
+          "date": "Dec 2025",
+          "description": "A .NET daemon that turns MIDI pad hits into keyboard shortcuts, shell commands, and HTTP calls, configured over a local API.",
+          "url": "https://github.com/thegoldenmule/midipad-daemon",
+          "imageUrl": "tex/midipad-daemon.jpg",
+          "tech": [
+            "c-sharp",
+            "dotnet"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Learntronome",
+          "subtitle": "A metronome for learning.",
+          "type": "software",
+          "date": "May 2025",
+          "description": "A SwiftUI metronome for practice: tempo, beats per measure, subdivisions, and a session timer.",
+          "url": "https://github.com/thegoldenmule/learntronome",
+          "imageUrl": "tex/learntronome.jpg",
+          "tech": [
+            "swift"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Terminal Wrapped",
+          "subtitle": "Spotify Wrapped, for your shell.",
+          "type": "software",
+          "date": "Dec 2025",
+          "description": "An animated dashboard of your shell history: top commands, favorite flags, and habits.",
+          "url": "https://github.com/thegoldenmule/terminal-wrapped",
+          "imageUrl": "tex/terminal-wrapped.jpg",
+          "tech": [
+            "ts",
+            "web"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "aibleton",
+          "subtitle": "An AI bandmate.",
+          "type": "software",
+          "date": "Sep 2026",
+          "description": "An AI bandmate for practicing musicians that builds songs in Ableton Live from Splice samples.",
+          "url": "https://github.com/thegoldenmule/aibleton",
+          "imageUrl": "tex/aibleton.jpg",
+          "tech": [
+            "ts",
+            "ai",
+            "nextjs"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Music Box",
+          "subtitle": "Native iOS and Mac app",
+          "type": "software",
+          "date": "Jul 2026",
+          "description": "Apple Music for kids, inside limits a parent sets.",
+          "url": "https://github.com/thegoldenmule/music-box",
+          "imageUrl": "tex/music-box.jpg",
+          "tech": [
+            "swift"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Learntronome",
+          "subtitle": "Native iOS app",
+          "type": "software",
+          "date": "May 2025",
+          "description": "A metronome for practice, with subdivisions and a session timer.",
+          "url": "https://github.com/thegoldenmule/learntronome",
+          "imageUrl": "tex/learntronome.jpg",
+          "tech": [
+            "swift"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Timeline",
+          "subtitle": "Native Swift app",
+          "type": "software",
+          "date": "Sep 2026",
+          "description": "An event-sourced video editor.",
+          "url": "https://github.com/thegoldenmule/timeline",
+          "imageUrl": "tex/timeline.jpg",
+          "tech": [
+            "swift"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Scorched3D",
+          "subtitle": "Browser game",
+          "type": "games",
+          "date": "September 2011",
+          "description": "A software-rendered, Scorched Earth-style hot-seat multiplayer artillery game.",
+          "imageUrl": "tex/ScorchedAnimation.jpg",
+          "tech": [
+            "js"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Natural-Log",
+          "subtitle": "Desktop app",
+          "type": "software",
+          "date": "September 2017",
+          "description": "A cross-platform log viewer: a socket server and client in one Electron app.",
+          "url": "https://github.com/thegoldenmule/naturallog",
+          "imageUrl": "https://raw.githubusercontent.com/thegoldenmule/naturallog/master/assets/screenshot.png",
+          "tech": [
+            "js",
+            "socketio"
+          ]
         }
       ]
     },
@@ -1486,23 +1764,6 @@
             "pixijs",
             "react",
             "tailwind"
-          ]
-        },
-        {
-          "category": "code",
-          "title": "Spyre JS SDK",
-          "subtitle": "A typescript and react module for building games on Spyre.",
-          "type": "software",
-          "date": "May 2024",
-          "description": "A typescript and react module for building games on Spyre.",
-          "url": "https://github.com/spyre-io/js",
-          "imageUrl": "tex/chomp.jpg",
-          "tech": [
-            "js",
-            "magic",
-            "thirdweb",
-            "viem",
-            "nakama"
           ]
         },
         {
@@ -1893,6 +2154,173 @@
             "java",
             "aws"
           ]
+        },
+        {
+          "category": "code",
+          "title": "hangman-clash",
+          "subtitle": "The source for Hangman Clash.",
+          "type": "games",
+          "date": "2024",
+          "description": "The full source for Hangman Clash: realtime PvP competitive hangman.",
+          "url": "https://github.com/thegoldenmule/hangman-clash",
+          "imageUrl": "tex/hangman.jpg",
+          "tech": [
+            "js",
+            "ts",
+            "go",
+            "pixijs",
+            "nakama"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "the-fallen-court",
+          "subtitle": "The source for The Fallen Court.",
+          "type": "games",
+          "date": "Dec 2025",
+          "description": "A story-driven ASCII-art dungeon crawler with on-chain perma-choices, built on-stream for a game jam it won.",
+          "url": "https://github.com/thegoldenmule/the-fallen-court",
+          "imageUrl": "tex/the-fallen-court.jpg",
+          "tech": [
+            "games",
+            "pixijs",
+            "web3",
+            "js"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "sermon-seek",
+          "subtitle": "The source for Sermon Seek.",
+          "type": "software",
+          "date": "May 2026",
+          "description": "Full-text and semantic (RAG) search over church YouTube channels and sermon transcripts.",
+          "url": "https://github.com/Goldenmule-Media/sermon-seek",
+          "imageUrl": "tex/sermon-seek.png",
+          "tech": [
+            "ts",
+            "nextjs",
+            "ai",
+            "backend"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Reactor Talk",
+          "subtitle": "A diagram-only talk on the Reactor.",
+          "type": "software",
+          "date": "Sep 2026",
+          "description": "A 20-minute talk on Powerhouse's local-first document runtime: document models, CQRS, and Operational Reshuffle sync. The slides are diagrams; the narrative lives in a Markdown outline that builds the reveal.js deck. Live at thegoldenmule.com/reactor-talk.",
+          "url": "https://github.com/thegoldenmule/reactor-talk",
+          "imageUrl": "tex/reactor-talk.jpg",
+          "tech": [
+            "js",
+            "deep-dives",
+            "teaching"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "PH Drive",
+          "subtitle": "Two-way file sync on the Reactor.",
+          "type": "software",
+          "date": "Jun 2026",
+          "description": "A Google Drive-style sync built on the Powerhouse stack: a browser editor and a Node file watcher sync through one local Switchboard, in both directions, folders and deletes included.",
+          "url": "https://github.com/thegoldenmule/ph-drive",
+          "imageUrl": "tex/ph-drive.jpg",
+          "tech": [
+            "ts",
+            "nodejs",
+            "backend"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "PH Diagrams",
+          "subtitle": "Architecture diagrams for Powerhouse.",
+          "type": "software",
+          "date": "Feb 2026",
+          "description": "HTML diagram pages for the Reactor's architecture (CQRS, event sourcing, read models, CRDTs, sync), rendered to images for docs, articles, and the Reactor talk.",
+          "url": "https://github.com/thegoldenmule/ph-diagrams",
+          "imageUrl": "tex/ph-diagrams.jpg",
+          "tech": [
+            "web",
+            "deep-dives"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "Lelantos",
+          "subtitle": "Security audits for document models.",
+          "type": "software",
+          "date": "Apr 2026",
+          "description": "Runs security audits on Powerhouse document models: a CLI plus a Reactor package, with a Mastra agent on a routine loop.",
+          "url": "https://github.com/thegoldenmule/ph-lelantos",
+          "imageUrl": "tex/ph-lelantos.jpg",
+          "tech": [
+            "ts",
+            "ai",
+            "backend"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "moveborne",
+          "subtitle": "A puzzle card game.",
+          "type": "games",
+          "date": "Oct 2025",
+          "description": "A competitive puzzle game: merge numbered tiles on a grid, then bend the board with power cards like vortex, teleport, and transform.",
+          "url": "https://github.com/thegoldenmule/moveborne",
+          "imageUrl": "tex/moveborne.jpg",
+          "tech": [
+            "js",
+            "games"
+          ]
+        },
+        {
+          "category": "code",
+          "title": "moveborne-godot",
+          "subtitle": "Secure LLM-built competitive games.",
+          "type": "games",
+          "date": "Jun 2026",
+          "description": "Moveborne rebuilt in Godot around a high-security model for LLM-built casual competitive games, with a server-side match validator.",
+          "url": "https://github.com/thegoldenmule/moveborne-godot",
+          "imageUrl": "tex/moveborne.jpg",
+          "tech": [
+            "godot",
+            "games",
+            "ai",
+            "backend"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Moveborne",
+          "subtitle": "A Goldenmule Media Original",
+          "type": "games",
+          "date": "Jun 2026",
+          "description": "A competitive puzzle card game: merge tiles on a grid and bend the board with power cards.",
+          "url": "https://github.com/thegoldenmule/moveborne-godot",
+          "imageUrl": "tex/moveborne.jpg",
+          "tech": [
+            "godot",
+            "games",
+            "ai"
+          ]
+        },
+        {
+          "category": "speaking",
+          "title": "The Reactor",
+          "subtitle": "A diagram-only talk on local-first runtimes.",
+          "type": "speaking",
+          "date": "Sep 2026",
+          "description": "A 20-minute talk on Powerhouse's local-first document runtime: document models, CQRS, and Operational Reshuffle sync.",
+          "url": "https://thegoldenmule.com/reactor-talk/",
+          "imageUrl": "tex/reactor-talk.jpg",
+          "tech": [
+            "deep-dives",
+            "backend"
+          ]
         }
       ]
     },
@@ -2136,7 +2564,7 @@
       "type": "teaching",
       "date": "2022 – 2024",
       "bullets": [
-        "Developed, taught, and open-sourced two courses for the CS Master's program: [Computer Graphics](https://github.com/thegoldenmule/csci-starter-05) (CSCI-4820) and [Principles of Software Engineering](https://github.com/thegoldenmule/csci-5030/) (CSCI-5030)."
+        "Developed, taught, and open-sourced two courses for the CS Master's program: [Computer Graphics](https://github.com/thegoldenmule/webgl-graphics-engine) (CSCI-4820) and [Principles of Software Engineering](https://github.com/thegoldenmule/csci-5030/) (CSCI-5030)."
       ],
       "url": "https://github.com/thegoldenmule/csci-5030/",
       "imageUrl": "https://www.slu.edu/ico/apple-touch-icon.png",
@@ -2191,7 +2619,7 @@
           "date": "2023",
           "description": "The last of seven starter repos for Computer Graphics (CSCI-4820), pair-programmed in front of students to build a WebGL engine from scratch. Slide decks for the whole course are in the linked Drive folder.",
           "imageUrl": "tex/slu.jpg",
-          "url": "https://github.com/thegoldenmule/csci-starter-05",
+          "url": "https://github.com/thegoldenmule/webgl-graphics-engine",
           "tech": [
             "teaching",
             "graphics",
