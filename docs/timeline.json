@@ -1351,7 +1351,7 @@
       "date": "Jan 2024 – Present",
       "bullets": [
         "Authored the core, [local-first engine (CQRS + CRDT/OT)](https://thegoldenmule.com/reactor-talk/) behind [Vetra.io](https://vetra.io), the AI-native platform for building software from natural language.",
-        "Developed [Knowledge Vault](https://oskv.vetra.io), an LLM knowledge base now onboarding clients, and [Toll Hunter](https://toll-hunter.com), a truck-toll claims portal, on that runtime; and [Sky Fusion](https://sky-fusion.powerhouse.io), the Sky Ecosystem's finance and governance dashboard, on the [analytics engine](https://github.com/powerhouse-inc/analytics-engine) I wrote.",
+        "Developed [Knowledge Vault](https://oskv.vetra.io), an AI-native record of a company's decisions and the reasons behind them, and [Toll Hunter](https://toll-hunter.com), a computer-vision + AI workflow for toll documents, on that runtime; and [Sky Fusion](https://sky-fusion.powerhouse.io), the Sky Ecosystem's public dashboard, on the [analytics engine](https://github.com/powerhouse-inc/analytics-engine) I wrote.",
         "Shipped, operated, and sunset [Hangman Clash](https://hangmanclash.com): 250K real-time PvP matches, 40K players, 10%+ paid conversion, 0 exploits.",
         "Built the agentic planning loop (comprehension-gated HITL, task execution graphs, team Kanban) behind [Hotseat](https://github.com/Goldenmule-Media/hotseat) + [Hotseat Wiki](https://wiki.thegoldenmule.com), tools in daily use."
       ],
@@ -1378,7 +1378,7 @@
           "subtitle": "A Goldenmule Media Original",
           "type": "software",
           "date": "Mar 2026",
-          "description": "A native macOS app for wrangling LLM coding agents via a Kanban board. Queue plans, code, and commits across repos — with worktrees, live tails, transition hooks, and a semantic CLI for LLMs to drive themselves.",
+          "description": "A native macOS app for wrangling LLM coding agents at scale via a Kanban board.",
           "url": "https://thegoldenmule.medium.com/my-workflow-is-better-than-yours-week-2-00b6e57a464b",
           "imageUrl": "https://miro.medium.com/v2/resize:fit:2000/format:webp/1*iheIZy9V-tVJKa81zjaFNg.png",
           "tech": [
@@ -1704,7 +1704,7 @@
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "2026",
-          "description": "Powerhouse's open-source, AI-native platform for building software from natural-language descriptions. A realtime collaborative, local-first workspace with Git-like version history, cryptographically signed audit logs, self-host or cloud deployment, and user-chosen AI models. I architected and built the engine underneath it, large parts of the TypeScript and React SDK, and the self-host and deploy layer.",
+          "description": "The AI-native platform for building software from natural language. Built on the Powerhouse Reactor.",
           "url": "https://vetra.io",
           "imageUrl": "tex/vetra.jpg",
           "tech": [
@@ -1721,7 +1721,7 @@
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "2026",
-          "description": "An open-source, LLM-first record of a company's decisions and the reasons behind them. Staff and AI agents read and write it over MCP, conflicting notes sit side by side until a named reviewer decides, and every answer cites its sources. Powerhouse uses it internally and is now onboarding clients. Runs on the Powerhouse Reactor, the event-sourced engine I wrote, and I developed the product.",
+          "description": "An AI-native record of a company's decisions and the reasons behind them. Built on the Powerhouse Reactor.",
           "url": "https://oskv.vetra.io",
           "imageUrl": "tex/knowledge-vault.jpg",
           "tech": [
@@ -1737,7 +1737,7 @@
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "2026",
-          "description": "A client portal for PFNÜR, a German law firm that recovers overpaid truck tolls. Transport operators upload their toll statements and follow each claim through review, in English, German, and Polish. Runs on the Powerhouse Reactor, the event-sourced engine I wrote, and I developed the product.",
+          "description": "CV + AI workflow for analyzing and managing toll documents. Built on the Powerhouse Reactor.",
           "url": "https://toll-hunter.com",
           "imageUrl": "tex/toll-hunter.jpg",
           "tech": [
@@ -1752,7 +1752,7 @@
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "2026",
-          "description": "The public dashboard for the Sky Ecosystem (formerly MakerDAO): protocol finances, budgets and expenses, governance proposals, contributors, and roadmaps in one place. Built on the Powerhouse Analytics Engine I wrote, and I developed the product.",
+          "description": "The public dashboard for the Sky Ecosystem (formerly MakerDAO). Built on the Powerhouse Analytics Engine.",
           "url": "https://sky-fusion.powerhouse.io",
           "imageUrl": "tex/sky-fusion.jpg",
           "tech": [
@@ -1768,7 +1768,7 @@
           "subtitle": "A Goldenmule Media Original",
           "type": "software",
           "date": "May 2026",
-          "description": "AI semantic and full-text search over church YouTube channels and sermon transcripts: find the moment a verse was preached, not just the video. A RAG pipeline of OpenAI chunk embeddings into pgvector search, with LLM enrichment for summaries, topics, and scripture references.",
+          "description": "Full-text and semantic (RAG) search over church YouTube channels and sermon transcripts.",
           "imageUrl": "tex/sermon-seek.png",
           "url": "https://sermonseek.ai",
           "tech": [
@@ -1784,7 +1784,7 @@
           "subtitle": "A Goldenmule Media Original",
           "type": "software",
           "date": "2026",
-          "description": "An open-source, event-sourced, LLM-first wiki. Pages are typed documents that change only through named mutations gated by a finite-state machine, over append-only Durable Streams and PGlite, with MCP integration for agent access.",
+          "description": "An LLM-only wiki. Pages are typed documents, all edits are validated graph transitions. Deep MCP integration, RAG as read-model.",
           "imageUrl": "tex/hotseat-wiki.jpg",
           "url": "https://github.com/Goldenmule-Media/hotseat-web",
           "tech": [
@@ -1800,7 +1800,7 @@
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "",
-          "description": "Consulting engagement with Slingshot Aerospace, builders of an integrated operational stack for space situational awareness. I was brought in for guidance on networked 3D simulation in a browser.",
+          "description": "Consulting engagement with Slingshot Aerospace, builders of an integrated operational stack for space situational awareness.",
           "imageUrl": "tex/slingshot.png",
           "tech": [
             "graphics",
