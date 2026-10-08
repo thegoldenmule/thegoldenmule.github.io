@@ -1351,7 +1351,7 @@
       "date": "Jan 2024 – Present",
       "bullets": [
         "Authored the core, [local-first engine (CQRS + CRDT/OT)](https://thegoldenmule.com/reactor-talk/) behind [Vetra.io](https://vetra.io), the AI-native platform for building software from natural language.",
-        "Helped directly build products that run on that runtime: [Knowledge Vault](https://oskv.vetra.io), an LLM knowledge base now onboarding clients, and [Toll Hunter](https://toll-hunter.com), a truck-toll claims portal for a German law firm.",
+        "Developed products that run on that runtime: [Knowledge Vault](https://oskv.vetra.io), an LLM knowledge base now onboarding clients; [Toll Hunter](https://toll-hunter.com), a truck-toll claims portal for a German law firm; and [Sky Fusion](https://sky-fusion.powerhouse.io), the Sky Ecosystem's finance and governance dashboard.",
         "Shipped, operated, and sunset [Hangman Clash](https://hangmanclash.com): 250K real-time PvP matches, 40K players, 10%+ paid conversion, 0 exploits.",
         "Built the agentic planning loop (comprehension-gated HITL, task execution graphs, team Kanban) behind [Hotseat](https://github.com/Goldenmule-Media/hotseat) + [Hotseat Wiki](https://wiki.thegoldenmule.com), tools in daily use."
       ],
@@ -1721,7 +1721,7 @@
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "2026",
-          "description": "An open-source, LLM-first record of a company's decisions and the reasons behind them. Staff and AI agents read and write it over MCP, conflicting notes sit side by side until a named reviewer decides, and every answer cites its sources. Powerhouse uses it internally and is now onboarding clients. Runs on the Powerhouse Reactor, the event-sourced engine I wrote, and I helped build the product directly.",
+          "description": "An open-source, LLM-first record of a company's decisions and the reasons behind them. Staff and AI agents read and write it over MCP, conflicting notes sit side by side until a named reviewer decides, and every answer cites its sources. Powerhouse uses it internally and is now onboarding clients. Runs on the Powerhouse Reactor, the event-sourced engine I wrote, and I developed the product.",
           "url": "https://oskv.vetra.io",
           "imageUrl": "tex/knowledge-vault.jpg",
           "tech": [
@@ -1737,12 +1737,28 @@
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "2026",
-          "description": "A client portal for PFNÜR, a German law firm that recovers overpaid truck tolls. Transport operators upload their toll statements and follow each claim through review, in English, German, and Polish. Runs on the Powerhouse Reactor, the event-sourced engine I wrote, and I helped build the product directly.",
+          "description": "A client portal for PFNÜR, a German law firm that recovers overpaid truck tolls. Transport operators upload their toll statements and follow each claim through review, in English, German, and Polish. Runs on the Powerhouse Reactor, the event-sourced engine I wrote, and I developed the product.",
           "url": "https://toll-hunter.com",
           "imageUrl": "tex/toll-hunter.jpg",
           "tech": [
             "ts",
             "nextjs",
+            "backend"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Sky Fusion Dashboard",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "2026",
+          "description": "The public dashboard for the Sky Ecosystem (formerly MakerDAO): protocol finances, budgets and expenses, governance proposals, contributors, and roadmaps in one place. Runs on the Powerhouse Reactor, the event-sourced engine I wrote, and I developed the product.",
+          "url": "https://sky-fusion.powerhouse.io",
+          "imageUrl": "tex/sky-fusion.jpg",
+          "tech": [
+            "ts",
+            "nextjs",
+            "web3",
             "backend"
           ]
         },
