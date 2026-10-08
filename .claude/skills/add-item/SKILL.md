@@ -29,7 +29,7 @@ Example:
    - code
 
 2. **Ask parent career** (if not a career type):
-   - Read `public/timeline.json` to get all career entries
+   - Read `docs/timeline.json` to get all career entries
    - Present career titles as options (e.g., "Founder: Goldenmule Media", "Experiments", "Miscellaneous Writing")
    - User selects which career the new item belongs under
 
@@ -38,13 +38,13 @@ Example:
 4. **Analyze URL content** - Use WebFetch to:
    - Extract title
    - Extract description/summary
-   - Identify relevant tech tags (match against `public/archive/tags.json`)
+   - Identify relevant tech tags (match against `docs/archive/tags.json`)
    - Extract image URL if available (og:image, twitter:image, etc.)
    - Determine date
 
 5. **Generate entry** - Create JSON entry based on the type
 
-6. **Insert entry** - Add the entry in the correct location in `public/timeline.json`:
+6. **Insert entry** - Add the entry in the correct location in `docs/timeline.json`:
    - If career: add to root of `events` array, sorted by date
    - If non-career: add to specified career's `children` array, sorted by date
 
@@ -112,7 +112,7 @@ Entries are sorted by date (most recent first). The skill will:
 
 ## Valid Tech Tags
 
-Reference `public/archive/tags.json` for valid tech tags. Common tags include:
+Reference `docs/archive/tags.json` for valid tech tags. Common tags include:
 - Languages: `js`, `ts`, `cs`, `go`, `python`, `java`
 - Frameworks: `react`, `unity`, `nakama`, `nodejs`
 - Categories: `games`, `web`, `web3`, `software`, `ai`
@@ -129,7 +129,7 @@ When the skill is invoked:
    - Options: media, product, writing, career, code
 
 3. If NOT career type:
-   - Read public/timeline.json
+   - Read docs/timeline.json
    - Extract all career titles from events array (items with category="career")
    - Ask which career this item belongs under via AskUserQuestion
 

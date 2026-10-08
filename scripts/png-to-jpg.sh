@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Convert all PNG files in public/tex/ to JPG format using macOS sips
+# Convert all PNG files in docs/tex/ to JPG format using macOS sips
 # Usage: ./scripts/png-to-jpg.sh [--delete-originals]
 
-TEX_DIR="public/tex"
+TEX_DIR="docs/tex"
 DELETE_ORIGINALS=false
 QUALITY=80
 

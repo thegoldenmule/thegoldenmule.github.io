@@ -21,8 +21,8 @@ Example:
 
 ## Workflow
 
-1. **Read the article** from `public/archive/<filename>`
-2. **Load canonical tags** from `public/archive/tags.json`
+1. **Read the article** from `docs/archive/<filename>`
+2. **Load canonical tags** from `docs/archive/tags.json`
 3. **Analyze content** for tag indicators:
    - Title keywords and patterns
    - Code block languages (```js, ```csharp, etc.)
@@ -88,9 +88,9 @@ When the skill is invoked:
 
 ```
 1. Parse the filename from arguments
-2. Read public/archive/<filename>
-3. Read public/archive/tags.json
-4. Read public/archive/manifest.json
+2. Read docs/archive/<filename>
+3. Read docs/archive/tags.json
+4. Read docs/archive/manifest.json
 
 5. Analyze article content:
    - Extract title from frontmatter

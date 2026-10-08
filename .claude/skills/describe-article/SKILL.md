@@ -21,7 +21,7 @@ Example:
 
 ## Workflow
 
-1. **Read the article** from `public/archive/<filename>`
+1. **Read the article** from `docs/archive/<filename>`
 2. **Read manifest.json** to find the existing entry
 3. **Analyze content** to understand:
    - Main topic and theme
@@ -102,8 +102,8 @@ When the skill is invoked:
 
 ```
 1. Parse the filename from arguments
-2. Read public/archive/<filename>
-3. Read public/archive/manifest.json
+2. Read docs/archive/<filename>
+3. Read docs/archive/manifest.json
 
 4. Analyze article content:
    - Extract title from frontmatter
