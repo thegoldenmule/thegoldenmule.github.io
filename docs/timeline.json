@@ -1350,7 +1350,7 @@
       "type": "games",
       "date": "Jan 2024 – Present",
       "bullets": [
-        "Authored the core, local-first engine (CQRS + CRDT/OT) behind [Vetra.io](https://vetra.io), the AI-native platform for building software from natural language.",
+        "Authored the core, local-first engine (CQRS + CRDT/OT) behind [Vetra.io](https://vetra.io), the AI-native platform for building software from natural language, and the products built on it: [Knowledge Vault](https://oskv.vetra.io) and [Toll Hunter](https://toll-hunter.com).",
         "Shipped, operated, and sunset [Hangman Clash](https://hangmanclash.com): 250K real-time PvP matches, 40K players, 10%+ paid conversion, 0 exploits.",
         "Built the agentic planning loop (comprehension-gated HITL, task execution graphs, team Kanban) behind [Hotseat](https://github.com/Goldenmule-Media/hotseat) + [Hotseat Wiki](https://wiki.thegoldenmule.com), tools in daily use."
       ],
