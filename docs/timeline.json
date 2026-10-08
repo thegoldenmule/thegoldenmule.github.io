@@ -60,6 +60,21 @@
       "children": [
         {
           "category": "publications",
+          "title": "Are LLMs “silver bullets”?",
+          "type": "writing",
+          "date": "Oct 2026",
+          "subtitle": "Letting Fred Brooks speak to us from 1986.",
+          "description": "Published in AI Advances. Reading LLM-era programming through Brooks' No Silver Bullet: if 100x output came only from compressing accidental difficulty, accidental work would have been over 99% of the job. So LLMs must be doing something else, quietly making the essential decisions for us.",
+          "url": "https://aiadvances.org/are-llms-silver-bullets-a764c668338e",
+          "imageUrl": "https://substack-post-media.s3.amazonaws.com/public/images/23721bf0-8010-4e08-86c5-c7338b1ba19b_700x466.jpeg",
+          "tech": [
+            "ai",
+            "software",
+            "history"
+          ]
+        },
+        {
+          "category": "publications",
           "title": "My Workflow is Better than Yours — Week 2",
           "type": "writing",
           "date": "Mar 2026",
@@ -1697,6 +1712,37 @@
             "ai",
             "backend",
             "docker"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Knowledge Vault",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "2026",
+          "description": "An open-source, LLM-first record of a company's decisions and the reasons behind them. Staff and AI agents read and write it over MCP, conflicting notes sit side by side until a named reviewer decides, and every answer cites its sources. Powerhouse runs on it internally and is now onboarding clients. Built on the Powerhouse Reactor.",
+          "url": "https://oskv.vetra.io",
+          "imageUrl": "tex/knowledge-vault.jpg",
+          "tech": [
+            "ts",
+            "nextjs",
+            "ai",
+            "backend"
+          ]
+        },
+        {
+          "category": "products",
+          "title": "Toll Hunter",
+          "subtitle": "Goldenmule Contract",
+          "type": "software",
+          "date": "2026",
+          "description": "A client portal for PFNÜR, a German law firm that recovers overpaid truck tolls. Transport operators upload their toll statements and follow each claim through review, in English, German, and Polish. Built on the Powerhouse Reactor, the event-sourced engine I wrote for Powerhouse.",
+          "url": "https://toll-hunter.com",
+          "imageUrl": "tex/toll-hunter.jpg",
+          "tech": [
+            "ts",
+            "nextjs",
+            "backend"
           ]
         },
         {
