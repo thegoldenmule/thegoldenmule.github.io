@@ -1351,7 +1351,7 @@
       "date": "Jan 2024 – Present",
       "bullets": [
         "Authored the core, [local-first engine (CQRS + CRDT/OT)](https://thegoldenmule.com/reactor-talk/) behind [Vetra.io](https://vetra.io), the AI-native platform for building software from natural language.",
-        "Developed products that run on that runtime: [Knowledge Vault](https://oskv.vetra.io), an LLM knowledge base now onboarding clients; [Toll Hunter](https://toll-hunter.com), a truck-toll claims portal for a German law firm; and [Sky Fusion](https://sky-fusion.powerhouse.io), the Sky Ecosystem's finance and governance dashboard.",
+        "Developed [Knowledge Vault](https://oskv.vetra.io), an LLM knowledge base now onboarding clients, and [Toll Hunter](https://toll-hunter.com), a truck-toll claims portal, on that runtime; and [Sky Fusion](https://sky-fusion.powerhouse.io), the Sky Ecosystem's finance and governance dashboard, on the [analytics engine](https://github.com/powerhouse-inc/analytics-engine) I wrote.",
         "Shipped, operated, and sunset [Hangman Clash](https://hangmanclash.com): 250K real-time PvP matches, 40K players, 10%+ paid conversion, 0 exploits.",
         "Built the agentic planning loop (comprehension-gated HITL, task execution graphs, team Kanban) behind [Hotseat](https://github.com/Goldenmule-Media/hotseat) + [Hotseat Wiki](https://wiki.thegoldenmule.com), tools in daily use."
       ],
@@ -1752,7 +1752,7 @@
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "2026",
-          "description": "The public dashboard for the Sky Ecosystem (formerly MakerDAO): protocol finances, budgets and expenses, governance proposals, contributors, and roadmaps in one place. Runs on the Powerhouse Reactor, the event-sourced engine I wrote, and I developed the product.",
+          "description": "The public dashboard for the Sky Ecosystem (formerly MakerDAO): protocol finances, budgets and expenses, governance proposals, contributors, and roadmaps in one place. Built on the Powerhouse Analytics Engine I wrote, and I developed the product.",
           "url": "https://sky-fusion.powerhouse.io",
           "imageUrl": "tex/sky-fusion.jpg",
           "tech": [
