@@ -1700,13 +1700,13 @@
         },
         {
           "category": "products",
-          "title": "Vetra",
+          "title": "Vetra.io",
           "subtitle": "Goldenmule Contract",
           "type": "software",
           "date": "2026",
           "description": "Powerhouse's open-source, AI-native platform for building software from natural-language descriptions. A realtime collaborative, local-first workspace with Git-like version history, cryptographically signed audit logs, self-host or cloud deployment, and user-chosen AI models. I architected and built the engine underneath it, large parts of the TypeScript and React SDK, and the self-host and deploy layer.",
           "url": "https://vetra.io",
-          "imageUrl": "tex/powerhouse.jpg",
+          "imageUrl": "tex/vetra.jpg",
           "tech": [
             "ts",
             "react",
