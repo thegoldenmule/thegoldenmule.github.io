@@ -166,12 +166,18 @@ function handleRouteChange() {
 // ==========================================================================
 
 function setupCategoryNav() {
-  const buttons = document.querySelectorAll(".nav-btn");
+  const buttons = document.querySelectorAll(".nav-btn[data-category]");
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const category = btn.dataset.category;
       switchCategory(category);
     });
+  });
+
+  // Close the Music dropdown when clicking anywhere outside it
+  const menu = document.querySelector(".nav-menu");
+  document.addEventListener("click", (event) => {
+    if (menu && !menu.contains(event.target)) menu.open = false;
   });
 }
 
